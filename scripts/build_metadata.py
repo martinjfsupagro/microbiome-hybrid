@@ -30,6 +30,14 @@ TAXONS = {
     "pt": ("toxostome", "Parachondrostoma toxostoma"),
 }
 
+# La SampleSheet de durance1 nomme deux échantillons `14Bue1006Cn05A`, en B07
+# et C07. durance2 et durance3 appellent celui de C07 `14Bue1006Cn05Abis` : le
+# suffixe a sauté à la saisie de durance1. Même puits dans les trois runs,
+# l'identification est certaine. Corrigé ici, tracé par le flag `bis`.
+NOMS_CORRIGES = {
+    ("170710_M03930_0062_000000000-BBHKV", "223"): "14Bue1006Cn05Abis",
+}
+
 # Le code tissu (01/02/03/05) n'est pas encore relié à un tissu nommé.
 # Les 4 blancs (Blanc-Caudal/Branchie/Midgut/Hindgut) donnent les 4 niveaux
 # attendus ; compléter ce dictionnaire une fois la correspondance confirmée.
@@ -154,7 +162,7 @@ COLUMNS = [
     "sample_id", "sample_name", "sample_type",
     "year", "site", "individual",
     "taxon_code", "taxon", "species",
-    "tissue_code", "tissue", "replicate",
+    "tissue_code", "tissue", "replicate", "extraction",
     "plate", "well", "i7_id", "i7_index", "i5_id", "i5_index",
     "fastq_r1", "fastq_r2", "fastq_ok", "size_r1", "size_r2",
     "run", "run_label", "flags",
@@ -255,6 +263,10 @@ def main():
     rows, n_unparsed = [], 0
     for rec in recs:
         raw = rec["sample_name"]
+        pre_flags = []
+        fixed = NOMS_CORRIGES.get((src.name, rec["sample_id"]))
+        if fixed and fixed != raw:
+            raw, pre_flags = fixed, ["nom_corrige"]
         stype = classify(raw)
 
         if stype == "biological":
@@ -263,6 +275,7 @@ def main():
                 fields, n_unparsed = dict(EMPTY_FIELDS), n_unparsed + 1
         else:
             fields, flags = dict(EMPTY_FIELDS), []
+        flags = pre_flags + flags
 
         if rec["from_filename"]:
             flags = flags + ["nom_depuis_fichier"]
@@ -276,6 +289,10 @@ def main():
             "sample_name": raw,
             "sample_type": stype,
             **fields,
+            # `bis` = seconde extraction d'ADN du même tissu (et non un second
+            # prélèvement) : même unité biologique, extraction distincte.
+            "extraction": "bis" if "bis" in flags else (
+                "initiale" if stype == "biological" else ""),
             "plate": rec["plate"],
             "well": rec["well"],
             "i7_id": rec["i7_id"],

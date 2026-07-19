@@ -71,7 +71,11 @@ def main():
           f"{len(runs)} runs")
 
     # -- réplicats techniques inter-runs -------------------------------------
-    key = lambda r: (r["year"], r["site"], r["individual"], r["tissue_code"])
+    # `extraction` fait partie de la clé : une ré-extraction (`bis`) du même
+    # tissu est un réplicat d'extraction, pas un réplicat de run. Les confondre
+    # ferait passer un effet extraction pour un effet run.
+    key = lambda r: (r["year"], r["site"], r["individual"],
+                     r["tissue_code"], r["extraction"])
     seen = collections.defaultdict(set)
     for r in bio:
         seen[key(r)].add(r["run_short"])

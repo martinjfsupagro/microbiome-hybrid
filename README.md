@@ -39,16 +39,30 @@ depuis les noms de fichiers, et les colonnes de plaque et d'index restent vides
 (elles ne sont pas reprises d'un autre run). D'où le flag `nom_depuis_fichier`
 sur toutes ses lignes.
 
+### Suffixe `bis` : ré-extraction
+`bis` désigne une **seconde extraction d'ADN du même tissu**, pas un second
+prélèvement. D'où la colonne `extraction` (`initiale` / `bis`), qui fait partie
+de la clé de réplicat : 9 tissus ont été extraits deux fois, soit 27 lignes.
+Les confondre avec leur extraction initiale ferait passer un effet extraction
+pour un effet run.
+
+Deux de ces `bis` étaient mal saisis : `-bis` dans les noms de fichiers de
+durance2 (conversion Illumina), et suffixe absent pour `14Bue1006Cn05A` en C07
+dans la SampleSheet de durance1. Ce dernier est corrigé dans `NOMS_CORRIGES`
+(`build_metadata.py`), flag `nom_corrige` — le puits est le même dans les trois
+runs, l'identification est certaine.
+
 ### Points en suspens sur les métadonnées
-- **`14Bue1006Cn05A` en double dans durance1** (puits B07 et C07, sample_id 211
-  et 223). durance2 et durance3 nomment le second `14Bue1006Cn05Abis` : le
-  suffixe manque dans la SampleSheet de durance1. Même puits d'un run à l'autre,
-  donc l'identification est sûre — reste à trancher si `bis` est une
-  ré-extraction du même tissu ou un second prélèvement.
 - **`15Avi1002Cn04A`** : seul échantillon en code tissu `04`, présent dans les
-  trois runs (flag `tissu_inattendu`). Saisie ou 5ᵉ tissu ?
-- **31 échantillons biologiques sans taxon** par run : pas de code dans le nom,
-  et aucun autre tissu du même individu n'en porte pour l'inférer.
+  trois runs (flag `tissu_inattendu`). Saisie ou 5ᵉ tissu ? → à voir avec le
+  collègue qui a acquis les données.
+- **Ain 2014, individus 1036 à 1043 : taxon non saisi.** Leurs noms portent une
+  espace là où devraient figurer les deux lettres du taxon (`14Ain1036 01A` au
+  lieu de `14Ain1036Cn01A`). Les 8 individus se suivent, c'est un bloc de saisie
+  entier qui manque, soit 31 échantillons sur les 4 tissus. Le taxon n'est pas
+  déductible : Ain 2014 contient à la fois du hotu (1001–1002) et du toxostome
+  (1011–1014), et ces 8 individus forment une troisième série de numéros qui
+  n'existe nulle part ailleurs. Il faut la feuille de terrain.
 - Le code tissu (`01/02/03/05`) n'est toujours pas relié à un tissu nommé
   (`TISSUS` vide dans `build_metadata.py`).
 
