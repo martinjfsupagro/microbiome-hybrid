@@ -27,7 +27,7 @@ Run MiSeq `170710_M03930_0062_000000000-BBHKV`, extrait de
 | Année   | 1-2   | 14 (270), 15 (459) |
 | Site    | 3-5   | Ain, Avi, Bau, Bue, Caa, Cab, Jus, Man, Per |
 | Individu| 6-9   | 1001… / 2011… |
-| Taxon   | 10-11 | **Ch** (531), **Cn** (140), **Pt** (24) |
+| Taxon   | 10-11 | **Ch** = chevesne (531), **Cn** = hotu (140), **Pt** = toxostome (24) |
 | Tissu   | 12-13 | 01 (182), 02 (141), 03 (180), 05 (179) |
 | Réplicat| 14    | A |
 
@@ -53,9 +53,29 @@ donc largement confondus : un effet « année » ne sera estimable que sur ces
 deux sites.
 
 ### Taxon × site (également confondu)
-`Cn` est concentré sur Avi (87) ; `Pt` n'existe qu'à Ain (16) et Avi (8) ;
-`Ch` est présent partout. Une comparaison taxon brute mélangera donc de
-l'effet site.
+Le chevesne (`Ch`) est présent partout et domine (531/695). Le hotu (`Cn`) est
+concentré sur Avi (87 sur 140) ; le toxostome (`Pt`) n'existe qu'à Ain (16) et
+Avi (8), soit 24 échantillons seulement. Une comparaison taxon brute mélangera
+donc de l'effet site. **Avi est le seul site où les trois taxons coexistent.**
+
+### ⚠ Aucun code « hybride » dans ce run
+Les trois codes correspondent à trois espèces distinctes — le chevesne
+(*Squalius cephalus*) n'hybride pas avec le couple *Chondrostoma* et sert
+vraisemblablement d'espèce de référence sympatrique. **Le statut hybride
+hotu × toxostome n'est donc pas encodé dans les noms d'échantillons.**
+
+Trois hypothèses à trancher avant de construire les métadonnées :
+1. les hybrides sont dans un autre run (le dossier s'appelle `durance1`) ;
+2. `Cn`/`Pt` sont des déterminations de terrain (morphologiques), et le statut
+   hybride est assigné a posteriori par génotypage, dans un fichier externe ;
+3. les hybrides ne sont pas encore séquencés.
+
+L'hypothèse 2 est la plus probable : dans la zone d'hybridation de la Durance
+les hybrides sont morphologiquement intermédiaires et régulièrement confondus
+avec l'une des deux espèces parentales sur le terrain. Si c'est le cas, une
+partie des 164 `Cn`/`Pt` sont en réalité des hybrides mal étiquetés, et le
+fichier de génotypage est indispensable — sans lui il n'y a pas de variable
+réponse.
 
 ## Contrôles disponibles
 | Type | n | Usage |
@@ -86,7 +106,13 @@ taux retiré par échantillon (il variera selon le tissu : branchie et nageoire
 caudale sont bien plus riches en cellules hôtes que le contenu intestinal, ce
 qui biaiserait toute comparaison de diversité entre tissus).
 
-Ces lectures 12S sont à **conserver dans un fichier séparé** : elles donnent la
-lignée maternelle de chaque individu, utile pour recouper l'assignation
-taxonomique. Limite : l'ADN mitochondrial étant transmis par la mère seule, un
-hybride F1 de mère hotu est indistinguable d'un hotu pur sur ce marqueur.
+Ces lectures 12S sont à **conserver dans un fichier séparé**, d'autant plus que
+le statut hybride n'est pas dans les noms d'échantillons. Elles permettent :
+- de séparer sans ambiguïté chevesne et *Chondrostoma* (genres très distants au
+  12S) → contrôle des inversions d'étiquettes entre taxons ;
+- de donner la lignée **maternelle** au sein du couple hotu / toxostome.
+
+Limite : l'ADN mitochondrial étant transmis par la mère seule, un hybride F1 de
+mère hotu est indistinguable d'un hotu pur. Le 12S ne remplace donc pas un
+génotypage nucléaire — c'est un contrôle qualité et un indicateur du sens du
+croisement, pas un test d'hybridation.
