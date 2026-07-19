@@ -22,22 +22,65 @@ Bue couvrent les deux années), de même que taxon et site. Voir
 [docs/donnees_durance1.md](docs/donnees_durance1.md).
 
 ### Données
-| Lot | Run | n | État |
-|---|---|---|---|
-| `durance1` | 170710_M03930_0062 | 768 | extrait, inventorié |
+| Lot | Run MiSeq | Flowcell | n | Livraison | État |
+|---|---|---|---|---|---|
+| `durance1` | 170710_M03930_0062 | BBHKV | 768 | run dir + SampleSheet | inventorié |
+| `durance2` | M03930_0069 | BCFFD | 768 | fastq renommés, sans SampleSheet | inventorié |
+| `durance3` | 171103_M03930_0072 | BFWT5 | 768 | run dir + SampleSheet | inventorié |
+
+Les trois runs sont **le reséquençage des mêmes 768 librairies** (même plan de
+plaque, mêmes i7 ; seuls les i5 changent d'un run à l'autre). Chaque échantillon
+est donc présent en triple : 720 réplicats techniques inter-runs, plus les
+39 contrôles × 3. L'effet run est estimable directement — il n'est confondu avec
+aucun facteur biologique.
+
+durance2 est livré sans SampleSheet : les métadonnées y sont reconstruites
+depuis les noms de fichiers, et les colonnes de plaque et d'index restent vides
+(elles ne sont pas reprises d'un autre run). D'où le flag `nom_depuis_fichier`
+sur toutes ses lignes.
+
+### Points en suspens sur les métadonnées
+- **`14Bue1006Cn05A` en double dans durance1** (puits B07 et C07, sample_id 211
+  et 223). durance2 et durance3 nomment le second `14Bue1006Cn05Abis` : le
+  suffixe manque dans la SampleSheet de durance1. Même puits d'un run à l'autre,
+  donc l'identification est sûre — reste à trancher si `bis` est une
+  ré-extraction du même tissu ou un second prélèvement.
+- **`15Avi1002Cn04A`** : seul échantillon en code tissu `04`, présent dans les
+  trois runs (flag `tissu_inattendu`). Saisie ou 5ᵉ tissu ?
+- **31 échantillons biologiques sans taxon** par run : pas de code dans le nom,
+  et aucun autre tissu du même individu n'en porte pour l'inférer.
+- Le code tissu (`01/02/03/05`) n'est toujours pas relié à un tissu nommé
+  (`TISSUS` vide dans `build_metadata.py`).
 
 ## Structure
 ```
 microbiome-hybrid/
 ├── scripts/
-│   ├── job_template.sh   ← copier pour chaque nouveau job
-│   └── check_run.sh      ← vérifier un run
+│   ├── job_template.sh     ← copier pour chaque nouveau job
+│   ├── check_run.sh        ← vérifier un run
+│   ├── build_metadata.py   ← métadonnées d'un run
+│   └── merge_metadata.py   ← fusion + diagnostic du plan
 ├── config/
-│   └── project.env       ← variables communes
-├── results/              ← {jobname}_{jobid}/ par run
-├── logs/                 ← .out / .err SLURM
-├── docs/                 ← notes, protocoles
-└── runs.log              ← registre de tous les jobs
+│   └── project.env         ← variables communes
+├── data/                   ← un dossier par lot
+├── metadata/
+│   ├── samples_durance{1,2,3}.csv
+│   └── samples_all.csv     ← fichier combiné, 2304 lignes
+├── results/                ← {jobname}_{jobid}/ par run
+├── logs/                   ← .out / .err SLURM
+├── docs/                   ← notes, protocoles
+└── runs.log                ← registre de tous les jobs
+```
+
+### Régénérer les métadonnées
+```bash
+python3 scripts/build_metadata.py data/durance1/170710_M03930_0062_000000000-BBHKV \
+        metadata/samples_durance1.csv --label durance1
+python3 scripts/build_metadata.py data/durance2/16S-Dur2_renamed \
+        metadata/samples_durance2.csv --label durance2
+python3 scripts/build_metadata.py data/durance3/171103_M03930_0072_000000000-BFWT5 \
+        metadata/samples_durance3.csv --label durance3
+python3 scripts/merge_metadata.py metadata/samples_durance?.csv -o metadata/samples_all.csv
 ```
 
 ## Procédure

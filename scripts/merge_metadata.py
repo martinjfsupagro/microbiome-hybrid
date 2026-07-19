@@ -59,9 +59,11 @@ def main():
                 n += 1
         print(f"{path}: {n} lignes")
 
-    # Étiquette de run courte et lisible, dérivée du nom de dossier du run.
+    # Étiquette de run courte et lisible : celle posée par build_metadata.py
+    # (--label), à défaut la date en tête du nom de dossier du run.
     for r in rows:
-        r["run_short"] = r["run"].split("_")[0] if r["run"] else "?"
+        r["run_short"] = (r.get("run_label")
+                          or (r["run"].split("_")[0] if r["run"] else "?"))
     runs = sorted({r["run_short"] for r in rows})
 
     bio = [r for r in rows if r["sample_type"] == "biological"]
@@ -96,10 +98,12 @@ def main():
         print(f"{t:12s}" + "".join(f"{ct.get((t, r), 0):12d}" for r in runs))
 
     # -- collisions de noms --------------------------------------------------
-    dup = [n for n, c in collections.Counter(
-        r["sample_name"] for r in rows).items() if c > 1]
+    # Un même nom dans plusieurs runs est attendu (reséquençage) ; seul un
+    # doublon à l'intérieur d'un run est une anomalie.
+    dup = [f"{n} ({r})" for (n, r), c in collections.Counter(
+        (x["sample_name"], x["run_short"]) for x in rows).items() if c > 1]
     if dup:
-        print(f"\n/!\\ {len(dup)} noms d'échantillons présents plusieurs fois : "
+        print(f"\n/!\\ {len(dup)} noms dupliqués au sein d'un même run : "
               f"{', '.join(dup[:10])}")
 
     with open(args.output, "w", newline="", encoding="utf-8") as fh:

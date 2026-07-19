@@ -1,8 +1,15 @@
 #!/usr/bin/env python3
-"""Construit le fichier de métadonnées à partir de la SampleSheet d'un run.
+"""Construit le fichier de métadonnées d'un run.
 
 Usage :
-    python3 scripts/build_metadata.py <rundir> <sortie.csv>
+    python3 scripts/build_metadata.py <source> <sortie.csv> [--label durance1]
+
+<source> est soit un dossier de run MiSeq contenant une SampleSheet.csv, soit
+un dossier de fastq déjà démultiplexés (cas de durance2, livré sans run dir).
+Dans ce second cas les noms d'échantillons sont reconstruits depuis les noms
+de fichiers : Illumina y a remplacé espaces et underscores par des tirets, et
+les colonnes de plaque et d'index restent vides — elles ne sont pas
+récupérables depuis les fastq et ne sont pas reprises d'un autre run.
 
 Parse les noms d'échantillons selon le schéma
     {année}{Site}{individu}{Taxon}{tissu}{réplicat}
@@ -11,6 +18,7 @@ Chaque anomalie corrigée est tracée dans la colonne `flags` : rien n'est
 silencieusement réparé.
 """
 
+import argparse
 import csv
 import re
 import sys
@@ -63,13 +71,23 @@ def classify(raw):
     return "biological"
 
 
-def parse_name(raw):
-    """Normalise puis décompose un nom. Retourne (champs, flags)."""
+def parse_name(raw, from_filename=False):
+    """Normalise puis décompose un nom. Retourne (champs, flags).
+
+    `from_filename` : le nom vient d'un fastq, où Illumina a déjà transformé
+    les espaces en tirets. Le tiret n'est alors pas une anomalie de saisie et
+    n'est pas signalé comme telle.
+    """
     flags = []
     name = raw.strip()
 
-    if name.lower().endswith("_bis"):
-        name = name[:-4]
+    # Suffixe «bis» : séparé par un underscore dans les SampleSheet, par un
+    # tiret dans les noms de fichiers (conversion Illumina), et collé au nom
+    # pour 14Bue1006Cn05A — saisi sans suffixe dans durance1, avec dans les
+    # deux autres runs. Même puits, même index : c'est bien la même librairie.
+    m_bis = re.match(r"^(.*?)[-_ ]?bis$", name, re.IGNORECASE)
+    if m_bis:
+        name = m_bis.group(1)
         flags.append("bis")
 
     # Chez Caa/Jus 2015, 38 échantillons portent le code tissu «0» au lieu de
@@ -82,7 +100,7 @@ def parse_name(raw):
 
     if " " in name:
         flags.append("espace_interne")
-    if "-" in name:
+    if "-" in name and not from_filename:
         flags.append("tiret_interne")
     name = re.sub(r"[\s-]+", "", name)
 
@@ -139,64 +157,140 @@ COLUMNS = [
     "tissue_code", "tissue", "replicate",
     "plate", "well", "i7_id", "i7_index", "i5_id", "i5_index",
     "fastq_r1", "fastq_r2", "fastq_ok", "size_r1", "size_r2",
-    "run", "flags",
+    "run", "run_label", "flags",
 ]
 
+# Un fastq démultiplexé Illumina : {nom}_S{n}_L001_R{1,2}_001.fastq[.gz]
+RE_FASTQ = re.compile(
+    r"^(?P<name>.+)_S(?P<snum>\d+)_L001_R(?P<read>[12])_001\.fastq(?:\.gz)?$"
+)
 
-def main():
-    if len(sys.argv) != 3:
-        sys.exit(__doc__)
-    rundir = Path(sys.argv[1]).resolve()
-    out = Path(sys.argv[2])
 
+def collect_from_samplesheet(rundir):
+    """Run MiSeq complet : la SampleSheet fait foi, les fastq sont vérifiés."""
     sheet = rundir / "SampleSheet.csv"
     basecalls = rundir / "Data" / "Intensities" / "BaseCalls"
-    if not sheet.exists():
-        sys.exit(f"SampleSheet introuvable : {sheet}")
+    fastqs = {f.name: f for f in basecalls.glob("*.fastq.gz")}
 
-    # Index des fastq réellement présents, par préfixe {name}_{S}
-    fastqs = {}
-    for f in basecalls.glob("*.fastq.gz"):
-        fastqs[f.name] = f
-
-    rows, n_unparsed = [], 0
+    recs = []
     for i, rec in enumerate(read_samplesheet(sheet), start=1):
         raw = (rec.get("Sample_Name") or "").strip()
-        stype = classify(raw)
-
-        if stype == "biological":
-            fields, flags = parse_name(raw)
-            if fields is None:
-                fields, n_unparsed = dict(EMPTY_FIELDS), n_unparsed + 1
-        else:
-            fields, flags = dict(EMPTY_FIELDS), []
-
         # Illumina remplace espaces et underscores par des tirets dans les noms
         # de fichiers, et suffixe par _S{n} (n = ordre dans la SampleSheet).
         fs_name = re.sub(r"[\s_]+", "-", raw)
         r1 = f"{fs_name}_S{i}_L001_R1_001.fastq.gz"
         r2 = f"{fs_name}_S{i}_L001_R2_001.fastq.gz"
-        p1, p2 = fastqs.get(r1), fastqs.get(r2)
-        if not (p1 and p2):
-            flags = flags + ["fastq_manquant"]
-
-        rows.append({
+        recs.append({
             "sample_id": rec.get("Sample_ID", ""),
             "sample_name": raw,
-            "sample_type": stype,
-            **fields,
+            "from_filename": False,
             "plate": rec.get("Sample_Plate", ""),
             "well": rec.get("Sample_Well", ""),
             "i7_id": rec.get("I7_Index_ID", ""),
             "i7_index": rec.get("index", ""),
             "i5_id": rec.get("I5_Index_ID", ""),
             "i5_index": rec.get("index2", ""),
-            "fastq_r1": r1 if p1 else "",
-            "fastq_r2": r2 if p2 else "",
+            "r1_name": r1, "r2_name": r2,
+            "r1": fastqs.get(r1), "r2": fastqs.get(r2),
+        })
+    return recs
+
+
+def collect_from_fastqdir(root):
+    """Fastq démultiplexés seuls : tout vient du nom de fichier.
+
+    Parcours récursif — durance2 range ses témoins dans un sous-dossier
+    `control/`. Le n° _S{n} sert de sample_id : c'est le rang de l'échantillon
+    dans la SampleSheet du run d'origine, non livrée ici.
+    """
+    pairs = {}
+    for f in sorted(root.rglob("*.fastq*")):
+        m = RE_FASTQ.match(f.name)
+        if not m:
+            continue
+        key = (m.group("name"), int(m.group("snum")))
+        pairs.setdefault(key, {})[m.group("read")] = f
+
+    recs = []
+    for (name, snum), reads in sorted(pairs.items(), key=lambda kv: kv[0][1]):
+        p1, p2 = reads.get("1"), reads.get("2")
+        recs.append({
+            "sample_id": str(snum),
+            "sample_name": name,
+            "from_filename": True,
+            "plate": "", "well": "",
+            "i7_id": "", "i7_index": "", "i5_id": "", "i5_index": "",
+            "r1_name": p1.name if p1 else "",
+            "r2_name": p2.name if p2 else "",
+            "r1": p1, "r2": p2,
+        })
+    return recs
+
+
+def main():
+    ap = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("source", help="dossier de run MiSeq, ou dossier de fastq")
+    ap.add_argument("output")
+    ap.add_argument("--label", default="",
+                    help="nom court du lot (durance1, durance2, ...) ; "
+                         "sert d'étiquette de run à la fusion")
+    args = ap.parse_args()
+
+    src = Path(args.source).resolve()
+    out = Path(args.output)
+    if not src.is_dir():
+        sys.exit(f"Source introuvable : {src}")
+
+    if (src / "SampleSheet.csv").exists():
+        recs = collect_from_samplesheet(src)
+        mode = "SampleSheet"
+    else:
+        recs = collect_from_fastqdir(src)
+        mode = "noms de fichiers"
+        if not recs:
+            sys.exit(f"Ni SampleSheet.csv ni fastq démultiplexés dans {src}")
+    print(f"{src.name} : source = {mode}")
+
+    rows, n_unparsed = [], 0
+    for rec in recs:
+        raw = rec["sample_name"]
+        stype = classify(raw)
+
+        if stype == "biological":
+            fields, flags = parse_name(raw, from_filename=rec["from_filename"])
+            if fields is None:
+                fields, n_unparsed = dict(EMPTY_FIELDS), n_unparsed + 1
+        else:
+            fields, flags = dict(EMPTY_FIELDS), []
+
+        if rec["from_filename"]:
+            flags = flags + ["nom_depuis_fichier"]
+
+        p1, p2 = rec["r1"], rec["r2"]
+        if not (p1 and p2):
+            flags = flags + ["fastq_manquant"]
+
+        rows.append({
+            "sample_id": rec["sample_id"],
+            "sample_name": raw,
+            "sample_type": stype,
+            **fields,
+            "plate": rec["plate"],
+            "well": rec["well"],
+            "i7_id": rec["i7_id"],
+            "i7_index": rec["i7_index"],
+            "i5_id": rec["i5_id"],
+            "i5_index": rec["i5_index"],
+            # Chemin relatif à la source : durance2 range ses témoins dans un
+            # sous-dossier, le seul nom de fichier ne suffit pas à les situer.
+            "fastq_r1": str(p1.relative_to(src)) if p1 else "",
+            "fastq_r2": str(p2.relative_to(src)) if p2 else "",
             "fastq_ok": "yes" if (p1 and p2) else "no",
             "size_r1": p1.stat().st_size if p1 else "",
             "size_r2": p2.stat().st_size if p2 else "",
-            "run": rundir.name,
+            "run": src.name,
+            "run_label": args.label or src.name,
             "flags": ";".join(flags),
         })
 
