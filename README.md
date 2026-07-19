@@ -1,7 +1,22 @@
 # microbiome-hybrid
 
 ## Description
-<!-- Une phrase -->
+Analyse comparative du microbiome (16S) de plusieurs tissus chez le hotu, le
+toxostome et leurs hybrides, sur plusieurs sites et deux années (2014, 2015).
+
+**Question** : le microbiome des hybrides est-il intermédiaire entre les deux
+espèces parentales, ou déplacé hors de leur intervalle ?
+
+### Plan d'échantillonnage
+| Facteur | Niveaux |
+|---|---|
+| Taxon    | hotu / toxostome / hybride |
+| Tissu    | *(à compléter)* |
+| Site     | *(à compléter)* |
+| Année    | 2014 / 2015 |
+
+Facteurs croisés → prévoir les effets site et année comme covariables, et
+vérifier l'équilibre du plan (taxon × tissu × site × année) avant tout test.
 
 ## Structure
 ```

@@ -10,7 +10,8 @@
 #SBATCH --output=%x_%j.out
 #SBATCH --error=%x_%j.err
 #SBATCH --mail-type=END,FAIL
-#SBATCH --mail-user=${SLURM_MAIL}
+# NB : SLURM n'expand pas les variables shell dans les #SBATCH → adresse en dur
+#SBATCH --mail-user=jean-francois.martin@supagro.fr
 #SBATCH --time=01:00:00             # ← ICI  hh:mm:ss
 #SBATCH --cpus-per-task=4           # ← ICI
 #SBATCH --mem=8G                    # ← ICI
