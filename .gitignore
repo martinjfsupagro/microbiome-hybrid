@@ -33,3 +33,6 @@ Thumbs.db
 __pycache__/
 *.pyc
 .venv/
+
+# Metadonnees derivees : versionnees (petit, tracable)
+!metadata/
