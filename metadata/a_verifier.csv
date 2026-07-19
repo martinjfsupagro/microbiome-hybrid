@@ -1,0 +1,42 @@
+question,reponse,sample_name,autres_noms,year,site,individual,tissue_code,extraction,plate,well,sample_id,flags
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1038 01A,14Ain1038-01A,2014,Ain,1038,01,initiale,1,A02,2,espace_interne;taxon_absent
+ré-extraction : bien le même tissu que l'extraction initiale ?,,14Per2011Ch01A_bis,14Per2011Ch01A-bis,2014,Per,2011,01,bis,1,A12,12,bis
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1039 01A,14Ain1039-01A,2014,Ain,1039,01,initiale,1,B02,14,espace_interne;taxon_absent
+ré-extraction : bien le même tissu que l'extraction initiale ?,,14Per2012Ch01A_bis,14Per2012Ch01A-bis,2014,Per,2012,01,bis,1,B12,24,bis
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1040 01A,14Ain1040-01A,2014,Ain,1040,01,initiale,1,C02,26,espace_interne;taxon_absent
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1041 01A,14Ain1041-01A,2014,Ain,1041,01,initiale,1,D02,38,espace_interne;taxon_absent
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1042 01A,14Ain1042-01A,2014,Ain,1042,01,initiale,1,E02,50,espace_interne;taxon_absent
+taxon manquant : quelle espèce pour cet individu ?,,14Ain 1043 01A,14Ain-1043-01A,2014,Ain,1043,01,initiale,1,F02,62,espace_interne;taxon_absent
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1036 01A,14Ain1036-01A,2014,Ain,1036,01,initiale,1,G01,73,espace_interne;taxon_absent
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1037 01A,14Ain1037-01A,2014,Ain,1037,01,initiale,1,H01,85,espace_interne;taxon_absent
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1038 05A,14Ain1038-05A,2014,Ain,1038,05,initiale,3,A02,194,espace_interne;taxon_absent
+ré-extraction : bien le même tissu que l'extraction initiale ?,,14Per2011Ch05A_bis,14Per2011Ch05A-bis,2014,Per,2011,05,bis,3,A12,204,bis
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1039 05A,14Ain1039-05A,2014,Ain,1039,05,initiale,3,B02,206,espace_interne;taxon_absent
+ré-extraction : bien le même tissu que l'extraction initiale ?,,14Per2012Ch05A_bis,14Per2012Ch05A-bis,2014,Per,2012,05,bis,3,B12,216,bis
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1040 05A,14Ain1040-05A,2014,Ain,1040,05,initiale,3,C02,218,espace_interne;taxon_absent
+ré-extraction : bien le même tissu que l'extraction initiale ?,,14Bue1006Cn05Abis,,2014,Bue,1006,05,bis,3,C07,223,nom_corrige;bis
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1041 05A,14Ain1041-05A,2014,Ain,1041,05,initiale,3,D02,230,espace_interne;taxon_absent
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1042 05A,14Ain1042-05A,2014,Ain,1042,05,initiale,3,E02,242,espace_interne;taxon_absent
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1043 05A,14Ain1043-05A,2014,Ain,1043,05,initiale,3,F02,254,espace_interne;taxon_absent
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1036 05A,14Ain1036-05A,2014,Ain,1036,05,initiale,3,G01,265,espace_interne;taxon_absent
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1037 05A,14Ain1037-05A,2014,Ain,1037,05,initiale,3,H01,277,espace_interne;taxon_absent
+"code tissu 04 inattendu : faute de frappe pour 05, ou 5e tissu ?",,15Avi1002Cn04A,,2015,Avi,1002,04,initiale,4,B09,309,tissu_inattendu
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1038 03A,14Ain1038-03A,2014,Ain,1038,03,initiale,5,A02,386,espace_interne;taxon_absent
+ré-extraction : bien le même tissu que l'extraction initiale ?,,14Per2011Ch03A_bis,14Per2011Ch03A-bis,2014,Per,2011,03,bis,5,A12,396,bis
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1039 03A,14Ain1039-03A,2014,Ain,1039,03,initiale,5,B02,398,espace_interne;taxon_absent
+ré-extraction : bien le même tissu que l'extraction initiale ?,,14Per2012Ch03A_bis,14Per2012Ch03A-bis,2014,Per,2012,03,bis,5,B12,408,bis
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1040 03A,14Ain1040-03A,2014,Ain,1040,03,initiale,5,C02,410,espace_interne;taxon_absent
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1041 03A,14Ain1041-03A,2014,Ain,1041,03,initiale,5,D02,422,espace_interne;taxon_absent
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1042 03A,14Ain1042-03A,2014,Ain,1042,03,initiale,5,E02,434,espace_interne;taxon_absent
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1043 03A,14Ain1043-03A,2014,Ain,1043,03,initiale,5,F02,446,espace_interne;taxon_absent
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1036 03A,14Ain1036-03A,2014,Ain,1036,03,initiale,5,G01,457,espace_interne;taxon_absent
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1037 03A,14Ain1037-03A,2014,Ain,1037,03,initiale,5,H01,469,espace_interne;taxon_absent
+taxon manquant : quelle espèce pour cet individu ?,,14Ain 1039 02A,14Ain-1039-02A,2014,Ain,1039,02,initiale,7,A02,578,espace_interne;taxon_absent
+ré-extraction : bien le même tissu que l'extraction initiale ?,,14Per2012Ch02A_bis,14Per2012Ch02A-bis,2014,Per,2012,02,bis,7,A12,588,bis
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1040 02A,14Ain1040-02A,2014,Ain,1040,02,initiale,7,B02,590,espace_interne;taxon_absent
+ré-extraction : bien le même tissu que l'extraction initiale ?,,14Per2013Ch02A_bis,14Per2013Ch02A-bis,2014,Per,2013,02,bis,7,B12,600,bis
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1041 02A,14Ain1041-02A,2014,Ain,1041,02,initiale,7,C02,602,espace_interne;taxon_absent
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1042 02A,14Ain1042-02A,2014,Ain,1042,02,initiale,7,D02,614,espace_interne;taxon_absent
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1043 02A,14Ain1043-02A,2014,Ain,1043,02,initiale,7,E02,626,espace_interne;taxon_absent
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1036 02A,14Ain1036-02A,2014,Ain,1036,02,initiale,7,G01,649,espace_interne;taxon_absent
+taxon manquant : quelle espèce pour cet individu ?,,14Ain1037 02A,14Ain1037-02A,2014,Ain,1037,02,initiale,7,H01,661,espace_interne;taxon_absent
