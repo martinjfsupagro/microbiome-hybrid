@@ -191,11 +191,23 @@ runs). Fichiers : `asv_table.tsv` (ASV × échantillon), `asv.fasta`,
 de `samples_all.csv` porte exactement cette clé — c'est par elle qu'on relie les
 ASV au plan d'échantillonnage (taxon, tissu, site, taille/poids…).
 
-### Taxonomie
-Réf. SILVA v138.2 (format DADA2) dans `$WORK/shared_softwares/silva/`,
-renseignée via `SILVA_TRAIN` / `SILVA_SPECIES` dans `config/project.env`.
-Relancer `sbatch scripts/05-merge_taxonomy.sh` produit alors `taxonomy.tsv` et
-`asv_table_filtered.tsv` (filtre Mitochondria/Chloroplast/Eukaryota).
+### Taxonomie (SILVA v138.2)
+Réf. dans `$WORK/shared_softwares/silva/`, via `SILVA_TRAIN`/`SILVA_SPECIES`.
+`assignTaxonomy` réplique la base par thread → gros pic mémoire : **256G** requis
+pour l'étape 05 (64G partait en OOM).
+
+Assignation (sur 46 320 ASV) : Kingdom 100 %, Phylum 98,6 %, Ordre 90,3 %,
+Famille 77,1 %, Genre 46,7 %, Espèce 2,1 % (typique du V4). Phyla dominants :
+Pseudomonadota, Bacteroidota, Planctomycetota, Verrucomicrobiota.
+
+**Filtre hors-cible : 1971 ASV retirés** — 1144 Mitochondria, 784 Chloroplast,
+22 Eukaryota, 21 non assignés. Les 1144 ASV mitochondriaux sont du 12S hôte
+résiduel (passé en pleine longueur, non éliminé par la longueur en 02) : le
+filet taxonomique les rattrape, comme prévu.
+
+→ **`asv_table_filtered.tsv` : 44 349 ASV × 2295 échantillons** (table d'analyse),
+`taxonomy.tsv`, `seqtab_nochim_filtered.rds`. Se joignent au plan
+d'échantillonnage par `dada2_id` de `samples_all.csv`.
 
 ## Structure
 ```
