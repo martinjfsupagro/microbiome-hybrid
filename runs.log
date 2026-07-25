@@ -1,2 +1,4 @@
 # runs.log — Registre des jobs : microbiome-hybrid
 # Format : ISO-date | job_id | statut | git_hash | script | notes
+2026-07-25T21:05:53+02:00 | fastqc_durance2_8736601 | START | 973e3fc | slurm_script | run=durance2
+2026-07-25T21:05:53+02:00 | fastqc_durance1_8736600 | START | 973e3fc | slurm_script | run=durance1
