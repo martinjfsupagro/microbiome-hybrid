@@ -72,10 +72,28 @@ terrain (`TAXON_MANUEL` dans `build_metadata.py`, flag
 `taxon_saisi_manuellement`) : 1036–1037 = hotu (`Cn`), 1038–1043 = toxostome
 (`Pt`). Ces individus ne sont donc pas un groupe à part.
 
-### Points en suspens
-- **`15Avi1002Cn04A`** : seul échantillon en code tissu `04` (présent dans les
-  trois runs, flag `tissu_inattendu`). Réponse du collègue à clarifier — la
-  correspondance ci-dessus ne compte que 4 codes, sans `04`.
+### Code tissu 04 → 05
+`15Avi1002Cn04A` portait un `04` confirmé faute de frappe pour `05` (branchie) ;
+l'individu retrouve son jeu 01/02/03/05. Corrigé via `TISSU_CORRIGE`
+(`build_metadata.py`), flag `tissu_corrige`.
+
+### Renommage des fastq bruts
+Les corrections d'espèce (1036–1043) et de tissu (04→05) ont aussi été
+appliquées **aux noms de fichiers fastq et aux SampleSheet** des trois runs, via
+`scripts/rename_fastq.py` (320 fichiers). Le renommage est réversible :
+
+- `metadata/rename_manifest.csv` (versionné) : correspondance ancien → nouveau ;
+- une sauvegarde `SampleSheet.csv.orig` à côté de chaque feuille modifiée ;
+- annulation : `python3 scripts/rename_fastq.py --revert metadata/rename_manifest.csv --data-root data`.
+
+L'appariement fastq ↔ SampleSheet se fait par le numéro `_S{n}`, donc le
+renommage ne dépend pas de ces corrections et reste rejouable. Les flags de
+provenance (`taxon_saisi_manuellement`, `tissu_corrige`) subsistent après
+renommage : on garde trace de ce qui a été corrigé et pourquoi.
+
+Seuls ces deux cas ont été renommés. Les casses de site (`15BUe`→`Bue`), les
+séparateurs et le suffixe `bis` **ne sont pas** touchés dans les fichiers : ils
+restent régularisés dans les seules métadonnées.
 
 ## Structure
 ```
@@ -84,13 +102,15 @@ microbiome-hybrid/
 │   ├── job_template.sh     ← copier pour chaque nouveau job
 │   ├── check_run.sh        ← vérifier un run
 │   ├── build_metadata.py   ← métadonnées d'un run
-│   └── merge_metadata.py   ← fusion + diagnostic du plan
+│   ├── merge_metadata.py   ← fusion + diagnostic du plan
+│   └── rename_fastq.py     ← renommage réversible des fastq corrigés
 ├── config/
 │   └── project.env         ← variables communes
 ├── data/                   ← un dossier par lot
 ├── metadata/
 │   ├── samples_durance{1,2,3}.csv
-│   └── samples_all.csv     ← fichier combiné, 2304 lignes
+│   ├── samples_all.csv     ← fichier combiné, 2304 lignes
+│   └── rename_manifest.csv ← ancien → nouveau nom de fastq
 ├── results/                ← {jobname}_{jobid}/ par run
 ├── logs/                   ← .out / .err SLURM
 ├── docs/                   ← notes, protocoles

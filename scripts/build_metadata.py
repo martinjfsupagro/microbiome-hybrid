@@ -63,6 +63,14 @@ TAXON_MANUEL = {
     ("2014", "Ain", "1043"): "Pt",
 }
 
+# Code tissu corrigé : 15Avi1002Cn04A porte un `04` confirmé faute de frappe
+# pour `05` (branchie) — collègue, 2026-07-25. L'individu a bien 01/02/03/05
+# une fois corrigé, et l'échantillon est entouré de 05 sur la plaque. Clé :
+# (année, site, individu, code_erroné) → code_correct. Tracé par `tissu_corrige`.
+TISSU_CORRIGE = {
+    ("2015", "Avi", "1002", "04"): "05",
+}
+
 RE_SAMPLE = re.compile(
     r"^(?P<year>14|15)"
     r"(?P<site>[A-Za-z]{3})"
@@ -208,19 +216,27 @@ RE_FASTQ = re.compile(
 
 
 def collect_from_samplesheet(rundir):
-    """Run MiSeq complet : la SampleSheet fait foi, les fastq sont vérifiés."""
+    """Run MiSeq complet : la SampleSheet fait foi, les fastq sont vérifiés.
+
+    L'appariement fastq ↔ ligne se fait par le numéro `_S{n}` (n = ordre dans
+    la SampleSheet), et non par reconstruction du nom de fichier : les fichiers
+    renommés (correction d'espèce ou de tissu) restent ainsi appariés sans que
+    la SampleSheet ait à l'être.
+    """
     sheet = rundir / "SampleSheet.csv"
     basecalls = rundir / "Data" / "Intensities" / "BaseCalls"
-    fastqs = {f.name: f for f in basecalls.glob("*.fastq.gz")}
+
+    by_snum = {}  # snum -> {read -> Path}
+    for f in basecalls.glob("*.fastq.gz"):
+        m = RE_FASTQ.match(f.name)
+        if m:
+            by_snum.setdefault(int(m.group("snum")), {})[m.group("read")] = f
 
     recs = []
     for i, rec in enumerate(read_samplesheet(sheet), start=1):
         raw = (rec.get("Sample_Name") or "").strip()
-        # Illumina remplace espaces et underscores par des tirets dans les noms
-        # de fichiers, et suffixe par _S{n} (n = ordre dans la SampleSheet).
-        fs_name = re.sub(r"[\s_]+", "-", raw)
-        r1 = f"{fs_name}_S{i}_L001_R1_001.fastq.gz"
-        r2 = f"{fs_name}_S{i}_L001_R2_001.fastq.gz"
+        reads = by_snum.get(i, {})
+        p1, p2 = reads.get("1"), reads.get("2")
         recs.append({
             "sample_id": rec.get("Sample_ID", ""),
             "sample_name": raw,
@@ -231,8 +247,9 @@ def collect_from_samplesheet(rundir):
             "i7_index": rec.get("index", ""),
             "i5_id": rec.get("I5_Index_ID", ""),
             "i5_index": rec.get("index2", ""),
-            "r1_name": r1, "r2_name": r2,
-            "r1": fastqs.get(r1), "r2": fastqs.get(r2),
+            "r1_name": p1.name if p1 else "",
+            "r2_name": p2.name if p2 else "",
+            "r1": p1, "r2": p2,
         })
     return recs
 
@@ -417,19 +434,45 @@ def main():
             "flags": ";".join(flags),
         })
 
+    def set_flags(r, drop, add):
+        keep = [f for f in r["flags"].split(";") if f and f not in drop]
+        r["flags"] = ";".join(keep + [a for a in add if a not in keep])
+
+    # Correction du code tissu (faute de frappe confirmée). Placée avant tout le
+    # reste, car le tissu entre dans la clé de réplicat et dans le nom canonique.
+    # On flague aussi les fichiers déjà renommés (le tissu y est déjà corrigé,
+    # la clé « erroné » ne matche plus) : la provenance survit au renommage.
+    corrige_vers = {}
+    for (y, s, i, _wrong), right in TISSU_CORRIGE.items():
+        corrige_vers.setdefault((y, s, i), set()).add(right)
+    for r in rows:
+        if r["sample_type"] != "biological":
+            continue
+        k = (r["year"], r["site"], r["individual"])
+        new = TISSU_CORRIGE.get((*k, r["tissue_code"]))
+        if new:
+            r["tissue_code"], r["tissue"] = new, TISSUS.get(new, "")
+            set_flags(r, {"tissu_inattendu"}, ["tissu_corrige"])
+        elif r["tissue_code"] in corrige_vers.get(k, set()):
+            set_flags(r, set(), ["tissu_corrige"])
+
     # Taxon saisi manuellement (feuille de terrain) : les individus dont le
     # code espèce manquait dans les noms. Appliqué avant la propagation, pour
-    # que les autres tissus du même individu en héritent le cas échéant.
+    # que les autres tissus du même individu en héritent le cas échéant. Le flag
+    # est posé même si le taxon est déjà lu du nom (cas des fichiers renommés) :
+    # on garde trace que l'espèce vient de la feuille de terrain, pas du labo.
     for r in rows:
         if r["sample_type"] != "biological":
             continue
         code = TAXON_MANUEL.get((r["year"], r["site"], r["individual"]))
-        if code and not r["taxon_code"]:
-            fr, lat = TAXONS[code.lower()]
-            r.update(taxon_code=code, taxon=fr, species=lat)
-            r["flags"] = ";".join(
-                [f for f in r["flags"].split(";") if f and f != "taxon_absent"]
-                + ["taxon_saisi_manuellement"])
+        if not code:
+            continue
+        if r["taxon_code"] and r["taxon_code"].lower() != code.lower():
+            set_flags(r, set(), ["conflit_taxon_manuel"])
+            continue
+        fr, lat = TAXONS[code.lower()]
+        r.update(taxon_code=code, taxon=fr, species=lat)
+        set_flags(r, {"taxon_absent"}, ["taxon_saisi_manuellement"])
 
     # Propagation du taxon : si un échantillon n'a pas de code taxon mais
     # qu'un autre échantillon du même individu (année+site+n°) en porte un,
