@@ -21,10 +21,13 @@
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=jean-francois.martin@supagro.fr
 #SBATCH --cpus-per-task=16
-#SBATCH --mem=64G
+#SBATCH --mem=256G
 #SBATCH --account=ondemand@biomics
 #SBATCH --qos=cpu-ondemand-long
 #SBATCH --time=12:00:00
+# NB : assignTaxonomy réplique la base SILVA (~452 k réfs) par thread → gros pic
+# mémoire. 64G était insuffisant (OOM à 16 threads) ; les nœuds cpu-ondemand
+# ont ~1,4 To, 256G est confortable.
 
 set -eEuo pipefail
 

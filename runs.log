@@ -19,3 +19,5 @@
 2026-07-25T21:35:17+02:00 | dada2_durance2_8736612 | END | a59bc02 | slurm_script | run=durance2
 2026-07-25T21:35:50+02:00 | dada2_merge_tax_8736614 | START | a59bc02 | slurm_script | 
 2026-07-25T21:37:17+02:00 | dada2_merge_tax_8736614 | END | a59bc02 | slurm_script | 
+2026-07-25T21:43:50+02:00 | dada2_merge_tax_8736698 | START | 545e07e | slurm_script | 
+2026-07-25T21:55:22+02:00 | dada2_merge_tax_8736698 | FAIL | 545e07e | slurm_script | exit 137
