@@ -24,8 +24,13 @@ import re
 import sys
 from pathlib import Path
 
+# `Ch` n'est PAS le chevesne (Squalius cephalus, code `Sc` au labo, absent de ces
+# trois runs) : c'est un chondrostome non identifié à ce stade — ni hotu (`Cn`)
+# ni toxostome (`Pt`) tranché. Le croisement avec HotuToxo_taillepoids.xlsx le
+# confirme : les individus séquencés `Ch` y sont mesurés comme Cn/Pt/Ch/Hy.
+# (Corrige la lecture antérieure « Ch = chevesne ».)
 TAXONS = {
-    "ch": ("chevesne", "Squalius cephalus"),
+    "ch": ("chondrostome", "Chondrostoma sp."),
     "cn": ("hotu", "Chondrostoma nasus"),
     "pt": ("toxostome", "Parachondrostoma toxostoma"),
 }

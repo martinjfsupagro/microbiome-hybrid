@@ -3,8 +3,6 @@
 ## Description
 Analyse comparative du microbiome (16S) de plusieurs tissus chez le hotu, le
 toxostome et leurs hybrides, sur plusieurs sites et deux années (2014, 2015).
-Le chevesne, cyprinidé sympatrique qui n'hybride pas avec ce couple, sert
-d'espèce de référence.
 
 **Question** : le microbiome des hybrides est-il intermédiaire entre les deux
 espèces parentales, ou déplacé hors de leur intervalle ?
@@ -12,10 +10,16 @@ espèces parentales, ou déplacé hors de leur intervalle ?
 ### Plan d'échantillonnage
 | Facteur | Niveaux |
 |---|---|
-| Taxon    | hotu (`Cn`) / toxostome (`Pt`) / chevesne (`Ch`) — statut hybride hors nomenclature |
-| Tissu    | 4 : caudale, branchie, midgut, hindgut (code ↔ tissu à confirmer) |
+| Taxon    | hotu (`Cn`) / toxostome (`Pt`) / chondrostome non résolu (`Ch`) |
+| Tissu    | 4 : caudale (`01`) / midgut (`02`) / hindgut (`03`) / branchie (`05`) |
 | Site     | Ain, Avi, Bau, Bue, Caa, Cab, Jus, Man, Per |
 | Année    | 2014 / 2015 |
+
+**Codes taxon.** `Ch` = chondrostome **non identifié** à ce stade (ni `Cn` ni
+`Pt` tranché), et **non** le chevesne comme on l'a d'abord cru. Le chevesne
+(*Squalius cephalus*, code labo `Sc`) n'est pas dans ces trois runs. L'espèce
+fine (dont le statut hybride) se lit dans `HotuToxo_taillepoids.xlsx`, où les
+individus séquencés `Ch` se répartissent en `Cn`/`Pt`/`Ch`/`Hy` — voir plus bas.
 
 Plan très déséquilibré : site et année sont largement confondus (seuls Avi et
 Bue couvrent les deux années), de même que taxon et site. Voir
@@ -77,6 +81,22 @@ terrain (`TAXON_MANUEL` dans `build_metadata.py`, flag
 l'individu retrouve son jeu 01/02/03/05. Corrigé via `TISSU_CORRIGE`
 (`build_metadata.py`), flag `tissu_corrige`.
 
+### Taille / poids (HotuToxo_taillepoids.xlsx)
+Colonnes `size` et `weight` ajoutées à `samples_all.csv` par `merge_metadata.py`
+(option `--measurements`), depuis `metadata/HotuToxo_taillepoids.xlsx`. Ce sont
+des mesures **par individu** : jointes sur (année, site, individu) — **sans** le
+taxon, puisque le poisson est le même quelle que soit son étiquette — et
+propagées à tous ses tissus et tous les runs.
+
+- 2070 lignes renseignées, 81 sans mesure (individus séquencés absents du xlsx),
+  36 en conflit ;
+- **conflits** : 3 individus (`15Jus1006/1007/1008`) ont deux jeux de mesures
+  divergents dans le xlsx. On laisse `size`/`weight` vides et on pose le flag
+  `mesures_conflit` plutôt que de choisir à l'aveugle ;
+- le xlsx porte aussi `Species` (Cn/Pt/Ch/**Hy** = hybride) et `Sex`, non repris
+  ici : le taxon fin et le statut hybride restent à intégrer le jour où on
+  exploitera ces individus.
+
 ### Renommage des fastq bruts
 Les corrections d'espèce (1036–1043) et de tissu (04→05) ont aussi été
 appliquées **aux noms de fichiers fastq et aux SampleSheet** des trois runs, via
@@ -109,7 +129,8 @@ microbiome-hybrid/
 ├── data/                   ← un dossier par lot
 ├── metadata/
 │   ├── samples_durance{1,2,3}.csv
-│   ├── samples_all.csv     ← fichier combiné, 2304 lignes
+│   ├── samples_all.csv     ← fichier combiné, 2304 lignes (+ size/weight)
+│   ├── HotuToxo_taillepoids.xlsx  ← mesures par individu (source)
 │   └── rename_manifest.csv ← ancien → nouveau nom de fastq
 ├── results/                ← {jobname}_{jobid}/ par run
 ├── logs/                   ← .out / .err SLURM
@@ -125,8 +146,10 @@ python3 scripts/build_metadata.py data/durance2/16S-Dur2_renamed \
         metadata/samples_durance2.csv --label durance2
 python3 scripts/build_metadata.py data/durance3/171103_M03930_0072_000000000-BFWT5 \
         metadata/samples_durance3.csv --label durance3
-python3 scripts/merge_metadata.py metadata/samples_durance?.csv -o metadata/samples_all.csv
+python3 scripts/merge_metadata.py metadata/samples_durance?.csv \
+        -o metadata/samples_all.csv --measurements metadata/HotuToxo_taillepoids.xlsx
 ```
+(`merge_metadata.py --measurements` requiert `openpyxl` : `pip install openpyxl`.)
 
 ## Procédure
 ```bash
