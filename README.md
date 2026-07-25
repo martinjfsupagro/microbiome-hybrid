@@ -25,19 +25,23 @@ Bue couvrent les deux années), de même que taxon et site. Voir
 | Lot | Run MiSeq | Flowcell | n | Livraison | État |
 |---|---|---|---|---|---|
 | `durance1` | 170710_M03930_0062 | BBHKV | 768 | run dir + SampleSheet | inventorié |
-| `durance2` | M03930_0069 | BCFFD | 768 | fastq renommés, sans SampleSheet | inventorié |
+| `durance2` | M03930_0069 | BCFFD | 768 | fastq renommés + SampleSheet à part | inventorié |
 | `durance3` | 171103_M03930_0072 | BFWT5 | 768 | run dir + SampleSheet | inventorié |
 
-Les trois runs sont **le reséquençage des mêmes 768 librairies** (même plan de
-plaque, mêmes i7 ; seuls les i5 changent d'un run à l'autre). Chaque échantillon
-est donc présent en triple : 720 réplicats techniques inter-runs, plus les
-39 contrôles × 3. L'effet run est estimable directement — il n'est confondu avec
-aucun facteur biologique.
+Les trois runs sont **le reséquençage des mêmes 768 librairies** (confirmé :
+même plan de plaque, mêmes puits, mêmes i7 ; seuls les i5 changent — durance1 a
+son propre jeu d'i5, durance2 et durance3 en partagent un autre). Chaque
+échantillon est donc présent en triple : 729 réplicats techniques inter-runs,
+plus les 39 contrôles × 3. L'effet run est estimable directement — il n'est
+confondu avec aucun facteur biologique.
 
-durance2 est livré sans SampleSheet : les métadonnées y sont reconstruites
-depuis les noms de fichiers, et les colonnes de plaque et d'index restent vides
-(elles ne sont pas reprises d'un autre run). D'où le flag `nom_depuis_fichier`
-sur toutes ses lignes.
+durance2 est livré en fastq démultiplexés (non compressés, témoins dans
+`control/`) et sans run dir. Sa SampleSheet d'origine, retrouvée à part
+(`EG_16S_Durance_Run2.csv`, déposée dans le dossier des fastq), est
+autodétectée par `build_metadata.py` et fournit plaque, puits et index — sinon
+absents. Sa virgule Sample_Name/Sample_Plate manquante (nom et n° de plaque
+collés) est corrigée à la lecture. Toutes ses lignes gardent le flag
+`nom_depuis_fichier`, les noms venant des fichiers et non de la feuille.
 
 ### Suffixe `bis` : ré-extraction
 `bis` désigne une **seconde extraction d'ADN du même tissu**, pas un second
@@ -52,19 +56,26 @@ dans la SampleSheet de durance1. Ce dernier est corrigé dans `NOMS_CORRIGES`
 (`build_metadata.py`), flag `nom_corrige` — le puits est le même dans les trois
 runs, l'identification est certaine.
 
-### Points en suspens sur les métadonnées
-- **`15Avi1002Cn04A`** : seul échantillon en code tissu `04`, présent dans les
-  trois runs (flag `tissu_inattendu`). Saisie ou 5ᵉ tissu ? → à voir avec le
-  collègue qui a acquis les données.
-- **Ain 2014, individus 1036 à 1043 : taxon non saisi.** Leurs noms portent une
-  espace là où devraient figurer les deux lettres du taxon (`14Ain1036 01A` au
-  lieu de `14Ain1036Cn01A`). Les 8 individus se suivent, c'est un bloc de saisie
-  entier qui manque, soit 31 échantillons sur les 4 tissus. Le taxon n'est pas
-  déductible : Ain 2014 contient à la fois du hotu (1001–1002) et du toxostome
-  (1011–1014), et ces 8 individus forment une troisième série de numéros qui
-  n'existe nulle part ailleurs. Il faut la feuille de terrain.
-- Le code tissu (`01/02/03/05`) n'est toujours pas relié à un tissu nommé
-  (`TISSUS` vide dans `build_metadata.py`).
+### Correspondance code tissu ↔ tissu
+Confirmée (collègue, 2026-07-25) et cohérente avec le plan de plaque :
+
+| Code | Tissu |
+|---|---|
+| `01` | caudale |
+| `02` | midgut |
+| `03` | hindgut |
+| `05` | branchie |
+
+### Taxon des individus 1036–1043 (Ain 2014)
+Le bloc de saisie du code espèce manquait. Complété d'après la feuille de
+terrain (`TAXON_MANUEL` dans `build_metadata.py`, flag
+`taxon_saisi_manuellement`) : 1036–1037 = hotu (`Cn`), 1038–1043 = toxostome
+(`Pt`). Ces individus ne sont donc pas un groupe à part.
+
+### Points en suspens
+- **`15Avi1002Cn04A`** : seul échantillon en code tissu `04` (présent dans les
+  trois runs, flag `tissu_inattendu`). Réponse du collègue à clarifier — la
+  correspondance ci-dessus ne compte que 4 codes, sans `04`.
 
 ## Structure
 ```
