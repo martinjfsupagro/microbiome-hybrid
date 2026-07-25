@@ -1,6 +1,7 @@
 # Données
 raw/
 data/
+consolidated_dataset/
 *.fastq*
 *.fq*
 *.bam

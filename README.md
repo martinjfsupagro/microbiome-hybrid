@@ -47,6 +47,23 @@ absents. Sa virgule Sample_Name/Sample_Plate manquante (nom et n° de plaque
 collés) est corrigée à la lecture. Toutes ses lignes gardent le flag
 `nom_depuis_fichier`, les noms venant des fichiers et non de la feuille.
 
+### Source unique des fastq : `consolidated_dataset/`
+Les fastq **R1/R2 des trois runs** ont été centralisés dans
+`consolidated_dataset/<run>/` (4608 fichiers, tout en `.fastq.gz`) par
+`scripts/consolidate_fastq.py`. C'est la source de données pour l'analyse ; les
+colonnes `fastq_r1`/`fastq_r2` de `samples_all.csv` pointent vers elle
+(chemins relatifs à la racine du projet).
+
+- **Sous-dossiers par run** : durance1 et durance3 portent les mêmes noms de
+  fichiers (mêmes librairies) — à plat ils s'écraseraient. Ça convient aussi à
+  DADA2, qui apprend les taux d'erreur par run.
+- **durance2 compressé** en `.fastq.gz` au passage (livré en `.fastq`).
+- **R1/R2 seulement.** Les index reads `I1/I2` (durance1/3) et les
+  `Undetermined` restent dans `data/`, avec les SampleSheet, InterOp, etc.
+- **Réversible** : `metadata/consolidate_manifest.csv` (versionné) ;
+  annulation : `python3 scripts/consolidate_fastq.py --revert metadata/consolidate_manifest.csv`
+  (puis régénérer les CSV : build + merge).
+
 ### Suffixe `bis` : ré-extraction
 `bis` désigne une **seconde extraction d'ADN du même tissu**, pas un second
 prélèvement. D'où la colonne `extraction` (`initiale` / `bis`), qui fait partie
@@ -133,12 +150,15 @@ microbiome-hybrid/
 │   └── rename_fastq.py     ← renommage réversible des fastq corrigés
 ├── config/
 │   └── project.env         ← variables communes
-├── data/                   ← un dossier par lot
+├── consolidated_dataset/   ← SOURCE UNIQUE des fastq pour l'analyse
+│   └── durance{1,2,3}/     ← R1/R2 .fastq.gz, un sous-dossier par run
+├── data/                   ← run dirs d'origine (SampleSheet, InterOp, I1/I2…)
 ├── metadata/
 │   ├── samples_durance{1,2,3}.csv
 │   ├── samples_all.csv     ← fichier combiné, 2304 lignes (+ size_cm/weight_g/sex)
 │   ├── HotuToxo_taillepoids.xlsx  ← mesures par individu (source)
-│   └── rename_manifest.csv ← ancien → nouveau nom de fastq
+│   ├── rename_manifest.csv ← ancien → nouveau nom de fastq
+│   └── consolidate_manifest.csv ← déplacement data/ → consolidated_dataset/
 ├── results/                ← {jobname}_{jobid}/ par run
 ├── logs/                   ← .out / .err SLURM
 ├── docs/                   ← notes, protocoles
