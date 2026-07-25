@@ -167,9 +167,35 @@ sbatch scripts/05-merge_taxonomy.sh                # après les 3 dada2
 ```
 Choix clés (mesurés sur les données, voir en-tête des scripts) : `-O 10`,
 `--minimum-length 240` pour le 12S ; `learnErrors` par run car 3 séquençages
-distincts ; chimères sur la table fusionnée. Réf. taxonomique SILVA à renseigner
-dans `config/project.env` (`SILVA_TRAIN`) — absente pour l'instant, l'étape 05
-produit alors la table d'ASV sans taxonomie.
+distincts ; chimères sur la table fusionnée.
+
+### Résultats (résultats/dada2_final/)
+Premier passage (commit du pipeline) :
+
+| Étape | Chiffre |
+|---|---|
+| 12S retiré | ~15 % des reads/run (jusqu'à 67 % par échantillon) |
+| Fusion des paires (médiane) | 92,7–94,3 % selon le run |
+| ASV bruts par run | 26 128 / 27 605 / 29 197 |
+| Après fusion des 3 runs | 2295 échantillons × 48 819 ASV |
+| Après chimères | **46 320 ASV** (98,0 % des reads conservés) |
+| Longueur d'ASV | pic à 251 pb (V4 ; aucun résidu 12S) |
+
+2295 échantillons (et non 2304) : 9 écartés car vides après filtrage
+(8 contrôles `empty` + `15Bue1014Ch03A` sur durance3 — présent dans les 2 autres
+runs). Fichiers : `asv_table.tsv` (ASV × échantillon), `asv.fasta`,
+`seqtab_nochim.rds`, `track_all.csv`.
+
+**Jointure table ↔ métadonnées** : les colonnes de `asv_table.tsv` sont nommées
+`{échantillon}__{run}` (ex. `14Ain1001Cn01A__durance1`). La colonne `dada2_id`
+de `samples_all.csv` porte exactement cette clé — c'est par elle qu'on relie les
+ASV au plan d'échantillonnage (taxon, tissu, site, taille/poids…).
+
+### Taxonomie
+Réf. SILVA v138.2 (format DADA2) dans `$WORK/shared_softwares/silva/`,
+renseignée via `SILVA_TRAIN` / `SILVA_SPECIES` dans `config/project.env`.
+Relancer `sbatch scripts/05-merge_taxonomy.sh` produit alors `taxonomy.tsv` et
+`asv_table_filtered.tsv` (filtre Mitochondria/Chloroplast/Eukaryota).
 
 ## Structure
 ```

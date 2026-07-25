@@ -2,3 +2,20 @@
 # Format : ISO-date | job_id | statut | git_hash | script | notes
 2026-07-25T21:05:53+02:00 | fastqc_durance2_8736601 | START | 973e3fc | slurm_script | run=durance2
 2026-07-25T21:05:53+02:00 | fastqc_durance1_8736600 | START | 973e3fc | slurm_script | run=durance1
+2026-07-25T21:07:52+02:00 | rm12S_durance3_8736610 | START | a59bc02 | slurm_script | run=durance3
+2026-07-25T21:07:52+02:00 | rm12S_durance1_8736608 | START | a59bc02 | slurm_script | run=durance1
+2026-07-25T21:07:52+02:00 | rm12S_durance2_8736609 | START | a59bc02 | slurm_script | run=durance2
+2026-07-25T21:17:40+02:00 | rm12S_durance2_8736609 | END | a59bc02 | slurm_script | run=durance2 samples=768 in=14808840 v4=12622208 rm12S=2186632
+2026-07-25T21:17:50+02:00 | rm12S_durance1_8736608 | END | a59bc02 | slurm_script | run=durance1 samples=768 in=12507056 v4=10607232 rm12S=1899824
+2026-07-25T21:17:51+02:00 | dada2_durance2_8736612 | START | a59bc02 | slurm_script | run=durance2
+2026-07-25T21:18:04+02:00 | rm12S_durance3_8736610 | END | a59bc02 | slurm_script | run=durance3 samples=768 in=14035040 v4=12047676 rm12S=1987364
+2026-07-25T21:18:51+02:00 | dada2_durance1_8736611 | START | a59bc02 | slurm_script | run=durance1
+2026-07-25T21:18:51+02:00 | dada2_durance3_8736613 | START | a59bc02 | slurm_script | run=durance3
+2026-07-25T21:19:45+02:00 | fastqc_durance3_8736602 | END | 973e3fc | slurm_script | run=durance3
+2026-07-25T21:19:46+02:00 | fastqc_durance1_8736600 | END | 973e3fc | slurm_script | run=durance1
+2026-07-25T21:19:50+02:00 | fastqc_durance2_8736601 | END | 973e3fc | slurm_script | run=durance2
+2026-07-25T21:33:24+02:00 | dada2_durance1_8736611 | END | a59bc02 | slurm_script | run=durance1
+2026-07-25T21:34:29+02:00 | dada2_durance3_8736613 | END | a59bc02 | slurm_script | run=durance3
+2026-07-25T21:35:17+02:00 | dada2_durance2_8736612 | END | a59bc02 | slurm_script | run=durance2
+2026-07-25T21:35:50+02:00 | dada2_merge_tax_8736614 | START | a59bc02 | slurm_script | 
+2026-07-25T21:37:17+02:00 | dada2_merge_tax_8736614 | END | a59bc02 | slurm_script | 

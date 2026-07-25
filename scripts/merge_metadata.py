@@ -139,6 +139,23 @@ def main():
                           or (r["run"].split("_")[0] if r["run"] else "?"))
     runs = sorted({r["run_short"] for r in rows})
 
+    # dada2_id : nom de colonne de l'échantillon dans la table d'ASV finale.
+    # DADA2 nomme chaque échantillon d'après son FICHIER (nom_echantillon), pas
+    # d'après sample_name (qui garde les variantes de saisie : _bis vs -bis,
+    # espaces…). L'étape 05 y ajoute le suffixe __<run>. Cette colonne est LA
+    # clé de jointure entre la table d'ASV et ces métadonnées.
+    def _nomech(path):
+        b = path.rsplit("/", 1)[-1]
+        for ext in (".gz", ".fastq", ".fq"):
+            if b.endswith(ext):
+                b = b[: -len(ext)]
+        b = re.sub(r"_S[0-9]+_L[0-9]+_R1(_[0-9]+)?$", "", b)
+        b = re.sub(r"_R1(_001)?$", "", b)
+        return b
+    for r in rows:
+        r["dada2_id"] = (f"{_nomech(r['fastq_r1'])}__{r['run_short']}"
+                         if r.get("fastq_r1") else "")
+
     bio = [r for r in rows if r["sample_type"] == "biological"]
     print(f"\ntotal : {len(rows)} lignes, {len(bio)} biologiques, "
           f"{len(runs)} runs")
@@ -219,7 +236,7 @@ def main():
               f"{', '.join(dup[:10])}")
 
     with open(args.output, "w", newline="", encoding="utf-8") as fh:
-        w = csv.DictWriter(fh, fieldnames=fields + ["run_short"])
+        w = csv.DictWriter(fh, fieldnames=fields + ["run_short", "dada2_id"])
         w.writeheader()
         w.writerows(rows)
     print(f"\n→ {args.output}")
