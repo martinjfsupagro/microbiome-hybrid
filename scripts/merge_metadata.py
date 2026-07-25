@@ -21,6 +21,17 @@ import re
 import sys
 
 
+# Mesures faisant autorité, fournies par le collègue quand le xlsx est en
+# conflit (deux lignes divergentes pour le même individu). Clé : (année sur
+# 2 chiffres, site, individu) → (size_cm, weight_g, sex). Le sexe est repris de
+# la ligne du xlsx dont la taille/poids correspond à la valeur retenue.
+MESURES_CORRIGEES = {
+    ("15", "Jus", "1006"): (15, 41, "X"),
+    ("15", "Jus", "1007"): (17, 51, "M"),
+    ("15", "Jus", "1008"): (16, 43, "X"),
+}
+
+
 def _sex(v):
     """Normalise le sexe : x/X → X (non défini), NA conservé (juvénile)."""
     s = str(v).strip()
@@ -41,9 +52,9 @@ def load_measurements(path):
     homogénéisés) / NA (juvénile).
 
     Un individu peut avoir plusieurs lignes (mesures dupliquées) : par champ, si
-    les valeurs présentes s'accordent on la garde, sinon on la laisse vide. Le
-    conflit est signalé dès qu'un champ diverge. Retourne
-    {clé: (size, weight, sex, conflit)}.
+    les valeurs présentes s'accordent on la garde, sinon on la laisse vide. Un
+    individu de MESURES_CORRIGEES reçoit les valeurs faisant autorité. Retourne
+    {clé: (size, weight, sex, status)} avec status ∈ {ok, conflit, corrige}.
     """
     import openpyxl
     ws = openpyxl.load_workbook(path, read_only=True, data_only=True).active
@@ -70,8 +81,12 @@ def load_measurements(path):
 
     out = {}
     for k, v in by.items():
+        if k in MESURES_CORRIGEES:
+            out[k] = (*MESURES_CORRIGEES[k], "corrige")
+            continue
         conflit = any(len(v[f]) > 1 for f in ("size", "weight", "sex"))
-        out[k] = (one(v["size"]), one(v["weight"]), one(v["sex"]), conflit)
+        out[k] = (one(v["size"]), one(v["weight"]), one(v["sex"]),
+                  "conflit" if conflit else "ok")
     return out
 
 
@@ -136,27 +151,32 @@ def main():
         fields = fields + ["size_cm", "weight_g", "sex"]
     if args.measurements:
         meas = load_measurements(args.measurements)
-        n_ok = n_abs = n_conf = 0
+        n_ok = n_abs = n_conf = n_corr = 0
         for r in bio:
             k = (r["year"][-2:], r["site"], r["individual"])
             hit = meas.get(k)
             if hit is None:
                 n_abs += 1
                 continue
-            size, weight, sex, conflit = hit
+            size, weight, sex, status = hit
             # Affectation champ par champ : un champ qui diverge est resté vide
             # (cf. load_measurements), les autres sont repris. On flague le
             # conflit sans jeter les mesures cohérentes.
             r["size_cm"], r["weight_g"], r["sex"] = size, weight, sex
-            if conflit:
+            if status == "conflit":
                 r["flags"] = ";".join(
                     [f for f in r["flags"].split(";") if f] + ["mesures_conflit"])
                 n_conf += 1
+            elif status == "corrige":
+                r["flags"] = ";".join(
+                    [f for f in r["flags"].split(";") if f] + ["mesures_corrigees"])
+                n_corr += 1
             else:
                 n_ok += 1
         indiv = len({(r["year"][-2:], r["site"], r["individual"]) for r in bio})
-        print(f"\n-- taille/poids/sexe : {n_ok} lignes renseignées, {n_abs} sans "
-              f"mesure, {n_conf} en conflit ({indiv} individus séquencés) --")
+        print(f"\n-- taille/poids/sexe : {n_ok} lignes renseignées, {n_corr} "
+              f"corrigées, {n_abs} sans mesure, {n_conf} en conflit "
+              f"({indiv} individus séquencés) --")
 
     # -- réplicats techniques inter-runs -------------------------------------
     # `extraction` fait partie de la clé : une ré-extraction (`bis`) du même

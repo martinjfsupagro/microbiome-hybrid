@@ -92,11 +92,14 @@ les runs.
 - taille en cm, poids en g ;
 - `sex` : `M` / `F` / `X` (non défini — les `x` et `X` du xlsx homogénéisés) /
   `NA` (juvénile) ;
-- 2070 lignes renseignées, 81 sans mesure (individus séquencés absents du xlsx),
-  36 en conflit ;
-- **conflits** : 3 individus (`15Jus1006/1007/1008`) ont deux jeux de mesures
-  divergents dans le xlsx. Le champ qui diverge est laissé vide et le flag
-  `mesures_conflit` est posé, plutôt que de choisir à l'aveugle ;
+- 2070 lignes renseignées, 36 corrigées, 81 sans mesure (individus séquencés
+  absents du xlsx), 0 en conflit ;
+- **conflits résolus** : 3 individus (`15Jus1006/1007/1008`) avaient deux jeux
+  de mesures divergents dans le xlsx. Valeurs faisant autorité fournies par le
+  collègue (2026-07-25), saisies dans `MESURES_CORRIGEES` (`merge_metadata.py`),
+  flag `mesures_corrigees`. Le mécanisme reste en place si d'autres conflits
+  apparaissent (un champ divergent non corrigé serait laissé vide + flag
+  `mesures_conflit`) ;
 - le xlsx porte aussi `Species` (Cn/Pt/Ch/**Hy** = hybride), **non repris** : le
   statut taxonomique fin des `Ch` est en cours de caractérisation et sera intégré
   au fichier dès qu'il sera disponible.
