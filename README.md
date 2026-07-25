@@ -139,10 +139,47 @@ Seuls ces deux cas ont été renommés. Les casses de site (`15BUe`→`Bue`), le
 séparateurs et le suffixe `bis` **ne sont pas** touchés dans les fichiers : ils
 restent régularisés dans les seules métadonnées.
 
+## Analyse (pipeline 16S V4)
+Chaîne adaptée du projet **azelie** (charpente SLURM/Singularity) et du projet
+**Apron** (retrait du 12S, même assay). Marqueur unique 16S V4, **3 runs** traités
+séparément puis fusionnés. Amorces Caporaso 515F/806R, **déjà retirées** des
+lectures (protocole Schloss : les amorces sont les amorces de séquençage) — donc
+pas d'étape de retrait 5', pas d'adaptateur Nextera.
+
+```
+01  QC          FastQC + MultiQC par run
+02  retrait 12S cutadapt : le 12S hôte co-amplifié (15-67 % des reads) est
+                retiré par la LONGUEUR (insert 12S ~190 pb vs V4 ~253 pb) ;
+                too-short conservé (signal hôte). Par run.
+04  DADA2       filterAndTrim truncLen c(230,190) + learnErrors PAR RUN + dada +
+                mergePairs → seqtab_<run>.rds (brut). Par run.
+05  fusion+tax  mergeSequenceTables (échantillons suffixés __run → 2304 colonnes)
+                + removeBimeraDenovo + assignTaxonomy SILVA + filtre
+                Mitochondria/Chloroplast/Eukaryota.
+```
+Lancement (chaque lanceur soumet un job par run, exige un arbre git propre) :
+```bash
+cd ~/work/projects/microbiome-hybrid
+bash scripts/01-quality_check_launcher.sh          # QC (facultatif, en //)
+bash scripts/02-remove_12S_launcher.sh             # → note les 3 job IDs
+bash scripts/04-dada2_launcher.sh --after J1:J2:J3 # afterok, ordre = durance1/2/3
+sbatch scripts/05-merge_taxonomy.sh                # après les 3 dada2
+```
+Choix clés (mesurés sur les données, voir en-tête des scripts) : `-O 10`,
+`--minimum-length 240` pour le 12S ; `learnErrors` par run car 3 séquençages
+distincts ; chimères sur la table fusionnée. Réf. taxonomique SILVA à renseigner
+dans `config/project.env` (`SILVA_TRAIN`) — absente pour l'instant, l'étape 05
+produit alors la table d'ASV sans taxonomie.
+
 ## Structure
 ```
 microbiome-hybrid/
 ├── scripts/
+│   ├── 01-quality_check_{launcher,worker}.sh  ← FastQC/MultiQC par run
+│   ├── 02-remove_12S_{launcher,worker}.sh     ← retrait 12S cutadapt par run
+│   ├── 04-dada2_{launcher,worker}.sh          ← DADA2 par run
+│   ├── 05-merge_taxonomy.sh                   ← fusion + chimères + taxonomie
+│   ├── lib_samples.sh      ← fonctions partagées (appariement R1/R2)
 │   ├── job_template.sh     ← copier pour chaque nouveau job
 │   ├── check_run.sh        ← vérifier un run
 │   ├── build_metadata.py   ← métadonnées d'un run
