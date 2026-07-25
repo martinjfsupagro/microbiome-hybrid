@@ -81,21 +81,25 @@ terrain (`TAXON_MANUEL` dans `build_metadata.py`, flag
 l'individu retrouve son jeu 01/02/03/05. Corrigé via `TISSU_CORRIGE`
 (`build_metadata.py`), flag `tissu_corrige`.
 
-### Taille / poids (HotuToxo_taillepoids.xlsx)
-Colonnes `size` et `weight` ajoutées à `samples_all.csv` par `merge_metadata.py`
-(option `--measurements`), depuis `metadata/HotuToxo_taillepoids.xlsx`. Ce sont
-des mesures **par individu** : jointes sur (année, site, individu) — **sans** le
-taxon, puisque le poisson est le même quelle que soit son étiquette — et
-propagées à tous ses tissus et tous les runs.
+### Taille / poids / sexe (HotuToxo_taillepoids.xlsx)
+Colonnes `size_cm`, `weight_g` et `sex` ajoutées à `samples_all.csv` par
+`merge_metadata.py` (option `--measurements`), depuis
+`metadata/HotuToxo_taillepoids.xlsx`. Ce sont des données **par individu** :
+jointes sur (année, site, individu) — **sans** le taxon, puisque le poisson est
+le même quelle que soit son étiquette — et propagées à tous ses tissus et tous
+les runs.
 
+- taille en cm, poids en g ;
+- `sex` : `M` / `F` / `X` (non défini — les `x` et `X` du xlsx homogénéisés) /
+  `NA` (juvénile) ;
 - 2070 lignes renseignées, 81 sans mesure (individus séquencés absents du xlsx),
   36 en conflit ;
 - **conflits** : 3 individus (`15Jus1006/1007/1008`) ont deux jeux de mesures
-  divergents dans le xlsx. On laisse `size`/`weight` vides et on pose le flag
-  `mesures_conflit` plutôt que de choisir à l'aveugle ;
-- le xlsx porte aussi `Species` (Cn/Pt/Ch/**Hy** = hybride) et `Sex`, non repris
-  ici : le taxon fin et le statut hybride restent à intégrer le jour où on
-  exploitera ces individus.
+  divergents dans le xlsx. Le champ qui diverge est laissé vide et le flag
+  `mesures_conflit` est posé, plutôt que de choisir à l'aveugle ;
+- le xlsx porte aussi `Species` (Cn/Pt/Ch/**Hy** = hybride), **non repris** : le
+  statut taxonomique fin des `Ch` est en cours de caractérisation et sera intégré
+  au fichier dès qu'il sera disponible.
 
 ### Renommage des fastq bruts
 Les corrections d'espèce (1036–1043) et de tissu (04→05) ont aussi été
@@ -129,7 +133,7 @@ microbiome-hybrid/
 ├── data/                   ← un dossier par lot
 ├── metadata/
 │   ├── samples_durance{1,2,3}.csv
-│   ├── samples_all.csv     ← fichier combiné, 2304 lignes (+ size/weight)
+│   ├── samples_all.csv     ← fichier combiné, 2304 lignes (+ size_cm/weight_g/sex)
 │   ├── HotuToxo_taillepoids.xlsx  ← mesures par individu (source)
 │   └── rename_manifest.csv ← ancien → nouveau nom de fastq
 ├── results/                ← {jobname}_{jobid}/ par run

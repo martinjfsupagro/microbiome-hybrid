@@ -21,23 +21,36 @@ import re
 import sys
 
 
+def _sex(v):
+    """Normalise le sexe : x/X → X (non défini), NA conservé (juvénile)."""
+    s = str(v).strip()
+    if s.lower() == "x":
+        return "X"
+    return s  # M, F, NA
+
+
 def load_measurements(path):
-    """Indexe taille/poids par individu depuis HotuToxo_taillepoids.xlsx.
+    """Indexe taille/poids/sexe par individu depuis HotuToxo_taillepoids.xlsx.
 
     Clé : (année sur 2 chiffres, site, individu), SANS le taxon — le code
     séquençage `Ch` est un chondrostome non résolu, l'espèce du xlsx peut donc
-    différer sur le même poisson. La taille et le poids, eux, sont propres au
-    poisson : la jointure se fait sur son identité, pas sur son étiquette.
+    différer sur le même poisson. Taille, poids et sexe sont propres au poisson :
+    la jointure se fait sur son identité, pas sur son étiquette.
 
-    Un individu peut avoir plusieurs lignes (mesures dupliquées) : si elles
-    s'accordent (aux valeurs vides près) on garde la valeur ; sinon on la laisse
-    vide et on signalera le conflit. Retourne {clé: (size, weight, conflit)}.
+    Taille en cm, poids en g. Sexe : M / F / X (non défini, `x` et `X` du xlsx
+    homogénéisés) / NA (juvénile).
+
+    Un individu peut avoir plusieurs lignes (mesures dupliquées) : par champ, si
+    les valeurs présentes s'accordent on la garde, sinon on la laisse vide. Le
+    conflit est signalé dès qu'un champ diverge. Retourne
+    {clé: (size, weight, sex, conflit)}.
     """
     import openpyxl
     ws = openpyxl.load_workbook(path, read_only=True, data_only=True).active
     rows = list(ws.iter_rows(values_only=True))[1:]  # saute l'en-tête
 
-    by = collections.defaultdict(lambda: {"size": set(), "weight": set()})
+    by = collections.defaultdict(lambda: {"size": set(), "weight": set(),
+                                           "sex": set()})
     for r in rows:
         if not r or r[0] is None:
             continue
@@ -49,13 +62,16 @@ def load_measurements(path):
             by[k]["size"].add(r[6])
         if isinstance(r[7], (int, float)):
             by[k]["weight"].add(r[7])
+        if r[8] is not None and str(r[8]).strip():
+            by[k]["sex"].add(_sex(r[8]))
+
+    def one(s):
+        return (next(iter(s)) if len(s) == 1 else "")
 
     out = {}
     for k, v in by.items():
-        conflit = len(v["size"]) > 1 or len(v["weight"]) > 1
-        size = next(iter(v["size"])) if len(v["size"]) == 1 else ""
-        weight = next(iter(v["weight"])) if len(v["weight"]) == 1 else ""
-        out[k] = (("", "", True) if conflit else (size, weight, False))
+        conflit = any(len(v[f]) > 1 for f in ("size", "weight", "sex"))
+        out[k] = (one(v["size"]), one(v["weight"]), one(v["sex"]), conflit)
     return out
 
 
@@ -112,12 +128,12 @@ def main():
     print(f"\ntotal : {len(rows)} lignes, {len(bio)} biologiques, "
           f"{len(runs)} runs")
 
-    # -- taille / poids par individu (optionnel) -----------------------------
+    # -- taille / poids / sexe par individu (optionnel) ----------------------
     # Mesures propres au poisson : appliquées à tous ses tissus et tous les runs.
     for r in rows:
-        r["size"], r["weight"] = "", ""
+        r["size_cm"], r["weight_g"], r["sex"] = "", "", ""
     if fields is not None:
-        fields = fields + ["size", "weight"]
+        fields = fields + ["size_cm", "weight_g", "sex"]
     if args.measurements:
         meas = load_measurements(args.measurements)
         n_ok = n_abs = n_conf = 0
@@ -127,16 +143,19 @@ def main():
             if hit is None:
                 n_abs += 1
                 continue
-            size, weight, conflit = hit
+            size, weight, sex, conflit = hit
+            # Affectation champ par champ : un champ qui diverge est resté vide
+            # (cf. load_measurements), les autres sont repris. On flague le
+            # conflit sans jeter les mesures cohérentes.
+            r["size_cm"], r["weight_g"], r["sex"] = size, weight, sex
             if conflit:
                 r["flags"] = ";".join(
                     [f for f in r["flags"].split(";") if f] + ["mesures_conflit"])
                 n_conf += 1
-                continue
-            r["size"], r["weight"] = size, weight
-            n_ok += 1
+            else:
+                n_ok += 1
         indiv = len({(r["year"][-2:], r["site"], r["individual"]) for r in bio})
-        print(f"\n-- taille/poids : {n_ok} lignes renseignées, {n_abs} sans "
+        print(f"\n-- taille/poids/sexe : {n_ok} lignes renseignées, {n_abs} sans "
               f"mesure, {n_conf} en conflit ({indiv} individus séquencés) --")
 
     # -- réplicats techniques inter-runs -------------------------------------
