@@ -37,3 +37,9 @@ __pycache__/
 
 # Metadonnees derivees : versionnees (petit, tracable)
 !metadata/
+
+# Zymo refs : gros/retelechargeables ignores, petit fasta+README versionnes
+refs/zymo_mock/OLD_ZR160406/
+refs/zymo_mock/*.zip
+refs/zymo_mock/zymo_db.*
+refs/mock_validation/
