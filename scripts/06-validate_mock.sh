@@ -68,6 +68,7 @@ json.dump({"mock_names":mock_names,"abund":abund}, open(f"{out}/_mock_abund.json
 PY
 
 echo "[2/4] blastn des ASV mock contre la reference Zymo"
+module load bioinfo-ifb
 module load blast/2.13.0
 makeblastdb -in "$ZYMO_REF" -dbtype nucl -out "$OUT/zymo_db" >/dev/null
 blastn -query "$OUT/mock_asvs.fasta" -db "$OUT/zymo_db" \
