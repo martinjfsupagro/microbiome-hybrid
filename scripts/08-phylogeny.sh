@@ -1,6 +1,7 @@
 #!/bin/bash -l
 #SBATCH --job-name=phylogeny
 #SBATCH --account=ondemand@biomics
+#SBATCH --qos=cpu-ondemand-long
 #SBATCH --partition=cpu-ondemand
 #SBATCH --time=12:00:00
 #SBATCH --cpus-per-task=32

@@ -1,6 +1,7 @@
 #!/bin/bash -l
 #SBATCH --job-name=qc_depth
 #SBATCH --account=ondemand@biomics
+#SBATCH --qos=cpu-ondemand-long
 #SBATCH --partition=cpu-ondemand
 #SBATCH --time=02:00:00
 #SBATCH --cpus-per-task=8
