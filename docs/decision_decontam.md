@@ -9,13 +9,15 @@ La table d'analyse de référence après décontamination est **le seuil deconta
 
 ## Méthode
 - Paquet : decontam 1.30.0 (Davis et al. 2018), méthode `prevalence`.
-- Témoins négatifs : le manuscrit d'origine décrit le plan de contrôles PAR LOT —
-  « four extraction negative controls and eight amplification negative controls »
-  (soit 4 + 8 = 12 par lot). Dans les données Durance, ces contrôles correspondent
-  aux 4 blancs d'extraction par tissu (`Blanc-*`) et aux 8 témoins PCR (`T-1..T-8`),
-  chacun séquencé dans les 3 runs → **12 blancs d'extraction + 24 témoins PCR = 36
-  échantillons-contrôles au total** (vérifié dans la table). C'est le manuscrit qui
-  confirme la NATURE (extraction vs PCR) ; le total de 36 est propre à ce jeu (×3 runs).
+- Témoins négatifs : le manuscrit d'origine indique la NATURE des contrôles
+  négatifs de son projet de séquençage (718 échantillons) — « four extraction
+  negative controls and eight amplification negative controls » — c'est-à-dire
+  des témoins négatifs d'EXTRACTION et des témoins négatifs de PCR (le manuscrit
+  ne donne pas de découpage par lot ni par tissu). Dans les données Durance, on
+  observe (vérifié dans la table) 4 blancs d'extraction (`Blanc-Caudal/Branchie/
+  Midgut/Hindgut`) et 8 témoins PCR (`T-1..T-8`), chacun présent dans les 3 runs,
+  soit **12 blancs d'extraction + 24 témoins PCR = 36 échantillons-contrôles** au
+  total. On les utilise comme jeu négatif de decontam (`neg = blank | temoin`).
 - `batch` = run de séquençage (durance1/2/3).
 - Mocks (témoins positifs) et puits vides `empty` (crosstalk) exclus de l'analyse.
 
