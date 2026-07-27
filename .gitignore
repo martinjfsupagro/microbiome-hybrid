@@ -43,3 +43,4 @@ refs/zymo_mock/OLD_ZR160406/
 refs/zymo_mock/*.zip
 refs/zymo_mock/zymo_db.*
 refs/mock_validation/
+metadata/samples_all_with_sites.csv

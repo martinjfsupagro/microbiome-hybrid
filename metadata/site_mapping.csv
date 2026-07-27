@@ -1,0 +1,10 @@
+site_code,site_nom,riviere,role_propose,annees_sequencees,statut
+Caa,canal,Durance,allopatrie,2015,confirmé André
+Ain,Ain,Ain,allopatrie,2014,confirmé André (Ain = Ain 2014 + Cab 2015)
+Cab,Ain,Ain,allopatrie,2015,confirmé André (Ain 2015)
+Bue,Büech,Durance,sympatrie+hyb,"2014,2015",nom confirmé ; effectif à réconcilier (en attente André)
+Jus,St-Just,Ardèche,sympatrie+hyb,2015,confirmé (rivière/effectif)
+Bau,Baume,Ardèche,asym. Toxo,2015,confirmé (rivière/effectif)
+Avi,Avignon,Durance,asym. Hotu,"2014,2015",confirmé (effectif)
+Man,Manosque,Durance,à statuer,2014,nom confirmé André ; hors tableau 6 pops — rôle à définir
+Per,?,?,à statuer,"2014,2015",non renseigné — nom/rôle en attente André
