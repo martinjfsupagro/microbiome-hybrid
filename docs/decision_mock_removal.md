@@ -4,7 +4,7 @@
 Pour les 20 echantillons `mock_contaminated` (vrais poissons a 4 tissus dont UN puits-
 tissu est contamine par de l'ADN mock ; voir docs/decision_mock_samples.md), la
 strategie retenue est **le retrait des ASV mock puis re-seuillage**, PAS l'exclusion
-de l'echantillon. Distinct des 6 `probable_mock` (Cab1021/Cab1022), qui, eux, sont
+de l'echantillon. Distinct des 6 `mock_confirme_andre` (Cab1021/Cab1022), confirmés mocks par André, qui, eux, sont
 exclus du biologique.
 
 /!\ AUCUNE TABLE N'EST GENEREE A CE STADE. On fige la regle ; l'application attend le

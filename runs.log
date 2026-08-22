@@ -23,3 +23,11 @@
 2026-07-25T21:55:22+02:00 | dada2_merge_tax_8736698 | FAIL | 545e07e | slurm_script | exit 137
 2026-07-25T21:57:50+02:00 | dada2_merge_tax_8736998 | START | e0ecaea | slurm_script | 
 2026-07-25T22:15:36+02:00 | dada2_merge_tax_8736998 | END | e0ecaea | slurm_script | 
+2026-07-26T17:35:05+02:00 | validate_mock_8741736 | END | e944449 | 06-validate_mock.sh | mock validation Zymo
+2026-07-27T16:05:01+02:00 | decontam_8753776 | START | 4fad253 | 07-decontam.sh | prevalence 36 neg
+2026-07-27T16:07:03+02:00 | decontam_8753776 | END | 4fad253 | 07-decontam.sh | prevalence 36 neg
+2026-07-27T17:10:02+02:00 | phylogeny_8754563 | START | e8c99cb | 08-phylogeny.sh | mafft-fasttree ASV decontam
+2026-07-27T17:14:05+02:00 | qc_depth_8754564 | END | e8c99cb | 09-qc_depth.sh | rarefaction table p01
+2026-07-27T17:21:14+02:00 | phylogeny_8754563 | END | e8c99cb | 08-phylogeny.sh | leaves=44256
+2026-07-27T21:00:02+02:00 | crosstalk_8756902 | START | cf9d3e0 | 10-crosstalk.sh | empties+mock tracers
+2026-07-27T21:00:22+02:00 | crosstalk_8756902 | END | cf9d3e0 | 10-crosstalk.sh | empties+mock tracers

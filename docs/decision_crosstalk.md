@@ -10,7 +10,7 @@ Puits vides (67 ; aucune librairie chargée → toute lecture = fuite pure) :
 → Le saut d'index est très en-dessous du seuil de préoccupation usuel (~0,1–1 %).
   Aucun filtrage de bruit de fond nécessaire à ce titre. Chimie de séquençage propre.
 
-## 2) Traceurs mock = RÉVÈLENT DES ÉCHANTILLONS SUSPECTS (≠ crosstalk)
+## 2) Traceurs mock = RÉVÈLENT DEUX MOCKS MAL ÉTIQUETÉS (confirmé André ; ≠ crosstalk)
 Les 10 ASV des 8 taxons Zymo (exogènes) apparaissent hors des puits mock :
 68 % des lectures mock sont "hors mock", dans 942 échantillons biologiques.
 MAIS ce n'est PAS du saut d'index diffus (qui serait à bas bruit, cf. §1) :
@@ -31,7 +31,7 @@ G11/H11, plaques adjacentes). Un saut d'index réel ne produit jamais un
 échantillon à 99 % mock.
 
 ## ACTION REQUISE (à remonter à André)
-- **15Cab1021*, 15Cab1022*** (Cab = Ain 2015 dans site_mapping.csv) : vérifier
+- **15Cab1021*, 15Cab1022*** (Cab = Ain 2015) : CONFIRMÉ mocks par André (2026-07-27) — exclus du biologique, Ain 2015 = 19 poissons. Ancienne action de vérification :
   s'il s'agit de mocks mal annotés → à exclure des analyses biologiques ou à
   ré-identifier. Idem **14Man1022Ch05A*** (Manosque).
 - Ces échantillons sont indépendants de la question hybride mais fausseraient

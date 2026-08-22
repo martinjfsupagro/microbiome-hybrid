@@ -6,8 +6,8 @@ L'examen PAR TISSU sépare deux cas de nature différente. **samples_all.csv n'e
 modifié** ; une table de jointure `metadata/sample_qc_flags.csv` (clé = dada2_id)
 porte l'annotation, sur le même principe que site_mapping.csv.
 
-## Cas 1 — probable_mock : 6 échantillons → NE PAS compter comme biologiques
-Hypothèse retenue : ce sont des puits mock mal étiquetés, pas des poissons.
+## Cas 1 — mock_confirme_andre : 6 échantillons (2 individus × 3 runs) = MOCKS confirmés par André
+CONFIRMÉ par André (réunion 2026-07-27) : ce sont des puits mock mal étiquetés (plaque 1, série index 711), pas des poissons. Ain 2015 : 21 → 19 poissons ; total biologique 183 → 181.
 Preuve : ces "individus" n'ont **qu'un seul échantillon (caudale)** — aucun tissu
 digestif ni branchial (un vrai poisson du design = 4 tissus) — et sont à 70-99 %
 lectures mock, en puits G11/H11 index série 711 (co-localisés avec les vrais mocks).
@@ -25,14 +25,14 @@ Bue1004, Bue1011, Man1022, Ain1043, Per2011, Caa1018, Avi1001.
 prudence dans les analyses par tissu ; le reste du poisson est exploitable.
 
 ## Seuils
-probable_mock    : frac_mock >= 0,70 (les 6 tombent tous à tissu unique — cohérent)
+mock_confirme_andre : Cab1021 & Cab1022 (frac 70-99 %, tissu unique) — confirmés MOCKS par André
 mock_contaminated: 0,20 <= frac_mock < 0,70 sur un puits d'un individu à 4 tissus
 Le trou net entre 0 % (tissus digestifs des vrais poissons) et 70-99 % (puits Cab
 isolés) rend la coupure robuste ; la zone 20-65 % correspond sans exception à des
 poissons complets par ailleurs propres.
 
 ## À confirmer par André / l'expérimentateur
-- Cab1021/Cab1022 : étaient-ce des puits mock sur la plaque 1 (série index 711) ?
+- Cab1021/Cab1022 : CONFIRMÉ mocks par André (plaque 1, série index 711). Résolu.
 - Origine de la contamination des puits caudale (Bue*, Ain1043) : débordement de puits ?
 
 ## Reproductibilité

@@ -29,7 +29,7 @@ seuls les i5 et la flowcell changent. Chaque échantillon est donc présent **en
 triple**. C'est une bonne nouvelle : l'effet « run de séquençage » peut être
 estimé directement et n'est confondu avec aucun facteur biologique (voir §7).
 
-**Plan réalisé au séquençage** (183 poissons distincts) :
+**Plan réalisé au séquençage** (183 échantillons "poisson" séquencés ; 181 vrais poissons après exclusion de Cab1021/Cab1022 = mocks confirmés André 2026-07-27) :
 
 | Facteur | Détail |
 |---|---|
