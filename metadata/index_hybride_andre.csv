@@ -1,0 +1,182 @@
+individual_id,site_code,site_nom,riviere,role_population,annee,individual,taxon_code_actuel,espece_actuelle,sexe,taille_cm,poids_g,n_tissus_sequences,tissus,index_hybride,index_hybride_source
+2014_Ain_1001,Ain,Ain,Ain,allopatrie,2014,1001,Cn,Chondrostoma nasus,M,30,419,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2014_Ain_1038,Ain,Ain,Ain,allopatrie,2014,1038,Pt,Parachondrostoma toxostoma,X,10.5,10,3,branchie;caudale;hindgut,1,connu (Cn=0/Pt=1)
+2015_Cab_1003,Cab,Ain,Ain,allopatrie,2015,1003,Ch,Chondrostoma sp.,M,19,86,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Cab_1011,Cab,Ain,Ain,allopatrie,2015,1011,Ch,Chondrostoma sp.,,,,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Cab_1019,Cab,Ain,Ain,allopatrie,2015,1019,Ch,Chondrostoma sp.,M,18,69,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Avi_1008,Avi,Avignon,Durance,asym. Hotu,2014,1008,Cn,Chondrostoma nasus,X,12.5,19,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2014_Bue_1005,Bue,Büech,Durance,sympatrie+hyb,2014,1005,Cn,Chondrostoma nasus,NA,29,167,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2014_Bue_1015,Bue,Büech,Durance,sympatrie+hyb,2014,1015,Ch,Chondrostoma sp.,NA,12.5,15,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Man_1011,Man,Manosque,Durance,à statuer,2014,1011,Ch,Chondrostoma sp.,M,13.5,29,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Man_1019,Man,Manosque,Durance,à statuer,2014,1019,Ch,Chondrostoma sp.,X,9.5,11,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Per_2011,Per,?,?,à statuer,2014,2011,Ch,Chondrostoma sp.,F,16,61,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Ain_1002,Ain,Ain,Ain,allopatrie,2014,1002,Cn,Chondrostoma nasus,M,30,399,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2014_Ain_1039,Ain,Ain,Ain,allopatrie,2014,1039,Pt,Parachondrostoma toxostoma,F,20,83,4,branchie;caudale;hindgut;midgut,1,connu (Cn=0/Pt=1)
+2015_Cab_1004,Cab,Ain,Ain,allopatrie,2015,1004,Ch,Chondrostoma sp.,M,42.5,970,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Cab_1012,Cab,Ain,Ain,allopatrie,2015,1012,Ch,Chondrostoma sp.,F,18,67,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Avi_1001,Avi,Avignon,Durance,asym. Hotu,2014,1001,Cn,Chondrostoma nasus,M,29.5,315,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2014_Avi_1036,Avi,Avignon,Durance,asym. Hotu,2014,1036,Cn,Chondrostoma nasus,M,27,225,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2014_Bue_1006,Bue,Büech,Durance,sympatrie+hyb,2014,1006,Cn,Chondrostoma nasus,NA,27,182,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2014_Bue_1016,Bue,Büech,Durance,sympatrie+hyb,2014,1016,Ch,Chondrostoma sp.,NA,18.5,44,3,caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Man_1012,Man,Manosque,Durance,à statuer,2014,1012,Ch,Chondrostoma sp.,X,11.5,15,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Man_1020,Man,Manosque,Durance,à statuer,2014,1020,Ch,Chondrostoma sp.,X,9.5,11,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Per_2012,Per,?,?,à statuer,2014,2012,Ch,Chondrostoma sp.,M,15,48,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Ain_1011,Ain,Ain,Ain,allopatrie,2014,1011,Pt,Parachondrostoma toxostoma,M,15,39,4,branchie;caudale;hindgut;midgut,1,connu (Cn=0/Pt=1)
+2014_Ain_1040,Ain,Ain,Ain,allopatrie,2014,1040,Pt,Parachondrostoma toxostoma,F,18.5,73,4,branchie;caudale;hindgut;midgut,1,connu (Cn=0/Pt=1)
+2015_Cab_1005,Cab,Ain,Ain,allopatrie,2015,1005,Ch,Chondrostoma sp.,F,43,1252,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Cab_1013,Cab,Ain,Ain,allopatrie,2015,1013,Ch,Chondrostoma sp.,F,22,113,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Avi_1002,Avi,Avignon,Durance,asym. Hotu,2014,1002,Cn,Chondrostoma nasus,X,10,10,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2014_Avi_1037,Avi,Avignon,Durance,asym. Hotu,2014,1037,Cn,Chondrostoma nasus,M,35,572,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2014_Bue_1007,Bue,Büech,Durance,sympatrie+hyb,2014,1007,Cn,Chondrostoma nasus,NA,26,149,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2014_Bue_1017,Bue,Büech,Durance,sympatrie+hyb,2014,1017,Ch,Chondrostoma sp.,NA,13.5,16,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Man_1013,Man,Manosque,Durance,à statuer,2014,1013,Ch,Chondrostoma sp.,X,11.5,15,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Man_1021,Man,Manosque,Durance,à statuer,2014,1021,Ch,Chondrostoma sp.,M,11,14,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Per_2013,Per,?,?,à statuer,2014,2013,Ch,Chondrostoma sp.,M,15,46,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Ain_1012,Ain,Ain,Ain,allopatrie,2014,1012,Pt,Parachondrostoma toxostoma,F,17.5,62,4,branchie;caudale;hindgut;midgut,1,connu (Cn=0/Pt=1)
+2014_Ain_1041,Ain,Ain,Ain,allopatrie,2014,1041,Pt,Parachondrostoma toxostoma,F,20,102,4,branchie;caudale;hindgut;midgut,1,connu (Cn=0/Pt=1)
+2015_Cab_1006,Cab,Ain,Ain,allopatrie,2015,1006,Ch,Chondrostoma sp.,F,32.5,484,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Cab_1014,Cab,Ain,Ain,allopatrie,2015,1014,Ch,Chondrostoma sp.,F,18.5,74,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Avi_1003,Avi,Avignon,Durance,asym. Hotu,2014,1003,Cn,Chondrostoma nasus,M,27.5,259,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2014_Avi_1038,Avi,Avignon,Durance,asym. Hotu,2014,1038,Cn,Chondrostoma nasus,M,34.5,525,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2014_Bue_1008,Bue,Büech,Durance,sympatrie+hyb,2014,1008,Cn,Chondrostoma nasus,NA,23.5,115,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2014_Bue_1018,Bue,Büech,Durance,sympatrie+hyb,2014,1018,Ch,Chondrostoma sp.,NA,15.5,29,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Man_1014,Man,Manosque,Durance,à statuer,2014,1014,Ch,Chondrostoma sp.,M,11.5,15,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Man_1022,Man,Manosque,Durance,à statuer,2014,1022,Ch,Chondrostoma sp.,X,10,12,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Per_2014,Per,?,?,à statuer,2014,2014,Ch,Chondrostoma sp.,M,13.5,34,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Ain_1013,Ain,Ain,Ain,allopatrie,2014,1013,Pt,Parachondrostoma toxostoma,M,14,32,4,branchie;caudale;hindgut;midgut,1,connu (Cn=0/Pt=1)
+2014_Ain_1042,Ain,Ain,Ain,allopatrie,2014,1042,Pt,Parachondrostoma toxostoma,F,13.5,28,4,branchie;caudale;hindgut;midgut,1,connu (Cn=0/Pt=1)
+2015_Cab_1007,Cab,Ain,Ain,allopatrie,2015,1007,Ch,Chondrostoma sp.,M,26,214,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Cab_1015,Cab,Ain,Ain,allopatrie,2015,1015,Ch,Chondrostoma sp.,M,17.5,68,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Avi_1004,Avi,Avignon,Durance,asym. Hotu,2014,1004,Cn,Chondrostoma nasus,M,25.5,228,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2014_Bue_1001,Bue,Büech,Durance,sympatrie+hyb,2014,1001,Cn,Chondrostoma nasus,,,,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2014_Bue_1011,Bue,Büech,Durance,sympatrie+hyb,2014,1011,Ch,Chondrostoma sp.,M,14.5,22,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Bue_1019,Bue,Büech,Durance,sympatrie+hyb,2014,1019,Ch,Chondrostoma sp.,NA,12.5,15,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Man_1015,Man,Manosque,Durance,à statuer,2014,1015,Ch,Chondrostoma sp.,X,11,15,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Per_1011,Per,?,?,à statuer,2014,1011,Ch,Chondrostoma sp.,X,13.5,29.5,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Per_2015,Per,?,?,à statuer,2014,2015,Ch,Chondrostoma sp.,M,15,43,3,branchie;caudale;midgut,,A_REMPLIR_ANDRE
+2014_Ain_1014,Ain,Ain,Ain,allopatrie,2014,1014,Pt,Parachondrostoma toxostoma,M,15,38,4,branchie;caudale;hindgut;midgut,1,connu (Cn=0/Pt=1)
+2014_Ain_1043,Ain,Ain,Ain,allopatrie,2014,1043,Pt,Parachondrostoma toxostoma,F,13,23,4,branchie;caudale;hindgut;midgut,1,connu (Cn=0/Pt=1)
+2015_Cab_1008,Cab,Ain,Ain,allopatrie,2015,1008,Ch,Chondrostoma sp.,M,47,1359,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Cab_1016,Cab,Ain,Ain,allopatrie,2015,1016,Ch,Chondrostoma sp.,M,18,73,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Avi_1005,Avi,Avignon,Durance,asym. Hotu,2014,1005,Cn,Chondrostoma nasus,X,12,18,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2014_Bue_1002,Bue,Büech,Durance,sympatrie+hyb,2014,1002,Cn,Chondrostoma nasus,,,,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2014_Bue_1012,Bue,Büech,Durance,sympatrie+hyb,2014,1012,Ch,Chondrostoma sp.,M,18.5,43,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Man_1001,Man,Manosque,Durance,à statuer,2014,1001,Cn,Chondrostoma nasus,X,13,27,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2014_Man_1016,Man,Manosque,Durance,à statuer,2014,1016,Ch,Chondrostoma sp.,X,11.5,16,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Per_1012,Per,?,?,à statuer,2014,1012,Ch,Chondrostoma sp.,X,12.5,23,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Ain_1036,Ain,Ain,Ain,allopatrie,2014,1036,Cn,Chondrostoma nasus,M,33,495,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2015_Cab_1001,Cab,Ain,Ain,allopatrie,2015,1001,Ch,Chondrostoma sp.,F,50,1467,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Cab_1009,Cab,Ain,Ain,allopatrie,2015,1009,Ch,Chondrostoma sp.,F,42,1047,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Cab_1017,Cab,Ain,Ain,allopatrie,2015,1017,Ch,Chondrostoma sp.,M,17,55,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Avi_1006,Avi,Avignon,Durance,asym. Hotu,2014,1006,Cn,Chondrostoma nasus,X,11,13,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2014_Bue_1003,Bue,Büech,Durance,sympatrie+hyb,2014,1003,Cn,Chondrostoma nasus,NA,18,39,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2014_Bue_1013,Bue,Büech,Durance,sympatrie+hyb,2014,1013,Ch,Chondrostoma sp.,NA,13.5,15,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Man_1002,Man,Manosque,Durance,à statuer,2014,1002,Cn,Chondrostoma nasus,M,14.5,40,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2014_Man_1017,Man,Manosque,Durance,à statuer,2014,1017,Ch,Chondrostoma sp.,X,12,19,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Per_1013,Per,?,?,à statuer,2014,1013,Ch,Chondrostoma sp.,,,,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Ain_1037,Ain,Ain,Ain,allopatrie,2014,1037,Cn,Chondrostoma nasus,F,39.5,857,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2015_Cab_1002,Cab,Ain,Ain,allopatrie,2015,1002,Ch,Chondrostoma sp.,F,50,1712,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Cab_1010,Cab,Ain,Ain,allopatrie,2015,1010,Ch,Chondrostoma sp.,M,40,822,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Cab_1018,Cab,Ain,Ain,allopatrie,2015,1018,Ch,Chondrostoma sp.,M,19,80,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Avi_1007,Avi,Avignon,Durance,asym. Hotu,2014,1007,Cn,Chondrostoma nasus,X,10,11,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2014_Bue_1004,Bue,Büech,Durance,sympatrie+hyb,2014,1004,Cn,Chondrostoma nasus,NA,18.5,43,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2014_Bue_1014,Bue,Büech,Durance,sympatrie+hyb,2014,1014,Ch,Chondrostoma sp.,NA,13,16,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Man_1010,Man,Manosque,Durance,à statuer,2014,1010,Cn,Chondrostoma nasus,X,11.5,17,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2014_Man_1018,Man,Manosque,Durance,à statuer,2014,1018,Ch,Chondrostoma sp.,X,11,15,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2014_Per_1014,Per,?,?,à statuer,2014,1014,Ch,Chondrostoma sp.,M,13.5,32,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bau_1001,Bau,Baume,Ardèche,asym. Toxo,2015,1001,Ch,Chondrostoma sp.,F,21.5,100,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bau_1009,Bau,Baume,Ardèche,asym. Toxo,2015,1009,Ch,Chondrostoma sp.,F,22,107,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bau_1017,Bau,Baume,Ardèche,asym. Toxo,2015,1017,Ch,Chondrostoma sp.,M,17,60,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bau_1025,Bau,Baume,Ardèche,asym. Toxo,2015,1025,Ch,Chondrostoma sp.,M,18,66,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Jus_1008,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1008,Ch,Chondrostoma sp.,X,16,43,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Jus_1016,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1016,Ch,Chondrostoma sp.,X,15,38,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Caa_1005,Caa,canal,Durance,allopatrie,2015,1005,Ch,Chondrostoma sp.,X,13,21,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Caa_1013,Caa,canal,Durance,allopatrie,2015,1013,Ch,Chondrostoma sp.,M,16.5,44,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Avi_1001,Avi,Avignon,Durance,asym. Hotu,2015,1001,Cn,Chondrostoma nasus,M,34.5,563,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2015_Avi_1009,Avi,Avignon,Durance,asym. Hotu,2015,1009,Cn,Chondrostoma nasus,X,12.5,22,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2015_Bue_1004,Bue,Büech,Durance,sympatrie+hyb,2015,1004,Ch,Chondrostoma sp.,M,16.5,53,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bue_1012,Bue,Büech,Durance,sympatrie+hyb,2015,1012,Ch,Chondrostoma sp.,M,19.5,91,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bau_1002,Bau,Baume,Ardèche,asym. Toxo,2015,1002,Ch,Chondrostoma sp.,F,17.5,65,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bau_1010,Bau,Baume,Ardèche,asym. Toxo,2015,1010,Ch,Chondrostoma sp.,M,18.5,71,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bau_1018,Bau,Baume,Ardèche,asym. Toxo,2015,1018,Ch,Chondrostoma sp.,M,19.5,84,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Jus_1001,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1001,Ch,Chondrostoma sp.,F,16,52,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Jus_1009,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1009,Ch,Chondrostoma sp.,X,14,27,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Jus_1017,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1017,Ch,Chondrostoma sp.,X,14.5,35,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Caa_1006,Caa,canal,Durance,allopatrie,2015,1006,Ch,Chondrostoma sp.,X,11.5,16,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Caa_1014,Caa,canal,Durance,allopatrie,2015,1014,Ch,Chondrostoma sp.,M,15,38,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Avi_1002,Avi,Avignon,Durance,asym. Hotu,2015,1002,Cn,Chondrostoma nasus,F,26,233,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2015_Avi_1010,Avi,Avignon,Durance,asym. Hotu,2015,1010,Cn,Chondrostoma nasus,X,11.5,21,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2015_Bue_1005,Bue,Büech,Durance,sympatrie+hyb,2015,1005,Ch,Chondrostoma sp.,F,16,49,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bue_1013,Bue,Büech,Durance,sympatrie+hyb,2015,1013,Ch,Chondrostoma sp.,M,21,108,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bau_1003,Bau,Baume,Ardèche,asym. Toxo,2015,1003,Ch,Chondrostoma sp.,M,23,130,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bau_1011,Bau,Baume,Ardèche,asym. Toxo,2015,1011,Ch,Chondrostoma sp.,M,21,89,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bau_1019,Bau,Baume,Ardèche,asym. Toxo,2015,1019,Ch,Chondrostoma sp.,M,15,39,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Jus_1002,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1002,Ch,Chondrostoma sp.,M,22,85,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Jus_1010,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1010,Ch,Chondrostoma sp.,M,43,1138,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Jus_1018,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1018,Ch,Chondrostoma sp.,X,16,46,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Caa_1007,Caa,canal,Durance,allopatrie,2015,1007,Ch,Chondrostoma sp.,X,11.5,14,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Caa_1015,Caa,canal,Durance,allopatrie,2015,1015,Ch,Chondrostoma sp.,M,14.5,31,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Avi_1003,Avi,Avignon,Durance,asym. Hotu,2015,1003,Cn,Chondrostoma nasus,M,26,318,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2015_Avi_1011,Avi,Avignon,Durance,asym. Hotu,2015,1011,Cn,Chondrostoma nasus,X,13,23,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2015_Bue_1006,Bue,Büech,Durance,sympatrie+hyb,2015,1006,Ch,Chondrostoma sp.,F,18,70,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bue_1014,Bue,Büech,Durance,sympatrie+hyb,2015,1014,Ch,Chondrostoma sp.,M,18,73,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bau_1004,Bau,Baume,Ardèche,asym. Toxo,2015,1004,Ch,Chondrostoma sp.,F,17,62,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bau_1012,Bau,Baume,Ardèche,asym. Toxo,2015,1012,Ch,Chondrostoma sp.,,,,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bau_1020,Bau,Baume,Ardèche,asym. Toxo,2015,1020,Ch,Chondrostoma sp.,M,18.5,73,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Jus_1003,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1003,Ch,Chondrostoma sp.,X,15.5,42,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Jus_1011,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1011,Ch,Chondrostoma sp.,M,43.5,1201,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Jus_1019,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1019,Ch,Chondrostoma sp.,X,11.5,18,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Caa_1008,Caa,canal,Durance,allopatrie,2015,1008,Ch,Chondrostoma sp.,X,11.5,16,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Caa_1016,Caa,canal,Durance,allopatrie,2015,1016,Ch,Chondrostoma sp.,X,11.5,15,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Avi_1004,Avi,Avignon,Durance,asym. Hotu,2015,1004,Cn,Chondrostoma nasus,F,32,423,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2015_Avi_1012,Avi,Avignon,Durance,asym. Hotu,2015,1012,Pt,Parachondrostoma toxostoma,F,20,98,4,branchie;caudale;hindgut;midgut,1,connu (Cn=0/Pt=1)
+2015_Bue_1007,Bue,Büech,Durance,sympatrie+hyb,2015,1007,Ch,Chondrostoma sp.,M,15,36,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bue_1015,Bue,Büech,Durance,sympatrie+hyb,2015,1015,Ch,Chondrostoma sp.,M,16,57,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bau_1005,Bau,Baume,Ardèche,asym. Toxo,2015,1005,Ch,Chondrostoma sp.,M,21,107,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bau_1013,Bau,Baume,Ardèche,asym. Toxo,2015,1013,Ch,Chondrostoma sp.,M,16,49,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bau_1021,Bau,Baume,Ardèche,asym. Toxo,2015,1021,Ch,Chondrostoma sp.,F,18,75,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Jus_1004,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1004,Ch,Chondrostoma sp.,M,16,56,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Jus_1012,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1012,Ch,Chondrostoma sp.,M,42.5,1072,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Caa_1001,Caa,canal,Durance,allopatrie,2015,1001,Ch,Chondrostoma sp.,X,14,28,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Caa_1009,Caa,canal,Durance,allopatrie,2015,1009,Ch,Chondrostoma sp.,X,12,16,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Caa_1017,Caa,canal,Durance,allopatrie,2015,1017,Ch,Chondrostoma sp.,X,12.5,15,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Avi_1005,Avi,Avignon,Durance,asym. Hotu,2015,1005,Cn,Chondrostoma nasus,M,27.5,240,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2015_Avi_1013,Avi,Avignon,Durance,asym. Hotu,2015,1013,Pt,Parachondrostoma toxostoma,M,23,139,4,branchie;caudale;hindgut;midgut,1,connu (Cn=0/Pt=1)
+2015_Bue_1008,Bue,Büech,Durance,sympatrie+hyb,2015,1008,Ch,Chondrostoma sp.,M,12.5,26,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bue_1016,Bue,Büech,Durance,sympatrie+hyb,2015,1016,Ch,Chondrostoma sp.,M,30,378,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bau_1006,Bau,Baume,Ardèche,asym. Toxo,2015,1006,Ch,Chondrostoma sp.,F,24,163,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bau_1014,Bau,Baume,Ardèche,asym. Toxo,2015,1014,Ch,Chondrostoma sp.,NA,22,115,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bau_1022,Bau,Baume,Ardèche,asym. Toxo,2015,1022,Ch,Chondrostoma sp.,M,16.5,63,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Jus_1005,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1005,Ch,Chondrostoma sp.,M,15.5,42,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Jus_1013,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1013,Ch,Chondrostoma sp.,M,44,991,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Caa_1002,Caa,canal,Durance,allopatrie,2015,1002,Ch,Chondrostoma sp.,X,13,21,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Caa_1010,Caa,canal,Durance,allopatrie,2015,1010,Ch,Chondrostoma sp.,X,11.5,15,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Caa_1018,Caa,canal,Durance,allopatrie,2015,1018,Ch,Chondrostoma sp.,X,10.5,12,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Avi_1006,Avi,Avignon,Durance,asym. Hotu,2015,1006,Cn,Chondrostoma nasus,X,15,38,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2015_Bue_1001,Bue,Büech,Durance,sympatrie+hyb,2015,1001,Ch,Chondrostoma sp.,M,30.5,386,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bue_1009,Bue,Büech,Durance,sympatrie+hyb,2015,1009,Ch,Chondrostoma sp.,M,30.5,327,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bue_1017,Bue,Büech,Durance,sympatrie+hyb,2015,1017,Ch,Chondrostoma sp.,M,31.5,363,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bau_1007,Bau,Baume,Ardèche,asym. Toxo,2015,1007,Ch,Chondrostoma sp.,F,24,155,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bau_1015,Bau,Baume,Ardèche,asym. Toxo,2015,1015,Ch,Chondrostoma sp.,M,19,77,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bau_1023,Bau,Baume,Ardèche,asym. Toxo,2015,1023,Ch,Chondrostoma sp.,M,17,60,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Jus_1006,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1006,Ch,Chondrostoma sp.,X,15,41,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Jus_1014,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1014,Ch,Chondrostoma sp.,X,16,49,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Caa_1003,Caa,canal,Durance,allopatrie,2015,1003,Ch,Chondrostoma sp.,X,12,16,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Caa_1011,Caa,canal,Durance,allopatrie,2015,1011,Ch,Chondrostoma sp.,F,18,62,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Caa_1019,Caa,canal,Durance,allopatrie,2015,1019,Ch,Chondrostoma sp.,X,12,18,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Avi_1007,Avi,Avignon,Durance,asym. Hotu,2015,1007,Cn,Chondrostoma nasus,X,11.5,17,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2015_Bue_1002,Bue,Büech,Durance,sympatrie+hyb,2015,1002,Ch,Chondrostoma sp.,M,30.5,391,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bue_1010,Bue,Büech,Durance,sympatrie+hyb,2015,1010,Ch,Chondrostoma sp.,M,25,215,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bue_1018,Bue,Büech,Durance,sympatrie+hyb,2015,1018,Ch,Chondrostoma sp.,X,31,376,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bau_1008,Bau,Baume,Ardèche,asym. Toxo,2015,1008,Ch,Chondrostoma sp.,M,18,70,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bau_1016,Bau,Baume,Ardèche,asym. Toxo,2015,1016,Ch,Chondrostoma sp.,F,18,63,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bau_1024,Bau,Baume,Ardèche,asym. Toxo,2015,1024,Ch,Chondrostoma sp.,,,,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Jus_1007,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1007,Ch,Chondrostoma sp.,M,17,51,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Jus_1015,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1015,Ch,Chondrostoma sp.,X,16,44,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Caa_1004,Caa,canal,Durance,allopatrie,2015,1004,Ch,Chondrostoma sp.,X,12.5,23,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Caa_1012,Caa,canal,Durance,allopatrie,2015,1012,Ch,Chondrostoma sp.,M,15.5,45,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Caa_1020,Caa,canal,Durance,allopatrie,2015,1020,Ch,Chondrostoma sp.,X,9.5,8,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Avi_1008,Avi,Avignon,Durance,asym. Hotu,2015,1008,Cn,Chondrostoma nasus,X,12,21,4,branchie;caudale;hindgut;midgut,0,connu (Cn=0/Pt=1)
+2015_Bue_1003,Bue,Büech,Durance,sympatrie+hyb,2015,1003,Ch,Chondrostoma sp.,M,33.5,491,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Bue_1011,Bue,Büech,Durance,sympatrie+hyb,2015,1011,Ch,Chondrostoma sp.,X,29,298,4,branchie;caudale;hindgut;midgut,,A_REMPLIR_ANDRE
+2015_Per_2015,Per,?,?,à statuer,2015,2015,Ch,Chondrostoma sp.,,,,1,hindgut,,A_REMPLIR_ANDRE
