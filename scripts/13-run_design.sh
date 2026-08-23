@@ -34,7 +34,7 @@ set -eEuo pipefail
 # Entree : results/decontam/asv_table_clean.tsv (table propre, non rarefiee)
 # Sorties : results/run_design/{run_design_summary.txt, pairwise_per_sample.tsv}
 
-cd "${SLURM_SUBMIT_DIR:-$HOME/work/projects/microbiome-hybrid}"
+cd "$HOME/work/projects/microbiome-hybrid"
 source config/project.env 2>/dev/null || true
 OUT=results/run_design
 mkdir -p "$OUT" logs
