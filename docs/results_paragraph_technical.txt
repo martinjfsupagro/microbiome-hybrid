@@ -1,0 +1,38 @@
+RESULTS — Technical reproducibility (draft paragraph, ~150 words)
+
+Technical variation was negligible relative to biological variation. In a PERMANOVA
+on Bray-Curtis distances with the technical terms entered first — the conservative
+ordering, which assigns them the maximum variance they can explain — library
+preparation accounted for 0.03% of the variance (R2 = 0.0003, p = 0.63) and
+sequencing run within library for 0.005% (p = 1.00), while tissue explained 9.2%
+(p = 0.002) and fish identity 37.7% (p = 0.002). Consistently, the mean Bray-Curtis
+dissimilarity between the two sequencing runs of a shared library was 0.13, and
+0.25 between libraries, against 0.88 between different fish of the same tissue and
+0.94 across tissues (Fig. X). The two to three technical versions of each sample
+therefore cluster tightly within the ordination relative to the spread among
+individuals. Because every sample is present in all batches, technical and
+biological factors are crossed rather than confounded, and batch correction was
+unnecessary.
+
+
+DISCUSSION — sentence on rare-taxon reproducibility
+
+Repeated sequencing of the same amplicon library recovered only 48% of the ASVs
+present at one to three reads in the other run, and Jaccard dissimilarity between
+two sequencings of one library reached 0.45 against 0.12 for Bray-Curtis; rare taxa
+are thus poorly reproducible even in the absence of any library-preparation step,
+which is why we based diversity analyses on abundance-weighted metrics rather than
+on observed richness or unweighted indices.
+
+
+FIGURE CAPTION (draft)
+
+Fig. X. Technical variation is small relative to biological variation.
+(a) Principal coordinates analysis of Bray-Curtis distances for the 1,784 samples
+retained after rarefaction to 3,000 reads, coloured by tissue; grey lines join the
+two to three library-preparation and sequencing versions of the same biological
+sample. (b) Mean Bray-Curtis dissimilarity (+/- SD) for technical comparisons
+(same sample, same library: n = 290 pairs; same sample, different libraries:
+n = 496) and biological comparisons (different fish, same tissue: n = 179,151;
+different fish, different tissues: n = 536,361). Pairwise counts are computed on a
+random subsample of 1,200 samples for the biological comparisons.
