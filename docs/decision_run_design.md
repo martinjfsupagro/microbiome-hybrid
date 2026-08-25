@@ -96,3 +96,39 @@ utile pour la redaction.
 - `scripts/13-run_design.sh` — test reproductible
 - `results/run_design/run_design_summary.txt` — synthese
 - `results/run_design/pairwise_per_sample.tsv` — les 3 dissimilarites par echantillon
+
+## Controle d'assignation echantillon-fichier (ajout 2026-08-25)
+
+**Question.** L'assignation des index differant entre les deux preparations de librairie
+(i7 : 384/768, i5 : 576/768), un echange d'etiquettes entre echantillons etait concevable.
+
+**Test.** Pour chaque librairie, recherche de son plus proche voisin en composition
+bacterienne (Bray-Curtis) parmi les replicats des autres runs. Un etiquetage correct
+predit que le plus proche voisin d'une librairie est son propre replicat.
+Fichier de resultat : `results/run_design/identity_check.tsv` (2027 comparaisons).
+Test realise dans la session de depot ENA (frame 90e7af1c), verifie ici sur le fichier.
+
+**Resultats.**
+| mesure | valeur |
+|---|---|
+| auto-appariements | 1891/2027 = 93.3 % |
+| entre runs partageant une preparation (d2 vs d3) | 99.7 % |
+| entre preparations (d1 vs d2, d1 vs d3) | 89.8 % / 90.1 % |
+| plaques dont l'assignation d'index a change (3,4,5,6) | **96.5 %** (n=1019) |
+| plaques inchangees (1,2,7,8) | **90.1 %** (n=1008) |
+| echecs reciproques (signature d'un vrai echange) | **0 / 136** |
+| dissimilarite self, mediane : echecs vs succes | 0.532 vs 0.133 |
+
+**Conclusion.** Deux temoins independants excluent l'erreur d'etiquetage :
+1. les plaques dont l'assignation d'index a change s'auto-apparient MIEUX que les
+   plaques inchangees (96.5 % vs 90.1 %) — l'inverse de ce qu'un brouillage produirait ;
+2. aucun des 136 echecs n'est reciproque, alors qu'un echange A<->B laisse par
+   construction une paire pointant mutuellement.
+Les echecs sont des echantillons peu reproductibles (dissimilarite self mediane 0.53
+contre 0.13), concentres sur la nageoire caudale — le tissu de plus faible biomasse.
+
+**ATTENTION a la formulation.** Une version du supplementaire ecrivait
+"no reciprocal mismatch was observed (0 of 136 discordant pairs), excluding a labelling
+error", ce qui laissait entendre 136 comparaisons dont 0 en echec. En realite il y a
+**136 echecs** sur 2027 comparaisons, dont 0 reciproque. Le taux d'auto-appariement
+global est de 93.3 %, pas de 100 %. Corrige dans Supplementary_Data.docx (v2).
