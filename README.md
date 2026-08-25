@@ -261,3 +261,48 @@ git add -A && git commit -m "feat: description"
 sbatch scripts/mon_job.sh
 bash scripts/check_run.sh results/mon_job_JOBID
 ```
+
+## Depot GitHub (ajout 2026-08-25)
+
+Le depot est desormais pousse sur **https://github.com/martinjfsupagro/microbiome-hybrid**
+(depot **PRIVE**, branche `main`). Les 68 commits de l'historique cluster y sont, avec
+l'identite d'auteur preservee (Jean-Francois Martin).
+
+### Pourquoi c'est utile
+Jusqu'ici l'historique n'existait qu'a un seul endroit : `.git` sur meso. Une perte de
+scratch/home, ou un `git` casse, aurait emporte la tracabilite de toutes les decisions
+d'analyse. Le remote est une seconde copie independante.
+
+### Comment pousser depuis meso
+Le remote `origin` est configure, MAIS **aucun identifiant n'est stocke sur le cluster**
+(volontaire : un token GitHub sur un cluster partage est un risque inutile). Pour pousser :
+
+```bash
+cd ~/work/projects/microbiome-hybrid
+git push origin main      # demandera identifiant + token
+```
+GitHub n'accepte plus les mots de passe : au prompt "Password", coller un
+**Personal Access Token** (Settings > Developer settings > Tokens, portee `repo`).
+
+Pour eviter de le retaper a chaque fois, sans l'ecrire en clair :
+```bash
+git config --global credential.helper 'cache --timeout=3600'
+```
+NB : `credential.helper` est actuellement a `store`, ce qui ecrirait le token en clair
+dans `~/.git-credentials`. Preferer `cache` sur une machine partagee.
+
+### Alternative sans token sur le cluster
+Si tu preferes ne jamais y mettre d'identifiant, l'assistant peut refaire le transfert
+par bundle git (`git bundle create ... --all`), rapatrier le bundle et pousser depuis
+son environnement, ou le token reste. C'est la methode utilisee pour le premier push.
+
+### Visibilite
+Depot **prive** (choix explicite : le manuscrit n'est pas soumis, et les notes de
+decision contiennent des points en attente d'Andre). Le passage en public se fait d'un
+clic au moment de la soumission. NB : l'inverse n'est pas vrai — un depot rendu public
+ne peut pas etre "de-publie" (clones et caches subsistent).
+
+### Ce qui n'est PAS versionne (rappel)
+`results/` (volumineux, regenerable par les scripts), `consolidated_dataset/` (12 Go de
+FASTQ bruts, deposes sur l'ENA sous PRJEB124417), les sorties par-run webin, et les
+copies parasites de sorties de jobs a la racine.
