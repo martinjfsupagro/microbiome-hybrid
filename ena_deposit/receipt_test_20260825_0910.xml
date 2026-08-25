@@ -1,0 +1,2316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+<RECEIPT receiptDate="2026-08-25T08:10:45.786+01:00" submissionFile="submission.xml" success="true">
+     <SAMPLE accession="ERS32342297" alias="DURANCE16S_14Ain1001Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154053" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342298" alias="DURANCE16S_14Ain1038Pt01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154054" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342299" alias="DURANCE16S_15Cab1003Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154055" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342300" alias="DURANCE16S_15Cab1011Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154056" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342301" alias="DURANCE16S_15Cab1019Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154057" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342302" alias="DURANCE16S_14Avi1008Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154058" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342303" alias="DURANCE16S_14Bue1005Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154059" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342304" alias="DURANCE16S_14Bue1015Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154060" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342305" alias="DURANCE16S_14Man1011Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154061" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342306" alias="DURANCE16S_14Man1019Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154062" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342307" alias="DURANCE16S_14Per2011Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154063" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342308" alias="DURANCE16S_14Per2011Ch01A-bis" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154064" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342309" alias="DURANCE16S_14Ain1002Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154065" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342310" alias="DURANCE16S_14Ain1039Pt01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154066" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342311" alias="DURANCE16S_15Cab1004Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154067" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342312" alias="DURANCE16S_15Cab1012Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154068" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342313" alias="DURANCE16S_14Avi1001Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154069" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342314" alias="DURANCE16S_14Avi1036Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154070" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342315" alias="DURANCE16S_14Bue1006Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154071" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342316" alias="DURANCE16S_14Bue1016Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154072" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342317" alias="DURANCE16S_14Man1012Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154073" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342318" alias="DURANCE16S_14Man1020Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154074" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342319" alias="DURANCE16S_14Per2012Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154075" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342320" alias="DURANCE16S_14Per2012Ch01A-bis" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154076" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342321" alias="DURANCE16S_14Ain1011Pt01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154077" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342322" alias="DURANCE16S_14Ain1040Pt01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154078" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342323" alias="DURANCE16S_15Cab1005Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154079" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342324" alias="DURANCE16S_15Cab1013Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154080" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342325" alias="DURANCE16S_14Avi1002Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154081" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342326" alias="DURANCE16S_14Avi1037-01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154082" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342327" alias="DURANCE16S_14Bue1007Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154083" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342328" alias="DURANCE16S_14Bue1017Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154084" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342329" alias="DURANCE16S_14Man1013Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154085" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342330" alias="DURANCE16S_14Man1021Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154086" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342331" alias="DURANCE16S_14Per2013Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154087" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342332" alias="DURANCE16S_T-1" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154088" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342333" alias="DURANCE16S_14Ain1012Pt01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154089" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342334" alias="DURANCE16S_14Ain1041Pt01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154090" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342335" alias="DURANCE16S_15Cab1006Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154091" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342336" alias="DURANCE16S_15Cab1014Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154092" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342337" alias="DURANCE16S_14Avi1003Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154093" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342338" alias="DURANCE16S_14Avi1038Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154094" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342339" alias="DURANCE16S_14Bue1008Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154095" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342340" alias="DURANCE16S_14Bue1018Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154096" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342341" alias="DURANCE16S_14Man1014Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154097" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342342" alias="DURANCE16S_14Man1022Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154098" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342343" alias="DURANCE16S_14Per2014Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154099" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342344" alias="DURANCE16S_empty-1" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154100" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342345" alias="DURANCE16S_14Ain1013Pt01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154101" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342346" alias="DURANCE16S_14Ain1042Pt01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154102" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342347" alias="DURANCE16S_15Cab1007Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154103" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342348" alias="DURANCE16S_15Cab1015Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154104" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342349" alias="DURANCE16S_14Avi1004Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154105" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342350" alias="DURANCE16S_14Bue1001Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154106" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342351" alias="DURANCE16S_14Bue1011Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154107" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342352" alias="DURANCE16S_14Bue1019Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154108" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342353" alias="DURANCE16S_14Man1015Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154109" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342354" alias="DURANCE16S_14Per1011Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154110" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342355" alias="DURANCE16S_14Per2015Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154111" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342356" alias="DURANCE16S_empty-2" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154112" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342357" alias="DURANCE16S_14Ain1014Pt01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154113" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342358" alias="DURANCE16S_14Ain1043Pt01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154114" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342359" alias="DURANCE16S_15Cab1008Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154115" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342360" alias="DURANCE16S_15Cab1016Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154116" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342361" alias="DURANCE16S_14Avi1005Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154117" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342362" alias="DURANCE16S_14Bue1002Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154118" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342363" alias="DURANCE16S_14Bue1012Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154119" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342364" alias="DURANCE16S_14Man1001Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154120" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342365" alias="DURANCE16S_14Man1016Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154121" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342366" alias="DURANCE16S_14per1012Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154122" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342367" alias="DURANCE16S_Blanc-Caudal" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154123" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342368" alias="DURANCE16S_empty-3" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154124" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342369" alias="DURANCE16S_14Ain1036Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154125" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342370" alias="DURANCE16S_15Cab1001Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154126" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342371" alias="DURANCE16S_15Cab1009Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154127" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342372" alias="DURANCE16S_15Cab1017Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154128" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342373" alias="DURANCE16S_14Avi1006Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154129" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342374" alias="DURANCE16S_14Bue1003Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154130" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342375" alias="DURANCE16S_14Bue1013Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154131" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342376" alias="DURANCE16S_14Man1002Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154132" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342377" alias="DURANCE16S_14Man1017Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154133" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342378" alias="DURANCE16S_14per1013Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154134" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342379" alias="DURANCE16S_15Cab1021Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154135" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342380" alias="DURANCE16S_empty-4" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154136" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342381" alias="DURANCE16S_14Ain1037Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154137" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342382" alias="DURANCE16S_15Cab1002Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154138" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342383" alias="DURANCE16S_15Cab1010Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154139" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342384" alias="DURANCE16S_15Cab1018Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154140" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342385" alias="DURANCE16S_14Avi1007Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154141" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342386" alias="DURANCE16S_14Bue1004Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154142" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342387" alias="DURANCE16S_14Bue1014Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154143" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342388" alias="DURANCE16S_14Man1010Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154144" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342389" alias="DURANCE16S_14Man1018Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154145" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342390" alias="DURANCE16S_14per1014Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154146" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342391" alias="DURANCE16S_15Cab1022Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154147" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342392" alias="DURANCE16S_empty-5" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154148" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342393" alias="DURANCE16S_15Bau1001Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154149" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342394" alias="DURANCE16S_15Bau1009Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154150" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342395" alias="DURANCE16S_15Bau1017Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154151" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342396" alias="DURANCE16S_15Bau1025Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154152" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342397" alias="DURANCE16S_15Jus1008Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154153" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342398" alias="DURANCE16S_15Jus1016Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154154" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342399" alias="DURANCE16S_15Caa1005Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154155" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342400" alias="DURANCE16S_15Caa1013Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154156" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342401" alias="DURANCE16S_15Avi1001Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154157" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342402" alias="DURANCE16S_15Avi1009Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154158" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342403" alias="DURANCE16S_15Bue1004Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154159" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342404" alias="DURANCE16S_15Bue1012Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154160" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342405" alias="DURANCE16S_15Bau1002Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154161" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342406" alias="DURANCE16S_15Bau1010Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154162" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342407" alias="DURANCE16S_15Bau1018Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154163" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342408" alias="DURANCE16S_15Jus1001Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154164" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342409" alias="DURANCE16S_15Jus1009Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154165" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342410" alias="DURANCE16S_15Jus1017Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154166" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342411" alias="DURANCE16S_15Caa1006Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154167" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342412" alias="DURANCE16S_15Caa1014Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154168" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342413" alias="DURANCE16S_15Avi1002Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154169" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342414" alias="DURANCE16S_15Avi1010Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154170" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342415" alias="DURANCE16S_15Bue1005Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154171" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342416" alias="DURANCE16S_15Bue1013Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154172" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342417" alias="DURANCE16S_15Bau1003Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154173" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342418" alias="DURANCE16S_15Bau1011Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154174" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342419" alias="DURANCE16S_15Bau1019Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154175" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342420" alias="DURANCE16S_15Jus1002Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154176" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342421" alias="DURANCE16S_15Jus1010Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154177" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342422" alias="DURANCE16S_15Jus1018Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154178" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342423" alias="DURANCE16S_15Caa1007Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154179" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342424" alias="DURANCE16S_15Caa1015Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154180" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342425" alias="DURANCE16S_15Avi1003Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154181" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342426" alias="DURANCE16S_15Avi1011Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154182" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342427" alias="DURANCE16S_15Bue1006Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154183" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342428" alias="DURANCE16S_15Bue1014Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154184" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342429" alias="DURANCE16S_15Bau1004Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154185" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342430" alias="DURANCE16S_15Bau1012Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154186" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342431" alias="DURANCE16S_15Bau1020Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154187" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342432" alias="DURANCE16S_15Jus1003Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154188" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342433" alias="DURANCE16S_15Jus1011Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154189" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342434" alias="DURANCE16S_15Jus1019Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154190" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342435" alias="DURANCE16S_15Caa1008Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154191" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342436" alias="DURANCE16S_15Caa1016Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154192" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342437" alias="DURANCE16S_15Avi1004Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154193" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342438" alias="DURANCE16S_15Avi1012Pt01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154194" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342439" alias="DURANCE16S_15Bue1007Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154195" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342440" alias="DURANCE16S_15Bue1015Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154196" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342441" alias="DURANCE16S_15Bau1005Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154197" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342442" alias="DURANCE16S_15Bau1013Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154198" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342443" alias="DURANCE16S_15Bau1021Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154199" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342444" alias="DURANCE16S_15Jus1004Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154200" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342445" alias="DURANCE16S_15Jus1012Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154201" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342446" alias="DURANCE16S_15Caa1001Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154202" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342447" alias="DURANCE16S_15Caa1009Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154203" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342448" alias="DURANCE16S_15Caa1017Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154204" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342449" alias="DURANCE16S_15Avi1005Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154205" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342450" alias="DURANCE16S_15Avi1013Pt01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154206" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342451" alias="DURANCE16S_15Bue1008Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154207" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342452" alias="DURANCE16S_15Bue1016Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154208" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342453" alias="DURANCE16S_15Bau1006Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154209" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342454" alias="DURANCE16S_15Bau1014Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154210" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342455" alias="DURANCE16S_15Bau1022Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154211" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342456" alias="DURANCE16S_15Jus1005Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154212" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342457" alias="DURANCE16S_15Jus1013Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154213" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342458" alias="DURANCE16S_15Caa1002Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154214" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342459" alias="DURANCE16S_15Caa1010Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154215" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342460" alias="DURANCE16S_15Caa1018Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154216" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342461" alias="DURANCE16S_15Avi1006Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154217" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342462" alias="DURANCE16S_15Bue1001Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154218" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342463" alias="DURANCE16S_15Bue1009Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154219" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342464" alias="DURANCE16S_15Bue1017Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154220" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342465" alias="DURANCE16S_15Bau1007Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154221" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342466" alias="DURANCE16S_15Bau1015Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154222" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342467" alias="DURANCE16S_15Bau1023Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154223" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342468" alias="DURANCE16S_15Jus1006Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154224" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342469" alias="DURANCE16S_15Jus1014Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154225" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342470" alias="DURANCE16S_15Caa1003Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154226" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342471" alias="DURANCE16S_15Caa1011Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154227" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342472" alias="DURANCE16S_15Caa1019Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154228" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342473" alias="DURANCE16S_15Avi1007Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154229" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342474" alias="DURANCE16S_15Bue1002Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154230" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342475" alias="DURANCE16S_15Bue1010Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154231" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342476" alias="DURANCE16S_15Bue1018Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154232" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342477" alias="DURANCE16S_15Bau1008Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154233" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342478" alias="DURANCE16S_15Bau1016Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154234" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342479" alias="DURANCE16S_15Bau1024Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154235" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342480" alias="DURANCE16S_15Jus1007Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154236" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342481" alias="DURANCE16S_15Jus1015Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154237" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342482" alias="DURANCE16S_15Caa1004Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154238" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342483" alias="DURANCE16S_15Caa1012Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154239" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342484" alias="DURANCE16S_15Caa1020Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154240" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342485" alias="DURANCE16S_15Avi1008Cn01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154241" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342486" alias="DURANCE16S_15Bue1003Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154242" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342487" alias="DURANCE16S_15Bue1011Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154243" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342488" alias="DURANCE16S_T-2" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154244" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342489" alias="DURANCE16S_14Ain1001Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154245" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342490" alias="DURANCE16S_14Ain1038Pt05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154246" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342491" alias="DURANCE16S_15Cab1003Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154247" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342492" alias="DURANCE16S_15Cab1011Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154248" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342493" alias="DURANCE16S_15Cab1019Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154249" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342494" alias="DURANCE16S_14Avi1008Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154250" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342495" alias="DURANCE16S_14Bue1005Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154251" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342496" alias="DURANCE16S_14Bue1014Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154252" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342497" alias="DURANCE16S_14Man1011Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154253" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342498" alias="DURANCE16S_14Man1019Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154254" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342499" alias="DURANCE16S_14Per2011Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154255" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342500" alias="DURANCE16S_14Per2011Ch05A-bis" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154256" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342501" alias="DURANCE16S_14Ain1002Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154257" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342502" alias="DURANCE16S_14Ain1039Pt05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154258" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342503" alias="DURANCE16S_15Cab1004Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154259" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342504" alias="DURANCE16S_15Cab1012Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154260" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342505" alias="DURANCE16S_14Avi1001Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154261" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342506" alias="DURANCE16S_14Avi1036Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154262" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342507" alias="DURANCE16S_14Bue1006Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154263" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342508" alias="DURANCE16S_14Bue1015Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154264" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342509" alias="DURANCE16S_14Man1012Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154265" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342510" alias="DURANCE16S_14Man1020Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154266" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342511" alias="DURANCE16S_14Per2012Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154267" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342512" alias="DURANCE16S_14Per2012Ch05A-bis" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154268" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342513" alias="DURANCE16S_14Ain1011Pt05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154269" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342514" alias="DURANCE16S_14Ain1040Pt05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154270" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342515" alias="DURANCE16S_15Cab1005Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154271" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342516" alias="DURANCE16S_15Cab1013Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154272" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342517" alias="DURANCE16S_14Avi1002Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154273" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342518" alias="DURANCE16S_14Avi1037Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154274" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342519" alias="DURANCE16S_14Bue1006Cn05Abis" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154275" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342520" alias="DURANCE16S_14Bue1017Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154276" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342521" alias="DURANCE16S_14Man1013Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154277" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342522" alias="DURANCE16S_14Man1021Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154278" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342523" alias="DURANCE16S_14Per2013Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154279" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342524" alias="DURANCE16S_empty-6" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154280" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342525" alias="DURANCE16S_14Ain1012Pt05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154281" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342526" alias="DURANCE16S_14Ain1041Pt05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154282" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342527" alias="DURANCE16S_15Cab1006Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154283" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342528" alias="DURANCE16S_15Cab1014Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154284" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342529" alias="DURANCE16S_14Avi1003Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154285" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342530" alias="DURANCE16S_14Avi1038Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154286" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342531" alias="DURANCE16S_14Bue1007Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154287" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342532" alias="DURANCE16S_14Bue1018Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154288" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342533" alias="DURANCE16S_14Man1014Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154289" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342534" alias="DURANCE16S_14Man1022Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154290" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342535" alias="DURANCE16S_14Per2014Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154291" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342536" alias="DURANCE16S_empty-7" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154292" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342537" alias="DURANCE16S_14Ain1013Pt05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154293" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342538" alias="DURANCE16S_14Ain1042Pt05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154294" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342539" alias="DURANCE16S_15Cab1007Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154295" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342540" alias="DURANCE16S_15Cab1015Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154296" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342541" alias="DURANCE16S_14Avi1004Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154297" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342542" alias="DURANCE16S_14Bue1001Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154298" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342543" alias="DURANCE16S_14Bue1008Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154299" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342544" alias="DURANCE16S_14Bue1019Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154300" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342545" alias="DURANCE16S_14Man1015Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154301" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342546" alias="DURANCE16S_14Per1011Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154302" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342547" alias="DURANCE16S_14Per2015Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154303" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342548" alias="DURANCE16S_empty-8" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154304" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342549" alias="DURANCE16S_14Ain1014Pt05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154305" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342550" alias="DURANCE16S_14Ain1043Pt05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154306" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342551" alias="DURANCE16S_15Cab1008Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154307" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342552" alias="DURANCE16S_15Cab1016Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154308" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342553" alias="DURANCE16S_14Avi1005Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154309" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342554" alias="DURANCE16S_14Bue1002Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154310" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342555" alias="DURANCE16S_14Bue1011Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154311" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342556" alias="DURANCE16S_14Man1001Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154312" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342557" alias="DURANCE16S_14Man1016Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154313" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342558" alias="DURANCE16S_14Per1012Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154314" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342559" alias="DURANCE16S_Blanc-Branchie" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154315" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342560" alias="DURANCE16S_empty-9" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154316" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342561" alias="DURANCE16S_14Ain1036Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154317" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342562" alias="DURANCE16S_15Cab1001Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154318" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342563" alias="DURANCE16S_15Cab1009Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154319" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342564" alias="DURANCE16S_15Cab1017Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154320" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342565" alias="DURANCE16S_14Avi1006Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154321" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342566" alias="DURANCE16S_14Bue1003Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154322" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342567" alias="DURANCE16S_14Bue1012Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154323" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342568" alias="DURANCE16S_14Man1002Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154324" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342569" alias="DURANCE16S_14Man1017Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154325" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342570" alias="DURANCE16S_14Per1013Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154326" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342571" alias="DURANCE16S_Mock-1" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154327" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342572" alias="DURANCE16S_empty-10" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154328" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342573" alias="DURANCE16S_14Ain1037Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154329" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342574" alias="DURANCE16S_15Cab1002Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154330" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342575" alias="DURANCE16S_15Cab1010Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154331" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342576" alias="DURANCE16S_15Cab1018Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154332" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342577" alias="DURANCE16S_14Avi1007Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154333" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342578" alias="DURANCE16S_14Bue1004Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154334" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342579" alias="DURANCE16S_14Bue1013Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154335" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342580" alias="DURANCE16S_14Man1010Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154336" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342581" alias="DURANCE16S_14Man1018Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154337" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342582" alias="DURANCE16S_14Per1014Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154338" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342583" alias="DURANCE16S_T-3" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154339" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342584" alias="DURANCE16S_empty-11" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154340" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342585" alias="DURANCE16S_15Bau1001Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154341" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342586" alias="DURANCE16S_15Bau1009Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154342" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342587" alias="DURANCE16S_15Bau1017Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154343" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342588" alias="DURANCE16S_15Bau1025Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154344" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342589" alias="DURANCE16S_15Jus1008Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154345" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342590" alias="DURANCE16S_15Jus1016Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154346" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342591" alias="DURANCE16S_15Caa1005Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154347" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342592" alias="DURANCE16S_15Caa1013Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154348" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342593" alias="DURANCE16S_15Avi1001Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154349" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342594" alias="DURANCE16S_15Avi1009Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154350" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342595" alias="DURANCE16S_15BUe1004Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154351" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342596" alias="DURANCE16S_15BUe1012Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154352" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342597" alias="DURANCE16S_15Bau1002Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154353" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342598" alias="DURANCE16S_15Bau1010Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154354" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342599" alias="DURANCE16S_15Bau1018Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154355" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342600" alias="DURANCE16S_15Jus1001Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154356" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342601" alias="DURANCE16S_15Jus1009Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154357" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342602" alias="DURANCE16S_15Jus1017Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154358" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342603" alias="DURANCE16S_15Caa1006Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154359" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342604" alias="DURANCE16S_15Caa1014Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154360" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342605" alias="DURANCE16S_15Avi1002Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154361" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342606" alias="DURANCE16S_15Avi1010Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154362" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342607" alias="DURANCE16S_15BUe1005Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154363" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342608" alias="DURANCE16S_15BUe1013Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154364" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342609" alias="DURANCE16S_15Bau1003Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154365" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342610" alias="DURANCE16S_15Bau1011Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154366" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342611" alias="DURANCE16S_15Bau1019Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154367" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342612" alias="DURANCE16S_15Jus1002Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154368" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342613" alias="DURANCE16S_15Jus1010Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154369" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342614" alias="DURANCE16S_15Jus1018Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154370" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342615" alias="DURANCE16S_15Caa1007Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154371" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342616" alias="DURANCE16S_15Caa1015Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154372" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342617" alias="DURANCE16S_15Avi1003Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154373" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342618" alias="DURANCE16S_15Avi1011Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154374" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342619" alias="DURANCE16S_15BUe1006Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154375" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342620" alias="DURANCE16S_15BUe1014Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154376" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342621" alias="DURANCE16S_15Bau1004Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154377" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342622" alias="DURANCE16S_15Bau1012Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154378" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342623" alias="DURANCE16S_15Bau1020Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154379" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342624" alias="DURANCE16S_15Jus1003Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154380" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342625" alias="DURANCE16S_15Jus1011Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154381" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342626" alias="DURANCE16S_15Jus1019Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154382" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342627" alias="DURANCE16S_15Caa1008Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154383" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342628" alias="DURANCE16S_15Caa1016Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154384" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342629" alias="DURANCE16S_15Avi1004Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154385" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342630" alias="DURANCE16S_15Avi1012Pt05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154386" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342631" alias="DURANCE16S_15BUe1007Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154387" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342632" alias="DURANCE16S_15BUe1015Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154388" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342633" alias="DURANCE16S_15Bau1005Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154389" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342634" alias="DURANCE16S_15Bau1013Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154390" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342635" alias="DURANCE16S_15Bau1021Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154391" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342636" alias="DURANCE16S_15Jus1004Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154392" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342637" alias="DURANCE16S_15Jus1012Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154393" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342638" alias="DURANCE16S_15Caa1001Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154394" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342639" alias="DURANCE16S_15Caa1009Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154395" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342640" alias="DURANCE16S_15Caa1017Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154396" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342641" alias="DURANCE16S_15Avi1005Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154397" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342642" alias="DURANCE16S_15Avi1013Pt05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154398" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342643" alias="DURANCE16S_15BUe1008Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154399" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342644" alias="DURANCE16S_15BUe1016Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154400" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342645" alias="DURANCE16S_15Bau1006Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154401" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342646" alias="DURANCE16S_15Bau1014Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154402" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342647" alias="DURANCE16S_15Bau1022Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154403" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342648" alias="DURANCE16S_15Jus1005Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154404" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342649" alias="DURANCE16S_15Jus1013Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154405" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342650" alias="DURANCE16S_15Caa1002Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154406" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342651" alias="DURANCE16S_15Caa1010Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154407" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342652" alias="DURANCE16S_15Caa1018Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154408" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342653" alias="DURANCE16S_15Avi1006Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154409" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342654" alias="DURANCE16S_15Bue1001Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154410" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342655" alias="DURANCE16S_15BUe1009Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154411" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342656" alias="DURANCE16S_15BUe1017Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154412" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342657" alias="DURANCE16S_15Bau1007Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154413" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342658" alias="DURANCE16S_15Bau1015Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154414" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342659" alias="DURANCE16S_15Bau1023Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154415" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342660" alias="DURANCE16S_15Jus1006Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154416" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342661" alias="DURANCE16S_15Jus1014Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154417" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342662" alias="DURANCE16S_15Caa1003Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154418" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342663" alias="DURANCE16S_15Caa1011Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154419" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342664" alias="DURANCE16S_15Caa1019Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154420" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342665" alias="DURANCE16S_15Avi1007Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154421" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342666" alias="DURANCE16S_15BUe1002Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154422" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342667" alias="DURANCE16S_15BUe1010Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154423" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342668" alias="DURANCE16S_15BUe1018Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154424" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342669" alias="DURANCE16S_15Bau1008Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154425" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342670" alias="DURANCE16S_15Bau1016Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154426" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342671" alias="DURANCE16S_15Bau1024Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154427" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342672" alias="DURANCE16S_15Jus1007Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154428" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342673" alias="DURANCE16S_15Jus1015Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154429" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342674" alias="DURANCE16S_15Caa1004Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154430" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342675" alias="DURANCE16S_15Caa1012Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154431" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342676" alias="DURANCE16S_15Caa1020Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154432" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342677" alias="DURANCE16S_15Avi1008Cn05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154433" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342678" alias="DURANCE16S_15BUe1003Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154434" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342679" alias="DURANCE16S_15BUe1011Ch05A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154435" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342680" alias="DURANCE16S_T-4" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154436" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342681" alias="DURANCE16S_14Ain1001Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154437" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342682" alias="DURANCE16S_14Ain1038Pt03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154438" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342683" alias="DURANCE16S_15Cab1003Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154439" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342684" alias="DURANCE16S_15Cab1011Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154440" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342685" alias="DURANCE16S_15Cab1019Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154441" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342686" alias="DURANCE16S_14Avi1008Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154442" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342687" alias="DURANCE16S_14Bue1005Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154443" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342688" alias="DURANCE16S_14Bue1015Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154444" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342689" alias="DURANCE16S_14Man1011Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154445" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342690" alias="DURANCE16S_14Man1019Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154446" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342691" alias="DURANCE16S_14Per2011Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154447" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342692" alias="DURANCE16S_14Per2011Ch03A-bis" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154448" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342693" alias="DURANCE16S_14Ain1002Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154449" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342694" alias="DURANCE16S_14Ain1039Pt03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154450" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342695" alias="DURANCE16S_15Cab1004Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154451" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342696" alias="DURANCE16S_15Cab1012Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154452" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342697" alias="DURANCE16S_14Avi1001Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154453" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342698" alias="DURANCE16S_14Avi1036-Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154454" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342699" alias="DURANCE16S_14Bue1006Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154455" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342700" alias="DURANCE16S_14Bue1016Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154456" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342701" alias="DURANCE16S_14Man1012Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154457" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342702" alias="DURANCE16S_14Man1020Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154458" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342703" alias="DURANCE16S_14Per2012Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154459" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342704" alias="DURANCE16S_14Per2012Ch03A-bis" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154460" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342705" alias="DURANCE16S_14Ain1011Pt03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154461" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342706" alias="DURANCE16S_14Ain1040Pt03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154462" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342707" alias="DURANCE16S_15Cab1005Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154463" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342708" alias="DURANCE16S_15Cab1013Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154464" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342709" alias="DURANCE16S_14Avi1002Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154465" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342710" alias="DURANCE16S_14Avi1037Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154466" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342711" alias="DURANCE16S_14Bue1007Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154467" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342712" alias="DURANCE16S_14Bue1017Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154468" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342713" alias="DURANCE16S_14Man1013Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154469" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342714" alias="DURANCE16S_14Man1021Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154470" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342715" alias="DURANCE16S_14Per2013Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154471" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342716" alias="DURANCE16S_empty-12" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154472" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342717" alias="DURANCE16S_14Ain1012Pt03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154473" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342718" alias="DURANCE16S_14Ain1041Pt03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154474" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342719" alias="DURANCE16S_15Cab1006Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154475" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342720" alias="DURANCE16S_15Cab1014Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154476" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342721" alias="DURANCE16S_14Avi1003Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154477" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342722" alias="DURANCE16S_14Avi1038Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154478" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342723" alias="DURANCE16S_14Bue1008Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154479" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342724" alias="DURANCE16S_14Bue1018Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154480" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342725" alias="DURANCE16S_14Man1014Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154481" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342726" alias="DURANCE16S_14Man1022Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154482" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342727" alias="DURANCE16S_14Per2014Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154483" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342728" alias="DURANCE16S_empty-13" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154484" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342729" alias="DURANCE16S_14Ain1013Pt03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154485" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342730" alias="DURANCE16S_14Ain1042Pt03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154486" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342731" alias="DURANCE16S_15Cab1007Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154487" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342732" alias="DURANCE16S_15Cab1015Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154488" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342733" alias="DURANCE16S_14Avi1004Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154489" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342734" alias="DURANCE16S_14Bue1001Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154490" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342735" alias="DURANCE16S_14Bue1011Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154491" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342736" alias="DURANCE16S_14Bue1019Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154492" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342737" alias="DURANCE16S_14Man1015Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154493" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342738" alias="DURANCE16S_14Per1011Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154494" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342739" alias="DURANCE16S_15Per2015Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154495" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342740" alias="DURANCE16S_empty-14" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154496" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342741" alias="DURANCE16S_14Ain1014Pt03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154497" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342742" alias="DURANCE16S_14Ain1043Pt03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154498" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342743" alias="DURANCE16S_15Cab1008Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154499" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342744" alias="DURANCE16S_15Cab1016Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154500" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342745" alias="DURANCE16S_14Avi1005Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154501" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342746" alias="DURANCE16S_14Bue1002Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154502" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342747" alias="DURANCE16S_14Bue1012Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154503" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342748" alias="DURANCE16S_14Man1001Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154504" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342749" alias="DURANCE16S_14Man1016Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154505" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342750" alias="DURANCE16S_14Per1012Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154506" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342751" alias="DURANCE16S_Blanc-Hindgut" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154507" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342752" alias="DURANCE16S_empty-15" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154508" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342753" alias="DURANCE16S_14Ain1036Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154509" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342754" alias="DURANCE16S_15Cab1001Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154510" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342755" alias="DURANCE16S_15Cab1009Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154511" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342756" alias="DURANCE16S_15Cab1017Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154512" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342757" alias="DURANCE16S_14Avi1006Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154513" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342758" alias="DURANCE16S_14Bue1003Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154514" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342759" alias="DURANCE16S_14Bue1013Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154515" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342760" alias="DURANCE16S_14Man1002Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154516" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342761" alias="DURANCE16S_14Man1017Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154517" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342762" alias="DURANCE16S_14Per1013Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154518" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342763" alias="DURANCE16S_Mock-2" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154519" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342764" alias="DURANCE16S_empty-16" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154520" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342765" alias="DURANCE16S_14Ain1037Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154521" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342766" alias="DURANCE16S_15Cab1002Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154522" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342767" alias="DURANCE16S_15Cab1010Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154523" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342768" alias="DURANCE16S_15Cab1018Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154524" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342769" alias="DURANCE16S_14Avi1007Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154525" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342770" alias="DURANCE16S_14Bue1004Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154526" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342771" alias="DURANCE16S_14Bue1014Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154527" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342772" alias="DURANCE16S_14Man1010Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154528" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342773" alias="DURANCE16S_14Man1018Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154529" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342774" alias="DURANCE16S_14Per1014Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154530" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342775" alias="DURANCE16S_T-5" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154531" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342776" alias="DURANCE16S_empty-17" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154532" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342777" alias="DURANCE16S_15Bau1001Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154533" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342778" alias="DURANCE16S_15Bau1009Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154534" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342779" alias="DURANCE16S_15Bau1017Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154535" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342780" alias="DURANCE16S_15Bau1025Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154536" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342781" alias="DURANCE16S_15Jus1008Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154537" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342782" alias="DURANCE16S_15Jus1016Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154538" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342783" alias="DURANCE16S_15Caa1005Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154539" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342784" alias="DURANCE16S_15Caa1013Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154540" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342785" alias="DURANCE16S_15Avi1001Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154541" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342786" alias="DURANCE16S_15Avi1009Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154542" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342787" alias="DURANCE16S_15Bue1004Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154543" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342788" alias="DURANCE16S_15Bue1012Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154544" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342789" alias="DURANCE16S_15Bau1002Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154545" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342790" alias="DURANCE16S_15Bau1010Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154546" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342791" alias="DURANCE16S_15Bau1018Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154547" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342792" alias="DURANCE16S_15Jus1001Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154548" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342793" alias="DURANCE16S_15Jus1009Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154549" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342794" alias="DURANCE16S_15Jus1017Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154550" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342795" alias="DURANCE16S_15Caa1006Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154551" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342796" alias="DURANCE16S_15Caa1014Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154552" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342797" alias="DURANCE16S_15Avi1002Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154553" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342798" alias="DURANCE16S_15Avi1010Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154554" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342799" alias="DURANCE16S_15Bue1005Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154555" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342800" alias="DURANCE16S_15Bue1013Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154556" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342801" alias="DURANCE16S_15Bau1003Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154557" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342802" alias="DURANCE16S_15Bau1011Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154558" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342803" alias="DURANCE16S_15Bau1019Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154559" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342804" alias="DURANCE16S_15Jus1002Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154560" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342805" alias="DURANCE16S_15Jus1010Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154561" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342806" alias="DURANCE16S_15Jus1018Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154562" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342807" alias="DURANCE16S_15Caa1007Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154563" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342808" alias="DURANCE16S_15Caa1015Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154564" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342809" alias="DURANCE16S_15Avi1003Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154565" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342810" alias="DURANCE16S_15Avi1011Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154566" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342811" alias="DURANCE16S_15Bue1006Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154567" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342812" alias="DURANCE16S_15Bue1014Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154568" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342813" alias="DURANCE16S_15Bau1004Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154569" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342814" alias="DURANCE16S_15Bau1012Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154570" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342815" alias="DURANCE16S_15Bau1020Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154571" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342816" alias="DURANCE16S_15Jus1003Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154572" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342817" alias="DURANCE16S_15Jus1011Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154573" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342818" alias="DURANCE16S_15Jus1019Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154574" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342819" alias="DURANCE16S_15Caa1008Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154575" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342820" alias="DURANCE16S_15Caa1016Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154576" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342821" alias="DURANCE16S_15Avi1004Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154577" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342822" alias="DURANCE16S_15Avi1012Pt03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154578" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342823" alias="DURANCE16S_15Bue1007Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154579" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342824" alias="DURANCE16S_15Bue1015Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154580" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342825" alias="DURANCE16S_15Bau1005Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154581" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342826" alias="DURANCE16S_15Bau1013Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154582" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342827" alias="DURANCE16S_15Bau1021Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154583" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342828" alias="DURANCE16S_15Jus1004Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154584" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342829" alias="DURANCE16S_15Jus1012Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154585" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342830" alias="DURANCE16S_15Caa1001CH03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154586" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342831" alias="DURANCE16S_15Caa1009Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154587" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342832" alias="DURANCE16S_15Caa1017Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154588" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342833" alias="DURANCE16S_15Avi1005Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154589" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342834" alias="DURANCE16S_15Avi1013Pt03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154590" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342835" alias="DURANCE16S_15Bue1008Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154591" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342836" alias="DURANCE16S_15Bue1016Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154592" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342837" alias="DURANCE16S_15Bau1006Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154593" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342838" alias="DURANCE16S_15Bau1014Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154594" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342839" alias="DURANCE16S_15Bau1022Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154595" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342840" alias="DURANCE16S_15Jus1005Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154596" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342841" alias="DURANCE16S_15Jus1013Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154597" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342842" alias="DURANCE16S_15Caa1002Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154598" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342843" alias="DURANCE16S_15Caa1010Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154599" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342844" alias="DURANCE16S_15Caa1018Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154600" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342845" alias="DURANCE16S_15Avi1006Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154601" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342846" alias="DURANCE16S_15Bue1001Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154602" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342847" alias="DURANCE16S_15Bue1009Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154603" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342848" alias="DURANCE16S_15Bue1017Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154604" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342849" alias="DURANCE16S_15Bau1007Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154605" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342850" alias="DURANCE16S_15Bau1015Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154606" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342851" alias="DURANCE16S_15Bau1023Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154607" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342852" alias="DURANCE16S_15Jus1006Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154608" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342853" alias="DURANCE16S_15Jus1014Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154609" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342854" alias="DURANCE16S_15Caa1003Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154610" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342855" alias="DURANCE16S_15Caa1011Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154611" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342856" alias="DURANCE16S_15Caa1019Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154612" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342857" alias="DURANCE16S_15Avi1007Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154613" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342858" alias="DURANCE16S_15Bue1002Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154614" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342859" alias="DURANCE16S_15Bue1010Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154615" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342860" alias="DURANCE16S_15Bue1018Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154616" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342861" alias="DURANCE16S_15Bau1008Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154617" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342862" alias="DURANCE16S_15Bau1016Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154618" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342863" alias="DURANCE16S_15Bau1024Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154619" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342864" alias="DURANCE16S_15Jus1007Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154620" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342865" alias="DURANCE16S_15Jus1015Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154621" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342866" alias="DURANCE16S_15Caa1004Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154622" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342867" alias="DURANCE16S_15Caa1012Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154623" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342868" alias="DURANCE16S_15Caa1020Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154624" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342869" alias="DURANCE16S_15Avi1008Cn03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154625" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342870" alias="DURANCE16S_15Bue1003Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154626" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342871" alias="DURANCE16S_15Bue1011Ch03A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154627" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342872" alias="DURANCE16S_T-6" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154628" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342873" alias="DURANCE16S_14Ain1001Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154629" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342874" alias="DURANCE16S_14Ain1039Pt02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154630" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342875" alias="DURANCE16S_15Cab1004Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154631" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342876" alias="DURANCE16S_15Cab1012Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154632" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342877" alias="DURANCE16S_14Avi1001Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154633" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342878" alias="DURANCE16S_14Avi1036Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154634" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342879" alias="DURANCE16S_14Bue1006Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154635" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342880" alias="DURANCE16S_14Bue1016Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154636" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342881" alias="DURANCE16S_14Man1012Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154637" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342882" alias="DURANCE16S_14Man1020Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154638" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342883" alias="DURANCE16S_14Per2012Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154639" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342884" alias="DURANCE16S_14Per2012Ch02A-bis" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154640" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342885" alias="DURANCE16S_14Ain1002Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154641" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342886" alias="DURANCE16S_14Ain1040Pt02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154642" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342887" alias="DURANCE16S_15Cab1005Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154643" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342888" alias="DURANCE16S_15Cab1013Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154644" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342889" alias="DURANCE16S_14Avi1002Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154645" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342890" alias="DURANCE16S_14Avi1037Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154646" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342891" alias="DURANCE16S_14Bue1007Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154647" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342892" alias="DURANCE16S_14Bue1017Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154648" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342893" alias="DURANCE16S_14Man1013Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154649" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342894" alias="DURANCE16S_14Man1021Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154650" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342895" alias="DURANCE16S_14Per2013Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154651" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342896" alias="DURANCE16S_14Per2013Ch02A-bis" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154652" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342897" alias="DURANCE16S_14Ain1011Pt02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154653" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342898" alias="DURANCE16S_14Ain1041Pt02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154654" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342899" alias="DURANCE16S_15Cab1006Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154655" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342900" alias="DURANCE16S_15Cab1014Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154656" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342901" alias="DURANCE16S_14Avi1003Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154657" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342902" alias="DURANCE16S_14Avi1038Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154658" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342903" alias="DURANCE16S_14Bue1008Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154659" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342904" alias="DURANCE16S_14Bue1018Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154660" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342905" alias="DURANCE16S_14Man1014Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154661" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342906" alias="DURANCE16S_14Man1022Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154662" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342907" alias="DURANCE16S_14Per2014Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154663" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342908" alias="DURANCE16S_empty-20" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154664" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342909" alias="DURANCE16S_14Ain1012Pt02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154665" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342910" alias="DURANCE16S_14Ain1042Pt02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154666" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342911" alias="DURANCE16S_15Cab1007Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154667" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342912" alias="DURANCE16S_15Cab1015Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154668" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342913" alias="DURANCE16S_14Avi1004Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154669" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342914" alias="DURANCE16S_14Bue1001Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154670" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342915" alias="DURANCE16S_14Bue1011Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154671" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342916" alias="DURANCE16S_14Bue1019Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154672" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342917" alias="DURANCE16S_14Man1015Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154673" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342918" alias="DURANCE16S_14per1011Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154674" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342919" alias="DURANCE16S_14Per2015Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154675" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342920" alias="DURANCE16S_empty-21" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154676" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342921" alias="DURANCE16S_14Ain1013Pt02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154677" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342922" alias="DURANCE16S_14Ain1043Pt02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154678" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342923" alias="DURANCE16S_15Cab1008Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154679" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342924" alias="DURANCE16S_15Cab1016Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154680" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342925" alias="DURANCE16S_14Avi1005Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154681" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342926" alias="DURANCE16S_14Bue1002Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154682" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342927" alias="DURANCE16S_14Bue1012Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154683" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342928" alias="DURANCE16S_14Man1001Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154684" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342929" alias="DURANCE16S_14Man1016Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154685" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342930" alias="DURANCE16S_14Per1012Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154686" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342931" alias="DURANCE16S_Blanc-Midgut" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154687" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342932" alias="DURANCE16S_empty-22" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154688" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342933" alias="DURANCE16S_14Ain1014Pt02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154689" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342934" alias="DURANCE16S_15Cab1001Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154690" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342935" alias="DURANCE16S_15Cab1009Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154691" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342936" alias="DURANCE16S_15Cab1017Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154692" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342937" alias="DURANCE16S_14Avi1006Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154693" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342938" alias="DURANCE16S_14Bue1003Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154694" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342939" alias="DURANCE16S_14Bue1013Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154695" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342940" alias="DURANCE16S_14Man1002Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154696" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342941" alias="DURANCE16S_14Man1017Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154697" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342942" alias="DURANCE16S_14Per1013Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154698" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342943" alias="DURANCE16S_T-7" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154699" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342944" alias="DURANCE16S_empty-23" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154700" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342945" alias="DURANCE16S_14Ain1036Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154701" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342946" alias="DURANCE16S_15Cab1002Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154702" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342947" alias="DURANCE16S_15Cab1010Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154703" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342948" alias="DURANCE16S_15Cab1018Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154704" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342949" alias="DURANCE16S_14Avi1007Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154705" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342950" alias="DURANCE16S_14Bue1004Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154706" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342951" alias="DURANCE16S_14Bue1014Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154707" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342952" alias="DURANCE16S_14Man1010Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154708" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342953" alias="DURANCE16S_14Man1018Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154709" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342954" alias="DURANCE16S_14Per1014Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154710" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342955" alias="DURANCE16S_empty-18" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154711" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342956" alias="DURANCE16S_empty-24" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154712" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342957" alias="DURANCE16S_14Ain1037Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154713" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342958" alias="DURANCE16S_15Cab1003Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154714" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342959" alias="DURANCE16S_15Cab1011Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154715" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342960" alias="DURANCE16S_15Cab1019Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154716" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342961" alias="DURANCE16S_14Avi1008Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154717" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342962" alias="DURANCE16S_14Bue1005Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154718" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342963" alias="DURANCE16S_14Bue1015Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154719" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342964" alias="DURANCE16S_14Man1011Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154720" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342965" alias="DURANCE16S_14Man1019Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154721" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342966" alias="DURANCE16S_14Per2011Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154722" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342967" alias="DURANCE16S_empty-19" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154723" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342968" alias="DURANCE16S_empty-25" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154724" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342969" alias="DURANCE16S_15Bau1001Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154725" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342970" alias="DURANCE16S_15Bau1009Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154726" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342971" alias="DURANCE16S_15Bau1017Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154727" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342972" alias="DURANCE16S_15Bau1025Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154728" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342973" alias="DURANCE16S_15Jus1008Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154729" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342974" alias="DURANCE16S_15Jus1016Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154730" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342975" alias="DURANCE16S_15Caa1005Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154731" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342976" alias="DURANCE16S_15Caa1013Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154732" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342977" alias="DURANCE16S_15Avi1001Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154733" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342978" alias="DURANCE16S_15Avi1009Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154734" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342979" alias="DURANCE16S_15Bue1004Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154735" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342980" alias="DURANCE16S_15Bue1012Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154736" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342981" alias="DURANCE16S_15Bau1002Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154737" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342982" alias="DURANCE16S_15Bau1010Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154738" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342983" alias="DURANCE16S_15Bau1018Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154739" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342984" alias="DURANCE16S_15Jus1001CH02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154740" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342985" alias="DURANCE16S_15Jus1009Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154741" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342986" alias="DURANCE16S_15Jus1017Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154742" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342987" alias="DURANCE16S_15Caa1006Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154743" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342988" alias="DURANCE16S_15Caa1014Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154744" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342989" alias="DURANCE16S_15Avi1002Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154745" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342990" alias="DURANCE16S_15Avi1010Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154746" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342991" alias="DURANCE16S_15Bue1005Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154747" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342992" alias="DURANCE16S_15Bue1013Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154748" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342993" alias="DURANCE16S_15Bau1003Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154749" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342994" alias="DURANCE16S_15Bau1011Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154750" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342995" alias="DURANCE16S_15Bau1019Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154751" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342996" alias="DURANCE16S_15Jus1002Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154752" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342997" alias="DURANCE16S_15Jus1010Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154753" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342998" alias="DURANCE16S_15Jus1018Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154754" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32342999" alias="DURANCE16S_15Caa1007Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154755" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343000" alias="DURANCE16S_15Caa1015Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154756" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343001" alias="DURANCE16S_15Avi1003Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154757" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343002" alias="DURANCE16S_15Avi1011Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154758" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343003" alias="DURANCE16S_15Bue1006Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154759" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343004" alias="DURANCE16S_15Bue1014Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154760" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343005" alias="DURANCE16S_15Bau1004Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154761" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343006" alias="DURANCE16S_15Bau1012Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154762" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343007" alias="DURANCE16S_15Bau1020Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154763" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343008" alias="DURANCE16S_15Jus1003Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154764" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343009" alias="DURANCE16S_15Jus1011Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154765" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343010" alias="DURANCE16S_15Jus1019Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154766" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343011" alias="DURANCE16S_15Caa1008Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154767" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343012" alias="DURANCE16S_15Caa1016Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154768" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343013" alias="DURANCE16S_15Avi1004Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154769" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343014" alias="DURANCE16S_15Avi1012Pt02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154770" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343015" alias="DURANCE16S_15Bue1007Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154771" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343016" alias="DURANCE16S_15Bue1015Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154772" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343017" alias="DURANCE16S_15Bau1005Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154773" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343018" alias="DURANCE16S_15Bau1013Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154774" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343019" alias="DURANCE16S_15Bau1021Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154775" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343020" alias="DURANCE16S_15Jus1004Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154776" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343021" alias="DURANCE16S_15Jus1012Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154777" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343022" alias="DURANCE16S_15Caa1001Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154778" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343023" alias="DURANCE16S_15Caa1009Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154779" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343024" alias="DURANCE16S_15Caa1017Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154780" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343025" alias="DURANCE16S_15Avi1005Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154781" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343026" alias="DURANCE16S_15Avi1013Pt02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154782" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343027" alias="DURANCE16S_15Bue1008Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154783" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343028" alias="DURANCE16S_15Bue1016Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154784" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343029" alias="DURANCE16S_15Bau1006Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154785" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343030" alias="DURANCE16S_15Bau1014Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154786" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343031" alias="DURANCE16S_15Bau1022Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154787" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343032" alias="DURANCE16S_15Jus1005Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154788" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343033" alias="DURANCE16S_15Jus1013Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154789" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343034" alias="DURANCE16S_15Caa1002Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154790" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343035" alias="DURANCE16S_15Caa1010Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154791" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343036" alias="DURANCE16S_15Caa1018Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154792" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343037" alias="DURANCE16S_15Avi1006Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154793" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343038" alias="DURANCE16S_15Bue1001Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154794" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343039" alias="DURANCE16S_15Bue1009Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154795" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343040" alias="DURANCE16S_15Bue1017Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154796" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343041" alias="DURANCE16S_15Bau1007Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154797" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343042" alias="DURANCE16S_15Bau1015Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154798" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343043" alias="DURANCE16S_15Bau1023Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154799" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343044" alias="DURANCE16S_15Jus1006Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154800" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343045" alias="DURANCE16S_15Jus1014Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154801" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343046" alias="DURANCE16S_15Caa1003Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154802" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343047" alias="DURANCE16S_15Caa1011Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154803" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343048" alias="DURANCE16S_15Caa1019Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154804" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343049" alias="DURANCE16S_15Avi1007Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154805" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343050" alias="DURANCE16S_15Bue1002Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154806" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343051" alias="DURANCE16S_15Bue1010Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154807" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343052" alias="DURANCE16S_15Bue1018Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154808" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343053" alias="DURANCE16S_15Bau1008Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154809" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343054" alias="DURANCE16S_15Bau1016Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154810" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343055" alias="DURANCE16S_15Bau1024Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154811" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343056" alias="DURANCE16S_15Jus1007Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154812" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343057" alias="DURANCE16S_15Jus1015Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154813" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343058" alias="DURANCE16S_15Caa1004Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154814" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343059" alias="DURANCE16S_15Caa1012Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154815" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343060" alias="DURANCE16S_15Caa1020Ch0A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154816" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343061" alias="DURANCE16S_15Avi1008Cn02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154817" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343062" alias="DURANCE16S_15Bue1003Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154818" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343063" alias="DURANCE16S_15Bue1011Ch02A" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154819" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS32343064" alias="DURANCE16S_T-8" status="PRIVATE">
+          <EXT_ID accession="SAMEA132154820" type="biosample"/>
+     </SAMPLE>
+     <PROJECT accession="PRJEB124408" alias="DURANCE16S_STUDY" status="PRIVATE" holdUntilDate="2028-08-25+01:00">
+          <EXT_ID accession="ERP204223" type="study"/>
+     </PROJECT>
+     <SUBMISSION accession="ERA36906987" alias="SUBMISSION-25-08-2026-08:10:20:107"/>
+     <MESSAGES>
+          <INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
+     </MESSAGES>
+     <ACTIONS>ADD</ACTIONS>
+</RECEIPT>

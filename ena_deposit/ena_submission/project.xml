@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROJECT_SET>
+  <PROJECT alias="DURANCE16S_STUDY">
+    <TITLE>Bacterial microbiota of four tissues in a Chondrostoma nasus x Parachondrostoma toxostoma hybrid zone (Rhone drainage, France): 16S V4 amplicon sequencing with three technical sequencing replicates</TITLE>
+    <DESCRIPTION>Host-associated bacterial microbiota of two interbreeding cyprinid fishes, the nase Chondrostoma nasus and the toxostome Parachondrostoma toxostoma, together with unassigned Chondrostoma sp. individuals from their contact zone, sampled across nine sites of the Rhone drainage (Durance and Ardeche rivers, France) in 2014 and 2015. Four tissues were sampled per fish (caudal fin, midgut, hindgut and gill). The V4 region of the bacterial 16S rRNA gene was amplified with the 515F/806R primer pair following the dual-index strategy of Kozich et al. (2013) and sequenced on an Illumina MiSeq (v3, 2x300). The same 768 libraries were sequenced three independent times (runs durance1, durance2 and durance3; distinct flow cells), so that every library is present as three technical replicates and the sequencing-run effect can be estimated unconfounded with any biological factor. The submission includes extraction blanks, no-template PCR controls, ZymoBIOMICS mock community positive controls and empty wells used to monitor index hopping.</DESCRIPTION>
+    <SUBMISSION_PROJECT>
+      <SEQUENCING_PROJECT/>
+    </SUBMISSION_PROJECT>
+  </PROJECT>
+</PROJECT_SET>

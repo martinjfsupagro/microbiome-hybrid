@@ -70,3 +70,9 @@ metadata/samples_all_with_sites.csv
 /technical_vs_biological_distances.tsv
 /variance_partition.txt
 /bench_out.txt
+ena_deposit/webin_out_prod/
+ena_deposit/webin_out_test/
+ena_deposit/manifests/
+ena_deposit/submit_*.log
+ena_deposit/ena_submit_*.out
+ena_deposit/done_runs_*.txt

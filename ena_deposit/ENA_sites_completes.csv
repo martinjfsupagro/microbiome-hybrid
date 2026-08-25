@@ -1,0 +1,10 @@
+﻿site_code,site_nom_projet,riviere,annees,n_librairies,n_individus,latitude_WGS84_A_REMPLIR,longitude_WGS84_A_REMPLIR,commune_ou_lieu_dit_A_REMPLIR,date_collecte_precise_A_REMPLIR,broad_env_context_propose,local_env_context_propose,environmental_medium_propose,commentaire
+Ain,Ain,Ain,2014,55,14,45.906458,5.233251,Villieu-Loyes-Mollon,2014,freshwater river biome [ENVO:01000253],river [ENVO:00000022],river water [ENVO:01000599],"Commune confirmée par l'utilisateur : Villieu-Loyes-Mollon (01800), rivière Ain — Pont-d'Ain était une approximation"
+Avi,Avignon,Durance,"2014, 2015",96,16,43.912848,4.817756,Avignon,"2014,2015",freshwater river biome [ENVO:01000253],river [ENVO:00000022],river water [ENVO:01000599],
+Bau,Baume,Ardèche,2015,100,25,44.523904,4.196789,Sanilhac,2015,freshwater river biome [ENVO:01000253],river [ENVO:00000022],river water [ENVO:01000599],"Orthographe corrigée : Sanihac -> Sanilhac (Ardèche, 07110), confirmé par géocodage inverse"
+Bue,Büech,Durance,"2014, 2015",140,19,44.308322,5.823657,Laragne-Montéglin,"2014,2015",freshwater river biome [ENVO:01000253],river [ENVO:00000022],river water [ENVO:01000599],
+Caa,canal,Durance,2015,80,20,43.66084,5.417827,Le Puy-Sainte-Réparade,2015,freshwater river biome [ENVO:01000253],river [ENVO:00000022],river water [ENVO:01000599],
+Cab,Ain (2015),Ain,2015,78,21,45.906458,5.233251,Villieu-Loyes-Mollon,2015,freshwater river biome [ENVO:01000253],river [ENVO:00000022],river water [ENVO:01000599],"Commune confirmée par l'utilisateur : Villieu-Loyes-Mollon (01800), rivière Ain — Pont-d'Ain était une approximation"
+Jus,St-Just,Ardèche,2015,76,19,44.286334,4.611151,Saint-Just-d'Ardèche,2015,freshwater river biome [ENVO:01000253],river [ENVO:00000022],river water [ENVO:01000599],
+Man,Manosque,Durance,2014,60,15,43.80971,5.828565,Manosque,2014,freshwater river biome [ENVO:01000253],river [ENVO:00000022],river water [ENVO:01000599],
+Per,Pertuis,Durance,"2014, 2015",44,9,43.667517,5.497149,Pertuis,"2014,2015",freshwater river biome [ENVO:01000253],river [ENVO:00000022],river water [ENVO:01000599],Site identifié par André : Pertuis (Durance)
