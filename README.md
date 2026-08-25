@@ -1,246 +1,298 @@
 # microbiome-hybrid
 
 ## Description
-Analyse comparative du microbiome (16S) de plusieurs tissus chez le hotu, le
-toxostome et leurs hybrides, sur plusieurs sites et deux années (2014, 2015).
+Comparative analysis of the 16S microbiota of several tissues in nase
+(*Chondrostoma nasus*), South-west European nase (*Parachondrostoma toxostoma*)
+and their hybrids, across several sites and two years (2014, 2015).
 
-**Question** : le microbiome des hybrides est-il intermédiaire entre les deux
-espèces parentales, ou déplacé hors de leur intervalle ?
+**Question**: is the hybrid microbiota intermediate between the two parental
+species, or displaced outside their range?
 
-### Plan d'échantillonnage
-| Facteur | Niveaux |
+### Sampling design
+| Factor | Levels |
 |---|---|
-| Taxon    | hotu (`Cn`) / toxostome (`Pt`) / chondrostome non résolu (`Ch`) |
-| Tissu    | 4 : caudale (`01`) / midgut (`02`) / hindgut (`03`) / branchie (`05`) |
-| Site     | Ain, Avi, Bau, Bue, Caa, Cab, Jus, Man, Per |
-| Année    | 2014 / 2015 |
+| Taxon  | nase (`Cn`) / toxostoma (`Pt`) / unresolved *Chondrostoma* (`Ch`) |
+| Tissue | 4: caudal fin (`01`) / midgut (`02`) / hindgut (`03`) / gill (`05`) |
+| Site   | Ain, Avi, Bau, Bue, Caa, Cab, Jus, Man, Per |
+| Year   | 2014 / 2015 |
 
-**Codes taxon.** `Ch` = chondrostome **non identifié** à ce stade (ni `Cn` ni
-`Pt` tranché), et **non** le chevesne comme on l'a d'abord cru. Le chevesne
-(*Squalius cephalus*, code labo `Sc`) n'est pas dans ces trois runs. L'espèce
-fine (dont le statut hybride) se lit dans `HotuToxo_taillepoids.xlsx`, où les
-individus séquencés `Ch` se répartissent en `Cn`/`Pt`/`Ch`/`Hy` — voir plus bas.
+**Taxon codes.** `Ch` means a *Chondrostoma* **not yet identified** at this stage
+(neither `Cn` nor `Pt` resolved) — it does **not** mean chub, as was first
+assumed. Chub (*Squalius cephalus*, lab code `Sc`) is absent from these three
+runs. Species-level identity (including hybrid status) is being genotyped and
+will be delivered as a **hybrid index** per individual, from 0 (nase) to
+1 (toxostoma); see `metadata/index_hybride_andre.csv`.
 
-Plan très déséquilibré : site et année sont largement confondus (seuls Avi et
-Bue couvrent les deux années), de même que taxon et site. Voir
+The design is strongly unbalanced: site and year are largely confounded (only Avi
+and Bue span both years), as are taxon and site. See
 [docs/donnees_durance1.md](docs/donnees_durance1.md).
 
-### Données
-| Lot | Run MiSeq | Flowcell | n | Livraison | État |
+### Data
+| Batch | MiSeq run | Flow cell | n | Delivery | Status |
 |---|---|---|---|---|---|
-| `durance1` | 170710_M03930_0062 | BBHKV | 768 | run dir + SampleSheet | inventorié |
-| `durance2` | M03930_0069 | BCFFD | 768 | fastq renommés + SampleSheet à part | inventorié |
-| `durance3` | 171103_M03930_0072 | BFWT5 | 768 | run dir + SampleSheet | inventorié |
+| `durance1` | 170710_M03930_0062 | BBHKV | 768 | run dir + SampleSheet | inventoried |
+| `durance2` | M03930_0069 | BCFFD | 768 | renamed fastq + separate SampleSheet | inventoried |
+| `durance3` | 171103_M03930_0072 | BFWT5 | 768 | run dir + SampleSheet | inventoried |
 
-Les trois runs sont **le reséquençage des mêmes 768 librairies** (confirmé :
-même plan de plaque, mêmes puits, mêmes i7 ; seuls les i5 changent — durance1 a
-son propre jeu d'i5, durance2 et durance3 en partagent un autre). Chaque
-échantillon est donc présent en triple : 729 réplicats techniques inter-runs,
-plus les 39 contrôles × 3. L'effet run est estimable directement — il n'est
-confondu avec aucun facteur biologique.
+The three runs are **not** three sequencings of one library. The replication
+structure is **nested**: the same 768 samples went through **two independent
+one-step dual-index PCR library preparations**; the first was sequenced once
+(`durance1`), the second twice on separate flow cells (`durance2`, `durance3`).
+Establishing this took four converging lines of evidence — see
+[docs/decision_run_design.md](docs/decision_run_design.md). Consequences:
 
-durance2 est livré en fastq démultiplexés (non compressés, témoins dans
-`control/`) et sans run dir. Sa SampleSheet d'origine, retrouvée à part
-(`EG_16S_Durance_Run2.csv`, déposée dans le dossier des fastq), est
-autodétectée par `build_metadata.py` et fournit plaque, puits et index — sinon
-absents. Sa virgule Sample_Name/Sample_Plate manquante (nom et n° de plaque
-collés) est corrigée à la lecture. Toutes ses lignes gardent le flag
-`nom_depuis_fichier`, les noms venant des fichiers et non de la feuille.
+- **Do not model `run` as a three-level factor with interchangeable levels.**
+  Sequencing is nested within library preparation.
+- Index assignment differs between preparations: relative to `durance1`, the i7
+  index differs for 384 of the 768 libraries and the i5 index for 576, whereas
+  `durance2` and `durance3` carry identical index pairs throughout. Because
+  indices are incorporated during amplification in a one-step protocol, an
+  existing amplicon pool cannot be re-indexed, so a different index assignment
+  implies a distinct PCR.
+- Every sample is present in all batches, so technical and biological factors
+  are **crossed, not confounded**: batch-correction methods designed for
+  confounded meta-analyses are unnecessary and were not applied.
 
-### Source unique des fastq : `consolidated_dataset/`
-Les fastq **R1/R2 des trois runs** ont été centralisés dans
-`consolidated_dataset/<run>/` (4608 fichiers, tout en `.fastq.gz`) par
-`scripts/consolidate_fastq.py`. C'est la source de données pour l'analyse ; les
-colonnes `fastq_r1`/`fastq_r2` de `samples_all.csv` pointent vers elle
-(chemins relatifs à la racine du projet).
+Of the 768 samples, **727 are biological** and **41 are controls** (4 extraction
+blanks, 8 no-template PCR controls, 4 mock aliquots, 25 empty wells), each
+sequenced in all three runs.
 
-- **Sous-dossiers par run** : durance1 et durance3 portent les mêmes noms de
-  fichiers (mêmes librairies) — à plat ils s'écraseraient. Ça convient aussi à
-  DADA2, qui apprend les taux d'erreur par run.
-- **durance2 compressé** en `.fastq.gz` au passage (livré en `.fastq`).
-- **R1/R2 seulement.** Les index reads `I1/I2` (durance1/3) et les
-  `Undetermined` restent dans `data/`, avec les SampleSheet, InterOp, etc.
-- **Réversible** : `metadata/consolidate_manifest.csv` (versionné) ;
-  annulation : `python3 scripts/consolidate_fastq.py --revert metadata/consolidate_manifest.csv`
-  (puis régénérer les CSV : build + merge).
+`durance2` was delivered as demultiplexed fastq (uncompressed, controls in
+`control/`) with no run dir. Its original SampleSheet, found separately
+(`EG_16S_Durance_Run2.csv`, placed in the fastq folder), is auto-detected by
+`build_metadata.py` and supplies plate, well and index — otherwise missing. Its
+missing Sample_Name/Sample_Plate comma (name and plate number run together) is
+fixed on read. All its rows keep the `nom_depuis_fichier` flag, names coming
+from the files rather than from the sheet.
 
-### Suffixe `bis` : ré-extraction
-`bis` désigne une **seconde extraction d'ADN du même tissu**, pas un second
-prélèvement. D'où la colonne `extraction` (`initiale` / `bis`), qui fait partie
-de la clé de réplicat : 9 tissus ont été extraits deux fois, soit 27 lignes.
-Les confondre avec leur extraction initiale ferait passer un effet extraction
-pour un effet run.
+### Single fastq source: `consolidated_dataset/`
+The **R1/R2 fastq of all three runs** were centralised into
+`consolidated_dataset/<run>/` (4,608 files, all `.fastq.gz`) by
+`scripts/consolidate_fastq.py`. This is the data source for the analysis; the
+`fastq_r1`/`fastq_r2` columns of `samples_all.csv` point to it (paths relative
+to the project root).
 
-Deux de ces `bis` étaient mal saisis : `-bis` dans les noms de fichiers de
-durance2 (conversion Illumina), et suffixe absent pour `14Bue1006Cn05A` en C07
-dans la SampleSheet de durance1. Ce dernier est corrigé dans `NOMS_CORRIGES`
-(`build_metadata.py`), flag `nom_corrige` — le puits est le même dans les trois
-runs, l'identification est certaine.
+- **One subfolder per run**: durance1 and durance3 carry identical file names
+  (same libraries) and would overwrite each other if flat. This also suits
+  DADA2, which learns error rates per run.
+- **durance2 compressed** to `.fastq.gz` in passing (delivered as `.fastq`).
+- **R1/R2 only.** Index reads `I1/I2` (durance1/3) and `Undetermined` stay in
+  `data/`, along with SampleSheets, InterOp, etc.
+- **Reversible**: `metadata/consolidate_manifest.csv` (version-controlled);
+  to undo: `python3 scripts/consolidate_fastq.py --revert metadata/consolidate_manifest.csv`
+  (then regenerate the CSVs: build + merge).
 
-### Correspondance code tissu ↔ tissu
-Confirmée (collègue, 2026-07-25) et cohérente avec le plan de plaque :
+### The `bis` suffix: re-extraction
+`bis` denotes a **second DNA extraction from the same tissue**, not a second
+sampling. Hence the `extraction` column (`initiale` / `bis`), which is part of
+the replicate key: 9 tissues were extracted twice, i.e. 27 rows. Merging them
+with their initial extraction would make an extraction effect look like a run
+effect.
 
-| Code | Tissu |
+Two of these `bis` were mis-entered: `-bis` inside the durance2 file names
+(Illumina conversion), and a missing suffix for `14Bue1006Cn05A` in well C07 of
+the durance1 SampleSheet. The latter is fixed in `NOMS_CORRIGES`
+(`build_metadata.py`), flag `nom_corrige` — the well is the same in all three
+runs, so the identification is certain.
+
+### Tissue code to tissue
+Confirmed (colleague, 2026-07-25) and consistent with the plate layout:
+
+| Code | Tissue |
 |---|---|
-| `01` | caudale |
+| `01` | caudal fin |
 | `02` | midgut |
 | `03` | hindgut |
-| `05` | branchie |
+| `05` | gill |
 
-### Taxon des individus 1036–1043 (Ain 2014)
-Le bloc de saisie du code espèce manquait. Complété d'après la feuille de
-terrain (`TAXON_MANUEL` dans `build_metadata.py`, flag
-`taxon_saisi_manuellement`) : 1036–1037 = hotu (`Cn`), 1038–1043 = toxostome
-(`Pt`). Ces individus ne sont donc pas un groupe à part.
+### Taxon of individuals 1036-1043 (Ain 2014)
+The species-code entry block was missing. Filled in from the field sheet
+(`TAXON_MANUEL` in `build_metadata.py`, flag `taxon_saisi_manuellement`):
+1036-1037 = nase (`Cn`), 1038-1043 = toxostoma (`Pt`). These individuals are
+therefore not a separate group.
 
-### Code tissu 04 → 05
-`15Avi1002Cn04A` portait un `04` confirmé faute de frappe pour `05` (branchie) ;
-l'individu retrouve son jeu 01/02/03/05. Corrigé via `TISSU_CORRIGE`
+### Tissue code 04 to 05
+`15Avi1002Cn04A` carried an `04` confirmed to be a typo for `05` (gill); the
+individual recovers its 01/02/03/05 set. Fixed via `TISSU_CORRIGE`
 (`build_metadata.py`), flag `tissu_corrige`.
 
-### Taille / poids / sexe (HotuToxo_taillepoids.xlsx)
-Colonnes `size_cm`, `weight_g` et `sex` ajoutées à `samples_all.csv` par
-`merge_metadata.py` (option `--measurements`), depuis
-`metadata/HotuToxo_taillepoids.xlsx`. Ce sont des données **par individu** :
-jointes sur (année, site, individu) — **sans** le taxon, puisque le poisson est
-le même quelle que soit son étiquette — et propagées à tous ses tissus et tous
-les runs.
+### Length / weight / sex (HotuToxo_taillepoids.xlsx)
+Columns `size_cm`, `weight_g` and `sex` are added to `samples_all.csv` by
+`merge_metadata.py` (`--measurements` option), from
+`metadata/HotuToxo_taillepoids.xlsx`. These are **per-individual** data: joined
+on (year, site, individual) — **without** taxon, since the fish is the same
+whatever its label — and propagated to all its tissues and all runs.
 
-- taille en cm, poids en g ;
-- `sex` : `M` / `F` / `X` (non défini — les `x` et `X` du xlsx homogénéisés) /
-  `NA` (juvénile) ;
-- 2070 lignes renseignées, 36 corrigées, 81 sans mesure (individus séquencés
-  absents du xlsx), 0 en conflit ;
-- **conflits résolus** : 3 individus (`15Jus1006/1007/1008`) avaient deux jeux
-  de mesures divergents dans le xlsx. Valeurs faisant autorité fournies par le
-  collègue (2026-07-25), saisies dans `MESURES_CORRIGEES` (`merge_metadata.py`),
-  flag `mesures_corrigees`. Le mécanisme reste en place si d'autres conflits
-  apparaissent (un champ divergent non corrigé serait laissé vide + flag
-  `mesures_conflit`) ;
-- le xlsx porte aussi `Species` (Cn/Pt/Ch/**Hy** = hybride), **non repris** : le
-  statut taxonomique fin des `Ch` est en cours de caractérisation et sera intégré
-  au fichier dès qu'il sera disponible.
+- length in cm, weight in g;
+- `sex`: `M` / `F` / `X` (undetermined — the xlsx's `x` and `X` homogenised) /
+  `NA` (juvenile);
+- 2,070 rows filled, 36 corrected, 81 without measurement (sequenced individuals
+  absent from the xlsx), 0 in conflict;
+- **conflicts resolved**: 3 individuals (`15Jus1006/1007/1008`) had two divergent
+  sets of measurements in the xlsx. Authoritative values supplied by the
+  colleague (2026-07-25), entered in `MESURES_CORRIGEES` (`merge_metadata.py`),
+  flag `mesures_corrigees`. The mechanism stays in place should further
+  conflicts appear (an uncorrected divergent field would be left empty with a
+  `mesures_conflit` flag);
+- the xlsx also carries `Species` (Cn/Pt/Ch/**Hy** = hybrid), **not used**: the
+  fine taxonomic status of the `Ch` is being characterised and will be
+  integrated as a hybrid index when available.
 
-### Renommage des fastq bruts
-Les corrections d'espèce (1036–1043) et de tissu (04→05) ont aussi été
-appliquées **aux noms de fichiers fastq et aux SampleSheet** des trois runs, via
-`scripts/rename_fastq.py` (320 fichiers). Le renommage est réversible :
+### Renaming of raw fastq
+The species (1036-1043) and tissue (04 to 05) corrections were also applied **to
+the fastq file names and the SampleSheets** of all three runs, via
+`scripts/rename_fastq.py` (320 files). The renaming is reversible:
 
-- `metadata/rename_manifest.csv` (versionné) : correspondance ancien → nouveau ;
-- une sauvegarde `SampleSheet.csv.orig` à côté de chaque feuille modifiée ;
-- annulation : `python3 scripts/rename_fastq.py --revert metadata/rename_manifest.csv --data-root data`.
+- `metadata/rename_manifest.csv` (version-controlled): old to new mapping;
+- a `SampleSheet.csv.orig` backup beside each modified sheet;
+- to undo: `python3 scripts/rename_fastq.py --revert metadata/rename_manifest.csv --data-root data`.
 
-L'appariement fastq ↔ SampleSheet se fait par le numéro `_S{n}`, donc le
-renommage ne dépend pas de ces corrections et reste rejouable. Les flags de
-provenance (`taxon_saisi_manuellement`, `tissu_corrige`) subsistent après
-renommage : on garde trace de ce qui a été corrigé et pourquoi.
+fastq-to-SampleSheet matching uses the `_S{n}` number, so the renaming does not
+depend on these corrections and remains reversible.
 
-Seuls ces deux cas ont été renommés. Les casses de site (`15BUe`→`Bue`), les
-séparateurs et le suffixe `bis` **ne sont pas** touchés dans les fichiers : ils
-restent régularisés dans les seules métadonnées.
-
-## Analyse (pipeline 16S V4)
-Chaîne adaptée du projet **azelie** (charpente SLURM/Singularity) et du projet
-**Apron** (retrait du 12S, même assay). Marqueur unique 16S V4, **3 runs** traités
-séparément puis fusionnés. Amorces Caporaso 515F/806R, **déjà retirées** des
-lectures (protocole Schloss : les amorces sont les amorces de séquençage) — donc
-pas d'étape de retrait 5', pas d'adaptateur Nextera.
-
+## Pipeline
 ```
-01  QC          FastQC + MultiQC par run
-02  retrait 12S cutadapt : le 12S hôte co-amplifié (15-67 % des reads) est
-                retiré par la LONGUEUR (insert 12S ~190 pb vs V4 ~253 pb) ;
-                too-short conservé (signal hôte). Par run.
-04  DADA2       filterAndTrim truncLen c(230,190) + learnErrors PAR RUN + dada +
-                mergePairs → seqtab_<run>.rds (brut). Par run.
-05  fusion+tax  mergeSequenceTables (échantillons suffixés __run → 2304 colonnes)
-                + removeBimeraDenovo + assignTaxonomy SILVA + filtre
-                Mitochondria/Chloroplast/Eukaryota.
+01  QC          FastQC + MultiQC per run
+02  12S removal cutadapt: co-amplified host 12S (15-67 % of reads) is removed
+                by LENGTH (12S insert ~190 bp vs V4 ~253 bp); too-short kept
+                (host signal). Per run.
+04  DADA2       filterAndTrim truncLen c(230,190) + learnErrors PER RUN + dada +
+                mergePairs -> seqtab_<run>.rds (raw). Per run.
+05  merge+tax   mergeSequenceTables (samples suffixed __run -> 2,304 columns)
+                + removeBimeraDenovo + assignTaxonomy SILVA + Mitochondria/
+                Chloroplast/Eukaryota filter.
+06  mock        blastn of mock ASVs against the ZymoBIOMICS 16S reference.
+07  decontam    reagent contaminants from negative controls.
+08  phylogeny   de-novo tree (MAFFT + FastTree2) for UniFrac / Faith PD.
+09  depth QC    depth distribution and rarefaction curves.
+10  crosstalk   index hopping quantified from the empty wells.
+11  QC flags    annotation of mock-composition samples (join table).
+12  clean table single canonical analysis table.
+13  run design  characterisation of the nested replication structure.
+14  variance    biological vs technical variance partition.
+15  rarefaction repeated rarefaction: alpha and beta, convergence.
 ```
-Lancement (chaque lanceur soumet un job par run, exige un arbre git propre) :
+Launching (each launcher submits one job per run and requires a clean git tree):
 ```bash
 cd ~/work/projects/microbiome-hybrid
-bash scripts/01-quality_check_launcher.sh          # QC (facultatif, en //)
-bash scripts/02-remove_12S_launcher.sh             # → note les 3 job IDs
-bash scripts/04-dada2_launcher.sh --after J1:J2:J3 # afterok, ordre = durance1/2/3
-sbatch scripts/05-merge_taxonomy.sh                # après les 3 dada2
+bash scripts/01-quality_check_launcher.sh          # QC (optional, in parallel)
+bash scripts/02-remove_12S_launcher.sh             # -> note the 3 job IDs
+bash scripts/04-dada2_launcher.sh --after J1:J2:J3 # afterok, order = durance1/2/3
+sbatch scripts/05-merge_taxonomy.sh                # after the 3 dada2 jobs
 ```
-Choix clés (mesurés sur les données, voir en-tête des scripts) : `-O 10`,
-`--minimum-length 240` pour le 12S ; `learnErrors` par run car 3 séquençages
-distincts ; chimères sur la table fusionnée.
+Key choices (measured on the data, see script headers): `-O 10`,
+`--minimum-length 240` for the 12S; `learnErrors` per run because these are
+distinct sequencings; chimeras on the merged table.
 
-### Résultats (résultats/dada2_final/)
-Premier passage (commit du pipeline) :
+**MESO@LR pitfall**: the default QOS on `ondemand@biomics` is `ondemand-short`,
+capped at **1 hour**. Any job with `--time` above that hangs PENDING with
+`QOSMaxWallDurationPerJobLimit`. Add `#SBATCH --qos=cpu-ondemand-long`.
 
-| Étape | Chiffre |
+### Results (results/dada2_final/)
+| Step | Figure |
 |---|---|
-| 12S retiré | ~15 % des reads/run (jusqu'à 67 % par échantillon) |
-| Fusion des paires (médiane) | 92,7–94,3 % selon le run |
-| ASV bruts par run | 26 128 / 27 605 / 29 197 |
-| Après fusion des 3 runs | 2295 échantillons × 48 819 ASV |
-| Après chimères | **46 320 ASV** (98,0 % des reads conservés) |
-| Longueur d'ASV | pic à 251 pb (V4 ; aucun résidu 12S) |
+| 12S removed | ~15 % of reads/run (up to 67 % per sample) |
+| Pair merging (median) | 92.7-94.3 % depending on run |
+| Raw ASVs per run | 26,128 / 27,605 / 29,197 |
+| After merging the 3 runs | 2,295 samples x 48,819 ASVs |
+| After chimeras | **46,320 ASVs** (98.0 % of reads kept) |
+| ASV length | peak at 251 bp (V4; no 12S residue) |
 
-2295 échantillons (et non 2304) : 9 écartés car vides après filtrage
-(8 contrôles `empty` + `15Bue1014Ch03A` sur durance3 — présent dans les 2 autres
-runs). Fichiers : `asv_table.tsv` (ASV × échantillon), `asv.fasta`,
-`seqtab_nochim.rds`, `track_all.csv`.
+2,295 samples rather than 2,304: 9 dropped as empty after filtering (8 `empty`
+controls + `15Bue1014Ch03A` on durance3, present in the two other runs). Files:
+`asv_table.tsv` (ASV x sample), `asv.fasta`, `seqtab_nochim.rds`,
+`track_all.csv`.
 
-**Jointure table ↔ métadonnées** : les colonnes de `asv_table.tsv` sont nommées
-`{échantillon}__{run}` (ex. `14Ain1001Cn01A__durance1`). La colonne `dada2_id`
-de `samples_all.csv` porte exactement cette clé — c'est par elle qu'on relie les
-ASV au plan d'échantillonnage (taxon, tissu, site, taille/poids…).
+**Joining table to metadata**: the columns of `asv_table.tsv` are named
+`{sample}__{run}` (e.g. `14Ain1001Cn01A__durance1`). The `dada2_id` column of
+`samples_all.csv` carries exactly this key — it is the join to the sampling
+design (taxon, tissue, site, length/weight, etc.).
 
-### Taxonomie (SILVA v138.2)
-Réf. dans `$WORK/shared_softwares/silva/`, via `SILVA_TRAIN`/`SILVA_SPECIES`.
-`assignTaxonomy` réplique la base par thread → gros pic mémoire : **256G** requis
-pour l'étape 05 (64G partait en OOM).
+### Taxonomy (SILVA v138.2)
+Reference in `$WORK/shared_softwares/silva/`, via `SILVA_TRAIN`/`SILVA_SPECIES`.
+`assignTaxonomy` replicates the database per thread, hence a large memory peak:
+**256G** required for step 05 (64G ran out of memory).
 
-Assignation (sur 46 320 ASV) : Kingdom 100 %, Phylum 98,6 %, Ordre 90,3 %,
-Famille 77,1 %, Genre 46,7 %, Espèce 2,1 % (typique du V4). Phyla dominants :
+Assignment (on 46,320 ASVs): Kingdom 100 %, Phylum 98.6 %, Order 90.3 %,
+Family 77.1 %, Genus 46.7 %, Species 2.1 % (typical of V4). Dominant phyla:
 Pseudomonadota, Bacteroidota, Planctomycetota, Verrucomicrobiota.
 
-**Filtre hors-cible : 1971 ASV retirés** — 1144 Mitochondria, 784 Chloroplast,
-22 Eukaryota, 21 non assignés. Les 1144 ASV mitochondriaux sont du 12S hôte
-résiduel (passé en pleine longueur, non éliminé par la longueur en 02) : le
-filet taxonomique les rattrape, comme prévu.
+**Off-target filter: 1,971 ASVs removed** — 1,144 Mitochondria, 784 Chloroplast,
+22 Eukaryota, 21 unassigned. The 1,144 mitochondrial ASVs are residual host 12S
+(passed at full length, not caught by the length filter in step 02): the
+taxonomic net catches them, as intended.
 
-→ **`asv_table_filtered.tsv` : 44 349 ASV × 2295 échantillons** (table d'analyse),
-`taxonomy.tsv`, `seqtab_nochim_filtered.rds`. Se joignent au plan
-d'échantillonnage par `dada2_id` de `samples_all.csv`.
+-> **`asv_table_filtered.tsv`: 44,349 ASVs x 2,295 samples**, `taxonomy.tsv`,
+`seqtab_nochim_filtered.rds`. Joined to the sampling design by `dada2_id`.
+
+## Downstream analysis
+Every decision below is recorded in `docs/decision_*.md`, with the criterion
+used, what was measured, and what remains open.
+
+| Step | Outcome | Note |
+|---|---|---|
+| Mock validation | 8/8 expected species at 100 % identity, no spurious ASV | see `results/mock_validation/` |
+| Decontamination | conservative threshold; 66 contaminants, 99.76 % of reads kept | `decision_decontam.md` |
+| Index hopping | 41 reads out of 26.8 M in the empty wells (0.0002 %) — negligible | `decision_crosstalk.md` |
+| Mock artefacts | 2 samples reclassified as mislabelled mocks; 20 wells with mock reads, ASVs removed rather than samples excluded | `decision_mock_samples.md`, `decision_mock_removal.md` |
+| Analysis table | **2,180 samples x 44,200 ASVs** | `results/decontam/asv_table_clean.tsv` |
+| Phylogeny | de-novo MAFFT + FastTree2, one leaf per ASV | `results/phylogeny/tree.nwk` |
+| Rarefaction | threshold 3,000 reads (81.8 % of samples kept), repeated rarefaction, metrics averaged | `decision_rarefaction.md`, `decision_rarefaction_mode.md` |
+| Variance partition | technical 0.03 % vs tissue 9.2 % and fish identity 37.7 % | `results/var_partition/` |
+
+**Still pending the hybrid index**: statistical models, hybrid-zone gradient
+contrasts, and the final choice of retained populations.
 
 ## Structure
 ```
 microbiome-hybrid/
 ├── scripts/
-│   ├── 01-quality_check_{launcher,worker}.sh  ← FastQC/MultiQC par run
-│   ├── 02-remove_12S_{launcher,worker}.sh     ← retrait 12S cutadapt par run
-│   ├── 04-dada2_{launcher,worker}.sh          ← DADA2 par run
-│   ├── 05-merge_taxonomy.sh                   ← fusion + chimères + taxonomie
-│   ├── lib_samples.sh      ← fonctions partagées (appariement R1/R2)
-│   ├── job_template.sh     ← copier pour chaque nouveau job
-│   ├── check_run.sh        ← vérifier un run
-│   ├── build_metadata.py   ← métadonnées d'un run
-│   ├── merge_metadata.py   ← fusion + diagnostic du plan
-│   └── rename_fastq.py     ← renommage réversible des fastq corrigés
+│   ├── 01-quality_check_{launcher,worker}.sh  <- FastQC/MultiQC per run
+│   ├── 02-remove_12S_{launcher,worker}.sh     <- cutadapt 12S removal per run
+│   ├── 04-dada2_{launcher,worker}.sh          <- DADA2 per run
+│   ├── 05-merge_taxonomy.sh                   <- merge + chimeras + taxonomy
+│   ├── 06-validate_mock.sh                    <- mock validation (blastn)
+│   ├── 07-decontam.sh                         <- decontamination
+│   ├── 08-phylogeny.sh                        <- de-novo tree
+│   ├── 09-qc_depth.sh                         <- depth QC + rarefaction curves
+│   ├── 10-crosstalk.sh                        <- index hopping
+│   ├── 11-flag_mock_samples.py                <- QC flags (join table)
+│   ├── 12-clean_table.py                      <- canonical analysis table
+│   ├── 13-run_design.sh                       <- replication structure
+│   ├── 14-variance_partition.sh               <- variance partition
+│   ├── 15-rarefaction_converge.sh             <- repeated rarefaction
+│   ├── lib_samples.sh      <- shared functions (R1/R2 pairing)
+│   ├── job_template.sh     <- copy for each new job
+│   ├── check_run.sh        <- check a run
+│   ├── build_metadata.py   <- metadata for one run
+│   ├── merge_metadata.py   <- merge + design diagnostics
+│   └── rename_fastq.py     <- reversible renaming of corrected fastq
 ├── config/
-│   └── project.env         ← variables communes
-├── consolidated_dataset/   ← SOURCE UNIQUE des fastq pour l'analyse
-│   └── durance{1,2,3}/     ← R1/R2 .fastq.gz, un sous-dossier par run
-├── data/                   ← run dirs d'origine (SampleSheet, InterOp, I1/I2…)
+│   └── project.env         <- shared variables
+├── consolidated_dataset/   <- SINGLE fastq SOURCE for the analysis
+│   └── durance{1,2,3}/     <- R1/R2 .fastq.gz, one subfolder per run
+├── data/                   <- original run dirs (SampleSheet, InterOp, I1/I2…)
 ├── metadata/
 │   ├── samples_durance{1,2,3}.csv
-│   ├── samples_all.csv     ← fichier combiné, 2304 lignes (+ size_cm/weight_g/sex)
-│   ├── HotuToxo_taillepoids.xlsx  ← mesures par individu (source)
-│   ├── rename_manifest.csv ← ancien → nouveau nom de fastq
-│   └── consolidate_manifest.csv ← déplacement data/ → consolidated_dataset/
-├── results/                ← {jobname}_{jobid}/ par run
-├── logs/                   ← .out / .err SLURM
-├── docs/                   ← notes, protocoles
-└── runs.log                ← registre de tous les jobs
+│   ├── samples_all.csv     <- combined file, 2,304 rows (+ size_cm/weight_g/sex)
+│   ├── site_mapping.csv    <- site code -> ecological site (join, no renaming)
+│   ├── sample_qc_flags.csv <- QC flags (join, no renaming)
+│   ├── index_hybride_andre.csv <- hybrid index to be filled in (181 individuals)
+│   ├── HotuToxo_taillepoids.xlsx  <- per-individual measurements (source)
+│   ├── rename_manifest.csv <- old -> new fastq name
+│   └── consolidate_manifest.csv <- data/ -> consolidated_dataset/ moves
+├── ena_deposit/            <- ENA submission (scripts, XML, receipts)
+├── results/                <- {jobname}_{jobid}/ per run (not versioned)
+├── logs/                   <- SLURM .out / .err
+├── docs/                   <- notes, decisions, manuscript
+└── runs.log                <- register of every job
 ```
 
-### Régénérer les métadonnées
+**Sample names are never changed.** Corrections and reclassifications go through
+**join tables** (`site_mapping.csv`, `sample_qc_flags.csv`) joined on
+`site_code` or `dada2_id`; `samples_all.csv` is left untouched.
+
+### Regenerating the metadata
 ```bash
 python3 scripts/build_metadata.py data/durance1/170710_M03930_0062_000000000-BBHKV \
         metadata/samples_durance1.csv --label durance1
@@ -251,58 +303,62 @@ python3 scripts/build_metadata.py data/durance3/171103_M03930_0072_000000000-BFW
 python3 scripts/merge_metadata.py metadata/samples_durance?.csv \
         -o metadata/samples_all.csv --measurements metadata/HotuToxo_taillepoids.xlsx
 ```
-(`merge_metadata.py --measurements` requiert `openpyxl` : `pip install openpyxl`.)
+(`merge_metadata.py --measurements` requires `openpyxl`: `pip install openpyxl`.)
 
-## Procédure
+## Working procedure
 ```bash
-cp scripts/job_template.sh scripts/mon_job.sh
-# éditer mon_job.sh ...
+cp scripts/job_template.sh scripts/my_job.sh
+# edit my_job.sh ...
 git add -A && git commit -m "feat: description"
-sbatch scripts/mon_job.sh
-bash scripts/check_run.sh results/mon_job_JOBID
+sbatch scripts/my_job.sh
+bash scripts/check_run.sh results/my_job_JOBID
 ```
 
-## Depot GitHub (ajout 2026-08-25)
+## Data availability
+Raw reads are deposited in the European Nucleotide Archive under accession
+**PRJEB124417** (768 samples, 2,304 runs, 4,608 FASTQ files). Per-run accessions
+and checksums: `docs/manuscrit/ENA_accessions_durance.tsv`.
 
-Le depot est desormais pousse sur **https://github.com/martinjfsupagro/microbiome-hybrid**
-(depot **PRIVE**, branche `main`). Les 68 commits de l'historique cluster y sont, avec
-l'identite d'auteur preservee (Jean-Francois Martin).
+## GitHub remote
+The repository is mirrored at
+**https://github.com/martinjfsupagro/microbiome-hybrid** (**private**, branch
+`main`), with author identity preserved.
 
-### Pourquoi c'est utile
-Jusqu'ici l'historique n'existait qu'a un seul endroit : `.git` sur meso. Une perte de
-scratch/home, ou un `git` casse, aurait emporte la tracabilite de toutes les decisions
-d'analyse. Le remote est une seconde copie independante.
+Until this mirror existed, the history lived in exactly one place: `.git` on
+meso. Losing that filesystem would have taken the traceability of every analysis
+decision with it.
 
-### Comment pousser depuis meso
-Le remote `origin` est configure, MAIS **aucun identifiant n'est stocke sur le cluster**
-(volontaire : un token GitHub sur un cluster partage est un risque inutile). Pour pousser :
+### Pushing from meso
+The `origin` remote is configured, but **no credential is stored on the
+cluster** — deliberately: a GitHub token on a shared cluster is an avoidable
+risk.
 
 ```bash
 cd ~/work/projects/microbiome-hybrid
-git push origin main      # demandera identifiant + token
+git push origin main      # prompts for username + token
 ```
-GitHub n'accepte plus les mots de passe : au prompt "Password", coller un
-**Personal Access Token** (Settings > Developer settings > Tokens, portee `repo`).
+GitHub no longer accepts passwords: at the "Password" prompt, paste a Personal
+Access Token (Settings > Developer settings > Tokens, `repo` scope).
 
-Pour eviter de le retaper a chaque fois, sans l'ecrire en clair :
+To avoid retyping it without writing it in clear text:
 ```bash
 git config --global credential.helper 'cache --timeout=3600'
 ```
-NB : `credential.helper` est actuellement a `store`, ce qui ecrirait le token en clair
-dans `~/.git-credentials`. Preferer `cache` sur une machine partagee.
+Note: `credential.helper` is currently set to `store`, which would write the
+token in clear text to `~/.git-credentials`. Prefer `cache` on a shared machine.
 
-### Alternative sans token sur le cluster
-Si tu preferes ne jamais y mettre d'identifiant, l'assistant peut refaire le transfert
-par bundle git (`git bundle create ... --all`), rapatrier le bundle et pousser depuis
-son environnement, ou le token reste. C'est la methode utilisee pour le premier push.
+Alternatively, the history can be transferred as a git bundle
+(`git bundle create ... --all`) and pushed from elsewhere, so that no credential
+ever reaches the cluster. That is how the first push was done.
 
-### Visibilite
-Depot **prive** (choix explicite : le manuscrit n'est pas soumis, et les notes de
-decision contiennent des points en attente d'Andre). Le passage en public se fait d'un
-clic au moment de la soumission. NB : l'inverse n'est pas vrai — un depot rendu public
-ne peut pas etre "de-publie" (clones et caches subsistent).
+### Visibility
+The repository is **private** by explicit choice: the manuscript is not
+submitted, and the decision notes contain points awaiting the collaborator's
+input. Switching to public is one click away at submission time. The reverse is
+not true — a repository made public cannot be un-published, since clones and
+caches persist.
 
-### Ce qui n'est PAS versionne (rappel)
-`results/` (volumineux, regenerable par les scripts), `consolidated_dataset/` (12 Go de
-FASTQ bruts, deposes sur l'ENA sous PRJEB124417), les sorties par-run webin, et les
-copies parasites de sorties de jobs a la racine.
+### Not version-controlled
+`results/` (large, regenerable from the scripts), `consolidated_dataset/` (12 GB
+of raw FASTQ, deposited at the ENA under PRJEB124417), the per-run webin
+outputs, and stray job-output copies at the repository root.
