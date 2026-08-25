@@ -31,3 +31,9 @@
 2026-07-27T17:21:14+02:00 | phylogeny_8754563 | END | e8c99cb | 08-phylogeny.sh | leaves=44256
 2026-07-27T21:00:02+02:00 | crosstalk_8756902 | START | cf9d3e0 | 10-crosstalk.sh | empties+mock tracers
 2026-07-27T21:00:22+02:00 | crosstalk_8756902 | END | cf9d3e0 | 10-crosstalk.sh | empties+mock tracers
+2026-08-23T10:28:55+02:00	START	9627969	8ae795a	13-run_design.sh
+2026-08-23T10:29:11+02:00	END	9627969	8ae795a	13-run_design.sh
+2026-08-23T11:01:03+02:00	START	9627973	8d4bb8b	14-variance_partition.sh
+2026-08-23T11:10:51+02:00	END	9627973	8d4bb8b	14-variance_partition.sh
+2026-08-23T12:25:58+02:00	START	9628094	4817159	15-rarefaction_converge.sh
+2026-08-23T18:27:37+02:00	END	9628094	4817159	15-rarefaction_converge.sh

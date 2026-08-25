@@ -1,0 +1,20 @@
+workflow_stage,role,citation,journal,cited_by,doi,supports_claim
+ASVs replace OTUs,DADA2,Callahan et al. 2016,Nature Methods,36872,10.1038/nmeth.3869,"DADA2 — the standard ASV denoiser; learns run-specific error model, merges pairs, removes chimeras"
+ASVs replace OTUs,Deblur,Amir et al. 2017,mSystems,1988,10.1128/msystems.00191-16,Deblur — alternative sub-OTU denoiser resolving single-nucleotide ASVs
+ASVs replace OTUs,"Position paper: exact sequence variants should replace 97% OTUs (reproducible, cross-study comparable)",Callahan et al. 2017,The ISME Journal,3465,10.1038/ismej.2017.119,"Position paper: exact sequence variants should replace 97% OTUs (reproducible, cross-study comparable)"
+Pipeline platform,QIIME 2,Bolyen et al. 2019,Nature Biotechnology,24424,10.1038/s41587-019-0209-9,"QIIME 2 — the reproducible, extensible platform that ties the workflow together"
+Reference databases,SILVA,Quast et al. 2012,Nucleic Acids Research,34389,10.1093/nar/gks1219,"SILVA — standard 16S taxonomy database (cite exact version, now 138.x)"
+Reference databases,Greengenes2,McDonald et al. 2023,Nature Biotechnology,634,10.1038/s41587-023-01845-1,"Greengenes2 — new unified reference tree/taxonomy (2022.10), actively maintained alternative"
+Phylogeny by placement,Fragment insertion (SEPP) places short ASVs in a reference tree; preferred over de-novo for UniFrac,Janssen et al. 2018,mSystems,597,10.1128/msystems.00021-18,Fragment insertion (SEPP) places short ASVs in a reference tree; preferred over de-novo for UniFrac
+Phylogenetic beta-diversity,UniFrac,Lozupone et al. 2005,Applied and Environmental Microbiology,8614,10.1128/aem.71.12.8228-8235.2005,UniFrac — phylogenetic community distance (weighted & unweighted)
+Contamination control,decontam,Davis et al. 2018,Microbiome,3612,10.1186/s40168-018-0605-2,decontam — statistical identification/removal of reagent contaminants using blanks
+Normalisation debate,McMurdie & Holmes,McMurdie et al. 2014,PLoS Computational Biology,3111,10.1371/journal.pcbi.1003531,McMurdie & Holmes — argues rarefying is statistically inadmissible; catalyst for the shift away from it
+Normalisation debate,Weiss et al.,Weiss et al. 2017,Microbiome,2201,10.1186/s40168-017-0237-y,Weiss et al. — normalisation & DA strategy depends on data characteristics (rarefaction still valid for some cases)
+Differential abundance methods,ALDEx2,Fernandes et al. 2014,Microbiome,1433,10.1186/2049-2618-2-15,"ALDEx2 — CLR-based compositional DA; conservative, low false-positive rate"
+Differential abundance methods,ANCOM-BC,Huang et al. 2020,Nature Communications,2271,10.1038/s41467-020-17041-7,ANCOM-BC — bias-corrected successor to ANCOM (use ANCOM-BC2 implementation)
+Differential abundance methods,MaAsLin2,Mallick et al. 2021,PLoS Computational Biology,2499,10.1371/journal.pcbi.1009442,MaAsLin2 — multivariable models with covariates; higher power complement
+"DA: run >1, report consensus",Nearing 2022,Nearing et al. 2022,Nature Communications,963,10.1038/s41467-022-28034-z,Nearing 2022 — 14 methods × 38 datasets: tools disagree; recommends ALDEx2/ANCOM and multi-method consensus
+"DA: run >1, report consensus",Calgaro 2022 (benchdamic),Cappellato et al. 2022,PLoS Computational Biology,72,10.1371/journal.pcbi.1010467,Calgaro 2022 (benchdamic) — systematic DA benchmark framework; some methods need raw counts
+"DA: run >1, report consensus",Wirbel 2024,Wirbel et al. 2024,Genome biology,38,10.1186/s13059-024-03390-9,Wirbel 2024 — realistic benchmark + confounder adjustment; simple tests often most replicable
+Predicted function,PICRUSt2,Douglas et al. 2020,Nature Biotechnology,6683,10.1038/s41587-020-0548-6,"PICRUSt2 — current 16S-based functional prediction; report NSTI, treat as predicted not measured"
+Field best-practice (fish/wildlife),Combrink 2023,Combrink et al. 2023,Frontiers in Microbiology,42,10.3389/fmicb.2023.1092216,Combrink 2023 — comprehensive best-practice review for wildlife/non-model 16S; the anchor reference

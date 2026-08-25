@@ -62,3 +62,11 @@ metadata/samples_all_with_sites.csv
 /mock_validation_summary.txt
 /rarefaction_curves.tsv
 /tree.nwk
+/alpha_mean_1000.tsv
+/beta_convergence.tsv
+/pcoa_coords.tsv
+/rarefaction_summary.txt
+/run_design_summary.txt
+/technical_vs_biological_distances.tsv
+/variance_partition.txt
+/bench_out.txt

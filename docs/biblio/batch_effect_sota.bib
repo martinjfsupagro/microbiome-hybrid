@@ -1,0 +1,307 @@
+@article{johnson2006adjusting,
+  title = {Adjusting batch effects in microarray expression data using empirical Bayes methods},
+  author = {W. Evan Johnson and Cheng Li and Ariel Rabinovic},
+  year = {2006},
+  journal = {Biostatistics},
+  doi = {10.1093/biostatistics/kxj037},
+  url = {https://doi.org/10.1093/biostatistics/kxj037},
+  abstract = {Non-biological experimental variation or "batch effects" are commonly observed across multiple batches of microarray experiments, often rendering the task of combining data from these batches difficult. The ability to combine microarray data sets is advantageous to researchers to increase statistical power to detect biological phenomena from studies where logistical considerations restrict sample size or in studies that require the sequential hybridization of arrays. In general, it is inappropriate to combine data sets without adjusting for batch effects. Methods have been proposed to filter batch effects from data, but these are often complicated and require large batch sizes ( > 25) to implement. Because the majority of microarray studies are conducted using much smaller sample sizes, existing methods are not sufficient. We propose parametric and non-parametric empirical Bayes frameworks for adjusting data for batch effects that is robust to outliers in small sample sizes and performs comparable to existing methods for large samples. We illustrate our methods using two example data sets and show that our methods are justifiable, easy to apply, and useful in practice. Software for our method is freely available at: http://biosun1.harvard.edu/complab/batch/.},
+  note = {cited-by: 9305; sources: openalex-snowball}
+}
+
+@article{davis2018simple,
+  title = {Simple statistical identification and removal of contaminant sequences in marker-gene and metagenomics data},
+  author = {Nicole M. Davis and Diana M. Proctor and Susan Holmes and David A. Relman and Benjamin J. Callahan},
+  year = {2018},
+  journal = {Microbiome},
+  doi = {10.1186/s40168-018-0605-2},
+  url = {https://doi.org/10.1186/s40168-018-0605-2},
+  abstract = {BACKGROUND: The accuracy of microbial community surveys based on marker-gene and metagenomic sequencing (MGS) suffers from the presence of contaminants-DNA sequences not truly present in the sample. Contaminants come from various sources, including reagents. Appropriate laboratory practices can reduce contamination, but do not eliminate it. Here we introduce decontam ( https://github.com/benjjneb/decontam ), an open-source R package that implements a statistical classification procedure that identifies contaminants in MGS data based on two widely reproduced patterns: contaminants appear at higher frequencies in low-concentration samples and are often found in negative controls. RESULTS: Decontam classified amplicon sequence variants (ASVs) in a human oral dataset consistently with prior microscopic observations of the microbial taxa inhabiting that environment and previous reports of contaminant taxa. In metagenomics and marker-gene measurements of a dilution series, decontam substantially reduced technical variation arising from different sequencing protocols. The application of decontam to two recently published datasets corroborated and extended their conclusions that little evidence existed for an indigenous placenta microbiome and that some low-frequency taxa seemingly associated with preterm birth were contaminants. CONCLUSIONS: Decontam improves the quality of metagenomic and marker-gene sequencing by identifying and removing contaminant DNA sequences. Decontam integrates easily with existing MGS workflows and allows researchers to generate more accurate profiles of microbial communities at little to no additional cost.},
+  note = {cited-by: 3651; sources: openalex-snowball}
+}
+
+@article{haghverdi2018batch,
+  title = {Batch effects in single-cell RNA-sequencing data are corrected by matching mutual nearest neighbors},
+  author = {Laleh Haghverdi and Aaron T. L. Lun and Michael D. Morgan and John C. Marioni},
+  year = {2018},
+  journal = {Nature Biotechnology},
+  doi = {10.1038/nbt.4091},
+  url = {https://www.ncbi.nlm.nih.gov/pmc/articles/6152897},
+  abstract = {Large-scale single-cell RNA sequencing (scRNA-seq) data sets that are produced in different laboratories and at different times contain batch effects that may compromise the integration and interpretation of the data. Existing scRNA-seq analysis methods incorrectly assume that the composition of cell populations is either known or identical across batches. We present a strategy for batch correction based on the detection of mutual nearest neighbors (MNNs) in the high-dimensional expression space. Our approach does not rely on predefined or equal population compositions across batches; instead, it requires only that a subset of the population be shared between batches. We demonstrate the superiority of our approach compared with existing methods by using both simulated and real scRNA-seq data sets. Using multiple droplet-based scRNA-seq data sets, we demonstrate that our MNN batch-effect-correction method can be scaled to large numbers of cells.},
+  note = {cited-by: 2777; sources: openalex-snowball}
+}
+
+@article{leek2010tackling,
+  title = {Tackling the widespread and critical impact of batch effects in high-throughput data},
+  author = {Jeffrey T. Leek and Robert B. Scharpf and Héctor Corrada Bravo and David Simcha and Ben Langmead and W. Evan Johnson and Donald Geman and Keith Baggerly and Rafael A. Irizarry},
+  year = {2010},
+  journal = {Nature Reviews Genetics},
+  doi = {10.1038/nrg2825},
+  url = {https://www.nature.com/articles/nrg2825.pdf},
+  abstract = {High-throughput technologies are widely used, for example to assay genetic variants, gene and protein expression, and epigenetic modifications. One often overlooked complication with such studies is batch effects, which occur because measurements are affected by laboratory conditions, reagent lots and personnel differences. This becomes a major problem when batch effects are correlated with an outcome of interest and lead to incorrect conclusions. Using both published studies and our own analyses, we argue that batch effects (as well as other technical and biological artefacts) are widespread and critical to address. We review experimental and computational approaches for doing so.},
+  note = {cited-by: 2343; sources: openalex-snowball}
+}
+
+@article{schloss2011reducing,
+  title = {Reducing the Effects of PCR Amplification and Sequencing Artifacts on 16S rRNA-Based Studies},
+  author = {Patrick D. Schloss and Dirk Gevers and Sarah L. Westcott},
+  year = {2011},
+  journal = {PLoS ONE},
+  doi = {10.1371/journal.pone.0027310},
+  url = {https://doi.org/10.1371/journal.pone.0027310},
+  abstract = {The advent of next generation sequencing has coincided with a growth in interest in using these approaches to better understand the role of the structure and function of the microbial communities in human, animal, and environmental health. Yet, use of next generation sequencing to perform 16S rRNA gene sequence surveys has resulted in considerable controversy surrounding the effects of sequencing errors on downstream analyses. We analyzed 2.7×10(6) reads distributed among 90 identical mock community samples, which were collections of genomic DNA from 21 different species with known 16S rRNA gene sequences; we observed an average error rate of 0.0060. To improve this error rate, we evaluated numerous methods of identifying bad sequence reads, identifying regions within reads of poor quality, and correcting base calls and were able to reduce the overall error rate to 0.0002. Implementation of the PyroNoise algorithm provided the best combination of error rate, sequence length, and number of sequences. Perhaps more problematic than sequencing errors was the presence of chimeras generated during PCR. Because we knew the true sequences within the mock community and the chimeras they could form, we identified 8\% of the raw sequence reads as chimeric. After quality filtering the raw sequences and using the Uchime chimera detection program, the overall chimera rate decreased to 1\%. The chimeras that could not be detected were largely responsible for the identification of spurious operational taxonomic units (OTUs) and genus-level phylotypes. The number of spurious OTUs and phylotypes increased with sequencing effort indicating that comparison of communities should be made using an equal number of sequences. Finally, we applied our improved quality-filtering pipeline to several benchmarking studies and observed that even with our stringent data curation pipeline, biases in the data generation pipeline and batch effects were observed that could potentially confound the interpretation of microbial community data.},
+  note = {cited-by: 2143; sources: openalex-snowball}
+}
+
+@article{zhang2020combat,
+  title = {ComBat-seq: batch effect adjustment for RNA-seq count data},
+  author = {Yuqing Zhang and Giovanni Parmigiani and W. Evan Johnson},
+  year = {2020},
+  journal = {NAR Genomics and Bioinformatics},
+  doi = {10.1093/nargab/lqaa078},
+  url = {https://doi.org/10.1093/nargab/lqaa078},
+  abstract = {The benefit of integrating batches of genomic data to increase statistical power is often hindered by batch effects, or unwanted variation in data caused by differences in technical factors across batches. It is therefore critical to effectively address batch effects in genomic data to overcome these challenges. Many existing methods for batch effects adjustment assume the data follow a continuous, bell-shaped Gaussian distribution. However in RNA-seq studies the data are typically skewed, over-dispersed counts, so this assumption is not appropriate and may lead to erroneous results. Negative binomial regression models have been used previously to better capture the properties of counts. We developed a batch correction method, ComBat-seq, using a negative binomial regression model that retains the integer nature of count data in RNA-seq studies, making the batch adjusted data compatible with common differential expression software packages that require integer counts. We show in realistic simulations that the ComBat-seq adjusted data results in better statistical power and control of false positives in differential expression compared to data adjusted by the other available methods. We further demonstrated in a real data example that ComBat-seq successfully removes batch effects and recovers the biological signal in the data.},
+  note = {cited-by: 1737; sources: openalex-snowball}
+}
+
+@article{chen2011removing,
+  title = {Removing Batch Effects in Analysis of Expression Microarray Data: An Evaluation of Six Batch Adjustment Methods},
+  author = {Chao Chen and Kay Grennan and Judith A. Badner and Dandan Zhang and Elliot S. Gershon and Jin Li and Chunyu Liu},
+  year = {2011},
+  journal = {PLoS ONE},
+  doi = {10.1371/journal.pone.0017238},
+  url = {https://doi.org/10.1371/journal.pone.0017238},
+  abstract = {The expression microarray is a frequently used approach to study gene expression on a genome-wide scale. However, the data produced by the thousands of microarray studies published annually are confounded by "batch effects," the systematic error introduced when samples are processed in multiple batches. Although batch effects can be reduced by careful experimental design, they cannot be eliminated unless the whole study is done in a single batch. A number of programs are now available to adjust microarray data for batch effects prior to analysis. We systematically evaluated six of these programs using multiple measures of precision, accuracy and overall performance. ComBat, an Empirical Bayes method, outperformed the other five programs by most metrics. We also showed that it is essential to standardize expression data at the probe level when testing for correlation of expression profiles, due to a sizeable probe effect in microarray data that can inflate the correlation among replicates and unrelated samples.},
+  note = {cited-by: 595; sources: openalex-snowball}
+}
+
+@article{brooks2015truth,
+  title = {The truth about metagenomics: quantifying and counteracting bias in 16S rRNA studies},
+  author = {J. Paul Brooks and David Edwards and Michael Harwich and Maria C. Rivera and Jennifer M. Fettweis and Myrna G. Serrano and Robert Reris and Nihar U. Sheth and Bernice Huang and Philippe H. Girerd and Jerome F. Strauss and Kimberly K. Jefferson and Gregory A. Buck},
+  year = {2015},
+  journal = {BMC Microbiology},
+  doi = {10.1186/s12866-015-0351-6},
+  url = {https://doi.org/10.1186/s12866-015-0351-6},
+  abstract = {BACKGROUND: Characterizing microbial communities via next-generation sequencing is subject to a number of pitfalls involving sample processing. The observed community composition can be a severe distortion of the quantities of bacteria actually present in the microbiome, hampering analysis and threatening the validity of conclusions from metagenomic studies. We introduce an experimental protocol using mock communities for quantifying and characterizing bias introduced in the sample processing pipeline. We used 80 bacterial mock communities comprised of prescribed proportions of cells from seven vaginally-relevant bacterial strains to assess the bias introduced in the sample processing pipeline. We created two additional sets of 80 mock communities by mixing prescribed quantities of DNA and PCR product to quantify the relative contribution to bias of (1) DNA extraction, (2) PCR amplification, and (3) sequencing and taxonomic classification for particular choices of protocols for each step. We developed models to predict the "true" composition of environmental samples based on the observed proportions, and applied them to a set of clinical vaginal samples from a single subject during four visits. RESULTS: We observed that using different DNA extraction kits can produce dramatically different results but bias is introduced regardless of the choice of kit. We observed error rates from bias of over 85\% in some samples, while technical variation was very low at less than 5\% for most bacteria. The effects of DNA extraction and PCR amplification for our protocols were much larger than those due to sequencing and classification. The processing steps affected different bacteria in different ways, resulting in amplified and suppressed observed proportions of a community. When predictive models were applied to clinical samples from a subject, the predicted microbiome profiles were better reflections of the physiology and diagnosis of the subject at the visits than the observed community compositions. CONCLUSIONS: Bias in 16S studies due to DNA extraction and PCR amplification will continue to require attention despite further advances in sequencing technology. Analysis of mock communities can help assess bias and facilitate the interpretation of results from environmental samples.},
+  note = {cited-by: 535; sources: openalex-snowball}
+}
+
+@article{gagnonbartsch2011using,
+  title = {Using control genes to correct for unwanted variation in microarray data},
+  author = {Johann A. Gagnon-Bartsch and Terence P. Speed},
+  year = {2011},
+  journal = {Biostatistics},
+  doi = {10.1093/biostatistics/kxr034},
+  url = {https://doi.org/10.1093/biostatistics/kxr034},
+  abstract = {Microarray expression studies suffer from the problem of batch effects and other unwanted variation. Many methods have been proposed to adjust microarray data to mitigate the problems of unwanted variation. Several of these methods rely on factor analysis to infer the unwanted variation from the data. A central problem with this approach is the difficulty in discerning the unwanted variation from the biological variation that is of interest to the researcher. We present a new method, intended for use in differential expression studies, that attempts to overcome this problem by restricting the factor analysis to negative control genes. Negative control genes are genes known a priori not to be differentially expressed with respect to the biological factor of interest. Variation in the expression levels of these genes can therefore be assumed to be unwanted variation. We name this method "Remove Unwanted Variation, 2-step" (RUV-2). We discuss various techniques for assessing the performance of an adjustment method and compare the performance of RUV-2 with that of other commonly used adjustment methods such as Combat and Surrogate Variable Analysis (SVA). We present several example studies, each concerning genes differentially expressed with respect to gender in the brain and find that RUV-2 performs as well or better than other methods. Finally, we discuss the possibility of adapting RUV-2 for use in studies not concerned with differential expression and conclude that there may be promise but substantial challenges remain.},
+  note = {cited-by: 518; sources: openalex-snowball}
+}
+
+@article{lozupone2013meta,
+  title = {Meta-analyses of studies of the human microbiota},
+  author = {Catherine Lozupone and Jesse Stombaugh and Antonio González and Gail Ackermann and Doug Wendel and Yoshiki Vázquez‐Baeza and Janet Jansson and Jeffrey I. Gordon and Rob Knight},
+  year = {2013},
+  journal = {Genome Research},
+  doi = {10.1101/gr.151803.112},
+  url = {https://doi.org/10.1101/gr.151803.112},
+  abstract = {Our body habitat-associated microbial communities are of intense research interest because of their influence on human health. Because many studies of the microbiota are based on the same bacterial 16S ribosomal RNA (rRNA) gene target, they can, in principle, be compared to determine the relative importance of different disease/physiologic/developmental states. However, differences in experimental protocols used may produce variation that outweighs biological differences. By comparing 16S rRNA gene sequences generated from diverse studies of the human microbiota using the QIIME database, we found that variation in composition of the microbiota across different body sites was consistently larger than technical variability across studies. However, samples from different studies of the Western adult fecal microbiota generally clustered by study, and the 16S rRNA target region, DNA extraction technique, and sequencing platform produced systematic biases in observed diversity that could obscure biologically meaningful compositional differences. In contrast, systematic compositional differences in the fecal microbiota that occurred with age and between Western and more agrarian cultures were great enough to outweigh technical variation. Furthermore, individuals with ileal Crohn's disease and in their third trimester of pregnancy often resembled infants from different studies more than controls from the same study, indicating parallel compositional attributes of these distinct developmental/physiological/disease states. Together, these results show that cross-study comparisons of human microbiota are valuable when the studied parameter has a large effect size, but studies of more subtle effects on the human microbiota require carefully selected control populations and standardized protocols.},
+  note = {cited-by: 444; sources: openalex-snowball}
+}
+
+@article{goh2017batch,
+  title = {Why Batch Effects Matter in Omics Data, and How to Avoid Them},
+  author = {Wilson Wen Bin Goh and Wei Wang and Limsoon Wong},
+  year = {2017},
+  journal = {Trends in biotechnology},
+  doi = {10.1016/j.tibtech.2017.02.012},
+  url = {https://doi.org/10.1016/j.tibtech.2017.02.012},
+  abstract = {Effective integration and analysis of new high-throughput data, especially gene-expression and proteomic-profiling data, are expected to deliver novel clinical insights and therapeutic options. Unfortunately, technical heterogeneity or batch effects (different experiment times, handlers, reagent lots, etc.) have proven challenging. Although batch effect-correction algorithms (BECAs) exist, we know little about effective batch-effect mitigation: even now, new batch effect-associated problems are emerging. These include false effects due to misapplying BECAs and positive bias during model evaluations. Depending on the choice of algorithm and experimental set-up, biological heterogeneity can be mistaken for batch effects and wrongfully removed. Here, we examine these emerging batch effect-associated problems, propose a series of best practices, and discuss some of the challenges that lie ahead.},
+  note = {cited-by: 431; sources: openalex-snowball}
+}
+
+@article{lazar2012batch,
+  title = {Batch effect removal methods for microarray gene expression data integration: a survey},
+  author = {Cosmin Lazar and Stijn Meganck and Jonatan Taminau and David Steenhoff and Alain Coletta and Colin Molter and David Y. Weiss-Solis and Robin Duqué and Hugues Bersini and Ann Nowé},
+  year = {2012},
+  journal = {Briefings in Bioinformatics},
+  doi = {10.1093/bib/bbs037},
+  url = {https://doi.org/10.1093/bib/bbs037},
+  abstract = {Genomic data integration is a key goal to be achieved towards large-scale genomic data analysis. This process is very challenging due to the diverse sources of information resulting from genomics experiments. In this work, we review methods designed to combine genomic data recorded from microarray gene expression (MAGE) experiments. It has been acknowledged that the main source of variation between different MAGE datasets is due to the so-called 'batch effects'. The methods reviewed here perform data integration by removing (or more precisely attempting to remove) the unwanted variation associated with batch effects. They are presented in a unified framework together with a wide range of evaluation tools, which are mandatory in assessing the efficiency and the quality of the data integration process. We provide a systematic description of the MAGE data integration methodology together with some basic recommendation to help the users in choosing the appropriate tools to integrate MAGE data for large-scale analysis; and also how to evaluate them from different perspectives in order to quantify their efficiency. All genomic data used in this study for illustration purposes were retrieved from InSilicoDB http://insilico.ulb.ac.be.},
+  note = {cited-by: 355; sources: openalex-snowball}
+}
+
+@article{kirst2014dysbiosis,
+  title = {Dysbiosis and Alterations in Predicted Functions of the Subgingival Microbiome in Chronic Periodontitis},
+  author = {Mariana E. Kirst and Eric C. Li and Barnett Alfant and Yueh‐Yun Chi and Clay Walker and Ingvar Magnusson and Gary P. Wang},
+  year = {2014},
+  journal = {Applied and Environmental Microbiology},
+  doi = {10.1128/aem.02712-14},
+  url = {https://doi.org/10.1128/aem.02712-14},
+  abstract = {Chronic periodontitis is an inflammatory disease of the periodontium affecting nearly 65 million adults in the United States. Changes in subgingival microbiota have long been associated with chronic periodontitis. Recent culture-independent molecular studies have revealed the immense richness and complexity of oral microbial communities. However, data sets across studies have not been directly compared, and whether the observed microbial variations are consistent across different studies is not known. Here, we used 16S rRNA sequencing to survey the subgingival microbiota in 25 subjects with chronic periodontal disease and 25 healthy controls and compared our data sets with those of three previously reported microbiome studies. Consistent with data from previous studies, our results demonstrate a significantly altered microbial community structure with decreased heterogeneity in periodontal disease. Comparison with data from three previously reported studies revealed that subgingival microbiota clustered by study. However, differences between periodontal health and disease were larger than the technical variations across studies. Using a prediction score and applying five different distance metrics, we observed two predominant clusters. One cluster was driven by Fusobacterium and Porphyromonas and was associated with clinically apparent periodontitis, and the second cluster was dominated by Rothia and Streptococcus in the majority of healthy sites. The predicted functional capabilities of the periodontitis microbiome were significantly altered. Genes involved in bacterial motility, energy metabolism, and lipopolysaccharide biosynthesis were overrepresented in periodontal disease, whereas genes associated with transporters, the phosphotransferase system, transcription factors, amino acid biosynthesis, and glycolysis/gluconeogenesis were enriched in healthy controls. These results demonstrate significant alterations in microbial composition and function in periodontitis and suggest genes and metabolic pathways associated with periodontal disease.},
+  note = {cited-by: 239; sources: openalex-snowball}
+}
+
+@article{yu2024assessing,
+  title = {Assessing and mitigating batch effects in large-scale omics studies},
+  author = {Ying Yu and Yuanbang Mai and Yuanting Zheng and Leming Shi},
+  year = {2024},
+  journal = {Genome biology},
+  doi = {10.1186/s13059-024-03401-9},
+  url = {https://doi.org/10.1186/s13059-024-03401-9},
+  abstract = {Batch effects in omics data are notoriously common technical variations unrelated to study objectives, and may result in misleading outcomes if uncorrected, or hinder biomedical discovery if over-corrected. Assessing and mitigating batch effects is crucial for ensuring the reliability and reproducibility of omics data and minimizing the impact of technical variations on biological interpretation. In this review, we highlight the profound negative impact of batch effects and the urgent need to address this challenging problem in large-scale omics studies. We summarize potential sources of batch effects, current progress in evaluating and correcting them, and consortium efforts aiming to tackle them.},
+  note = {cited-by: 176; sources: openalex-snowball}
+}
+
+@article{ma2022population,
+  title = {Population structure discovery in meta-analyzed microbial communities and inflammatory bowel disease using MMUPHin},
+  author = {Siyuan Ma and Dmitry Shungin and Himel Mallick and Melanie Schirmer and Long H. Nguyen and Raivo Kolde and Eric A. Franzosa and Hera Vlamakis and Ramnik J. Xavier and Curtis Huttenhower},
+  year = {2022},
+  journal = {Genome biology},
+  doi = {10.1186/s13059-022-02753-4},
+  url = {https://doi.org/10.1186/s13059-022-02753-4},
+  abstract = {Microbiome studies of inflammatory bowel diseases (IBD) have achieved a scale for meta-analysis of dysbioses among populations. To enable microbial community meta-analyses generally, we develop MMUPHin for normalization, statistical meta-analysis, and population structure discovery using microbial taxonomic and functional profiles. Applying it to ten IBD cohorts, we identify consistent associations, including novel taxa such as Acinetobacter and Turicibacter, and additional exposure and interaction effects. A single gradient of dysbiosis severity is favored over discrete types to summarize IBD microbiome population structure. These results provide a benchmark for characterization of IBD and a framework for meta-analysis of any microbial communities.},
+  note = {cited-by: 166; sources: openalex-snowball}
+}
+
+@article{chase2016geography,
+  title = {Geography and Location Are the Primary Drivers of Office Microbiome Composition},
+  author = {John Chase and Jennifer Fouquier and Mahnaz Zare and Derek L. Sonderegger and Rob Knight and Scott T. Kelley and Jeffrey A. Siegel and J. Gregory Caporaso},
+  year = {2016},
+  journal = {mSystems},
+  doi = {10.1128/msystems.00022-16},
+  url = {https://doi.org/10.1128/msystems.00022-16},
+  abstract = {Our study highlights several points that should impact the design of future studies of the microbiology of BEs. First, projects tracking changes in BE bacterial communities should focus sampling efforts on surveying different locations in offices and in different cities but not necessarily different materials or different offices in the same city. Next, disturbance due to repeated sampling, though detectable, is small compared to that due to other variables, opening up a range of longitudinal study designs in the BE. Next, studies requiring more samples than can be sequenced on a single sequencing run (which is increasingly common) must control for run effects by including some of the same samples in all of the sequencing runs as technical replicates. Finally, detailed tracking of indoor and material environment covariates is likely not essential for BE microbiome studies, as the normal range of indoor environmental conditions is likely not large enough to impact bacterial communities.},
+  note = {cited-by: 161; sources: openalex-snowball}
+}
+
+@article{ling2022batch,
+  title = {Batch effects removal for microbiome data via conditional quantile regression},
+  author = {Wodan Ling and Jiuyao Lu and Ni Zhao and Anju Lulla and Anna Plantinga and Weijia Fu and Angela Zhang and Hongjiao Liu and Hoseung Song and Zhigang Li and Jun Chen and Timothy W. Randolph and Wei Li Adeline Koay and James R. White and Lenore J. Launer and Anthony A. Fodor and Katie A. Meyer and Michael C. Wu},
+  year = {2022},
+  journal = {Nature Communications},
+  doi = {10.1038/s41467-022-33071-9},
+  url = {https://doi.org/10.1038/s41467-022-33071-9},
+  abstract = {Batch effects in microbiome data arise from differential processing of specimens and can lead to spurious findings and obscure true signals. Strategies designed for genomic data to mitigate batch effects usually fail to address the zero-inflated and over-dispersed microbiome data. Most strategies tailored for microbiome data are restricted to association testing or specialized study designs, failing to allow other analytic goals or general designs. Here, we develop the Conditional Quantile Regression (ConQuR) approach to remove microbiome batch effects using a two-part quantile regression model. ConQuR is a comprehensive method that accommodates the complex distributions of microbial read counts by non-parametric modeling, and it generates batch-removed zero-inflated read counts that can be used in and benefit usual subsequent analyses. We apply ConQuR to simulated and real microbiome datasets and demonstrate its advantages in removing batch effects while preserving the signals of interest.},
+  note = {cited-by: 139; sources: openalex}
+}
+
+@article{gibbons2018correcting,
+  title = {Correcting for batch effects in case-control microbiome studies},
+  author = {S. Gibbons and C. Duvallet and E. Alm},
+  year = {2018},
+  journal = {bioRxiv},
+  doi = {10.1371/journal.pcbi.1006102},
+  url = {https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1006102&type=printable},
+  abstract = {High-throughput data generation platforms, like mass-spectrometry, microarrays, and second-generation sequencing are susceptible to batch effects due to run-to-run variation in reagents, equipment, protocols, or personnel. Currently, batch correction methods are not commonly applied to microbiome sequencing datasets. In this paper, we compare different batch-correction methods applied to microbiome case-control studies. We introduce a model-free normalization procedure where features (i.e. bacterial taxa) in case samples are converted to percentiles of the equivalent features in control samples within a study prior to pooling data across studies. We look at how this percentile-normalization method compares to traditional meta-analysis methods for combining independent p-values and to limma and ComBat, widely used batch-correction models developed for RNA microarray data. Overall, we show that percentile-normalization is a simple, non-parametric approach for correcting batch effects and improving sensitivity in case-control meta-analyses. Author Summary Batch effects are obstacles to comparing results across studies. Traditional meta-analysis techniques for combining p-values from independent studies, like Fisher’s method, are effective but statistically conservative. If batch-effects can be corrected, then statistical tests can be performed on data pooled across studies, increasing sensitivity to detect differences between treatment groups. Here, we show how a simple, model-free approach corrects for batch effects in case-control microbiome datasets.},
+  note = {cited-by: 138; sources: s2}
+}
+
+@article{schuyler2019minimizing,
+  title = {Minimizing Batch Effects in Mass Cytometry Data},
+  author = {Ronald P. Schuyler and Conner Jackson and Josselyn E. Garcia‐Perez and Ryan M. Baxter and Sidney Ogolla and Rosemary Rochford and Debashis Ghosh and Pratyaydipta Rudra and Elena W.Y. Hsieh},
+  year = {2019},
+  journal = {Frontiers in Immunology},
+  doi = {10.3389/fimmu.2019.02367},
+  url = {https://doi.org/10.3389/fimmu.2019.02367},
+  abstract = {Cytometry by Time-Of-Flight (CyTOF) uses antibodies conjugated to isotopically pure metals to identify and quantify a large number of cellular features with single-cell resolution. A barcoding approach allows for 20 unique samples to be pooled and processed together in one tube, reducing the intra-barcode technical variability. However, with only 20 samples per barcode, multiple barcode sets (batches) are required to address questions in robustly powered study designs. A batch adjustment procedure is required to reduce variability across batches and to facilitate direct comparison of runs performed across multiple barcodes run over weeks, months, or years. We describe a method using technical replicates that are included in each run to determine and apply an appropriate adjustment per batch without manual intervention. The use of technical replicate samples (i.e., anchors or reference samples) avoids assumptions of sample homogeneity among batches, and allows direct estimation of batch effects and appropriate adjustment parameters applicable to all samples within a batch. Quantification of cell subpopulations and mean signal intensity pre- and post-adjustment using both manual gating and unsupervised clustering demonstrate substantial mitigation of batch effects in the anchor samples used for this adjustment calculation, and in a second validation set of technical replicates.},
+  note = {cited-by: 124; sources: openalex-snowball}
+}
+
+@article{wang2019managing,
+  title = {Managing batch effects in microbiome data},
+  author = {Yiwen Wang and K. Cao},
+  year = {2019},
+  journal = {Briefings Bioinform.},
+  doi = {10.1093/bib/bbz105},
+  url = {https://doi.org/10.1093/bib/bbz105},
+  abstract = {Microbial communities have been increasingly studied in recent years to investigate their role in ecological habitats. However, microbiome studies are difficult to reproduce or replicate as they may suffer from confounding factors that are unavoidable in practice and originate from biological, technical or computational sources. In this review, we define batch effects as unwanted variation introduced by confounding factors that are not related to any factors of interest. Computational and analytical methods are required to remove or account for batch effects. However, inherent microbiome data characteristics (e.g. sparse, compositional and multivariate) challenge the development and application of batch effect adjustment methods to either account or correct for batch effects. We present commonly encountered sources of batch effects that we illustrate in several case studies. We discuss the limitations of current methods, which often have assumptions that are not met due to the peculiarities of microbiome data. We provide practical guidelines for assessing the efficiency of the methods based on visual and numerical outputs and a thorough tutorial to reproduce the analyses conducted in this review.},
+  note = {cited-by: 109; sources: s2}
+}
+
+@article{xiao2022large,
+  title = {Large-scale microbiome data integration enables robust biomarker identification},
+  author = {Liwen Xiao and Fengyi Zhang and Fangqing Zhao},
+  year = {2022},
+  journal = {Nature Computational Science},
+  doi = {10.1038/s43588-022-00247-8},
+  url = {https://doi.org/10.1038/s43588-022-00247-8},
+  abstract = {The close association between gut microbiota dysbiosis and human diseases is being increasingly recognized. However, contradictory results are frequently reported, as confounding effects exist. The lack of unbiased data integration methods is also impeding the discovery of disease-associated microbial biomarkers from different cohorts. Here we propose an algorithm, NetMoss, for assessing shifts of microbial network modules to identify robust biomarkers associated with various diseases. Compared to previous approaches, the NetMoss method shows better performance in removing batch effects. Through comprehensive evaluations on both simulated and real datasets, we demonstrate that NetMoss has great advantages in the identification of disease-related biomarkers. Based on analysis of pandisease microbiota studies, there is a high prevalence of multidisease-related bacteria in global populations. We believe that large-scale data integration will help in understanding the role of the microbiome from a more comprehensive perspective and that accurate biomarker identification will greatly promote microbiome-based medical diagnosis.},
+  note = {cited-by: 104; sources: openalex-snowball}
+}
+
+@article{regueiraiglesias2023critical,
+  title = {Critical review of 16S rRNA gene sequencing workflow in microbiome studies: From primer selection to advanced data analysis.},
+  author = {A. Regueira-Iglesias and C. Balsa‐Castro and T. Blanco-Pintos and Inmaculada Tomás},
+  year = {2023},
+  journal = {Molecular Oral Microbiology},
+  doi = {10.1111/omi.12434},
+  url = {https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/omi.12434},
+  abstract = {The multi-batch reanalysis approach of jointly reevaluating gene/genome sequences from different works has gained particular relevance in the literature in recent years. The large amount of 16S ribosomal ribonucleic acid (rRNA) gene sequence data stored in public repositories and information in taxonomic databases of the same gene far exceeds that related to complete genomes. This review is intended to guide researchers new to studying microbiota, particularly the oral microbiota, using 16S rRNA gene sequencing and those who want to expand and update their knowledge to optimise their decision-making and improve their research results. First, we describe the advantages and disadvantages of using the 16S rRNA gene as a phylogenetic marker and the latest findings on the impact of primer pair selection on diversity and taxonomic assignment outcomes in oral microbiome studies. Strategies for primer selection based on these results are introduced. Second, we identified the key factors to consider in selecting the sequencing technology and platform. The process and particularities of the main steps for processing 16S rRNA gene-derived data are described in detail to enable researchers to choose the most appropriate bioinformatics pipeline and analysis methods based on the available evidence. We then produce an overview of the different types of advanced analyses, both the most widely used in the literature and the most recent approaches. Several indices, metrics and software for studying microbial communities are included, highlighting their advantages and disadvantages. Considering the principles of clinical metagenomics, we conclude that future research should focus on rigorous analytical approaches, such as developing predictive models to identify microbiome-based biomarkers to classify health and disease states. Finally, we address the batch effect concept and the microbiome-specific methods for accounting for or correcting them.},
+  note = {cited-by: 98; sources: s2}
+}
+
+@article{robinson2017distinguishing,
+  title = {Distinguishing potential bacteria-tumor associations from contamination in a secondary data analysis of public cancer genome sequence data},
+  author = {Kelly Robinson and Jonathan Crabtree and John S. Mattick and Kathleen E. Anderson and Julie C. Dunning Hotopp},
+  year = {2017},
+  journal = {Microbiome},
+  doi = {10.1186/s40168-016-0224-8},
+  url = {https://doi.org/10.1186/s40168-016-0224-8},
+  abstract = {BACKGROUND: A variety of bacteria are known to influence carcinogenesis. Therefore, we sought to investigate if publicly available whole genome and whole transcriptome sequencing data generated by large public cancer genome efforts, like The Cancer Genome Atlas (TCGA), could be used to identify bacteria associated with cancer. The Burrows-Wheeler aligner (BWA) was used to align a subset of Illumina paired-end sequencing data from TCGA to the human reference genome and all complete bacterial genomes in the RefSeq database in an effort to identify bacterial read pairs from the microbiome. RESULTS: Through careful consideration of all of the bacterial taxa present in the cancer types investigated, their relative abundance, and batch effects, we were able to identify some read pairs from certain taxa as likely resulting from contamination. In particular, the presence of Mycobacterium tuberculosis complex in the ovarian serous cystadenocarcinoma (OV) and glioblastoma multiforme (GBM) samples was correlated with the sequencing center of the samples. Additionally, there was a correlation between the presence of Ralstonia spp. and two specific plates of acute myeloid leukemia (AML) samples. At the end, associations remained between Pseudomonas-like and Acinetobacter-like read pairs in AML, and Pseudomonas-like read pairs in stomach adenocarcinoma (STAD) that could not be explained through batch effects or systematic contamination as seen in other samples. CONCLUSIONS: This approach suggests that it is possible to identify bacteria that may be present in human tumor samples from public genome sequencing data that can be examined further experimentally. More weight should be given to this approach in the future when bacterial associations with diseases are suspected.},
+  note = {cited-by: 89; sources: openalex-snowball}
+}
+
+@article{hornung2016combining,
+  title = {Combining location-and-scale batch effect adjustment with data cleaning by latent factor adjustment},
+  author = {Roman Hornung and Anne‐Laure Boulesteix and David Causeur},
+  year = {2016},
+  journal = {BMC Bioinformatics},
+  doi = {10.1186/s12859-015-0870-z},
+  url = {https://doi.org/10.1186/s12859-015-0870-z},
+  abstract = {BACKGROUND: In the context of high-throughput molecular data analysis it is common that the observations included in a dataset form distinct groups; for example, measured at different times, under different conditions or even in different labs. These groups are generally denoted as batches. Systematic differences between these batches not attributable to the biological signal of interest are denoted as batch effects. If ignored when conducting analyses on the combined data, batch effects can lead to distortions in the results. In this paper we present FAbatch, a general, model-based method for correcting for such batch effects in the case of an analysis involving a binary target variable. It is a combination of two commonly used approaches: location-and-scale adjustment and data cleaning by adjustment for distortions due to latent factors. We compare FAbatch extensively to the most commonly applied competitors on the basis of several performance metrics. FAbatch can also be used in the context of prediction modelling to eliminate batch effects from new test data. This important application is illustrated using real and simulated data. We implemented FAbatch and various other functionalities in the R package bapred available online from CRAN. RESULTS: FAbatch is seen to be competitive in many cases and above average in others. In our analyses, the only cases where it failed to adequately preserve the biological signal were when there were extremely outlying batches and when the batch effects were very weak compared to the biological signal. CONCLUSIONS: As seen in this paper batch effect structures found in real datasets are diverse. Current batch effect adjustment methods are often either too simplistic or make restrictive assumptions, which can be violated in real datasets. Due to the generality of its underlying model and its ability to perform well FAbatch represents a reliable tool for batch effect adjustment for most situations found in practice.},
+  note = {cited-by: 66; sources: openalex-snowball}
+}
+
+@article{wang2023plsda,
+  title = {PLSDA-batch: a multivariate framework to correct for batch effects in microbiome data},
+  author = {Yiwen Wang and K. Cao},
+  year = {2023},
+  journal = {Briefings Bioinform.},
+  doi = {10.1093/bib/bbac622},
+  url = {https://academic.oup.com/bib/advance-article-pdf/doi/10.1093/bib/bbac622/48756436/bbac622.pdf},
+  abstract = {Abstract Microbial communities are highly dynamic and sensitive to changes in the environment. Thus, microbiome data are highly susceptible to batch effects, defined as sources of unwanted variation that are not related to and obscure any factors of interest. Existing batch effect correction methods have been primarily developed for gene expression data. As such, they do not consider the inherent characteristics of microbiome data, including zero inflation, overdispersion and correlation between variables. We introduce new multivariate and non-parametric batch effect correction methods based on Partial Least Squares Discriminant Analysis (PLSDA). PLSDA-batch first estimates treatment and batch variation with latent components, then subtracts batch-associated components from the data. The resulting batch-effect-corrected data can then be input in any downstream statistical analysis. Two variants are proposed to handle unbalanced batch x treatment designs and to avoid overfitting when estimating the components via variable selection. We compare our approaches with popular methods managing batch effects, namely, removeBatchEffect, ComBat and Surrogate Variable Analysis, in simulated and three case studies using various visual and numerical assessments. We show that our three methods lead to competitive performance in removing batch variation while preserving treatment variation, especially for unbalanced batch \textbackslash{}documentclass[12pt]{minimal} \textbackslash{}usepackage{amsmath} \textbackslash{}usepackage{wasysym} \textbackslash{}usepackage{amsfonts} \textbackslash{}usepackage{amssymb} \textbackslash{}usepackage{amsbsy} \textbackslash{}usepackage{upgreek} \textbackslash{}usepackage{mathrsfs} \textbackslash{}setlength{\textbackslash{}oddsidemargin}{-69pt} \textbackslash{}begin{document} }{}\$\textbackslash{}times \$\textbackslash{}end{document} treatment designs. Our downstream analyses show selections of biologically relevant taxa. This work demonstrates that batch effect correction methods can improve microbiome research outputs. Reproducible code and vignettes are available on GitHub.},
+  note = {cited-by: 59; sources: s2}
+}
+
+@article{sepichpoore2024robustness,
+  title = {Robustness of cancer microbiome signals over a broad range of methodological variation},
+  author = {G. Sepich-Poore and D. McDonald and Evguenia Kopylova and Caitlin Guccione and Qiyun Zhu and George I. Austin and Carolina S. Carpenter and S. Fraraccio and S. Wandro and T. Kościółek and Stefan Janssen and J. Metcalf and S. Song and Jad N Kanbar and S. Miller-Montgomery and Robert Heaton and R. Mckay and S. P. Patel and Austin D. Swafford and T. Korem and R. Knight},
+  year = {2024},
+  journal = {Oncogene},
+  doi = {10.1038/s41388-024-02974-w},
+  url = {https://www.nature.com/articles/s41388-024-02974-w.pdf},
+  abstract = {In 2020, we identified cancer-specific microbial signals in The Cancer Genome Atlas (TCGA) [1]. Multiple peer-reviewed papers independently verified or extended our findings [2–12]. Given this impact, we carefully considered concerns by Gihawi et al. [13] that batch correction and database contamination with host sequences artificially created the appearance of cancer type-specific microbiomes. (1) We tested batch correction by comparing raw and Voom-SNM-corrected data per-batch, finding predictive equivalence and significantly similar features. We found consistent results with a modern microbiome-specific method (ConQuR [14]), and when restricting to taxa found in an independent, highly-decontaminated cohort. (2) Using Conterminator [15], we found low levels of human contamination in our original databases (\textasciitilde{}1\% of genomes). We demonstrated that the increased detection of human reads in Gihawi et al. [13] was due to using a newer human genome reference. (3) We developed Exhaustive, a method twice as sensitive as Conterminator, to clean RefSeq. We comprehensively host-deplete TCGA with many human (pan)genome references. We repeated all analyses with this and the Gihawi et al. [13] pipeline, and found cancer type-specific microbiomes. These extensive re-analyses and updated methods validate our original conclusion that cancer type-specific microbial signatures exist in TCGA, and show they are robust to methodology.},
+  note = {cited-by: 58; sources: s2}
+}
+
+@article{goffau2021batch,
+  title = {Batch effects account for the main findings of an in utero human intestinal bacterial colonization study},
+  author = {M. D. de Goffau and D. S. Charnock-Jones and Gordon C. S. Smith and Julian Parkhill},
+  year = {2021},
+  journal = {Microbiome},
+  doi = {10.1186/s40168-020-00949-z},
+  url = {https://microbiomejournal.biomedcentral.com/track/pdf/10.1186/s40168-020-00949-z},
+  abstract = {A recent study by Rackaityte et al. reported evidence for a low level of bacterial colonization, specifically of Micrococcus luteus, in the intestine of second trimester human fetuses. We have re-analyzed their sequence data and identified a batch effect which violates the underlying assumptions of the bioinformatic method used for contamination removal. This batch effect resulted in Micrococcus not being identified as a contaminant in the original work and being falsely assigned to the fetal samples. We further provide evidence that the micrographs presented by Rackaityte et al. are unlikely to show Micrococci or other bacteria as the size of the particles shown exceeds that of related bacterial cells. Finally, phylogenetic analysis showed that the microbes cultured from the fetal samples differed significantly from those detected by sequencing. Overall, our findings show that the presence of Micrococcus in the fetal gut is not supported by the primary sequence data. Our findings underline important aspects of the nature of contamination for both sequencing and culture approaches in microbiome studies and the appropriate use of automated contamination identification tools.},
+  note = {cited-by: 43; sources: s2}
+}
+
+@article{small2018highly,
+  title = {Highly Reproducible 16S Sequencing Facilitates Measurement of Host Genetic Influences on the Stickleback Gut Microbiome},
+  author = {C. Small and M. Currey and Emily A. Beck and S. Bassham and W. Cresko},
+  year = {2018},
+  journal = {mSystems},
+  doi = {10.1128/msystems.00331-19},
+  url = {https://doi.org/10.1128/msystems.00331-19},
+  abstract = {Our findings demonstrate the importance of appropriately quantifying biological and technical variance components when attempting to understand major influences on high-throughput microbiome data. Our focus was on understanding among-host (biological) variance in community metrics and its magnitude in relation to within-host (technical) variance, because meaningful comparisons among individuals are necessary in addressing major questions in host-microbe ecology and evolution, such as heritability of the microbiome. Our study design and insights should provide a useful example for others desiring to quantify microbiome variation at biological levels in the face of various technical factors in a variety of systems. ABSTRACT Multicellular organisms interact with resident microbes in important ways, and a better understanding of host-microbe interactions is aided by tools such as high-throughput 16S sequencing. However, rigorous evaluation of the veracity of these tools in a different context from which they were developed has often lagged behind. Our goal was to perform one such critical test by examining how variation in tissue preparation and DNA isolation could affect inferences about gut microbiome variation between two genetically divergent lines of threespine stickleback fish maintained in the same laboratory environment. Using careful experimental design and intensive sampling of individuals, we addressed technical and biological sources of variation in 16S-based estimates of microbial diversity. After employing a two-tiered bead beating approach that comprised tissue homogenization followed by microbial lysis in subsamples, we found an extremely minor effect of DNA isolation protocol relative to among-host microbial diversity differences. Abundance estimates for rare operational taxonomic units (OTUs), however, showed much lower reproducibility. Gut microbiome composition was highly variable across fish—even among cohoused siblings—relative to technical replicates, but a subtle effect of host genotype (stickleback line) was nevertheless detected for some microbial taxa. IMPORTANCE Our findings demonstrate the importance of appropriately quantifying biological and technical variance components when attempting to understand major influences on high-throughput microbiome data. Our focus was on understanding among-host (biological) variance in community metrics and its magnitude in relation to within-host (technical) variance, because meaningful comparisons among individuals are necessary in addressing major questions in host-microbe ecology and evolution, such as heritability of the microbiome. Our study design and insights should provide a useful example for others desiring to quantify microbiome variation at biological levels in the face of various technical factors in a variety of systems.},
+  note = {cited-by: 13; sources: s2}
+}

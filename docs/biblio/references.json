@@ -1,0 +1,2598 @@
+[
+ {
+  "id": 611,
+  "type": "article-journal",
+  "title": "Gut microbiotas and host evolution: scaling up symbiosis",
+  "container-title": "Trends in Ecology & Evolution",
+  "page": "539-549",
+  "volume": "31",
+  "issue": "7",
+  "source": "CrossRef",
+  "DOI": "10.1016/j.tree.2016.03.006",
+  "ISSN": "01695347",
+  "title-short": "Gut Microbiotas and Host Evolution",
+  "language": "en",
+  "author": [
+   {
+    "family": "Shapira",
+    "given": "Michael"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2016",
+     7
+    ]
+   ]
+  }
+ },
+ {
+  "id": 630,
+  "type": "article-journal",
+  "title": "Analysis of intestinal microbiota in hybrid house mice reveals evolutionary divergence in a vertebrate hologenome",
+  "container-title": "Nature Communications",
+  "page": "6440",
+  "volume": "6",
+  "source": "CrossRef",
+  "DOI": "10.1038/ncomms7440",
+  "ISSN": "2041-1723",
+  "author": [
+   {
+    "family": "Wang",
+    "given": "Jun"
+   },
+   {
+    "family": "Kalyan",
+    "given": "Shirin"
+   },
+   {
+    "family": "Steck",
+    "given": "Natalie"
+   },
+   {
+    "family": "Turner",
+    "given": "Leslie M."
+   },
+   {
+    "family": "Harr",
+    "given": "Bettina"
+   },
+   {
+    "family": "Künzel",
+    "given": "Sven"
+   },
+   {
+    "family": "Vallier",
+    "given": "Marie"
+   },
+   {
+    "family": "Häsler",
+    "given": "Robert"
+   },
+   {
+    "family": "Franke",
+    "given": "Andre"
+   },
+   {
+    "family": "Oberg",
+    "given": "Hans-Heinrich"
+   },
+   {
+    "family": "Ibrahim",
+    "given": "Saleh M."
+   },
+   {
+    "family": "Grassl",
+    "given": "Guntram A."
+   },
+   {
+    "family": "Kabelitz",
+    "given": "Dieter"
+   },
+   {
+    "family": "Baines",
+    "given": "John F."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2015",
+     3,
+     4
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1582,
+  "type": "article-journal",
+  "title": "Species identity dominates over environment in shaping the microbiota of small mammals",
+  "container-title": "Ecology Letters",
+  "source": "Crossref",
+  "URL": "https://onlinelibrary.wiley.com/doi/abs/10.1111/ele.13240",
+  "DOI": "10.1111/ele.13240",
+  "ISSN": "1461-023X, 1461-0248",
+  "language": "en",
+  "author": [
+   {
+    "family": "Knowles",
+    "given": "S. C. L."
+   },
+   {
+    "family": "Eccles",
+    "given": "R. M."
+   },
+   {
+    "family": "Baltrūnaitė",
+    "given": "L."
+   }
+  ],
+  "editor": [
+   {
+    "family": "Grover",
+    "given": "James"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2019",
+     3,
+     13
+    ]
+   ]
+  },
+  "accessed": {
+   "date-parts": [
+    [
+     "2019",
+     3,
+     15
+    ]
+   ]
+  }
+ },
+ {
+  "id": 528,
+  "type": "article-journal",
+  "title": "Microbial community structure and its functional implications",
+  "container-title": "Nature",
+  "page": "193-199",
+  "volume": "459",
+  "issue": "7244",
+  "source": "CrossRef",
+  "DOI": "10.1038/nature08058",
+  "ISSN": "0028-0836, 1476-4687",
+  "author": [
+   {
+    "family": "Fuhrman",
+    "given": "Jed A."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2009",
+     5,
+     14
+    ]
+   ]
+  }
+ },
+ {
+  "id": 982,
+  "type": "article-journal",
+  "title": "Functional interactions between the gut microbiota and host metabolism",
+  "container-title": "Nature",
+  "page": "242-249",
+  "volume": "489",
+  "issue": "7415",
+  "source": "CrossRef",
+  "DOI": "10.1038/nature11552",
+  "ISSN": "0028-0836, 1476-4687",
+  "author": [
+   {
+    "family": "Tremaroli",
+    "given": "Valentina"
+   },
+   {
+    "family": "Bäckhed",
+    "given": "Fredrik"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2012",
+     9,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1051,
+  "type": "article-journal",
+  "title": "Host biology in light of the microbiome: ten principles of holobionts and hologenomes",
+  "container-title": "PLOS Biology",
+  "page": "e1002226",
+  "volume": "13",
+  "issue": "8",
+  "source": "CrossRef",
+  "DOI": "10.1371/journal.pbio.1002226",
+  "ISSN": "1545-7885",
+  "title-short": "Host Biology in Light of the Microbiome",
+  "language": "en",
+  "author": [
+   {
+    "family": "Bordenstein",
+    "given": "Seth R."
+   },
+   {
+    "family": "Theis",
+    "given": "Kevin R."
+   }
+  ],
+  "editor": [
+   {
+    "family": "Waldor",
+    "given": "Matthew K."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2015",
+     8,
+     18
+    ]
+   ]
+  }
+ },
+ {
+  "id": 979,
+  "type": "article-journal",
+  "title": "Speciation by Symbiosis: the Microbiome and Behavior",
+  "container-title": "mBio",
+  "page": "e01785-15",
+  "volume": "7",
+  "issue": "2",
+  "source": "CrossRef",
+  "DOI": "10.1128/mBio.01785-15",
+  "ISSN": "2150-7511",
+  "title-short": "Speciation by Symbiosis",
+  "language": "en",
+  "author": [
+   {
+    "family": "Shropshire",
+    "given": "J. Dylan"
+   },
+   {
+    "family": "Bordenstein",
+    "given": "Seth R."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2016",
+     5,
+     4
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1566,
+  "type": "article-journal",
+  "title": "Making a microbiome: the many determinants of host-associated microbial community composition",
+  "container-title": "Current Opinion in Microbiology",
+  "page": "23-29",
+  "volume": "35",
+  "source": "Crossref",
+  "DOI": "10.1016/j.mib.2016.11.002",
+  "ISSN": "13695274",
+  "title-short": "Making a microbiome",
+  "language": "en",
+  "author": [
+   {
+    "family": "Adair",
+    "given": "Karen L"
+   },
+   {
+    "family": "Douglas",
+    "given": "Angela E"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2017",
+     2
+    ]
+   ]
+  }
+ },
+ {
+  "id": 570,
+  "type": "article-journal",
+  "title": "Teleost microbiomes: the state of the art in their characterization, manipulation and importance in aquaculture and fisheries",
+  "container-title": "Frontiers in Microbiology",
+  "volume": "5",
+  "source": "CrossRef",
+  "URL": "http://journal.frontiersin.org/article/10.3389/fmicb.2014.00207/abstract",
+  "DOI": "10.3389/fmicb.2014.00207",
+  "ISSN": "1664-302X",
+  "title-short": "Teleost microbiomes",
+  "author": [
+   {
+    "family": "Llewellyn",
+    "given": "Martin S."
+   },
+   {
+    "family": "Boutin",
+    "given": "SÃ©bastien"
+   },
+   {
+    "family": "Hoseinifar",
+    "given": "Seyed Hossein"
+   },
+   {
+    "family": "Derome",
+    "given": "Nicolas"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2014",
+     6,
+     2
+    ]
+   ]
+  },
+  "accessed": {
+   "date-parts": [
+    [
+     "2016",
+     6,
+     23
+    ]
+   ]
+  }
+ },
+ {
+  "id": 616,
+  "type": "article-journal",
+  "title": "Dietary input of microbes and host genetic variation shape among-population differences in stickleback gut microbiota",
+  "container-title": "The ISME journal",
+  "source": "Google Scholar",
+  "URL": "http://www.nature.com/ismej/journal/vaop/ncurrent/full/ismej201564a.html",
+  "author": [
+   {
+    "family": "Smith",
+    "given": "Chris CR"
+   },
+   {
+    "family": "Snowberg",
+    "given": "Lisa K."
+   },
+   {
+    "family": "Caporaso",
+    "given": "J. Gregory"
+   },
+   {
+    "family": "Knight",
+    "given": "Rob"
+   },
+   {
+    "family": "Bolnick",
+    "given": "Daniel I."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2015"
+    ]
+   ]
+  },
+  "accessed": {
+   "date-parts": [
+    [
+     "2016",
+     6,
+     23
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1429,
+  "type": "article-journal",
+  "title": "Skin microbiome of coral reef fish is highly variable and driven by host phylogeny and diet",
+  "container-title": "Microbiome",
+  "volume": "6",
+  "issue": "1",
+  "source": "Crossref",
+  "URL": "https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-018-0530-4",
+  "DOI": "10.1186/s40168-018-0530-4",
+  "ISSN": "2049-2618",
+  "language": "en",
+  "author": [
+   {
+    "family": "Chiarello",
+    "given": "Marlène"
+   },
+   {
+    "family": "Auguet",
+    "given": "Jean-Christophe"
+   },
+   {
+    "family": "Bettarel",
+    "given": "Yvan"
+   },
+   {
+    "family": "Bouvier",
+    "given": "Corinne"
+   },
+   {
+    "family": "Claverie",
+    "given": "Thomas"
+   },
+   {
+    "family": "Graham",
+    "given": "Nicholas A. J."
+   },
+   {
+    "family": "Rieuvilleneuve",
+    "given": "Fabien"
+   },
+   {
+    "family": "Sucré",
+    "given": "Elliot"
+   },
+   {
+    "family": "Bouvier",
+    "given": "Thierry"
+   },
+   {
+    "family": "Villéger",
+    "given": "Sébastien"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2018",
+     12
+    ]
+   ]
+  },
+  "accessed": {
+   "date-parts": [
+    [
+     "2018",
+     10,
+     30
+    ]
+   ]
+  }
+ },
+ {
+  "id": 710,
+  "type": "article-journal",
+  "title": "Microbiome investigation in the ecological speciation context of lake whitefish ( <i>Coregonus clupeaformis</i> ) using next-generation sequencing",
+  "container-title": "Journal of Evolutionary Biology",
+  "page": "1029-1046",
+  "volume": "27",
+  "issue": "6",
+  "source": "CrossRef",
+  "DOI": "10.1111/jeb.12374",
+  "ISSN": "1010061X",
+  "language": "en",
+  "author": [
+   {
+    "family": "Sevellec",
+    "given": "M."
+   },
+   {
+    "family": "Pavey",
+    "given": "S. A."
+   },
+   {
+    "family": "Boutin",
+    "given": "S."
+   },
+   {
+    "family": "Filteau",
+    "given": "M."
+   },
+   {
+    "family": "Derome",
+    "given": "N."
+   },
+   {
+    "family": "Bernatchez",
+    "given": "L."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2014",
+     6
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1389,
+  "type": "article-journal",
+  "title": "Holobionts and ecological speciation: the intestinal microbiota of lake whitefish species pairs",
+  "container-title": "Microbiome",
+  "volume": "6",
+  "issue": "1",
+  "source": "Crossref",
+  "URL": "https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-018-0427-2",
+  "DOI": "10.1186/s40168-018-0427-2",
+  "ISSN": "2049-2618",
+  "title-short": "Holobionts and ecological speciation",
+  "language": "en",
+  "author": [
+   {
+    "family": "Sevellec",
+    "given": "Maelle"
+   },
+   {
+    "family": "Derome",
+    "given": "Nicolas"
+   },
+   {
+    "family": "Bernatchez",
+    "given": "Louis"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2018",
+     12
+    ]
+   ]
+  },
+  "accessed": {
+   "date-parts": [
+    [
+     "2018",
+     9,
+     3
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1053,
+  "type": "article-journal",
+  "title": "Hybridization as a facilitator of species range expansion",
+  "container-title": "Proceedings of the Royal Society B: Biological Sciences",
+  "page": "20161329",
+  "volume": "283",
+  "issue": "1839",
+  "source": "CrossRef",
+  "DOI": "10.1098/rspb.2016.1329",
+  "ISSN": "0962-8452, 1471-2954",
+  "language": "en",
+  "author": [
+   {
+    "family": "Pfennig",
+    "given": "Karin S."
+   },
+   {
+    "family": "Kelly",
+    "given": "Audrey L."
+   },
+   {
+    "family": "Pierce",
+    "given": "Amanda A."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2016",
+     9,
+     28
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1399,
+  "type": "article-journal",
+  "title": "Natural selection interacts with recombination to shape the evolution of hybrid genomes",
+  "container-title": "Science",
+  "page": "656-660",
+  "volume": "360",
+  "issue": "6389",
+  "source": "Crossref",
+  "DOI": "10.1126/science.aar3684",
+  "ISSN": "0036-8075, 1095-9203",
+  "language": "en",
+  "author": [
+   {
+    "family": "Schumer",
+    "given": "Molly"
+   },
+   {
+    "family": "Xu",
+    "given": "Chenling"
+   },
+   {
+    "family": "Powell",
+    "given": "Daniel L."
+   },
+   {
+    "family": "Durvasula",
+    "given": "Arun"
+   },
+   {
+    "family": "Skov",
+    "given": "Laurits"
+   },
+   {
+    "family": "Holland",
+    "given": "Chris"
+   },
+   {
+    "family": "Blazier",
+    "given": "John C."
+   },
+   {
+    "family": "Sankararaman",
+    "given": "Sriram"
+   },
+   {
+    "family": "Andolfatto",
+    "given": "Peter"
+   },
+   {
+    "family": "Rosenthal",
+    "given": "Gil G."
+   },
+   {
+    "family": "Przeworski",
+    "given": "Molly"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2018",
+     5,
+     11
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1160,
+  "type": "article-journal",
+  "title": "Speciation reversal and biodiversity dynamics with hybridization in changing environments",
+  "container-title": "Molecular Ecology",
+  "page": "30-44",
+  "volume": "17",
+  "issue": "1",
+  "source": "CrossRef",
+  "DOI": "10.1111/j.1365-294X.2007.03529.x",
+  "ISSN": "09621083, 1365294X",
+  "language": "en",
+  "author": [
+   {
+    "family": "Seehausen",
+    "given": "Ole"
+   },
+   {
+    "family": "Takimoto",
+    "given": "Gaku"
+   },
+   {
+    "family": "Roy",
+    "given": "Denis"
+   },
+   {
+    "family": "Jokela",
+    "given": "Jukka"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2008",
+     1
+    ]
+   ]
+  }
+ },
+ {
+  "id": 515,
+  "type": "article-journal",
+  "title": "Evolution of mosaic hybrid zone between invasive and endemic species of Cyprinidae through space and time",
+  "container-title": "Biological Journal of the Linnean Society",
+  "page": "135–155",
+  "volume": "85",
+  "issue": "2",
+  "source": "Google Scholar",
+  "author": [
+   {
+    "family": "Costedoat",
+    "given": "Caroline"
+   },
+   {
+    "family": "Pech",
+    "given": "Nicolas"
+   },
+   {
+    "family": "Salducci",
+    "given": "Marie-Dominique"
+   },
+   {
+    "family": "Chappaz",
+    "given": "Remi"
+   },
+   {
+    "family": "Gilles",
+    "given": "Andre"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2005"
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1316,
+  "type": "article",
+  "title": "Research on european cyprinids polyspecific complex : systematics, speciation and hybrid zones. Thèse de doctorat",
+  "archive_location": "Université Aix-Marseille I",
+  "author": [
+   {
+    "family": "Gilles",
+    "given": "André"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "1998"
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1265,
+  "type": "article-journal",
+  "title": "Non-homogeneous combination of two porous genomes induces complex body shape trajectories in cyprinid hybrids",
+  "container-title": "Frontiers in Zoology",
+  "page": "22",
+  "volume": "10",
+  "issue": "1",
+  "source": "CrossRef",
+  "DOI": "10.1186/1742-9994-10-22",
+  "ISSN": "1742-9994",
+  "language": "en",
+  "author": [
+   {
+    "family": "Sinama",
+    "given": "Melthide"
+   },
+   {
+    "family": "Gilles",
+    "given": "André"
+   },
+   {
+    "family": "Costedoat",
+    "given": "Caroline"
+   },
+   {
+    "family": "Corse",
+    "given": "Emmanuel"
+   },
+   {
+    "family": "Olivier",
+    "given": "Jean-Michel"
+   },
+   {
+    "family": "Chappaz",
+    "given": "Rémi"
+   },
+   {
+    "family": "Pech",
+    "given": "Nicolas"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2013"
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1468,
+  "type": "article-journal",
+  "title": "Canals as ecological corridors and hybridization zones for two cyprinid species",
+  "container-title": "Hydrobiologia",
+  "page": "1-16",
+  "volume": "830",
+  "issue": "1",
+  "source": "Crossref",
+  "DOI": "10.1007/s10750-018-3843-1",
+  "ISSN": "0018-8158, 1573-5117",
+  "language": "en",
+  "author": [
+   {
+    "family": "Guivier",
+    "given": "Emmanuel"
+   },
+   {
+    "family": "Gilles",
+    "given": "André"
+   },
+   {
+    "family": "Pech",
+    "given": "Nicolas"
+   },
+   {
+    "family": "Duflot",
+    "given": "Nicolas"
+   },
+   {
+    "family": "Tissot",
+    "given": "Laurence"
+   },
+   {
+    "family": "Chappaz",
+    "given": "Rémi"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2019"
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1083,
+  "type": "article-journal",
+  "title": "16S rRNA amplicon sequencing for epidemiological surveys of bacteria in wildlife",
+  "container-title": "mSystems",
+  "page": "e00032-16",
+  "volume": "1",
+  "issue": "4",
+  "source": "CrossRef",
+  "DOI": "10.1128/mSystems.00032-16",
+  "ISSN": "2379-5077",
+  "language": "en",
+  "author": [
+   {
+    "family": "Galan",
+    "given": "Maxime"
+   },
+   {
+    "family": "Razzauti",
+    "given": "Maria"
+   },
+   {
+    "family": "Bard",
+    "given": "Emilie"
+   },
+   {
+    "family": "Bernard",
+    "given": "Maria"
+   },
+   {
+    "family": "Brouat",
+    "given": "Carine"
+   },
+   {
+    "family": "Charbonnel",
+    "given": "Nathalie"
+   },
+   {
+    "family": "Dehne-Garcia",
+    "given": "Alexandre"
+   },
+   {
+    "family": "Loiseau",
+    "given": "Anne"
+   },
+   {
+    "family": "Tatard",
+    "given": "Caroline"
+   },
+   {
+    "family": "Tamisier",
+    "given": "Lucie"
+   },
+   {
+    "family": "Vayssier-Taussat",
+    "given": "Muriel"
+   },
+   {
+    "family": "Vignes",
+    "given": "Helene"
+   },
+   {
+    "family": "Cosson",
+    "given": "Jean-François"
+   }
+  ],
+  "editor": [
+   {
+    "family": "Bik",
+    "given": "Holly"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2016",
+     8,
+     30
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1505,
+  "type": "article-journal",
+  "title": "DADA2: High-resolution sample inference from Illumina amplicon data",
+  "container-title": "Nature Methods",
+  "page": "581-583",
+  "volume": "13",
+  "issue": "7",
+  "source": "Crossref",
+  "DOI": "10.1038/nmeth.3869",
+  "ISSN": "1548-7091, 1548-7105",
+  "title-short": "DADA2",
+  "language": "en",
+  "author": [
+   {
+    "family": "Callahan",
+    "given": "Benjamin J"
+   },
+   {
+    "family": "McMurdie",
+    "given": "Paul J"
+   },
+   {
+    "family": "Rosen",
+    "given": "Michael J"
+   },
+   {
+    "family": "Han",
+    "given": "Andrew W"
+   },
+   {
+    "family": "Johnson",
+    "given": "Amy Jo A"
+   },
+   {
+    "family": "Holmes",
+    "given": "Susan P"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2016",
+     7
+    ]
+   ]
+  }
+ },
+ {
+  "id": 857,
+  "type": "article-journal",
+  "title": "The SILVA ribosomal RNA gene database project: improved data processing and web-based tools",
+  "container-title": "Nucleic Acids Research",
+  "page": "D590-D596",
+  "volume": "41",
+  "issue": "D1",
+  "source": "CrossRef",
+  "DOI": "10.1093/nar/gks1219",
+  "ISSN": "0305-1048, 1362-4962",
+  "title-short": "The SILVA ribosomal RNA gene database project",
+  "language": "en",
+  "author": [
+   {
+    "family": "Quast",
+    "given": "C."
+   },
+   {
+    "family": "Pruesse",
+    "given": "E."
+   },
+   {
+    "family": "Yilmaz",
+    "given": "P."
+   },
+   {
+    "family": "Gerken",
+    "given": "J."
+   },
+   {
+    "family": "Schweer",
+    "given": "T."
+   },
+   {
+    "family": "Yarza",
+    "given": "P."
+   },
+   {
+    "family": "Peplies",
+    "given": "J."
+   },
+   {
+    "family": "Glockner",
+    "given": "F. O."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2013",
+     1,
+     1
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1509,
+  "type": "article-journal",
+  "title": "QIIME 2: Reproducible, interactive, scalable, and extensible microbiome data science",
+  "source": "DataCite",
+  "abstract": "We present QIIME 2, an open-source microbiome data science platform accessible to users spanning the microbiome research ecosystem, from scientists and engineers to clinicians and policy makers. QIIME 2 provides new features that will drive the next generation of microbiome research. These include interactive spatial and temporal analysis and visualization tools, support for metabolomics and shotgun metagenomics analysis, and automated data provenance tracking to ensure reproducible, transparent microbiome data science.",
+  "URL": "https://peerj.com/preprints/27295",
+  "DOI": "10.7287/peerj.preprints.27295v2",
+  "title-short": "QIIME 2",
+  "author": [
+   {
+    "family": "Bolyen",
+    "given": "Evan"
+   },
+   {
+    "family": "Rideout",
+    "given": "Jai Ram"
+   },
+   {
+    "family": "Dillon",
+    "given": "Matthew R"
+   },
+   {
+    "family": "Bokulich",
+    "given": "Nicholas A"
+   },
+   {
+    "family": "Abnet",
+    "given": "Christian"
+   },
+   {
+    "family": "Al-Ghalith",
+    "given": "Gabriel A"
+   },
+   {
+    "family": "Alexander",
+    "given": "Harriet"
+   },
+   {
+    "family": "Alm",
+    "given": "Eric J"
+   },
+   {
+    "family": "Arumugam",
+    "given": "Manimozhiyan"
+   },
+   {
+    "family": "Asnicar",
+    "given": "Francesco"
+   },
+   {
+    "family": "Bai",
+    "given": "Yang"
+   },
+   {
+    "family": "Bisanz",
+    "given": "Jordan E"
+   },
+   {
+    "family": "Bittinger",
+    "given": "Kyle"
+   },
+   {
+    "family": "Brejnrod",
+    "given": "Asker"
+   },
+   {
+    "family": "Brislawn",
+    "given": "Colin J"
+   },
+   {
+    "family": "Brown",
+    "given": "C Titus"
+   },
+   {
+    "family": "Callahan",
+    "given": "Benjamin J"
+   },
+   {
+    "family": "Caraballo-Rodríguez",
+    "given": "Andrés Mauricio"
+   },
+   {
+    "family": "Chase",
+    "given": "John"
+   },
+   {
+    "family": "Cope",
+    "given": "Emily"
+   },
+   {
+    "family": "Da Silva",
+    "given": "Ricardo"
+   },
+   {
+    "family": "Dorrestein",
+    "given": "Pieter C"
+   },
+   {
+    "family": "Douglas",
+    "given": "Gavin M"
+   },
+   {
+    "family": "Durall",
+    "given": "Daniel M"
+   },
+   {
+    "family": "Duvallet",
+    "given": "Claire"
+   },
+   {
+    "family": "Edwardson",
+    "given": "Christian F"
+   },
+   {
+    "family": "Ernst",
+    "given": "Madeleine"
+   },
+   {
+    "family": "Estaki",
+    "given": "Mehrbod"
+   },
+   {
+    "family": "Fouquier",
+    "given": "Jennifer"
+   },
+   {
+    "family": "Gauglitz",
+    "given": "Julia M"
+   },
+   {
+    "family": "Gibson",
+    "given": "Deanna L"
+   },
+   {
+    "family": "Gonzalez",
+    "given": "Antonio"
+   },
+   {
+    "family": "Gorlick",
+    "given": "Kestrel"
+   },
+   {
+    "family": "Guo",
+    "given": "Jiarong"
+   },
+   {
+    "family": "Hillmann",
+    "given": "Benjamin"
+   },
+   {
+    "family": "Holmes",
+    "given": "Susan"
+   },
+   {
+    "family": "Holste",
+    "given": "Hannes"
+   },
+   {
+    "family": "Huttenhower",
+    "given": "Curtis"
+   },
+   {
+    "family": "Huttley",
+    "given": "Gavin"
+   },
+   {
+    "family": "Janssen",
+    "given": "Stefan"
+   },
+   {
+    "family": "Jarmusch",
+    "given": "Alan K"
+   },
+   {
+    "family": "Jiang",
+    "given": "Lingjing"
+   },
+   {
+    "family": "Kaehler",
+    "given": "Benjamin"
+   },
+   {
+    "family": "Kang",
+    "given": "Kyo Bin"
+   },
+   {
+    "family": "Keefe",
+    "given": "Christopher R"
+   },
+   {
+    "family": "Keim",
+    "given": "Paul"
+   },
+   {
+    "family": "Kelley",
+    "given": "Scott T"
+   },
+   {
+    "family": "Knights",
+    "given": "Dan"
+   },
+   {
+    "family": "Koester",
+    "given": "Irina"
+   },
+   {
+    "family": "Kosciolek",
+    "given": "Tomasz"
+   },
+   {
+    "family": "Kreps",
+    "given": "Jorden"
+   },
+   {
+    "family": "Langille",
+    "given": "Morgan GI"
+   },
+   {
+    "family": "Lee",
+    "given": "Joslynn"
+   },
+   {
+    "family": "Ley",
+    "given": "Ruth"
+   },
+   {
+    "family": "Liu",
+    "given": "Yong-Xin"
+   },
+   {
+    "family": "Loftfield",
+    "given": "Erikka"
+   },
+   {
+    "family": "Lozupone",
+    "given": "Catherine"
+   },
+   {
+    "family": "Maher",
+    "given": "Massoud"
+   },
+   {
+    "family": "Marotz",
+    "given": "Clarisse"
+   },
+   {
+    "family": "Martin",
+    "given": "Bryan D"
+   },
+   {
+    "family": "McDonald",
+    "given": "Daniel"
+   },
+   {
+    "family": "McIver",
+    "given": "Lauren J"
+   },
+   {
+    "family": "Melnik",
+    "given": "Alexey V"
+   },
+   {
+    "family": "Metcalf",
+    "given": "Jessica L"
+   },
+   {
+    "family": "Morgan",
+    "given": "Sydney C"
+   },
+   {
+    "family": "Morton",
+    "given": "Jamie"
+   },
+   {
+    "family": "Naimey",
+    "given": "Ahmad Turan"
+   },
+   {
+    "family": "Navas-Molina",
+    "given": "Jose A"
+   },
+   {
+    "family": "Nothias",
+    "given": "Louis Felix"
+   },
+   {
+    "family": "Orchanian",
+    "given": "Stephanie B"
+   },
+   {
+    "family": "Pearson",
+    "given": "Talima"
+   },
+   {
+    "family": "Peoples",
+    "given": "Samuel L"
+   },
+   {
+    "family": "Petras",
+    "given": "Daniel"
+   },
+   {
+    "family": "Preuss",
+    "given": "Mary Lai"
+   },
+   {
+    "family": "Pruesse",
+    "given": "Elmar"
+   },
+   {
+    "family": "Rasmussen",
+    "given": "Lasse Buur"
+   },
+   {
+    "family": "Rivers",
+    "given": "Adam"
+   },
+   {
+    "family": "Robeson, II",
+    "given": "Michael S"
+   },
+   {
+    "family": "Rosenthal",
+    "given": "Patrick"
+   },
+   {
+    "family": "Segata",
+    "given": "Nicola"
+   },
+   {
+    "family": "Shaffer",
+    "given": "Michael"
+   },
+   {
+    "family": "Shiffer",
+    "given": "Arron"
+   },
+   {
+    "family": "Sinha",
+    "given": "Rashmi"
+   },
+   {
+    "family": "Song",
+    "given": "Se Jin"
+   },
+   {
+    "family": "Spear",
+    "given": "John R"
+   },
+   {
+    "family": "Swafford",
+    "given": "Austin D"
+   },
+   {
+    "family": "Thompson",
+    "given": "Luke R"
+   },
+   {
+    "family": "Torres",
+    "given": "Pedro J"
+   },
+   {
+    "family": "Trinh",
+    "given": "Pauline"
+   },
+   {
+    "family": "Tripathi",
+    "given": "Anupriya"
+   },
+   {
+    "family": "Turnbaugh",
+    "given": "Peter J"
+   },
+   {
+    "family": "Ul-Hasan",
+    "given": "Sabah"
+   },
+   {
+    "family": "Hooft",
+    "given": "Justin JJ",
+    "non-dropping-particle": "van der"
+   },
+   {
+    "family": "Vargas",
+    "given": "Fernando"
+   },
+   {
+    "family": "Vázquez-Baeza",
+    "given": "Yoshiki"
+   },
+   {
+    "family": "Vogtmann",
+    "given": "Emily"
+   },
+   {
+    "family": "Hippel",
+    "given": "Max",
+    "non-dropping-particle": "von"
+   },
+   {
+    "family": "Walters",
+    "given": "William"
+   },
+   {
+    "family": "Wan",
+    "given": "Yunhu"
+   },
+   {
+    "family": "Wang",
+    "given": "Mingxun"
+   },
+   {
+    "family": "Warren",
+    "given": "Jonathan"
+   },
+   {
+    "family": "Weber",
+    "given": "Kyle C"
+   },
+   {
+    "family": "Williamson",
+    "given": "Chase HD"
+   },
+   {
+    "family": "Willis",
+    "given": "Amy D"
+   },
+   {
+    "family": "Xu",
+    "given": "Zhenjiang Zech"
+   },
+   {
+    "family": "Zaneveld",
+    "given": "Jesse R"
+   },
+   {
+    "family": "Zhang",
+    "given": "Yilong"
+   },
+   {
+    "family": "Zhu",
+    "given": "Qiyun"
+   },
+   {
+    "family": "Knight",
+    "given": "Rob"
+   },
+   {
+    "family": "Caporaso",
+    "given": "J Gregory"
+   }
+  ],
+  "accessed": {
+   "date-parts": [
+    [
+     "2018",
+     12,
+     10
+    ]
+   ]
+  }
+ },
+ {
+  "id": 558,
+  "type": "article-journal",
+  "title": "Predictive functional profiling of microbial communities using 16S rRNA marker gene sequences",
+  "container-title": "Nature Biotechnology",
+  "page": "814-821",
+  "volume": "31",
+  "issue": "9",
+  "source": "CrossRef",
+  "DOI": "10.1038/nbt.2676",
+  "ISSN": "1087-0156, 1546-1696",
+  "author": [
+   {
+    "family": "Langille",
+    "given": "Morgan G I"
+   },
+   {
+    "family": "Zaneveld",
+    "given": "Jesse"
+   },
+   {
+    "family": "Caporaso",
+    "given": "J Gregory"
+   },
+   {
+    "family": "McDonald",
+    "given": "Daniel"
+   },
+   {
+    "family": "Knights",
+    "given": "Dan"
+   },
+   {
+    "family": "Reyes",
+    "given": "Joshua A"
+   },
+   {
+    "family": "Clemente",
+    "given": "Jose C"
+   },
+   {
+    "family": "Burkepile",
+    "given": "Deron E"
+   },
+   {
+    "family": "Vega Thurber",
+    "given": "Rebecca L"
+   },
+   {
+    "family": "Knight",
+    "given": "Rob"
+   },
+   {
+    "family": "Beiko",
+    "given": "Robert G"
+   },
+   {
+    "family": "Huttenhower",
+    "given": "Curtis"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2013",
+     8,
+     25
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1568,
+  "type": "article-journal",
+  "title": "Correcting for 16S rRNA gene copy numbers in microbiome surveys remains an unsolved problem",
+  "container-title": "Microbiome",
+  "volume": "6",
+  "issue": "1",
+  "source": "Crossref",
+  "URL": "https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-018-0420-9",
+  "DOI": "10.1186/s40168-018-0420-9",
+  "ISSN": "2049-2618",
+  "language": "en",
+  "author": [
+   {
+    "family": "Louca",
+    "given": "Stilianos"
+   },
+   {
+    "family": "Doebeli",
+    "given": "Michael"
+   },
+   {
+    "family": "Parfrey",
+    "given": "Laura Wegener"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2018",
+     12
+    ]
+   ]
+  },
+  "accessed": {
+   "date-parts": [
+    [
+     "2019",
+     2,
+     26
+    ]
+   ]
+  }
+ },
+ {
+  "id": 573,
+  "type": "article-journal",
+  "title": "UniFrac: a new phylogenetic method for comparing microbial communities",
+  "container-title": "Applied and Environmental Microbiology",
+  "page": "8228-8235",
+  "volume": "71",
+  "issue": "12",
+  "source": "CrossRef",
+  "DOI": "10.1128/AEM.71.12.8228-8235.2005",
+  "ISSN": "0099-2240",
+  "title-short": "UniFrac",
+  "language": "en",
+  "author": [
+   {
+    "family": "Lozupone",
+    "given": "C."
+   },
+   {
+    "family": "Knight",
+    "given": "R."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2005",
+     12,
+     1
+    ]
+   ]
+  }
+ },
+ {
+  "id": 594,
+  "type": "article-journal",
+  "title": "Application of multivariate statistical techniques in microbial ecology",
+  "container-title": "Molecular Ecology",
+  "page": "1032-1057",
+  "volume": "25",
+  "issue": "5",
+  "source": "CrossRef",
+  "DOI": "10.1111/mec.13536",
+  "ISSN": "09621083",
+  "language": "en",
+  "author": [
+   {
+    "family": "Paliy",
+    "given": "O."
+   },
+   {
+    "family": "Shankar",
+    "given": "V."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2016",
+     3
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1056,
+  "type": "article",
+  "title": "vegan: community ecology package. R package version 2.4-1",
+  "author": [
+   {
+    "family": "Oksanen",
+    "given": "Jari"
+   },
+   {
+    "family": "Blanchet",
+    "given": "Guillaume"
+   },
+   {
+    "family": "Friendly",
+    "given": "Roeland"
+   },
+   {
+    "family": "Legendre",
+    "given": "Pierre"
+   },
+   {
+    "family": "McGlinn",
+    "given": "Dan"
+   },
+   {
+    "family": "Minchin",
+    "given": "Peter R."
+   },
+   {
+    "family": "O'Hara",
+    "given": "R. B."
+   },
+   {
+    "family": "Simpson",
+    "given": "Gavin L."
+   },
+   {
+    "family": "Solymos",
+    "given": "Peter"
+   },
+   {
+    "family": "Stevens",
+    "given": "M. Henry H."
+   },
+   {
+    "family": "Szoecs",
+    "given": "Eduard"
+   },
+   {
+    "family": "Wagner",
+    "given": "Helene"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2016"
+    ]
+   ]
+  }
+ },
+ {
+  "id": 925,
+  "type": "article-journal",
+  "title": "Analysis of composition of microbiomes: a novel method for studying microbial composition",
+  "container-title": "Microbial Ecology in Health & Disease",
+  "volume": "26",
+  "issue": "0",
+  "source": "CrossRef",
+  "URL": "http://www.microbecolhealthdis.net/index.php/mehd/article/view/27663",
+  "DOI": "10.3402/mehd.v26.27663",
+  "ISSN": "1651-2235",
+  "title-short": "Analysis of composition of microbiomes",
+  "author": [
+   {
+    "family": "Mandal",
+    "given": "Siddhartha"
+   },
+   {
+    "family": "Van Treuren",
+    "given": "Will"
+   },
+   {
+    "family": "White",
+    "given": "Richard A."
+   },
+   {
+    "family": "Eggesbø",
+    "given": "Merete"
+   },
+   {
+    "family": "Knight",
+    "given": "Rob"
+   },
+   {
+    "family": "Peddada",
+    "given": "Shyamal D."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2015",
+     5,
+     29
+    ]
+   ]
+  },
+  "accessed": {
+   "date-parts": [
+    [
+     "2016",
+     8,
+     16
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1408,
+  "type": "article-journal",
+  "title": "Normalization and microbial differential abundance strategies depend upon data characteristics",
+  "container-title": "Microbiome",
+  "volume": "5",
+  "issue": "1",
+  "source": "Crossref",
+  "URL": "http://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-017-0237-y",
+  "DOI": "10.1186/s40168-017-0237-y",
+  "ISSN": "2049-2618",
+  "language": "en",
+  "author": [
+   {
+    "family": "Weiss",
+    "given": "Sophie"
+   },
+   {
+    "family": "Xu",
+    "given": "Zhenjiang Zech"
+   },
+   {
+    "family": "Peddada",
+    "given": "Shyamal"
+   },
+   {
+    "family": "Amir",
+    "given": "Amnon"
+   },
+   {
+    "family": "Bittinger",
+    "given": "Kyle"
+   },
+   {
+    "family": "Gonzalez",
+    "given": "Antonio"
+   },
+   {
+    "family": "Lozupone",
+    "given": "Catherine"
+   },
+   {
+    "family": "Zaneveld",
+    "given": "Jesse R."
+   },
+   {
+    "family": "Vázquez-Baeza",
+    "given": "Yoshiki"
+   },
+   {
+    "family": "Birmingham",
+    "given": "Amanda"
+   },
+   {
+    "family": "Hyde",
+    "given": "Embriette R."
+   },
+   {
+    "family": "Knight",
+    "given": "Rob"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2017",
+     12
+    ]
+   ]
+  },
+  "accessed": {
+   "date-parts": [
+    [
+     "2018",
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1449,
+  "type": "article-journal",
+  "title": "STAMP: statistical analysis of taxonomic and functional profiles",
+  "container-title": "Bioinformatics",
+  "page": "3123-3124",
+  "volume": "30",
+  "issue": "21",
+  "source": "Crossref",
+  "DOI": "10.1093/bioinformatics/btu494",
+  "ISSN": "1460-2059, 1367-4803",
+  "title-short": "STAMP",
+  "language": "en",
+  "author": [
+   {
+    "family": "Parks",
+    "given": "Donovan H."
+   },
+   {
+    "family": "Tyson",
+    "given": "Gene W."
+   },
+   {
+    "family": "Hugenholtz",
+    "given": "Philip"
+   },
+   {
+    "family": "Beiko",
+    "given": "Robert G."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2014",
+     11,
+     1
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1078,
+  "type": "article-journal",
+  "title": "Controlling the false discovery rate: a practical and powerful approach to multiple testing",
+  "container-title": "Journal of the Royal Statistical Society. Series B (Methodological)",
+  "page": "289-300",
+  "volume": "57",
+  "issue": "1",
+  "abstract": "The common approach to the multiplicity problem calls for controlling the familywise error rate (FWER). This approach, though, has faults, and we point out a few. A different approach to problems of multiple significance testing is presented. It calls for controlling the expected proportion of falsely rejected hypotheses-the false discovery rate. This error rate is equivalent to the FWER when all hypotheses are true but is smaller otherwise. Therefore, in problems where the control of the false discovery rate rather than that of the FWER is desired, there is potential for a gain in power. A simple sequential Bonferroni-type procedure is proved to control the false discovery rate for independent test statistics, and a simulation study shows that the gain in power is substantial. The use of the new procedure and the appropriateness of the criterion are illustrated with examples.",
+  "ISSN": "00359246",
+  "author": [
+   {
+    "family": "Benjamini",
+    "given": "Yoav"
+   },
+   {
+    "family": "Hochberg",
+    "given": "Yosef"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "1995"
+    ]
+   ]
+  }
+ },
+ {
+  "id": 498,
+  "type": "article-journal",
+  "title": "Inter individual variations of the fish skin microbiota: host genetics basis of mutualism?",
+  "container-title": "PLoS ONE",
+  "page": "e102649",
+  "volume": "9",
+  "issue": "7",
+  "source": "CrossRef",
+  "DOI": "10.1371/journal.pone.0102649",
+  "ISSN": "1932-6203",
+  "title-short": "Inter Individual Variations of the Fish Skin Microbiota",
+  "language": "en",
+  "author": [
+   {
+    "family": "Boutin",
+    "given": "Sébastien"
+   },
+   {
+    "family": "Sauvage",
+    "given": "Christopher"
+   },
+   {
+    "family": "Bernatchez",
+    "given": "Louis"
+   },
+   {
+    "family": "Audet",
+    "given": "Céline"
+   },
+   {
+    "family": "Derome",
+    "given": "Nicolas"
+   }
+  ],
+  "editor": [
+   {
+    "family": "Mariani",
+    "given": "Stefano"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2014",
+     7,
+     28
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1451,
+  "type": "article-journal",
+  "title": "The gills of reef fish support a distinct microbiome influenced by host-specific factors",
+  "container-title": "Applied and Environmental Microbiology",
+  "volume": "84",
+  "issue": "9",
+  "source": "Crossref",
+  "URL": "http://aem.asm.org/lookup/doi/10.1128/AEM.00063-18",
+  "DOI": "10.1128/AEM.00063-18",
+  "ISSN": "0099-2240, 1098-5336",
+  "language": "en",
+  "author": [
+   {
+    "family": "Pratte",
+    "given": "Zoe A."
+   },
+   {
+    "family": "Besson",
+    "given": "Marc"
+   },
+   {
+    "family": "Hollman",
+    "given": "Rebecca D."
+   },
+   {
+    "family": "Stewart",
+    "given": "Frank J."
+   }
+  ],
+  "editor": [
+   {
+    "family": "McBain",
+    "given": "Andrew J."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2018",
+     2,
+     16
+    ]
+   ]
+  },
+  "accessed": {
+   "date-parts": [
+    [
+     "2018",
+     11,
+     23
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1667,
+  "type": "article-journal",
+  "title": "Environmental conditions and neutral processes shape the skin microbiome of European catfish ( <i>Silurus glanis</i> ) populations of Southwestern France",
+  "container-title": "Environmental Microbiology Reports",
+  "page": "605-614",
+  "volume": "11",
+  "issue": "4",
+  "source": "Crossref",
+  "abstract": "Teleost ﬁshes interact with diverse microbial communities, playing crucial functions for host ﬁtness. While gut microbiome has been extensively studied, skin microbiome has been overlooked. Speciﬁcally, there is no assessment of the relative impact of host and environmental factors on microbiome variability as well as neutral processes shaping ﬁsh skin microbiome. Here, we assessed the skin microbiome of a Siluriforme, the European catﬁsh (Silurus glanis) sampled in four sites located in Southwestern France. We assessed the relative roles of individual features (body size and genetic background), local environment and neutral processes in shaping skin microbiome. Catﬁsh skin microbiome composition was distinct to that of other freshwater ﬁsh species previously studied with high abundances of Gammaproteobacteria and Bacteroidetes. We found no effect of catﬁsh individual genotype and body size on the structure of its associated skin microbiome. Geographical location was the best catﬁsh skin microbiome structure predictor, together with neutral models of microbiome assembly.",
+  "DOI": "10.1111/1758-2229.12774",
+  "ISSN": "1758-2229, 1758-2229",
+  "language": "en",
+  "author": [
+   {
+    "family": "Chiarello",
+    "given": "Marlène"
+   },
+   {
+    "family": "Paz‐Vinas",
+    "given": "Ivan"
+   },
+   {
+    "family": "Veyssière",
+    "given": "Charlotte"
+   },
+   {
+    "family": "Santoul",
+    "given": "Frédéric"
+   },
+   {
+    "family": "Loot",
+    "given": "Géraldine"
+   },
+   {
+    "family": "Ferriol",
+    "given": "Jessica"
+   },
+   {
+    "family": "Boulêtreau",
+    "given": "Stéphanie"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2019",
+     8
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1571,
+  "type": "article-journal",
+  "title": "Diet in the driving seat: natural diet-immunity-microbiome interactions in wild fish",
+  "container-title": "Frontiers in Immunology",
+  "volume": "10",
+  "source": "Crossref",
+  "URL": "https://www.frontiersin.org/article/10.3389/fimmu.2019.00243/full",
+  "DOI": "10.3389/fimmu.2019.00243",
+  "ISSN": "1664-3224",
+  "title-short": "Diet in the Driving Seat",
+  "author": [
+   {
+    "family": "Friberg",
+    "given": "Ida M."
+   },
+   {
+    "family": "Taylor",
+    "given": "Joe D."
+   },
+   {
+    "family": "Jackson",
+    "given": "Joseph A."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2019",
+     2,
+     19
+    ]
+   ]
+  },
+  "accessed": {
+   "date-parts": [
+    [
+     "2019",
+     3,
+     4
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1632,
+  "type": "article-journal",
+  "title": "Microbiota associated with the skin, gills, and gut of the fish Parachondrostoma toxostoma from the Rhône basin",
+  "container-title": "Freshwater Biology",
+  "author": [
+   {
+    "family": "Guivier",
+    "given": "Emmanuel"
+   },
+   {
+    "family": "Pech",
+    "given": "Nicolas"
+   },
+   {
+    "family": "Chappaz",
+    "given": "Remi"
+   },
+   {
+    "family": "Gilles",
+    "given": "Andre"
+   }
+  ],
+  "issued": {
+   "literal": "in press"
+  }
+ },
+ {
+  "id": 1487,
+  "type": "article-journal",
+  "title": "Characterization of \"<i>Candidatus Piscichlamydia salmonis</i>\" (Order Chlamydiales), a Chlamydia-Like bacterium associated with epitheliocystis in farmed atlantic salmon (<i>Salmo salar</i>)",
+  "container-title": "Journal of Clinical Microbiology",
+  "page": "5286-5297",
+  "volume": "42",
+  "issue": "11",
+  "source": "Crossref",
+  "DOI": "10.1128/JCM.42.11.5286-5297.2004",
+  "ISSN": "0095-1137",
+  "language": "en",
+  "author": [
+   {
+    "family": "Draghi",
+    "given": "A."
+   },
+   {
+    "family": "Popov",
+    "given": "V. L."
+   },
+   {
+    "family": "Kahl",
+    "given": "M. M."
+   },
+   {
+    "family": "Stanton",
+    "given": "J. B."
+   },
+   {
+    "family": "Brown",
+    "given": "C. C."
+   },
+   {
+    "family": "Tsongalis",
+    "given": "G. J."
+   },
+   {
+    "family": "West",
+    "given": "A. B."
+   },
+   {
+    "family": "Frasca",
+    "given": "S."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2004",
+     11,
+     1
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1488,
+  "type": "article-journal",
+  "title": "Diverse <i>Chlamydia</i> -like agents associated with epitheliocystis infection in two cyprinid fish species, the common carp (<i>Cyprinus carpio</i> L.) and the gibel carp (<i>Carassius auratus gibelio</i> L.)",
+  "container-title": "Acta Veterinaria Hungarica",
+  "page": "29-40",
+  "volume": "65",
+  "issue": "1",
+  "source": "Crossref",
+  "DOI": "10.1556/004.2017.003",
+  "ISSN": "0236-6290, 1588-2705",
+  "language": "en",
+  "author": [
+   {
+    "family": "Sellyei",
+    "given": "Boglárka"
+   },
+   {
+    "family": "Molnár",
+    "given": "Kálmán"
+   },
+   {
+    "family": "Székely",
+    "given": "Csaba"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2017",
+     3
+    ]
+   ]
+  }
+ },
+ {
+  "id": 497,
+  "type": "article-journal",
+  "title": "Network Analysis Highlights Complex Interactions between Pathogen, Host and Commensal Microbiota",
+  "container-title": "PLoS ONE",
+  "page": "e84772",
+  "volume": "8",
+  "issue": "12",
+  "source": "CrossRef",
+  "DOI": "10.1371/journal.pone.0084772",
+  "ISSN": "1932-6203",
+  "language": "en",
+  "author": [
+   {
+    "family": "Boutin",
+    "given": "Sébastien"
+   },
+   {
+    "family": "Bernatchez",
+    "given": "Louis"
+   },
+   {
+    "family": "Audet",
+    "given": "Céline"
+   },
+   {
+    "family": "Derôme",
+    "given": "Nicolas"
+   }
+  ],
+  "editor": [
+   {
+    "family": "Rawls",
+    "given": "John F."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2013",
+     12,
+     23
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1464,
+  "type": "article-journal",
+  "title": "The amphibian microbiome: natural range of variation, pathogenic dysbiosis, and role in conservation",
+  "container-title": "Biodiversity and Conservation",
+  "page": "763-786",
+  "volume": "26",
+  "issue": "4",
+  "source": "Crossref",
+  "DOI": "10.1007/s10531-016-1272-x",
+  "ISSN": "0960-3115, 1572-9710",
+  "title-short": "The amphibian microbiome",
+  "language": "en",
+  "author": [
+   {
+    "family": "Jiménez",
+    "given": "Randall R."
+   },
+   {
+    "family": "Sommer",
+    "given": "Simone"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2017",
+     4
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1680,
+  "type": "article-journal",
+  "title": "Disentangling the effect of host genetics and gut microbiota on resistance to an intestinal parasite",
+  "container-title": "International Journal for Parasitology",
+  "page": "873-883",
+  "volume": "49",
+  "issue": "11",
+  "source": "Crossref",
+  "abstract": "Resistance to infection is a multifactorial trait, and recent work has suggested that the gut microbiota can also contribute to resistance. Here, we performed a fecal microbiota transplant to disentangle the contribution of the gut microbiota and host genetics as drivers of resistance to the intestinal nematode Heligmosomoides polygyrus. We transplanted the microbiota of a strain of mice (SJL), resistant to H. polygyrus, into a susceptible strain (CBA) and vice-versa. We predicted that if the microbiota shapes resistance to H. polygyrus, the FMT should reverse the pattern of resistance between the two host strains. The two host strains had different microbiota diversities and compositions before the start of the experiment, and the FMT altered the microbiota of recipient mice. One mouse strain (SJL) was more resistant to colonization by the heterologous microbiota, and it maintained its resistance proﬁle to H. polygyrus (lower parasite burden) independently of the FMT. On the contrary, CBA mice harbored parasites with lower fecundity during the early stage of the infection, and had an up-regulated expression of the cytokine IL-4 (a marker of H. polygyrus resistance) after receiving the heterologous microbiota. Therefore, while host genetics remains the main factor shaping the pattern of resistance to H. polygyrus, the composition of the gut microbiota also seems to play a strain-speciﬁc role.",
+  "DOI": "10.1016/j.ijpara.2019.06.001",
+  "ISSN": "00207519",
+  "language": "en",
+  "author": [
+   {
+    "family": "Faivre",
+    "given": "Bruno"
+   },
+   {
+    "family": "Bellenger",
+    "given": "Jérôme"
+   },
+   {
+    "family": "Rieu",
+    "given": "Aurélie"
+   },
+   {
+    "family": "Guivier",
+    "given": "Emmanuel"
+   },
+   {
+    "family": "Galan",
+    "given": "Maxime"
+   },
+   {
+    "family": "Ollivier",
+    "given": "Anthony"
+   },
+   {
+    "family": "Poloni",
+    "given": "Lauriane"
+   },
+   {
+    "family": "Sorci",
+    "given": "Gabriele"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2019",
+     10
+    ]
+   ]
+  }
+ },
+ {
+  "id": 879,
+  "type": "article-journal",
+  "title": "Co-evolution in context: The importance of studying gut microbiomes in wild animals",
+  "container-title": "Microbiome Science and Medicine",
+  "volume": "1",
+  "issue": "1",
+  "source": "CrossRef",
+  "URL": "http://www.degruyter.com/view/j/micsm.2014.1.issue-1/micsm-2013-0002/micsm-2013-0002.xml",
+  "DOI": "10.2478/micsm-2013-0002",
+  "ISSN": "2084-7653",
+  "title-short": "Co-evolution in context",
+  "author": [
+   {
+    "family": "Amato",
+    "given": "Katherine R."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2013",
+     1,
+     22
+    ]
+   ]
+  },
+  "accessed": {
+   "date-parts": [
+    [
+     "2016",
+     8,
+     8
+    ]
+   ]
+  }
+ },
+ {
+  "id": 482,
+  "type": "article-journal",
+  "title": "Phylogenetic and ecological factors impact the gut microbiota of two Neotropical primate species",
+  "container-title": "Oecologia",
+  "page": "717-733",
+  "volume": "180",
+  "issue": "3",
+  "source": "CrossRef",
+  "DOI": "10.1007/s00442-015-3507-z",
+  "ISSN": "0029-8549, 1432-1939",
+  "language": "en",
+  "author": [
+   {
+    "family": "Amato",
+    "given": "Katherine R."
+   },
+   {
+    "family": "Martinez-Mota",
+    "given": "Rodolfo"
+   },
+   {
+    "family": "Righini",
+    "given": "Nicoletta"
+   },
+   {
+    "family": "Raguet-Schofield",
+    "given": "Melissa"
+   },
+   {
+    "family": "Corcione",
+    "given": "Fabiana Paola"
+   },
+   {
+    "family": "Marini",
+    "given": "Elisabetta"
+   },
+   {
+    "family": "Humphrey",
+    "given": "Greg"
+   },
+   {
+    "family": "Gogul",
+    "given": "Grant"
+   },
+   {
+    "family": "Gaffney",
+    "given": "James"
+   },
+   {
+    "family": "Lovelace",
+    "given": "Elijah"
+   },
+   {
+    "family": "Williams",
+    "given": "LaShanda"
+   },
+   {
+    "family": "Luong",
+    "given": "Albert"
+   },
+   {
+    "family": "Dominguez-Bello",
+    "given": "Maria Gloria"
+   },
+   {
+    "family": "Stumpf",
+    "given": "Rebecca M."
+   },
+   {
+    "family": "White",
+    "given": "Bryan"
+   },
+   {
+    "family": "Nelson",
+    "given": "Karen E."
+   },
+   {
+    "family": "Knight",
+    "given": "Rob"
+   },
+   {
+    "family": "Leigh",
+    "given": "Steven R."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2016",
+     3
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1682,
+  "type": "article-journal",
+  "title": "Microbiome composition within a sympatric species complex of intertidal isopods (Jaera albifrons)",
+  "container-title": "PLOS ONE",
+  "page": "e0202212",
+  "volume": "13",
+  "issue": "8",
+  "source": "Crossref",
+  "DOI": "10.1371/journal.pone.0202212",
+  "ISSN": "1932-6203",
+  "language": "en",
+  "author": [
+   {
+    "family": "Wenzel",
+    "given": "Marius A."
+   },
+   {
+    "family": "Douglas",
+    "given": "Alex"
+   },
+   {
+    "family": "Piertney",
+    "given": "Stuart B."
+   }
+  ],
+  "editor": [
+   {
+    "family": "Rosenfeld",
+    "given": "Cheryl S."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     "2018",
+     8,
+     29
+    ]
+   ]
+  }
+ }
+]

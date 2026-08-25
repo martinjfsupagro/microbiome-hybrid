@@ -1,0 +1,27 @@
+OpenAlex query URLs — freshwater fish microbiome bibliography
+(for VOSviewer: Create map based on bibliographic data > Download through API > OpenAlex)
+================================================================================
+
+RECOMMENDED for a co-citation / bibliographic-coupling map:
+Use query #3 (host-associated corpus, ~989 works) — it is the cleaned query that
+removed the eDNA-biodiversity and free-living bacterioplankton noise.
+
+--------------------------------------------------------------------------------
+1) BROAD corpus (~4,279 works: microbiome + fish + freshwater)
+https://api.openalex.org/works?filter=title_and_abstract.search%3A%28microbiome%20OR%20microbiota%20OR%20microbiomes%20OR%20microbiotas%20OR%20%22bacterial%20community%22%20OR%20%22bacterial%20communities%22%20OR%20%22microbial%20community%22%20OR%20%22microbial%20communities%22%20OR%20%2216S%20rRNA%22%20OR%20%22gut%20bacteria%22%20OR%20metagenome%20OR%20metagenomic%20OR%20metabarcoding%20OR%20amplicon%20OR%20dysbiosis%29%20AND%20%28fish%20OR%20fishes%20OR%20teleost%20OR%20teleosts%20OR%20cyprinid%20OR%20salmonid%20OR%20zebrafish%20OR%20carp%20OR%20trout%20OR%20tilapia%29%20AND%20%28freshwater%20OR%20%22fresh%20water%22%20OR%20river%20OR%20riverine%20OR%20lake%20OR%20lacustrine%20OR%20stream%20OR%20pond%20OR%20reservoir%29
+
+2) BROAD, journal articles + reviews only
+https://api.openalex.org/works?filter=title_and_abstract.search%3A%28microbiome%20OR%20microbiota%20OR%20microbiomes%20OR%20microbiotas%20OR%20%22bacterial%20community%22%20OR%20%22bacterial%20communities%22%20OR%20%22microbial%20community%22%20OR%20%22microbial%20communities%22%20OR%20%2216S%20rRNA%22%20OR%20%22gut%20bacteria%22%20OR%20metagenome%20OR%20metagenomic%20OR%20metabarcoding%20OR%20amplicon%20OR%20dysbiosis%29%20AND%20%28fish%20OR%20fishes%20OR%20teleost%20OR%20teleosts%20OR%20cyprinid%20OR%20salmonid%20OR%20zebrafish%20OR%20carp%20OR%20trout%20OR%20tilapia%29%20AND%20%28freshwater%20OR%20%22fresh%20water%22%20OR%20river%20OR%20riverine%20OR%20lake%20OR%20lacustrine%20OR%20stream%20OR%20pond%20OR%20reservoir%29%2Ctype%3Aarticle
+
+3) HOST-ASSOCIATED corpus (~989 works) — RECOMMENDED
+https://api.openalex.org/works?filter=title_and_abstract.search%3A%28%22gut%20microbiome%22%20OR%20%22gut%20microbiota%22%20OR%20%22intestinal%20microbiome%22%20OR%20%22intestinal%20microbiota%22%20OR%20%22skin%20microbiome%22%20OR%20%22skin%20microbiota%22%20OR%20%22gill%20microbiome%22%20OR%20%22gill%20microbiota%22%20OR%20%22gut%20bacteria%22%20OR%20%22gut%20microbial%22%20OR%20%22intestinal%20microbial%22%20OR%20%22digestive%20microbiota%22%20OR%20%22host-associated%20microb%22%20OR%20%22fish%20microbiome%22%20OR%20%22fish%20microbiota%22%20OR%20%22gastrointestinal%20microbiota%22%20OR%20%22mucosal%20microbiota%22%29%20AND%20%28fish%20OR%20fishes%20OR%20teleost%20OR%20teleosts%20OR%20cyprinid%20OR%20salmonid%20OR%20zebrafish%20OR%20carp%20OR%20trout%20OR%20tilapia%29%20AND%20%28freshwater%20OR%20%22fresh%20water%22%20OR%20river%20OR%20riverine%20OR%20lake%20OR%20lacustrine%20OR%20stream%20OR%20pond%20OR%20reservoir%29
+
+4) HOST-ASSOCIATED, articles only (~747)
+https://api.openalex.org/works?filter=title_and_abstract.search%3A%28%22gut%20microbiome%22%20OR%20%22gut%20microbiota%22%20OR%20%22intestinal%20microbiome%22%20OR%20%22intestinal%20microbiota%22%20OR%20%22skin%20microbiome%22%20OR%20%22skin%20microbiota%22%20OR%20%22gill%20microbiome%22%20OR%20%22gill%20microbiota%22%20OR%20%22gut%20bacteria%22%20OR%20%22gut%20microbial%22%20OR%20%22intestinal%20microbial%22%20OR%20%22digestive%20microbiota%22%20OR%20%22host-associated%20microb%22%20OR%20%22fish%20microbiome%22%20OR%20%22fish%20microbiota%22%20OR%20%22gastrointestinal%20microbiota%22%20OR%20%22mucosal%20microbiota%22%29%20AND%20%28fish%20OR%20fishes%20OR%20teleost%20OR%20teleosts%20OR%20cyprinid%20OR%20salmonid%20OR%20zebrafish%20OR%20carp%20OR%20trout%20OR%20tilapia%29%20AND%20%28freshwater%20OR%20%22fresh%20water%22%20OR%20river%20OR%20riverine%20OR%20lake%20OR%20lacustrine%20OR%20stream%20OR%20pond%20OR%20reservoir%29%2Ctype%3Aarticle
+--------------------------------------------------------------------------------
+
+RAW FILTER STRINGS (if VOSviewer asks only for the 'filter' value, paste this part
+only — the text after 'filter='):
+
+#3 host-associated filter:
+title_and_abstract.search:("gut microbiome" OR "gut microbiota" OR "intestinal microbiome" OR "intestinal microbiota" OR "skin microbiome" OR "skin microbiota" OR "gill microbiome" OR "gill microbiota" OR "gut bacteria" OR "gut microbial" OR "intestinal microbial" OR "digestive microbiota" OR "host-associated microb" OR "fish microbiome" OR "fish microbiota" OR "gastrointestinal microbiota" OR "mucosal microbiota") AND (fish OR fishes OR teleost OR teleosts OR cyprinid OR salmonid OR zebrafish OR carp OR trout OR tilapia) AND (freshwater OR "fresh water" OR river OR riverine OR lake OR lacustrine OR stream OR pond OR reservoir)

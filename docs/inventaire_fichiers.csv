@@ -1,0 +1,33 @@
+fichier,categorie,role,taille,utile_aval,note
+results/decontam/asv_table_clean.tsv,Table ASV,"TABLE PROPRE CANONIQUE — 2180 éch. x 44200 ASV ; mocks Cab exclus, ASV mock retirés",184 Mo,OUI — point de départ,Généré par 12-clean_table.py
+results/phylogeny/tree.nwk,Phylogénie,"Arbre enraciné Newick (44 256 feuilles) — UniFrac, Faith PD",1 Mo,OUI,Couvre 100% des ASV de la table propre
+results/phylogeny/rooted_tree.qza,Phylogénie,"Même arbre, format QIIME2",621 Ko,OUI (si QIIME2),Équivalent de tree.nwk
+results/dada2_final/taxonomy.tsv,Taxonomie,Assignation SILVA par ASV (46 320 ASV),4 Mo,OUI,Sur-ensemble de la table propre
+results/dada2_final/asv.fasta,Séquences,Séquences des ASV (46 320),12 Mo,OUI,Sur-ensemble ; utile BLAST/re-analyse
+metadata/samples_all.csv,Métadonnées,Métadonnées par échantillon — clé dada2_id,861 Ko,OUI — jointure,"INTACT, jamais modifié"
+metadata/site_mapping.csv,Métadonnées,Jointure code-site -> site écologique + rôle population,780 o,OUI — jointure,Man/Per à statuer
+metadata/sample_qc_flags.csv,Métadonnées,"Flags QC : mock_confirme_andre (6), mock_contaminated (20)",6 Ko,OUI — jointure,Déjà appliqué dans la table propre
+metadata/index_hybride_andre.csv,Métadonnées,"CSV à remplir par André — 181 individus, index hybride 0..1",24 Ko,OUI — en attente,132 Ch à génotyper
+results/decontam/clean_table_summary.txt,Rapport,Résumé de génération de la table propre,623 o,Traçabilité,—
+results/qc_depth/depth_per_sample.tsv,QC,Profondeur + richesse par échantillon,—,OUI (choix seuil),Base du seuil 3000
+results/qc_depth/rarefaction_curves.tsv,QC,Courbes de raréfaction,—,OUI (justification),Plateau avant 3000
+results/qc_depth/fig_qc_depth.png,QC,Figure QC 3 panneaux (corrigée),—,OUI (figure article),—
+results/crosstalk/crosstalk_summary.txt,QC,"Crosstalk : 0,0002% (négligeable) + traceurs mock",2 Ko,Traçabilité/Methods,A révélé les mocks Cab
+results/mock_validation/mock_validation_summary.txt,QC,Validation mock : 8/8 taxons Zymo à 100% identité,—,Traçabilité/Methods,Contrôle positif validé
+results/decontam/decontam_scores.tsv,QC,Score decontam par ASV + statut aux 2 seuils,—,Traçabilité,"Seuil 0,1 retenu"
+results/decontam/decontam_summary.txt,Rapport,"Bilan décontamination (66 contaminants, 99,76% lectures)",—,Traçabilité/Methods,—
+docs/decision_*.md (5 fichiers),Documentation,"Décisions figées : decontam, raréfaction, mocks, retrait mock, crosstalk",—,OUI — Methods,Source des paramètres
+docs/materials_and_methods.docx,Documentation,Section M&M rédigée (§1 en attente André),—,OUI — manuscrit,—
+docs/note_reunion_andre.docx,Documentation,Note projet post-réunion (contexte + points résolus/en attente),—,Suivi,v3
+scripts/06 à 12,Code,"Scripts d'analyse versionnés (mock, decontam, arbre, QC, crosstalk, flags, table propre)",—,OUI — reproductibilité,Tous committés
+runs.log,Traçabilité,"Journal des jobs SLURM (START/END, commit, script)",—,Traçabilité,—
+results/decontam/asv_table_analysis.tsv,Table ASV,Table décontaminée AVANT décisions mocks (2186 éch.),185 Mo,NON — superseded,Remplacée par asv_table_clean.tsv
+results/decontam/asv_table_decontam_p01/p05.tsv,Table ASV,Tables des 2 seuils decontam comparés,2x185 Mo,NON — intermédiaire,p01 = source de analysis.tsv
+results/dada2_final/asv_table_filtered.tsv,Table ASV,Table filtrée avant décontamination (tous types d'éch.),195 Mo,NON (sauf re-analyse),Contient mocks/blancs/vides
+results/dada2_final/asv_table.tsv,Table ASV,Table brute avant filtrage,203 Mo,NON,—
+results/dada2_final/seqtab_nochim*.rds,Objet R,Objets DADA2 sérialisés,2x3 Mo,NON (sauf re-analyse R),—
+"results/fastqc_durance{1,2,3}_*/",QC brut,FastQC par fichier + MultiQC (3 runs),"~2,9 Go",NON — archivage,Rapports HTML consultables
+"results/rm12S_durance{1,2,3}_*/",Intermédiaire,Logs cutadapt du retrait 12S (769 fichiers/run),3x4 Mo,NON,—
+"results/dada2_durance{1,2,3}_*/",QC,Courbes qualité/erreurs + track par run (PDF),3x~450 Ko,Traçabilité,PDF utiles en supplémentaire
+results/dada2_merge_tax_8736614/ + _8736698/,Intermédiaire,2 tentatives ECHOUEES du merge+taxonomie (exit 137 OOM),2x219 Mo,NON — candidats purge,~438 Mo récupérables sans perte
+results/dada2_merge_tax_8736998/,Intermédiaire,Merge+taxonomie REUSSI — a produit results/dada2_final/,219 Mo,NON (mais A CONSERVER),Source de dada2_final/ : ne pas supprimer
