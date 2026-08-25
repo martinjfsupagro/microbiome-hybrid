@@ -15,11 +15,23 @@ Le design initialement transmis etait different (durance2 = memes PCR que duranc
 avec normalisation refaite ; durance3 = resequencage de durance2). Les donnees le
 contredisent. Quatre temoins independants :
 
-1. **Index i5** — i7 identique dans les 3 runs, mais i5 = SC501 pour durance1 et
-   SB501 pour durance2/3 (sequences reellement differentes). Le protocole etant
-   **1-step** (index incorpore pendant la PCR), une reindexation d'un pool existant
-   est impossible : un i5 different implique necessairement une PCR distincte.
+1. **Assignation des index** (CORRIGE 2026-08-25 — voir note ci-dessous) — le meme
+   jeu de 768 combinaisons i7 x i5 sert aux deux preparations, mais l'assignation des
+   paires aux puits differe. Sur les 768 librairies, par rapport a durance1 :
+   **l'i7 differe pour 384** et **l'i5 pour 576** ; durance2 et durance3 portent des
+   paires **identiques sur les 768**. Le protocole etant **1-step** (index incorpore
+   pendant la PCR), une reindexation d'un pool existant est impossible : une
+   assignation d'index differente implique necessairement une PCR distincte.
    Confirme par l'experimentateur : durance2 a fait l'objet d'une nouvelle PCR.
+
+   NOTE DE CORRECTION. Une version anterieure de ce document affirmait que l'i7 etait
+   *identique dans les 3 runs* et que seul l'i5 changeait. C'etait FAUX : cette
+   affirmation venait de l'inspection de la seule plaque 1 (SC501 vs SB501) et avait
+   ete generalisee a tort aux 768 librairies. Verification sur l'ensemble des
+   librairies : i7 differe 384/768, i5 differe 576/768 entre durance1 et durance2/3 ;
+   d2-d3 : 0/768 pour les deux. **La conclusion est inchangee et meme renforcee** —
+   durance2/durance3 partagent une preparation, durance1 en est une autre — mais la
+   caracterisation etait inexacte.
 2. **Dissimilarite intra-echantillon** (548 echantillons a >=3000 lectures dans les
    3 runs, rarefies a profondeur egale) — script 13-run_design.sh :
 

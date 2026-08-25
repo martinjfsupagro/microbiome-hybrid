@@ -16,7 +16,10 @@ laissée vide à remplir.
 ## Ce qui a été établi
 
 Les trois lots sont **le reséquençage des mêmes 768 librairies** : mêmes noms,
-même plan de plaque, mêmes index i7 ; seuls les i5 et la flowcell changent.
+même plan de plaque, mais l'assignation des index diffère entre les deux
+préparations de librairie : i7 différent pour 384/768, i5 pour 576/768 entre durance1
+et durance2/3 ; identiques sur les 768 entre durance2 et durance3. [CORRIGE
+2026-08-25 : affirmation antérieure "mêmes index i7" erronée.]
 
 | Lot | Run | Flowcell |
 |---|---|---|

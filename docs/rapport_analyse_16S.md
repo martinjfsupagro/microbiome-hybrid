@@ -24,8 +24,12 @@ pour cela. Les points nécessitant ton avis sont en **§7**.
 ## 2. Jeu de données
 
 Trois runs MiSeq (`M03930` n° 62, 69, 72) qui se sont révélés être **le
-reséquençage des mêmes 768 librairies** — même plan de plaque, mêmes index i7 ;
-seuls les i5 et la flowcell changent. Chaque échantillon est donc présent **en
+reséquençage des mêmes 768 échantillons** — même plan de plaque, mais DEUX
+préparations de librairie distinctes (cf. docs/decision_run_design.md) : par rapport
+à durance1, l'i7 diffère pour 384/768 librairies et l'i5 pour 576/768 ; durance2 et
+durance3 partagent des index identiques sur les 768. [CORRIGE 2026-08-25 : la version
+antérieure disait "mêmes index i7, seuls les i5 changent", généralisation erronée
+depuis la plaque 1.] Chaque échantillon est donc présent **en
 triple**. C'est une bonne nouvelle : l'effet « run de séquençage » peut être
 estimé directement et n'est confondu avec aucun facteur biologique (voir §7).
 
