@@ -168,3 +168,129 @@ Effectif utile : 180 individus, dont **178 avec les quatre tissus**.
 7. **D** — l'analyse.
 
 A1, A2 et A3 peuvent être lancés maintenant sans attendre André.
+
+
+---
+
+# ADDENDUM 2026-08-30 — les catégories génotypiques sont arrivées
+
+Source : `metadata/source/nouveau_tableau_AG_Aout_2026.xlsx` (André Gilles), converti
+verbatim en `metadata/genotypes_andre_aout2026.csv`. Catégorie retenue : **colonne P**
+(`taxon_code_index`, Cn / Hy / Pt), pas la médiane d'index de la colonne Q (décision
+JF Martin). Intégré dans `metadata/analysis_metadata.csv` par `scripts/19-analysis_metadata.py`.
+
+## Ce qui est résolu
+
+**C1 est levé.** Les 180 individus ont une catégorie : **Cn 59, Hy 30, Pt 91**.
+Les 131 `Ch` se résolvent en Cn 28, Hy 24, Pt 79. Et **8 des 49 individus antérieurement
+« identifiés » ont été reclassés** (4 Cn → Hy, 2 Cn → Pt, 2 Pt → Hy) : les identifications
+morphologiques n'étaient pas fiables, ce qui justifie rétrospectivement le génotypage.
+
+**A3 est fait.** `metadata/analysis_metadata.csv` : une ligne par échantillon séquencé,
+2 181 lignes, couvrant **100 % des 2 180 échantillons de la table propre**. Toutes les
+corrections y sont appliquées : requalification des mocks, station, coquille d'année,
+rangs de colonne intra-site et intra-station.
+
+**C2 est répondu, partiellement favorablement.** Trois stations portent les trois
+catégories : Confluence Buech-Méouge (Cn 11, Hy 10, Pt 14), Canal du Largue (8, 4, 8) et
+Saint-Just-d'Ardèche (8, 3, 8) — **74 individus avec le gradient complet intra-station**.
+La crainte antérieure (une seule station avec les deux parentaux) est levée.
+
+**La prédiction d'André sur le Suran est confirmée, et le désaccord était possible.**
+Le génotypage, fait indépendamment de l'assignation de station, donne Pont-d'Ain
+Cn 12 / Hy 2 / Pt 0 et Chavannes Cn 0 / Hy 0 / Pt 19. Aucun mélange.
+
+**La ligne fantôme corrobore la correction.** Le fichier d'André porte 181 lignes — il a
+été rempli sur la version antérieure du CSV. Il n'a retourné **aucun génotype** pour
+`2015_Per_2015`. Cet individu n'existait pas.
+
+## Le nouveau problème, et il est sérieux
+
+**Le confondant position ne s'est PAS affaibli avec les nouvelles catégories.**
+
+| | V de Cramér (catégorie × colonne de plaque) |
+|---|---|
+| ancien taxon (avant génotypage) | 0,477 |
+| **nouvelles catégories (Cn/Hy/Pt)** | **0,504** |
+
+Et surtout : **les trois stations à gradient complet sont précisément celles où catégorie
+et position sont le plus enchevêtrées.**
+
+| Station | n | catégories | V (catégorie × colonne) | colonnes partagées |
+|---|---|---|---|---|
+| Rosières | 100 | 2 | **0,181** (p = 0,35) | 3 sur 3 — 96 éch. |
+| Pertuis | 44 | 2 | 0,300 (p = 0,14) | 2 |
+| Pont-d'Ain | 56 | 2 | 0,367 | 1 |
+| Manosque | 60 | 2 | 0,421 | 2 |
+| Avignon | 96 | 2 | 0,436 | 2 |
+| **Canal du Largue** | 80 | **3** | **0,559** | **1** |
+| **Saint-Just** | 76 | **3** | **0,637** | **1** |
+| **Buech-Méouge** | 140 | **3** | **0,694** | **2** |
+
+Le sous-plan où catégorie et position sont pleinement séparables à station constante —
+les échantillons situés dans des colonnes occupées par **toutes** les catégories de leur
+station — compte **90 individus sur 180**, mais seulement **32** dans une station gardant
+les trois catégories (Canal 4/2/2, Buech 4/4/8, Saint-Just 5/2/1). **Trop mince pour
+porter le test principal.**
+
+Aucun axe n'est donc propre :
+- **entre stations**, la catégorie est confondue avec la station — l'effet le plus fort
+  mesuré sur la composition (ratio 3,07, significatif dans les 12 strates) ;
+- **dans les stations à gradient**, la catégorie est confondue avec la position — dont
+  l'effet par degré de liberté (1,77–1,89) égale celui du taxon (1,93).
+
+Ce n'est pas une réserve de forme : c'est la structure du plan.
+
+## Ce que ça change pour l'analyse
+
+**Le modèle doit porter les trois termes** (station, position, catégorie) en acceptant que
+l'effet de catégorie ne soit que **partiellement identifié**, et rapporter l'**encadrement**
+par les deux ordres séquentiels :
+- position d'abord, catégorie ensuite → variance minimale attribuable à la catégorie ;
+- catégorie d'abord, position ensuite → variance maximale.
+L'intervalle entre les deux est le degré d'incertitude imputable au confondant. Rapporter
+un seul des deux ordres serait choisir la réponse.
+
+**Un témoin propre existe, et il est petit : Rosières.** C'est la seule station où
+catégorie et position sont statistiquement indépendantes (V = 0,181, p = 0,35) et où
+96 des 100 échantillons occupent des colonnes partagées. Elle porte Hy (4 individus) et
+Pt (20). Elle permet donc **un** contraste propre de position — hybrides *vs* toxostome —
+mais pas le gradient complet, et sur 4 hybrides seulement. À utiliser comme témoin, pas
+comme test principal.
+
+**Le sous-plan séparable (32 individus) sert d'analyse de sensibilité**, pas de test
+principal : si la conclusion y change de signe, le confondant la produit.
+
+**La question « intermédiaire ou transgressif » reste posable** grâce aux 74 individus à
+gradient complet intra-station, mais l'estimation de la position des hybrides dans
+l'intervalle parental héritera de cette incertitude. Il faudra le dire dans le manuscrit.
+
+## Points de traçabilité
+
+- **Orientation de la colonne Q inversée.** `index_hybride_andre.csv` spécifiait
+  0 = hotu, 1 = toxostome ; le fichier d'André donne Cn ≈ 0,9999 et Pt ≈ 0,0001, soit
+  l'inverse. Sans conséquence ici puisque la colonne P est utilisée, mais reportée
+  verbatim dans `analysis_metadata.csv` sous `index_mediane_andre` avec cet avertissement.
+- **Pourquoi P et non Q, vérifié dans les données.** 9 des 30 Hy ont une médiane d'index
+  extrême (< 0,05 ou > 0,95) : un seuil sur Q les classerait parentaux. C'est leur
+  discordance inter-chromosomes qui les identifie (delta médian 0,366 contre 0,030 chez
+  les Cn purs et 0,011 chez les Pt purs). La décision d'utiliser P préserve ces 9 individus.
+- **Un défaut de mon script 19, corrigé.** La table de corrections est indexée sur le nom
+  d'échantillon nu (`15Per2015Ch03A`) alors que `dada2_id` porte le suffixe de run
+  (`15Per2015Ch03A__durance1`). La première version perdait donc silencieusement les
+  3 échantillons corrigés dans un compteur d'écartés. Un `assert` fait désormais échouer
+  le script si un échantillon biologique reste sans génotype.
+- **Un échantillon des métadonnées n'est pas dans la table propre** :
+  `15Bue1014Ch03A__durance3` (hindgut, Buech, Pt), sans flag QC — écarté en amont lors du
+  nettoyage. 2 181 lignes de métadonnées pour 2 180 échantillons analysables.
+
+## Étapes restantes, mises à jour
+
+1. **A1** — UniFrac et Faith PD (inchangé, faisable maintenant).
+2. **A2** — partition de variance avec terme de position, **et désormais terme de
+   catégorie** : c'est elle qui chiffrera l'encadrement décrit ci-dessus.
+3. **B1** — station plutôt que site : confirmé par le génotypage (Pont-d'Ain et Chavannes
+   ne partagent aucune catégorie).
+4. **B2** — nageoire caudale : décision toujours ouverte.
+5. **A4 / A5 / B3** — dépôt ENA, §1 du M&M, confirmations de protocole.
+6. **D** — l'analyse, avec le double ordre séquentiel obligatoire et Rosières en témoin.
