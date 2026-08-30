@@ -76,3 +76,6 @@ ena_deposit/manifests/
 ena_deposit/submit_*.log
 ena_deposit/ena_submit_*.out
 ena_deposit/done_runs_*.txt
+/position_effect_sizes.tsv
+/position_summary.txt
+/position_tests.tsv
