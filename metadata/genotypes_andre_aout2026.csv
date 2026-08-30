@@ -1,0 +1,182 @@
+individual_id,site_code,site_nom,riviere,role_population,annee,individual,taxon_code_actuel,espece_actuelle,sexe,taille_cm,poids_g,n_tissus_sequences,tissus,Individu,taxon_code_index,mediane des Index par chromosome,delta_mediane_quart
+2014_Ain_1001,Ain,Ain,Ain,allopatrie,2014,1001,Cn,Chondrostoma nasus,M,30.0,419.0,4,branchie;caudale;hindgut;midgut,14Ain1001,Cn,0.9999,0.02987200000000001
+2014_Ain_1002,Ain,Ain,Ain,allopatrie,2014,1002,Cn,Chondrostoma nasus,M,30.0,399.0,4,branchie;caudale;hindgut;midgut,14Ain1002,Cn,0.9999,0.027077000000000018
+2014_Ain_1011,Ain,Ain,Ain,allopatrie,2014,1011,Pt,Parachondrostoma toxostoma,M,15.0,39.0,4,branchie;caudale;hindgut;midgut,14Ain1011,Pt,0.0001,0.00132522
+2014_Ain_1012,Ain,Ain,Ain,allopatrie,2014,1012,Pt,Parachondrostoma toxostoma,F,17.5,62.0,4,branchie;caudale;hindgut;midgut,14Ain1012,Pt,0.0001,0.034025599999999996
+2014_Ain_1013,Ain,Ain,Ain,allopatrie,2014,1013,Pt,Parachondrostoma toxostoma,M,14.0,32.0,4,branchie;caudale;hindgut;midgut,14Ain1013,Pt,0.0001,0.0099728
+2014_Ain_1014,Ain,Ain,Ain,allopatrie,2014,1014,Pt,Parachondrostoma toxostoma,M,15.0,38.0,4,branchie;caudale;hindgut;midgut,14Ain1014,Pt,0.0001,0.0193883
+2014_Ain_1036,Ain,Ain,Ain,allopatrie,2014,1036,Cn,Chondrostoma nasus,M,33.0,495.0,4,branchie;caudale;hindgut;midgut,14Ain1036,Cn,0.9634205,0.05584849999999997
+2014_Ain_1037,Ain,Ain,Ain,allopatrie,2014,1037,Cn,Chondrostoma nasus,F,39.5,857.0,4,branchie;caudale;hindgut;midgut,14Ain1037,Cn,0.9999,0.021923000000000026
+2014_Ain_1038,Ain,Ain,Ain,allopatrie,2014,1038,Pt,Parachondrostoma toxostoma,X,10.5,10.0,3,branchie;caudale;hindgut,14Ain1038,Pt,0.0001,0.0105608
+2014_Ain_1039,Ain,Ain,Ain,allopatrie,2014,1039,Pt,Parachondrostoma toxostoma,F,20.0,83.0,4,branchie;caudale;hindgut;midgut,14Ain1039,Pt,0.0001,0.0118913
+2014_Ain_1040,Ain,Ain,Ain,allopatrie,2014,1040,Pt,Parachondrostoma toxostoma,F,18.5,73.0,4,branchie;caudale;hindgut;midgut,14Ain1040,Pt,0.0001,0.029344600000000002
+2014_Ain_1041,Ain,Ain,Ain,allopatrie,2014,1041,Pt,Parachondrostoma toxostoma,F,20.0,102.0,4,branchie;caudale;hindgut;midgut,14Ain1041,Pt,0.0001,0.0032175100000000002
+2014_Ain_1042,Ain,Ain,Ain,allopatrie,2014,1042,Pt,Parachondrostoma toxostoma,F,13.5,28.0,4,branchie;caudale;hindgut;midgut,14Ain1042,Pt,0.0001,0.0252761
+2014_Ain_1043,Ain,Ain,Ain,allopatrie,2014,1043,Pt,Parachondrostoma toxostoma,F,13.0,23.0,4,branchie;caudale;hindgut;midgut,14Ain1043,Pt,0.0001,0.0059209399999999995
+2014_Avi_1001,Avi,Avignon,Durance,asym. Hotu,2014,1001,Cn,Chondrostoma nasus,M,29.5,315.0,4,branchie;caudale;hindgut;midgut,14Avi1001,Cn,0.9999,0.014294000000000029
+2014_Avi_1002,Avi,Avignon,Durance,asym. Hotu,2014,1002,Cn,Chondrostoma nasus,X,10.0,10.0,4,branchie;caudale;hindgut;midgut,14Avi1002,Cn,0.9999,0.01569799999999999
+2014_Avi_1003,Avi,Avignon,Durance,asym. Hotu,2014,1003,Cn,Chondrostoma nasus,M,27.5,259.0,4,branchie;caudale;hindgut;midgut,14Avi1003,Cn,0.9999,0.002593999999999985
+2014_Avi_1004,Avi,Avignon,Durance,asym. Hotu,2014,1004,Cn,Chondrostoma nasus,M,25.5,228.0,4,branchie;caudale;hindgut;midgut,14Avi1004,Cn,0.9999,0.01977300000000004
+2014_Avi_1005,Avi,Avignon,Durance,asym. Hotu,2014,1005,Cn,Chondrostoma nasus,X,12.0,18.0,4,branchie;caudale;hindgut;midgut,14Avi1005,Cn,0.9999,0.08110799999999996
+2014_Avi_1006,Avi,Avignon,Durance,asym. Hotu,2014,1006,Cn,Chondrostoma nasus,X,11.0,13.0,4,branchie;caudale;hindgut;midgut,14Avi1006,Cn,0.9999,0.03937199999999996
+2014_Avi_1007,Avi,Avignon,Durance,asym. Hotu,2014,1007,Cn,Chondrostoma nasus,X,10.0,11.0,4,branchie;caudale;hindgut;midgut,14Avi1007,Cn,0.9999,0.010548000000000002
+2014_Avi_1008,Avi,Avignon,Durance,asym. Hotu,2014,1008,Cn,Chondrostoma nasus,X,12.5,19.0,4,branchie;caudale;hindgut;midgut,14Avi1008,Cn,0.9790425,0.04159250000000003
+2014_Avi_1036,Avi,Avignon,Durance,asym. Hotu,2014,1036,Cn,Chondrostoma nasus,M,27.0,225.0,4,branchie;caudale;hindgut;midgut,14Avi1036,Cn,0.9999,0.025182000000000038
+2014_Avi_1037,Avi,Avignon,Durance,asym. Hotu,2014,1037,Cn,Chondrostoma nasus,M,35.0,572.0,4,branchie;caudale;hindgut;midgut,14Avi1037,Cn,0.9999,0.114066
+2014_Avi_1038,Avi,Avignon,Durance,asym. Hotu,2014,1038,Cn,Chondrostoma nasus,M,34.5,525.0,4,branchie;caudale;hindgut;midgut,14Avi1038,Cn,0.9999,0.017442999999999986
+2014_Bue_1001,Bue,Büech,Durance,sympatrie+hyb,2014,1001,Cn,Chondrostoma nasus,,15.5,28.0,4,branchie;caudale;hindgut;midgut,14Bue1001,Cn,0.9878026,0.0
+2014_Bue_1002,Bue,Büech,Durance,sympatrie+hyb,2014,1002,Cn,Chondrostoma nasus,,13.5,17.0,4,branchie;caudale;hindgut;midgut,14Bue1002,Cn,0.989712,0.0
+2014_Bue_1003,Bue,Büech,Durance,sympatrie+hyb,2014,1003,Cn,Chondrostoma nasus,,18.0,39.0,4,branchie;caudale;hindgut;midgut,14Bue1003,Cn,0.9999,0.05878899999999998
+2014_Bue_1004,Bue,Büech,Durance,sympatrie+hyb,2014,1004,Cn,Chondrostoma nasus,,18.5,43.0,4,branchie;caudale;hindgut;midgut,14Bue1004,Cn,0.9999,0.01164900000000002
+2014_Bue_1005,Bue,Büech,Durance,sympatrie+hyb,2014,1005,Cn,Chondrostoma nasus,,29.0,167.0,4,branchie;caudale;hindgut;midgut,14Bue1005,Cn,0.996529,0.015122999999999998
+2014_Bue_1006,Bue,Büech,Durance,sympatrie+hyb,2014,1006,Cn,Chondrostoma nasus,,27.0,182.0,4,branchie;caudale;hindgut;midgut,14Bue1006,Hy,0.9466924999999999,0.09561849999999994
+2014_Bue_1007,Bue,Büech,Durance,sympatrie+hyb,2014,1007,Cn,Chondrostoma nasus,,26.0,149.0,4,branchie;caudale;hindgut;midgut,14Bue1007,Cn,0.9999,0.013390000000000013
+2014_Bue_1008,Bue,Büech,Durance,sympatrie+hyb,2014,1008,Cn,Chondrostoma nasus,,23.5,115.0,4,branchie;caudale;hindgut;midgut,14Bue1008,Cn,0.9999,0.019206999999999974
+2014_Bue_1011,Bue,Büech,Durance,sympatrie+hyb,2014,1011,Ch,Chondrostoma sp.,M,14.5,22.0,4,branchie;caudale;hindgut;midgut,14Bue1011,Pt,0.0001,0.0232161
+2014_Bue_1012,Bue,Büech,Durance,sympatrie+hyb,2014,1012,Ch,Chondrostoma sp.,M,18.5,43.0,4,branchie;caudale;hindgut;midgut,14Bue1012,Pt,0.0001,0.0
+2014_Bue_1013,Bue,Büech,Durance,sympatrie+hyb,2014,1013,Ch,Chondrostoma sp.,,13.5,15.0,4,branchie;caudale;hindgut;midgut,14Bue1013,Pt,0.0001,0.023389300000000002
+2014_Bue_1014,Bue,Büech,Durance,sympatrie+hyb,2014,1014,Ch,Chondrostoma sp.,,13.0,16.0,4,branchie;caudale;hindgut;midgut,14Bue1014,Pt,0.00459266,0.015245940000000001
+2014_Bue_1015,Bue,Büech,Durance,sympatrie+hyb,2014,1015,Ch,Chondrostoma sp.,,12.5,15.0,4,branchie;caudale;hindgut;midgut,14Bue1015,Pt,0.0001,0.027206
+2014_Bue_1016,Bue,Büech,Durance,sympatrie+hyb,2014,1016,Ch,Chondrostoma sp.,,18.5,44.0,3,caudale;hindgut;midgut,14Bue1016,Pt,0.0001,0.025033800000000002
+2014_Bue_1017,Bue,Büech,Durance,sympatrie+hyb,2014,1017,Ch,Chondrostoma sp.,,13.5,16.0,4,branchie;caudale;hindgut;midgut,14Bue1017,Pt,0.0001,0.0436135
+2014_Bue_1018,Bue,Büech,Durance,sympatrie+hyb,2014,1018,Ch,Chondrostoma sp.,,15.5,29.0,4,branchie;caudale;hindgut;midgut,14Bue1018,Pt,0.0001,0.009559940000000001
+2014_Bue_1019,Bue,Büech,Durance,sympatrie+hyb,2014,1019,Ch,Chondrostoma sp.,,12.5,15.0,4,branchie;caudale;hindgut;midgut,14Bue1019,Pt,0.0001,0.0
+2014_Man_1001,Man,Manosque,Durance,à statuer,2014,1001,Cn,Chondrostoma nasus,X,13.0,27.0,4,branchie;caudale;hindgut;midgut,14Man1001,Pt,0.0001,0.0031458500000000004
+2014_Man_1002,Man,Manosque,Durance,à statuer,2014,1002,Cn,Chondrostoma nasus,M,14.5,40.0,4,branchie;caudale;hindgut;midgut,14Man1002,Hy,0.0001,0.366158
+2014_Man_1010,Man,Manosque,Durance,à statuer,2014,1010,Cn,Chondrostoma nasus,X,11.5,17.0,4,branchie;caudale;hindgut;midgut,14Man1010,Pt,0.0001,0.0
+2014_Man_1011,Man,Manosque,Durance,à statuer,2014,1011,Ch,Chondrostoma sp.,M,13.5,29.0,4,branchie;caudale;hindgut;midgut,14Man1011,Pt,0.0001,0.0034689200000000003
+2014_Man_1012,Man,Manosque,Durance,à statuer,2014,1012,Ch,Chondrostoma sp.,X,11.5,15.0,4,branchie;caudale;hindgut;midgut,14Man1012,Pt,0.0001,0.00126172
+2014_Man_1013,Man,Manosque,Durance,à statuer,2014,1013,Ch,Chondrostoma sp.,X,11.5,15.0,4,branchie;caudale;hindgut;midgut,14Man1013,Pt,0.0001,0.0236388
+2014_Man_1014,Man,Manosque,Durance,à statuer,2014,1014,Ch,Chondrostoma sp.,M,11.5,15.0,4,branchie;caudale;hindgut;midgut,14Man1014,Pt,0.0001,0.0023953100000000003
+2014_Man_1015,Man,Manosque,Durance,à statuer,2014,1015,Ch,Chondrostoma sp.,X,11.0,15.0,4,branchie;caudale;hindgut;midgut,14Man1015,Pt,0.0001,0.0
+2014_Man_1016,Man,Manosque,Durance,à statuer,2014,1016,Ch,Chondrostoma sp.,X,11.5,16.0,4,branchie;caudale;hindgut;midgut,14Man1016,Pt,0.0001,0.00548115
+2014_Man_1017,Man,Manosque,Durance,à statuer,2014,1017,Ch,Chondrostoma sp.,X,12.0,19.0,4,branchie;caudale;hindgut;midgut,14Man1017,Pt,0.0001,0.0
+2014_Man_1018,Man,Manosque,Durance,à statuer,2014,1018,Ch,Chondrostoma sp.,X,11.0,15.0,4,branchie;caudale;hindgut;midgut,14Man1018,Pt,0.0001,0.0202354
+2014_Man_1019,Man,Manosque,Durance,à statuer,2014,1019,Ch,Chondrostoma sp.,X,9.5,11.0,4,branchie;caudale;hindgut;midgut,14Man1019,Pt,0.0001,0.00794395
+2014_Man_1020,Man,Manosque,Durance,à statuer,2014,1020,Ch,Chondrostoma sp.,X,9.5,11.0,4,branchie;caudale;hindgut;midgut,14Man1020,Pt,0.0001,0.00115361
+2014_Man_1021,Man,Manosque,Durance,à statuer,2014,1021,Ch,Chondrostoma sp.,M,11.0,14.0,4,branchie;caudale;hindgut;midgut,14Man1021,Hy,0.2179825,0.1247321
+2014_Man_1022,Man,Manosque,Durance,à statuer,2014,1022,Ch,Chondrostoma sp.,X,10.0,12.0,4,branchie;caudale;hindgut;midgut,14Man1022,Pt,0.0001,0.010545200000000001
+2014_Per_1011,Per,Pertuis,Durance,à statuer,2014,1011,Ch,Chondrostoma sp.,X,13.5,29.5,4,branchie;caudale;hindgut;midgut,14Per1011,Pt,0.0001,0.01805
+2014_Per_1012,Per,Pertuis,Durance,à statuer,2014,1012,Ch,Chondrostoma sp.,X,12.5,23.0,4,branchie;caudale;hindgut;midgut,14Per1012,Pt,0.0001,0.00345481
+2014_Per_1013,Per,Pertuis,Durance,à statuer,2014,1013,Ch,Chondrostoma sp.,,,,4,branchie;caudale;hindgut;midgut,14Per1013,Pt,0.0001,0.0
+2014_Per_1014,Per,Pertuis,Durance,à statuer,2014,1014,Ch,Chondrostoma sp.,M,13.5,32.0,4,branchie;caudale;hindgut;midgut,14Per1014,Pt,0.0001,0.006368319999999999
+2014_Per_2011,Per,Pertuis,Durance,à statuer,2014,2011,Ch,Chondrostoma sp.,F,16.0,61.0,4,branchie;caudale;hindgut;midgut,14Per2011,Pt,0.0001,0.0198136
+2014_Per_2012,Per,Pertuis,Durance,à statuer,2014,2012,Ch,Chondrostoma sp.,M,15.0,48.0,4,branchie;caudale;hindgut;midgut,14Per2012,Pt,0.0001,0.0
+2014_Per_2013,Per,Pertuis,Durance,à statuer,2014,2013,Ch,Chondrostoma sp.,M,15.0,46.0,4,branchie;caudale;hindgut;midgut,14Per2013,Hy,0.2097815,0.1761465
+2014_Per_2014,Per,Pertuis,Durance,à statuer,2014,2014,Ch,Chondrostoma sp.,M,13.5,34.0,4,branchie;caudale;hindgut;midgut,14Per2014,Pt,0.0001,0.0
+2014_Per_2015,Per,Pertuis,Durance,à statuer,2014,2015,Ch,Chondrostoma sp.,M,15.0,43.0,3,branchie;caudale;midgut,14Per2015,Pt,0.0001,0.0
+2015_Avi_1001,Avi,Avignon,Durance,asym. Hotu,2015,1001,Cn,Chondrostoma nasus,M,34.5,563.0,4,branchie;caudale;hindgut;midgut,15Avi1001,Hy,0.9999,0.36144699999999996
+2015_Avi_1002,Avi,Avignon,Durance,asym. Hotu,2015,1002,Cn,Chondrostoma nasus,F,26.0,233.0,4,branchie;caudale;hindgut;midgut,15Avi1002,Hy,0.529004,0.06558199999999992
+2015_Avi_1003,Avi,Avignon,Durance,asym. Hotu,2015,1003,Cn,Chondrostoma nasus,M,26.0,318.0,4,branchie;caudale;hindgut;midgut,15Avi1003,Cn,0.9999,0.020881999999999956
+2015_Avi_1004,Avi,Avignon,Durance,asym. Hotu,2015,1004,Cn,Chondrostoma nasus,F,32.0,423.0,4,branchie;caudale;hindgut;midgut,15Avi1004,Cn,0.9999,0.022290000000000032
+2015_Avi_1005,Avi,Avignon,Durance,asym. Hotu,2015,1005,Cn,Chondrostoma nasus,M,27.5,240.0,4,branchie;caudale;hindgut;midgut,15Avi1005,Cn,0.99929,0.06421699999999997
+2015_Avi_1006,Avi,Avignon,Durance,asym. Hotu,2015,1006,Cn,Chondrostoma nasus,X,15.0,38.0,4,branchie;caudale;hindgut;midgut,15Avi1006,Cn,0.981626,0.024009999999999976
+2015_Avi_1007,Avi,Avignon,Durance,asym. Hotu,2015,1007,Cn,Chondrostoma nasus,X,11.5,17.0,4,branchie;caudale;hindgut;midgut,15Avi1007,Cn,0.9999,0.08638400000000002
+2015_Avi_1008,Avi,Avignon,Durance,asym. Hotu,2015,1008,Cn,Chondrostoma nasus,X,12.0,21.0,4,branchie;caudale;hindgut;midgut,15Avi1008,Cn,0.9999,0.01104000000000005
+2015_Avi_1009,Avi,Avignon,Durance,asym. Hotu,2015,1009,Cn,Chondrostoma nasus,X,12.5,22.0,4,branchie;caudale;hindgut;midgut,15Avi1009,Cn,0.9999,0.06070900000000001
+2015_Avi_1010,Avi,Avignon,Durance,asym. Hotu,2015,1010,Cn,Chondrostoma nasus,X,11.5,21.0,4,branchie;caudale;hindgut;midgut,15Avi1010,Cn,0.9999,0.023951999999999973
+2015_Avi_1011,Avi,Avignon,Durance,asym. Hotu,2015,1011,Cn,Chondrostoma nasus,X,13.0,23.0,4,branchie;caudale;hindgut;midgut,15Avi1011,Cn,0.9999,0.05917300000000003
+2015_Avi_1012,Avi,Avignon,Durance,asym. Hotu,2015,1012,Pt,Parachondrostoma toxostoma,F,20.0,98.0,4,branchie;caudale;hindgut;midgut,15Avi1012,Hy,0.0001,0.39093300000000003
+2015_Avi_1013,Avi,Avignon,Durance,asym. Hotu,2015,1013,Pt,Parachondrostoma toxostoma,M,23.0,139.0,4,branchie;caudale;hindgut;midgut,15Avi1013,Hy,0.28511410000000004,0.33378589999999997
+2015_Bau_1001,Bau,Baume,Ardèche,asym. Toxo,2015,1001,Ch,Chondrostoma sp.,F,21.5,100.0,4,branchie;caudale;hindgut;midgut,15Bau1001,Pt,0.0001,0.0011884
+2015_Bau_1002,Bau,Baume,Ardèche,asym. Toxo,2015,1002,Ch,Chondrostoma sp.,F,17.5,65.0,4,branchie;caudale;hindgut;midgut,15Bau1002,Pt,0.0001,0.00046527
+2015_Bau_1003,Bau,Baume,Ardèche,asym. Toxo,2015,1003,Ch,Chondrostoma sp.,M,23.0,130.0,4,branchie;caudale;hindgut;midgut,15Bau1003,Pt,0.0001,0.0
+2015_Bau_1004,Bau,Baume,Ardèche,asym. Toxo,2015,1004,Ch,Chondrostoma sp.,F,17.0,62.0,4,branchie;caudale;hindgut;midgut,15Bau1004,Pt,0.0001,0.07919129999999999
+2015_Bau_1005,Bau,Baume,Ardèche,asym. Toxo,2015,1005,Ch,Chondrostoma sp.,M,21.0,107.0,4,branchie;caudale;hindgut;midgut,15Bau1005,Pt,0.004509865000000001,0.039507935
+2015_Bau_1006,Bau,Baume,Ardèche,asym. Toxo,2015,1006,Ch,Chondrostoma sp.,F,24.0,163.0,4,branchie;caudale;hindgut;midgut,15Bau1006,Hy,0.5132975,0.09612850000000006
+2015_Bau_1007,Bau,Baume,Ardèche,asym. Toxo,2015,1007,Ch,Chondrostoma sp.,F,24.0,155.0,4,branchie;caudale;hindgut;midgut,15Bau1007,Pt,0.0001,0.00827844
+2015_Bau_1008,Bau,Baume,Ardèche,asym. Toxo,2015,1008,Ch,Chondrostoma sp.,M,18.0,70.0,4,branchie;caudale;hindgut;midgut,15Bau1008,Pt,0.0001,0.039034
+2015_Bau_1009,Bau,Baume,Ardèche,asym. Toxo,2015,1009,Ch,Chondrostoma sp.,F,22.0,107.0,4,branchie;caudale;hindgut;midgut,15Bau1009,Pt,0.0001,0.0190407
+2015_Bau_1010,Bau,Baume,Ardèche,asym. Toxo,2015,1010,Ch,Chondrostoma sp.,M,18.5,71.0,4,branchie;caudale;hindgut;midgut,15Bau1010,Hy,0.0001,0.375879
+2015_Bau_1011,Bau,Baume,Ardèche,asym. Toxo,2015,1011,Ch,Chondrostoma sp.,M,21.0,89.0,4,branchie;caudale;hindgut;midgut,15Bau1011,Pt,0.00156659,0.04267271
+2015_Bau_1012,Bau,Baume,Ardèche,asym. Toxo,2015,1012,Ch,Chondrostoma sp.,F,17.5,53.0,4,branchie;caudale;hindgut;midgut,15Bau1012,Pt,0.0001,0.014222100000000001
+2015_Bau_1013,Bau,Baume,Ardèche,asym. Toxo,2015,1013,Ch,Chondrostoma sp.,M,16.0,49.0,4,branchie;caudale;hindgut;midgut,15Bau1013,Pt,0.0001,0.0409044
+2015_Bau_1014,Bau,Baume,Ardèche,asym. Toxo,2015,1014,Ch,Chondrostoma sp.,,22.0,115.0,4,branchie;caudale;hindgut;midgut,15Bau1014,Pt,0.00344197,0.03864973
+2015_Bau_1015,Bau,Baume,Ardèche,asym. Toxo,2015,1015,Ch,Chondrostoma sp.,M,19.0,77.0,4,branchie;caudale;hindgut;midgut,15Bau1015,Pt,0.0001,0.0171402
+2015_Bau_1016,Bau,Baume,Ardèche,asym. Toxo,2015,1016,Ch,Chondrostoma sp.,F,18.0,63.0,4,branchie;caudale;hindgut;midgut,15Bau1016,Hy,0.02028617,0.44522083
+2015_Bau_1017,Bau,Baume,Ardèche,asym. Toxo,2015,1017,Ch,Chondrostoma sp.,M,17.0,60.0,4,branchie;caudale;hindgut;midgut,15Bau1017,Pt,0.01931,0.026522699999999996
+2015_Bau_1018,Bau,Baume,Ardèche,asym. Toxo,2015,1018,Ch,Chondrostoma sp.,M,19.5,84.0,4,branchie;caudale;hindgut;midgut,15Bau1018,Pt,0.0001,0.0420278
+2015_Bau_1019,Bau,Baume,Ardèche,asym. Toxo,2015,1019,Ch,Chondrostoma sp.,M,15.0,39.0,4,branchie;caudale;hindgut;midgut,15Bau1019,Pt,0.0001,0.00373055
+2015_Bau_1020,Bau,Baume,Ardèche,asym. Toxo,2015,1020,Ch,Chondrostoma sp.,M,18.5,73.0,4,branchie;caudale;hindgut;midgut,15Bau1020,Hy,0.0001,0.206549
+2015_Bau_1021,Bau,Baume,Ardèche,asym. Toxo,2015,1021,Ch,Chondrostoma sp.,F,18.0,75.0,4,branchie;caudale;hindgut;midgut,15Bau1021,Pt,0.0001,0.0344185
+2015_Bau_1022,Bau,Baume,Ardèche,asym. Toxo,2015,1022,Ch,Chondrostoma sp.,M,16.5,63.0,4,branchie;caudale;hindgut;midgut,15Bau1022,Pt,0.026378,0.0396818
+2015_Bau_1023,Bau,Baume,Ardèche,asym. Toxo,2015,1023,Ch,Chondrostoma sp.,M,17.0,60.0,4,branchie;caudale;hindgut;midgut,15Bau1023,Pt,0.0001,0.0
+2015_Bau_1024,Bau,Baume,Ardèche,asym. Toxo,2015,1024,Ch,Chondrostoma sp.,M,17.0,66.0,4,branchie;caudale;hindgut;midgut,15Bau1024,Pt,0.0001,0.0131795
+2015_Bau_1025,Bau,Baume,Ardèche,asym. Toxo,2015,1025,Ch,Chondrostoma sp.,M,18.0,66.0,4,branchie;caudale;hindgut;midgut,15Bau1025,Pt,0.019029945,0.066665255
+2015_Bue_1001,Bue,Büech,Durance,sympatrie+hyb,2015,1001,Ch,Chondrostoma sp.,M,30.5,386.0,4,branchie;caudale;hindgut;midgut,15Bue1001,Cn,0.9999,0.05101900000000004
+2015_Bue_1002,Bue,Büech,Durance,sympatrie+hyb,2015,1002,Ch,Chondrostoma sp.,M,30.5,391.0,4,branchie;caudale;hindgut;midgut,15Bue1002,Cn,0.9999,0.015835000000000043
+2015_Bue_1003,Bue,Büech,Durance,sympatrie+hyb,2015,1003,Ch,Chondrostoma sp.,M,33.5,491.0,4,branchie;caudale;hindgut;midgut,15Bue1003,Cn,0.9999,0.015947000000000044
+2015_Bue_1004,Bue,Büech,Durance,sympatrie+hyb,2015,1004,Ch,Chondrostoma sp.,M,16.5,53.0,4,branchie;caudale;hindgut;midgut,15Bue1004,Pt,0.0001,0.0
+2015_Bue_1005,Bue,Büech,Durance,sympatrie+hyb,2015,1005,Ch,Chondrostoma sp.,F,16.0,49.0,4,branchie;caudale;hindgut;midgut,15Bue1005,Hy,0.130852,0.06826000000000002
+2015_Bue_1006,Bue,Büech,Durance,sympatrie+hyb,2015,1006,Ch,Chondrostoma sp.,F,18.0,70.0,4,branchie;caudale;hindgut;midgut,15Bue1006,Hy,0.00753796,0.11408504
+2015_Bue_1007,Bue,Büech,Durance,sympatrie+hyb,2015,1007,Ch,Chondrostoma sp.,M,15.0,36.0,4,branchie;caudale;hindgut;midgut,15Bue1007,Hy,0.220115,0.09282300000000002
+2015_Bue_1008,Bue,Büech,Durance,sympatrie+hyb,2015,1008,Ch,Chondrostoma sp.,M,12.5,26.0,4,branchie;caudale;hindgut;midgut,15Bue1008,Pt,0.0001,0.00945818
+2015_Bue_1009,Bue,Büech,Durance,sympatrie+hyb,2015,1009,Ch,Chondrostoma sp.,M,30.5,327.0,4,branchie;caudale;hindgut;midgut,15Bue1009,Hy,0.9276935,0.1251184999999999
+2015_Bue_1010,Bue,Büech,Durance,sympatrie+hyb,2015,1010,Ch,Chondrostoma sp.,M,25.0,215.0,4,branchie;caudale;hindgut;midgut,15Bue1010,Hy,0.5373025,0.11367450000000001
+2015_Bue_1011,Bue,Büech,Durance,sympatrie+hyb,2015,1011,Ch,Chondrostoma sp.,X,29.0,298.0,4,branchie;caudale;hindgut;midgut,15Bue1011,Hy,0.7010149999999999,0.10766600000000004
+2015_Bue_1012,Bue,Büech,Durance,sympatrie+hyb,2015,1012,Ch,Chondrostoma sp.,M,19.5,91.0,4,branchie;caudale;hindgut;midgut,15Bue1012,Hy,0.0001,0.393005
+2015_Bue_1013,Bue,Büech,Durance,sympatrie+hyb,2015,1013,Ch,Chondrostoma sp.,M,21.0,108.0,4,branchie;caudale;hindgut;midgut,15Bue1013,Pt,0.0001,0.0261861
+2015_Bue_1014,Bue,Büech,Durance,sympatrie+hyb,2015,1014,Ch,Chondrostoma sp.,M,18.0,73.0,4,branchie;caudale;hindgut;midgut,15Bue1014,Pt,0.001654999999999962,0.0
+2015_Bue_1015,Bue,Büech,Durance,sympatrie+hyb,2015,1015,Ch,Chondrostoma sp.,M,16.0,57.0,4,branchie;caudale;hindgut;midgut,15Bue1015,Pt,0.0001,0.0178451
+2015_Bue_1016,Bue,Büech,Durance,sympatrie+hyb,2015,1016,Ch,Chondrostoma sp.,M,30.0,378.0,4,branchie;caudale;hindgut;midgut,15Bue1016,Hy,0.8887309999999999,0.15708699999999998
+2015_Bue_1017,Bue,Büech,Durance,sympatrie+hyb,2015,1017,Ch,Chondrostoma sp.,M,31.5,363.0,4,branchie;caudale;hindgut;midgut,15Bue1017,Cn,0.985546,0.08171899999999999
+2015_Bue_1018,Bue,Büech,Durance,sympatrie+hyb,2015,1018,Ch,Chondrostoma sp.,X,31.0,376.0,4,branchie;caudale;hindgut;midgut,15Bue1018,Hy,0.8807585,0.09011049999999998
+2015_Caa_1001,Caa,canal,Durance,allopatrie,2015,1001,Ch,Chondrostoma sp.,X,14.0,28.0,4,branchie;caudale;hindgut;midgut,15Caa1001,Cn,0.947083,0.052817
+2015_Caa_1002,Caa,canal,Durance,allopatrie,2015,1002,Ch,Chondrostoma sp.,X,13.0,21.0,4,branchie;caudale;hindgut;midgut,15Caa1002,Cn,0.9994325,0.1068714999999999
+2015_Caa_1003,Caa,canal,Durance,allopatrie,2015,1003,Ch,Chondrostoma sp.,X,12.0,16.0,4,branchie;caudale;hindgut;midgut,15Caa1003,Cn,0.9999,0.011297000000000001
+2015_Caa_1004,Caa,canal,Durance,allopatrie,2015,1004,Ch,Chondrostoma sp.,X,12.5,23.0,4,branchie;caudale;hindgut;midgut,15Caa1004,Cn,0.9999,0.005790999999999991
+2015_Caa_1005,Caa,canal,Durance,allopatrie,2015,1005,Ch,Chondrostoma sp.,X,13.0,21.0,4,branchie;caudale;hindgut;midgut,15Caa1005,Cn,0.9999,0.031225000000000058
+2015_Caa_1006,Caa,canal,Durance,allopatrie,2015,1006,Ch,Chondrostoma sp.,X,11.5,16.0,4,branchie;caudale;hindgut;midgut,15Caa1006,Hy,0.9211665,0.07827249999999997
+2015_Caa_1007,Caa,canal,Durance,allopatrie,2015,1007,Ch,Chondrostoma sp.,X,11.5,14.0,4,branchie;caudale;hindgut;midgut,15Caa1007,Cn,0.9847625,0.052702499999999985
+2015_Caa_1008,Caa,canal,Durance,allopatrie,2015,1008,Ch,Chondrostoma sp.,X,11.5,16.0,4,branchie;caudale;hindgut;midgut,15Caa1008,Hy,0.9208035,0.07993349999999999
+2015_Caa_1009,Caa,canal,Durance,allopatrie,2015,1009,Ch,Chondrostoma sp.,X,12.0,16.0,4,branchie;caudale;hindgut;midgut,15Caa1009,Cn,0.9999,0.03842699999999999
+2015_Caa_1010,Caa,canal,Durance,allopatrie,2015,1010,Ch,Chondrostoma sp.,X,11.5,15.0,4,branchie;caudale;hindgut;midgut,15Caa1010,Cn,0.9999,0.019187999999999983
+2015_Caa_1011,Caa,canal,Durance,allopatrie,2015,1011,Ch,Chondrostoma sp.,F,18.0,62.0,4,branchie;caudale;hindgut;midgut,15Caa1011,Pt,0.0001,0.0906421
+2015_Caa_1012,Caa,canal,Durance,allopatrie,2015,1012,Ch,Chondrostoma sp.,M,15.5,45.0,4,branchie;caudale;hindgut;midgut,15Caa1012,Pt,0.0001,0.0
+2015_Caa_1013,Caa,canal,Durance,allopatrie,2015,1013,Ch,Chondrostoma sp.,M,16.5,44.0,4,branchie;caudale;hindgut;midgut,15Caa1013,Pt,0.0001,0.0214899
+2015_Caa_1014,Caa,canal,Durance,allopatrie,2015,1014,Ch,Chondrostoma sp.,M,15.0,38.0,4,branchie;caudale;hindgut;midgut,15Caa1014,Pt,0.0001,0.008547260000000001
+2015_Caa_1015,Caa,canal,Durance,allopatrie,2015,1015,Ch,Chondrostoma sp.,M,14.5,31.0,4,branchie;caudale;hindgut;midgut,15Caa1015,Hy,0.7446605,0.20081149999999992
+2015_Caa_1016,Caa,canal,Durance,allopatrie,2015,1016,Ch,Chondrostoma sp.,X,11.5,15.0,4,branchie;caudale;hindgut;midgut,15Caa1016,Pt,0.003348402,0.030516898
+2015_Caa_1017,Caa,canal,Durance,allopatrie,2015,1017,Ch,Chondrostoma sp.,X,12.5,15.0,4,branchie;caudale;hindgut;midgut,15Caa1017,Hy,0.1006175,0.04702049999999999
+2015_Caa_1018,Caa,canal,Durance,allopatrie,2015,1018,Ch,Chondrostoma sp.,X,10.5,12.0,4,branchie;caudale;hindgut;midgut,15Caa1018,Pt,0.0001,0.0258486
+2015_Caa_1019,Caa,canal,Durance,allopatrie,2015,1019,Ch,Chondrostoma sp.,X,12.0,18.0,4,branchie;caudale;hindgut;midgut,15Caa1019,Pt,0.0001,0.007794419999999999
+2015_Caa_1020,Caa,canal,Durance,allopatrie,2015,1020,Ch,Chondrostoma sp.,X,9.5,8.0,4,branchie;caudale;hindgut;midgut,15Caa1020,Pt,0.0001,0.0260511
+2015_Cab_1001,Cab,Ain,Ain,allopatrie,2015,1001,Ch,Chondrostoma sp.,F,50.0,1467.0,4,branchie;caudale;hindgut;midgut,15Cab1001,Cn,0.9999,0.07011200000000006
+2015_Cab_1002,Cab,Ain,Ain,allopatrie,2015,1002,Ch,Chondrostoma sp.,F,50.0,1712.0,4,branchie;caudale;hindgut;midgut,15Cab1002,Cn,0.9624035,0.043770499999999934
+2015_Cab_1003,Cab,Ain,Ain,allopatrie,2015,1003,Ch,Chondrostoma sp.,M,19.0,86.0,4,branchie;caudale;hindgut;midgut,15Cab1003,Cn,0.9790135,0.04033549999999997
+2015_Cab_1004,Cab,Ain,Ain,allopatrie,2015,1004,Ch,Chondrostoma sp.,M,42.5,970.0,4,branchie;caudale;hindgut;midgut,15Cab1004,Cn,0.9916195,0.051615500000000036
+2015_Cab_1005,Cab,Ain,Ain,allopatrie,2015,1005,Ch,Chondrostoma sp.,F,43.0,1252.0,4,branchie;caudale;hindgut;midgut,15Cab1005,Cn,0.9999,0.04226799999999997
+2015_Cab_1006,Cab,Ain,Ain,allopatrie,2015,1006,Ch,Chondrostoma sp.,F,32.5,484.0,4,branchie;caudale;hindgut;midgut,15Cab1006,Cn,0.9676345,0.0767025
+2015_Cab_1007,Cab,Ain,Ain,allopatrie,2015,1007,Ch,Chondrostoma sp.,M,26.0,214.0,4,branchie;caudale;hindgut;midgut,15Cab1007,Cn,0.986855,0.040076
+2015_Cab_1008,Cab,Ain,Ain,allopatrie,2015,1008,Ch,Chondrostoma sp.,M,47.0,1359.0,4,branchie;caudale;hindgut;midgut,15Cab1008,Cn,0.997914,0.01697700000000002
+2015_Cab_1009,Cab,Ain,Ain,allopatrie,2015,1009,Ch,Chondrostoma sp.,F,42.0,1047.0,4,branchie;caudale;hindgut;midgut,15Cab1009,Hy,0.8998935,0.13065250000000006
+2015_Cab_1010,Cab,Ain,Ain,allopatrie,2015,1010,Ch,Chondrostoma sp.,M,40.0,822.0,4,branchie;caudale;hindgut;midgut,15Cab1010,Hy,0.759876,0.07340000000000002
+2015_Cab_1011,Cab,Ain,Ain,allopatrie,2015,1011,Ch,Chondrostoma sp.,F,23.0,132.0,4,branchie;caudale;hindgut;midgut,15Cab1011,Pt,0.00042399999999997995,0.0
+2015_Cab_1012,Cab,Ain,Ain,allopatrie,2015,1012,Ch,Chondrostoma sp.,F,18.0,67.0,4,branchie;caudale;hindgut;midgut,15Cab1012,Pt,0.0001,0.0024834600000000003
+2015_Cab_1013,Cab,Ain,Ain,allopatrie,2015,1013,Ch,Chondrostoma sp.,F,22.0,113.0,4,branchie;caudale;hindgut;midgut,15Cab1013,Pt,0.0001,0.0639904
+2015_Cab_1014,Cab,Ain,Ain,allopatrie,2015,1014,Ch,Chondrostoma sp.,F,18.5,74.0,4,branchie;caudale;hindgut;midgut,15Cab1014,Pt,0.0001,0.0
+2015_Cab_1015,Cab,Ain,Ain,allopatrie,2015,1015,Ch,Chondrostoma sp.,M,17.5,68.0,4,branchie;caudale;hindgut;midgut,15Cab1015,Pt,0.0001,0.0122371
+2015_Cab_1016,Cab,Ain,Ain,allopatrie,2015,1016,Ch,Chondrostoma sp.,M,18.0,73.0,4,branchie;caudale;hindgut;midgut,15Cab1016,Pt,0.0001,0.00194113
+2015_Cab_1017,Cab,Ain,Ain,allopatrie,2015,1017,Ch,Chondrostoma sp.,M,17.0,55.0,4,branchie;caudale;hindgut;midgut,15Cab1017,Pt,0.0001,0.0135881
+2015_Cab_1018,Cab,Ain,Ain,allopatrie,2015,1018,Ch,Chondrostoma sp.,M,19.0,80.0,4,branchie;caudale;hindgut;midgut,15Cab1018,Pt,0.0001,0.018595900000000002
+2015_Cab_1019,Cab,Ain,Ain,allopatrie,2015,1019,Ch,Chondrostoma sp.,M,18.0,69.0,4,branchie;caudale;hindgut;midgut,15Cab1019,Pt,0.0001,0.0
+2015_Jus_1001,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1001,Ch,Chondrostoma sp.,F,16.0,52.0,4,branchie;caudale;hindgut;midgut,15Jus1001,Pt,0.0001,0.0
+2015_Jus_1002,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1002,Ch,Chondrostoma sp.,M,22.0,85.0,4,branchie;caudale;hindgut;midgut,15Jus1002,Pt,0.0001,0.034920799999999995
+2015_Jus_1003,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1003,Ch,Chondrostoma sp.,X,15.5,42.0,4,branchie;caudale;hindgut;midgut,15Jus1003,Pt,0.014152999999999999,0.0733562
+2015_Jus_1004,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1004,Ch,Chondrostoma sp.,M,16.0,56.0,4,branchie;caudale;hindgut;midgut,15Jus1004,Pt,0.0001,0.008645690000000001
+2015_Jus_1005,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1005,Ch,Chondrostoma sp.,M,15.5,42.0,4,branchie;caudale;hindgut;midgut,15Jus1005,Pt,0.0001,0.0121084
+2015_Jus_1006,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1006,Ch,Chondrostoma sp.,X,15.0,41.0,4,branchie;caudale;hindgut;midgut,15Jus1006,Pt,0.0001,0.0
+2015_Jus_1007,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1007,Ch,Chondrostoma sp.,M,17.0,51.0,4,branchie;caudale;hindgut;midgut,15Jus1007,Pt,0.0001,0.014199
+2015_Jus_1008,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1008,Ch,Chondrostoma sp.,X,16.0,43.0,4,branchie;caudale;hindgut;midgut,15Jus1008,Pt,0.045518999999999976,0.01
+2015_Jus_1009,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1009,Ch,Chondrostoma sp.,X,14.0,27.0,4,branchie;caudale;hindgut;midgut,15Jus1009,Hy,0.4761105,0.2859385
+2015_Jus_1010,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1010,Ch,Chondrostoma sp.,M,43.0,1138.0,4,branchie;caudale;hindgut;midgut,15Jus1010,Cn,0.9999,0.04496900000000004
+2015_Jus_1011,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1011,Ch,Chondrostoma sp.,M,43.5,1201.0,4,branchie;caudale;hindgut;midgut,15Jus1011,Hy,0.9294205,0.06764250000000005
+2015_Jus_1012,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1012,Ch,Chondrostoma sp.,M,42.5,1072.0,4,branchie;caudale;hindgut;midgut,15Jus1012,Cn,0.9999,0.02703500000000003
+2015_Jus_1013,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1013,Ch,Chondrostoma sp.,M,44.0,991.0,4,branchie;caudale;hindgut;midgut,15Jus1013,Cn,0.9766085,0.10154149999999995
+2015_Jus_1014,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1014,Ch,Chondrostoma sp.,X,16.0,49.0,4,branchie;caudale;hindgut;midgut,15Jus1014,Cn,0.9468705,0.05302950000000006
+2015_Jus_1015,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1015,Ch,Chondrostoma sp.,X,16.0,44.0,4,branchie;caudale;hindgut;midgut,15Jus1015,Cn,0.9977965,0.050436499999999995
+2015_Jus_1016,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1016,Ch,Chondrostoma sp.,X,15.0,38.0,4,branchie;caudale;hindgut;midgut,15Jus1016,Hy,0.9999,0.23044900000000001
+2015_Jus_1017,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1017,Ch,Chondrostoma sp.,X,14.5,35.0,4,branchie;caudale;hindgut;midgut,15Jus1017,Cn,0.9999,0.022872000000000003
+2015_Jus_1018,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1018,Ch,Chondrostoma sp.,X,16.0,46.0,4,branchie;caudale;hindgut;midgut,15Jus1018,Cn,0.9970375,0.02751349999999997
+2015_Jus_1019,Jus,St-Just,Ardèche,sympatrie+hyb,2015,1019,Ch,Chondrostoma sp.,X,11.5,18.0,4,branchie;caudale;hindgut;midgut,15Jus1019,Cn,0.9999,0.043321000000000054
+2015_Per_2015,Per,?,?,à statuer,2015,2015,Ch,Chondrostoma sp.,,,,1,hindgut,,,,
