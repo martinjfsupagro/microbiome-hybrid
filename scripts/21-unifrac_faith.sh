@@ -78,7 +78,10 @@ DEPTH   = 3000
 # Budget et cible pilotes par l'environnement, pour que la REPETITION a faible N et la
 # passe complete executent exactement le meme code (aucun assert relache entre les deux).
 BUDGET  = float(os.environ.get("PHYLO_BUDGET_H", "9.0")) * 3600
-TARGET  = int(os.environ.get("PHYLO_TARGET", "50"))   # par chaine
+# N alignee sur les matrices taxonomiques (beta_mean_*_N400) : 200 par chaine = 400 au
+# total, pour que les metriques phylogenetiques et taxonomiques soient constituees de la
+# meme facon. La repetition a montre ~10 s par iteration, soit ~70 min.
+TARGET  = int(os.environ.get("PHYLO_TARGET", "200"))   # par chaine
 OUT     = "results/phylo_diversity"
 TREE    = "results/phylogeny/tree.nwk"
 TABLE   = "results/decontam/asv_table_clean.tsv"
@@ -191,38 +194,49 @@ tab0, n_obs = to_biom(R0)
 log(f"  rarefaction : {t_rar:.1f} s | ASV presents dans un tirage : {n_obs}")
 assert n_obs < n_f, "aucun ASV elague : verifier le tirage"
 
-def dm(fn, tab):
+BPATH = os.path.join(os.environ.get("TMPDIR","/tmp"), "rar.biom")
+
+def write_biom(tab):
+    """unifrac.weighted_normalized n'accepte PAS un biom.Table en memoire malgre son
+    annotation Union[str, Table] : il fait str(table) puis valide un CHEMIN (constate
+    en repetition, ValueError 'Table does not appear to be a BIOM-Format v2.1').
+    unweighted l'accepte, mais on passe par un fichier pour les TROIS appels afin
+    d'avoir un seul chemin de code — le fichier est de toute facon requis par faith_pd."""
+    with h5py.File(BPATH, "w") as h5:
+        tab.to_hdf5(h5, "21-unifrac_faith")
+    return BPATH
+
+def dm(fn, path):
     """Distance UniFrac REORDONNEE selon kept_samples : ne pas supposer l'ordre rendu."""
-    D = fn(tab, TREE_OBJ)
+    D = fn(path, TREE)
     if list(D.ids) != kept_samples:
         D = D.filter(kept_samples)
     assert list(D.ids) == kept_samples
     return D
 
-t = time.time(); Du = dm(unifrac.unweighted, tab0); t_un = time.time()-t
+t = time.time(); bp0 = write_biom(tab0); t_wr = time.time()-t
+log(f"  ecriture BIOM : {t_wr:.1f} s")
+t = time.time(); Du = dm(unifrac.unweighted, bp0); t_un = time.time()-t
 assert Du.shape == (N_S, N_S), f"forme inattendue {Du.shape}"
 assert np.isfinite(Du.data).all(), "valeurs non finies en UniFrac non pondere"
 log(f"  UniFrac non pondere : {t_un:.1f} s | elagage de l'arbre accepte (temoin: "
     f"table a {n_obs} ASV vs arbre a 44256 feuilles)")
 
-t = time.time(); Dw = dm(unifrac.weighted_normalized, tab0); t_wn = time.time()-t
+t = time.time(); Dw = dm(unifrac.weighted_normalized, bp0); t_wn = time.time()-t
 assert np.isfinite(Dw.data).all(), "valeurs non finies en UniFrac pondere"
 log(f"  UniFrac pondere normalise : {t_wn:.1f} s")
 
 t = time.time()
-bpath = os.path.join(os.environ.get("TMPDIR","/tmp"), "rar.biom")
-with h5py.File(bpath, "w") as h5:
-    tab0.to_hdf5(h5, "21-unifrac_faith")
-fpd_s = unifrac.faith_pd(bpath, TREE)
+fpd_s = unifrac.faith_pd(bp0, TREE)
 t_fp = time.time()-t
 assert len(fpd_s) == N_S, f"Faith PD : {len(fpd_s)} valeurs pour {N_S} echantillons"
 assert set(fpd_s.index) == set(kept_samples), "Faith PD : identifiants inattendus"
 fpd = fpd_s.reindex(kept_samples).to_numpy(dtype=float)
 assert np.isfinite(fpd).all(), "valeurs non finies en Faith PD"
-log(f"  ecriture BIOM + Faith PD : {t_fp:.1f} s")
+log(f"  Faith PD : {t_fp:.1f} s")
 
 t = time.time(); _ = alpha_taxo(R0); t_at = time.time()-t
-per_iter = t_rar + t_un + t_wn + t_fp + t_at
+per_iter = t_rar + t_wr + t_un + t_wn + t_fp + t_at
 log(f"  alpha taxonomiques : {t_at:.1f} s")
 log(f"  => une iteration = {per_iter:.1f} s")
 log(f"  => budget {BUDGET/3600:.1f} h permet ~{int(BUDGET/per_iter)} iterations au total")
@@ -247,11 +261,10 @@ while True:
     rng = np.random.default_rng(SEEDS[ch] + a["n"])
     R = rarefy(rng)
     tab, _ = to_biom(R)
-    a["un"] += dm(unifrac.unweighted, tab).data
-    a["wn"] += dm(unifrac.weighted_normalized, tab).data
-    with h5py.File(bpath, "w") as h5:
-        tab.to_hdf5(h5, "21-unifrac_faith")
-    a["fpd"] += unifrac.faith_pd(bpath, TREE).reindex(kept_samples).to_numpy(dtype=float)
+    bp = write_biom(tab)
+    a["un"] += dm(unifrac.unweighted, bp).data
+    a["wn"] += dm(unifrac.weighted_normalized, bp).data
+    a["fpd"] += unifrac.faith_pd(bp, TREE).reindex(kept_samples).to_numpy(dtype=float)
     r_, s_, i_ = alpha_taxo(R)
     a["rich"] += r_; a["sha"] += s_; a["inv"] += i_
     a["n"] += 1
