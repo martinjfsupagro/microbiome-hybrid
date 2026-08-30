@@ -37,3 +37,7 @@
 2026-08-23T11:10:51+02:00	END	9627973	8d4bb8b	14-variance_partition.sh
 2026-08-23T12:25:58+02:00	START	9628094	4817159	15-rarefaction_converge.sh
 2026-08-23T18:27:37+02:00	END	9628094	4817159	15-rarefaction_converge.sh
+2026-08-30T20:30:22+02:00	START	10285791	48f1eff	17-position_effect.sh
+2026-08-30T20:30:52+02:00	END	10285791	48f1eff	17-position_effect.sh
+2026-08-30T20:35:21+02:00	START	10286034	d5a51de	18-position_control.sh
+2026-08-30T20:35:35+02:00	END	10286034	d5a51de	18-position_control.sh
