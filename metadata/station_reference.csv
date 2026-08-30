@@ -1,0 +1,12 @@
+site_code,station,river,latitude_WGS84,longitude_WGS84,collection_date,source
+Ain,Pont-d'Ain,Suran,46.048,5.324,2014-08-12,Andre 2026-08-30 (DMS converti)
+Ain,Chavannes-sur-Suran,Suran,46.264389,5.429444,2014-08-12,Andre 2026-08-30 (DMS converti)
+Cab,Pont-d'Ain,Suran,46.048,5.324,2015-08-26,Andre 2026-08-30 (DMS converti)
+Cab,Chavannes-sur-Suran,Suran,46.264389,5.429444,2015-08-26,Andre 2026-08-30 (DMS converti)
+Avi,Avignon,Durance,43.913,4.820722,2014-07-17;2015-07-10,Andre 2026-08-30 (DMS converti)
+Per,Pertuis,Durance,43.668139,5.493,2014-07-07;2014-08-20,Andre 2026-08-30 (DMS converti)
+Caa,Canal (usine du Largue),Canal,43.853389,5.858444,2015-09-08,Andre 2026-08-30 (DMS converti)
+Man,Manosque-Oraison,Durance,43.919667,5.896278,2014-07-23,Andre 2026-08-30 (DMS converti)
+Bue,Confluence Buech-Meouge,Buech,44.262,5.828,2014-07-03;2015-07-17,Andre 2026-08-30 (DMS converti)
+Jus,Saint-Just-d'Ardeche,Ardeche,44.286,4.597833,2015-07-21,Andre 2026-08-30 (DMS converti)
+Bau,Rosieres,Beaume,44.475,4.264,2015-07-22,Andre 2026-08-30 (DMS converti)

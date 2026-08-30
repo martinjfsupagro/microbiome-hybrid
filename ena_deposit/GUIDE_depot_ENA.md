@@ -270,3 +270,53 @@ un embargo :
 ```bash
 python3 build_ena_xml.py --sites ENA_sites_completes.csv --hold-date 2027-06-30
 ```
+
+
+---
+
+## CORRECTION IMPORTANTE (2026-08-30) — provenance des coordonnees
+
+La section 3 ci-dessus affirme que *"les coordonnees des 9 sites ont ete fournies par
+Andre"*. **C'est inexact.** JF Martin a confirme le 2026-08-30 que ces coordonnees
+etaient **ses propres extrapolations**, deduites de noms de communes, et non des
+releves de terrain.
+
+Andre a transmis les coordonnees reelles le 2026-08-30. Confrontees au depot :
+
+| Code | Riviere deposee | Riviere reelle | Ecart de position |
+|---|---|---|---|
+| Caa | Durance | Canal (usine du Largue) | **41,4 km** |
+| Ain / Cab | Ain | **Suran** | **17,2 km** |
+| Man | Durance | Durance | **13,4 km** |
+| Bau | Ardeche | **Beaume** | **7,6 km** |
+| Bue | Durance | **Buech** | **5,2 km** |
+| Jus | Ardeche | Ardeche | 1,1 km |
+| Per | Durance | Durance | 0,34 km |
+| Avi | Durance | Durance | 0,24 km |
+
+**Six des neuf sites** portent une coordonnee fausse de plus de 5 km dans le depot, et
+**cinq** une riviere fausse. De plus, `Ain` et `Cab` correspondent chacun a **DEUX
+stations physiques** sur le Suran (Pont-d'Ain et Chavannes-sur-Suran, 24 km d'ecart,
+separees par un seuil infranchissable de 2,5 m), et non a une station unique.
+
+En consequence, les raisonnements de la section 3 batis sur ces coordonnees sont
+caducs :
+- la "commune confirmee par l'utilisateur" (Villieu-Loyes-Mollon) confirmait une
+  extrapolation, pas un releve ;
+- le geocodage inverse concordait avec la commune extrapolee, ce qui ne validait donc
+  rien : la concordance etait garantie par construction ;
+- la correction d'orthographe Sanihac -> Sanilhac portait sur une commune deduite ;
+  la station reelle est **Rosieres**, sur la **Beaume**.
+
+**A FAIRE** : corriger les metadonnees d'echantillon du depot PRJEB124417 via
+l'interface Webin (les champs geographiques et la date de collecte sont modifiables
+apres soumission) :
+1. latitude / longitude des 9 sites -> `metadata/station_reference.csv` ;
+2. distinguer les deux stations du Suran (les echantillons Ain/Cab n'ont pas tous la
+   meme coordonnee) -> `metadata/station_mapping.csv` ;
+3. renseigner la **date de collecte au jour pres**, maintenant disponible (le depot ne
+   porte que l'annee, faute de dates fiables a l'epoque) ;
+4. corriger l'annee de collecte de `15Per2015Ch03A` : coquille de saisie, l'individu
+   a ete peche en 2014 (Pertuis n'a pas ete echantillonne en 2015).
+
+Details et temoins : `docs/decision_stations.md`.

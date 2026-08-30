@@ -1,10 +1,10 @@
-site_code,site_nom,riviere,role_propose,annees_sequencees,statut
-Caa,canal,Durance,allopatrie,2015,confirmé André
-Ain,Ain,Ain,allopatrie,2014,confirmé André (Ain = Ain 2014 + Cab 2015)
-Cab,Ain,Ain,allopatrie,2015,Ain 2015 = 19 poissons (Cab1021/1022 = mocks confirmés André, exclus)
-Bue,Büech,Durance,sympatrie+hyb,"2014,2015",effectif 35 confirmé André (le "53" était une lecture erronée)
-Jus,St-Just,Ardèche,sympatrie+hyb,2015,confirmé (rivière/effectif)
-Bau,Baume,Ardèche,asym. Toxo,2015,confirmé (rivière/effectif)
-Avi,Avignon,Durance,asym. Hotu,"2014,2015",confirmé (effectif)
-Man,Manosque,Durance,à statuer,2014,nom confirmé André ; hors tableau 6 pops — rôle à définir
-Per,?,?,à statuer,"2014,2015",non renseigné — nom/rôle en attente André
+site_code,site_nom,riviere,stations,role_propose,annees_sequencees,statut
+Ain,Suran (2 stations),Suran,Pont-d'Ain;Chavannes-sur-Suran,Cn+Hy aval / Pt amont,2014,"Andre 2026-08-30 : DEUX stations, barriere infranchissable (seuil 2,5 m) entre elles"
+Cab,Suran (2 stations),Suran,Pont-d'Ain;Chavannes-sur-Suran,Cn+Hy aval / Pt amont,2015,"Andre 2026-08-30 : idem Ain, annee 2015 ; 1001-1010 aval, 1011-1019 amont"
+Avi,Avignon,Durance,Avignon,asym. Hotu,"2014,2015",effectif confirme
+Bau,Rosieres,Beaume,Rosieres,asym. Toxo,2015,Andre 2026-08-30 : riviere = Beaume (et non Ardeche) ; station Rosieres
+Bue,Confluence Buech-Meouge,Buech,Confluence Buech-Meouge,sympatrie+hyb,"2014,2015",Andre 2026-08-30 : riviere = Buech (et non Durance)
+Caa,Canal (usine du Largue),Canal,Canal (usine du Largue),allopatrie,2015,Andre 2026-08-30 : canal de l'usine du Largue (et non Durance)
+Jus,Saint-Just-d'Ardeche,Ardeche,Saint-Just-d'Ardeche,sympatrie+hyb,2015,"confirme ; Andre : Pt faits en premier, puis les Cn atypiques"
+Man,Manosque-Oraison,Durance,Manosque-Oraison,a statuer,2014,Andre 2026-08-30 : station Manosque-Oraison
+Per,Pertuis,Durance,Pertuis,a statuer,2014,"Andre 2026-08-30 : SEULE annee 2014, deux campagnes (07/07 et 20/08) ; l'annee 2015 du fichier vient d'une coquille"
