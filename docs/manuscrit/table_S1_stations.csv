@@ -1,0 +1,11 @@
+Station,River,Site code,Latitude (°N),Longitude (°E),Year(s),Collection date(s),Individuals (per year),Cn / Hy / Pt,Libraries
+Avignon,Durance,Avi,43.913000,4.820722,"2014, 2015",2014-07-17 ; 2015-07-10,11 / 13,20 / 4 / 0,96
+Canal (usine du Largue),Canal,Caa,43.853389,5.858444,2015,2015-09-08,20,8 / 4 / 8,80
+Chavannes-sur-Suran,Suran,Ain + Cab,46.264389,5.429444,"2014, 2015",2014-08-12 ; 2015-08-26,10 / 9,0 / 0 / 19,75
+Confluence Buech-Meouge,Buech,Bue,44.262000,5.828000,"2014, 2015",2014-07-03 ; 2015-07-17,17 / 18,11 / 10 / 14,140
+Manosque-Oraison,Durance,Man,43.919667,5.896278,2014,2014-07-23,15,0 / 2 / 13,60
+Pertuis,Durance,Per,43.668139,5.493000,2014,2014-07-07 ; 2014-08-20,9,0 / 1 / 8,44
+Pont-d'Ain,Suran,Ain + Cab,46.048000,5.324000,"2014, 2015",2014-08-12 ; 2015-08-26,4 / 10,12 / 2 / 0,56
+Rosieres,Beaume,Bau,44.475000,4.264000,2015,2015-07-22,25,0 / 4 / 21,100
+Saint-Just-d'Ardeche,Ardeche,Jus,44.286000,4.597833,2015,2015-07-21,19,8 / 3 / 8,76
+Total,,,,,,,180,59 / 30 / 91,727

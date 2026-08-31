@@ -107,9 +107,19 @@ for r in corr:
 # latitude_WGS84, longitude_WGS84, collection_date, source
 for cname in ("station","river","latitude_WGS84","longitude_WGS84","collection_date"):
     assert cname in stref[0], f"colonne absente de station_reference.csv : {cname!r}"
-stinfo = {}
+# ATTENTION : station_reference.csv a une ligne par (site_code, station), et le
+# collection_date DIFFERE entre elles — Ain/Pont-d'Ain = 2014-08-12 mais
+# Cab/Pont-d'Ain = 2015-08-26. Indexer sur la station seule (ce que faisait la
+# premiere version) ecrasait la date 2015 du Suran par celle de 2014 : les 19
+# individus Cab portaient une date de collecte fausse d'un an.
+assert "site_code" in stref[0], "colonne site_code absente de station_reference.csv"
+stinfo = {(r["site_code"], r["station"]): r for r in stref}
+# garde-fou : les lignes d'un meme couple ne doivent pas se contredire
+_bystn = collections.defaultdict(set)
 for r in stref:
-    stinfo.setdefault(r["station"], r)
+    _bystn[r["station"]].add((r["latitude_WGS84"], r["longitude_WGS84"], r["river"]))
+for k, v in _bystn.items():
+    assert len(v) == 1, f"coordonnees contradictoires pour la station {k!r} : {v}"
 
 # --- construction, echantillons biologiques uniquement ---
 rows, drop = [], collections.Counter()
@@ -133,7 +143,8 @@ for s in samples:
         continue
     stn = station.get((year, s["site"], s["individual"]), "")
     assert stn, f"station manquante pour {iid}"
-    si = stinfo.get(stn, {})
+    si = stinfo.get((s["site"], stn))
+    assert si is not None, f"pas de ligne station_reference pour ({s['site']!r}, {stn!r})"
     rows.append({
         "dada2_id": sid, "individual_id": iid, "run_label": s["run_label"],
         "library": "A" if s["run_label"] == "durance1" else "B",
