@@ -74,7 +74,9 @@ import numpy as np, h5py, biom, unifrac
 from scipy.sparse import csc_matrix
 
 T0 = time.time()
-DEPTH   = 3000
+DEPTH   = int(os.environ.get("PHYLO_DEPTH", "3000"))
+IS_REF  = (DEPTH == 3000)          # les controles ci-dessous ne valent qu'au seuil principal
+ONLY_W  = os.environ.get("PHYLO_ONLY_WEIGHTED", "0") == "1"
 # Budget et cible pilotes par l'environnement, pour que la REPETITION a faible N et la
 # passe complete executent exactement le meme code (aucun assert relache entre les deux).
 BUDGET  = float(os.environ.get("PHYLO_BUDGET_H", "9.0")) * 3600
@@ -82,7 +84,8 @@ BUDGET  = float(os.environ.get("PHYLO_BUDGET_H", "9.0")) * 3600
 # total, pour que les metriques phylogenetiques et taxonomiques soient constituees de la
 # meme facon. La repetition a montre ~10 s par iteration, soit ~70 min.
 TARGET  = int(os.environ.get("PHYLO_TARGET", "200"))   # par chaine
-OUT     = "results/phylo_diversity"
+OUT     = os.environ.get("PHYLO_OUTDIR", "results/phylo_diversity")
+os.makedirs(OUT, exist_ok=True)
 TREE    = "results/phylogeny/tree.nwk"
 TABLE   = "results/decontam/asv_table_clean.tsv"
 NCPU    = int(os.environ.get("OMP_NUM_THREADS", "8"))
@@ -125,7 +128,11 @@ kept_samples = [samples[j] for j in keep]
 # le jeu doit coincider avec celui des matrices taxonomiques deja produites
 import csv as _csv
 log("  controle : jeu d'echantillons identique aux metriques taxonomiques ?")
+if not IS_REF:
+    log(f"    profondeur {DEPTH} != 3000 : jeu volontairement DIFFERENT (c'est l'objet du"
+        f" job), controle saute")
 try:
+    if not IS_REF: raise FileNotFoundError
     with open("results/rarefaction/alpha_mean_1000.tsv") as fh:
         prev = {r["sample"] for r in _csv.DictReader(fh, delimiter="\t")}
     inter = prev & set(kept_samples)
@@ -262,7 +269,8 @@ while True:
     R = rarefy(rng)
     tab, _ = to_biom(R)
     bp = write_biom(tab)
-    a["un"] += dm(unifrac.unweighted, bp).data
+    if not ONLY_W:
+        a["un"] += dm(unifrac.unweighted, bp).data
     a["wn"] += dm(unifrac.weighted_normalized, bp).data
     a["fpd"] += unifrac.faith_pd(bp, TREE).reindex(kept_samples).to_numpy(dtype=float)
     r_, s_, i_ = alpha_taxo(R)
@@ -285,7 +293,8 @@ def mean_of(ch, k): return acc[ch][k] / acc[ch]["n"]
 nmin = min(n1, n2)
 log("=== CONVERGENCE : ecart entre deux chaines INDEPENDANTES ===")
 conv_rows = []
-for key, lbl in (("un","unifrac_unweighted"), ("wn","unifrac_weighted")):
+for key, lbl in ((("wn","unifrac_weighted"),) if ONLY_W else
+                 (("un","unifrac_unweighted"), ("wn","unifrac_weighted"))):
     A, B = mean_of(1, key), mean_of(2, key)
     iu = np.triu_indices(N_S, 1)
     a_, b_ = A[iu], B[iu]
@@ -322,7 +331,9 @@ N_TOT = n1 + n2
 def pooled(k): return (acc[1][k] + acc[2][k]) / N_TOT
 log(f"=== MOYENNES FINALES sur N = {N_TOT} tirages ===")
 
-for key, name in (("un","unifrac_unweighted_mean"), ("wn","unifrac_weighted_mean")):
+_out_metrics = (("wn","unifrac_weighted_mean"),) if ONLY_W else \
+               (("un","unifrac_unweighted_mean"), ("wn","unifrac_weighted_mean"))
+for key, name in _out_metrics:
     Dm = pooled(key)
     np.fill_diagonal(Dm, 0.0)
     path = os.path.join(OUT, f"{name}.tsv.gz")
@@ -345,7 +356,11 @@ log(f"  alpha_phylo_mean.tsv ecrit ({N_S} echantillons, 4 metriques, memes tirag
 # CONTROLE : accord avec la serie taxonomique anterieure (N=1000, autres tirages).
 # Un desaccord signalerait une erreur de pipeline, pas un manque d'iterations.
 log("=== CONTROLE : accord avec alpha_mean_1000.tsv (serie de tirages independante) ===")
+if not IS_REF:
+    log(f"    profondeur {DEPTH} != 3000 : la richesse n'y est PAS comparable "
+        f"(-42 % a 500), controle saute")
 try:
+    if not IS_REF: raise FileNotFoundError
     prev = {}
     with open("results/rarefaction/alpha_mean_1000.tsv") as fh:
         for r in _csv.DictReader(fh, delimiter="\t"):

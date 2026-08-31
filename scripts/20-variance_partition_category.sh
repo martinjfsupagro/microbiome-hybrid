@@ -59,18 +59,18 @@ set -eEuo pipefail
 # Sorties : results/var_partition_cat/{category_partition.tsv, category_summary.txt}
 
 cd "$HOME/work/projects/microbiome-hybrid"
-OUT=results/var_partition_cat
+OUT="${CATPART_OUTDIR:-results/var_partition_cat}"
 mkdir -p "$OUT" logs
 RSCRIPT=$HOME/bin/envs/dada2/bin/Rscript
 GIT_HASH=$(git rev-parse --short HEAD 2>/dev/null || echo NA)
 printf '%s\tSTART\t%s\t%s\t%s\n' "$(date -Is)" "${SLURM_JOB_ID:-local}" "$GIT_HASH" "$(basename "$0")" >> runs.log
 
-"$RSCRIPT" - <<'RS' > results/var_partition_cat/category_summary.txt
+"$RSCRIPT" - <<'RS' > "$OUT"/category_summary.txt
 suppressMessages({library(vegan); library(permute)})
 set.seed(20260830)
 NPERM <- 999
 NCPU  <- as.integer(Sys.getenv("SLURM_CPUS_PER_TASK", "8"))
-OUT   <- "results/var_partition_cat"
+OUT   <- Sys.getenv("CATPART_OUTDIR", "results/var_partition_cat")
 TSV   <- file.path(OUT, "category_partition.tsv")
 cat("metrique\tsous_ensemble\trun\ttissu\tn\tmodele\tterme\tdf\tR2\tF\tp\n", file = TSV)
 
@@ -111,7 +111,8 @@ shared_ids <- function(md) {
   keep
 }
 
-files <- Sys.glob("results/rarefaction/beta_mean_*.rds")
+files <- Sys.glob(Sys.getenv("CATPART_GLOB", "results/rarefaction/beta_mean_*.rds"))
+stopifnot(length(files) > 0)
 cat("matrices trouvees :", paste(basename(files), collapse=", "), "\n")
 
 for (f in files) {
@@ -234,4 +235,4 @@ cat("\n=== termine ===\n")
 RS
 
 printf '%s\tEND\t%s\t%s\t%s\n' "$(date -Is)" "${SLURM_JOB_ID:-local}" "$GIT_HASH" "$(basename "$0")" >> runs.log
-tail -60 results/var_partition_cat/category_summary.txt
+tail -60 "$OUT"/category_summary.txt
