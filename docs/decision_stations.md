@@ -213,3 +213,17 @@ Les series separees ne sont donc ni des erreurs ni des individus manquants.
   annee de `15Per2015Ch03A`. A faire via Webin.
 - **Test de position sur la composition** (point 4).
 - **Role des populations** : `Man` et `Per` restent "a statuer" dans `site_mapping.csv`.
+
+
+## Distance entre les deux stations du Suran (ajout 2026-08-31)
+
+Pont-d'Ain (46.048000 N, 5.324000 E) et Chavannes-sur-Suran (46.264389 N, 5.429444 E) sont
+distantes de **25,4 km** (haversine sur les coordonnees d'Andre).
+
+**Correction.** Une premiere redaction de la note de la Table S1 et du paragraphe 1 de
+l'Article annoncait « 17,2 km apart ». C'etait faux : 17,2 km est l'ecart entre la
+coordonnee ENA extrapolee (Villieu-Loyes-Mollon) et la station reelle de Pont-d'Ain,
+c'est-a-dire une valeur du tableau ci-dessus, reutilisee par erreur pour une affirmation
+geographique differente sans etre recalculee. La distance entre les deux stations n'avait
+jamais ete calculee. Corrige dans Supplementary_Data.docx, Article.docx et
+materials_and_methods.docx. Le 17,2 km du tableau des ecarts, lui, reste exact.
