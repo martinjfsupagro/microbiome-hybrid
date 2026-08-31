@@ -144,7 +144,7 @@ de profondeur.**
 Le midgut passe de 0/3 a 3/3 en sequentiel — mais son biais reste a +15 points a 500,
 donc ce n'est pas une lecture affranchie de la selection.
 
-Le hindgut ne montre rien aux deux seuils, ce qui est coherent avec les quatre metriques
+Le hindgut n'est detecte par UniFrac pondere a aucun des deux seuils (0/3 dans les deux dispositifs ; en Jaccard a 3000 il atteint 2/3 en sequentiel, cf. decision_phylo_and_category.md), ce qui est coherent avec les quatre metriques
 a 3000.
 
 ## 3. Ce qui reste ouvert

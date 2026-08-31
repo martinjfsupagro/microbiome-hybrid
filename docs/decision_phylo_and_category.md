@@ -145,7 +145,7 @@ cela** : c'est une hypothese.
    manuscrit devra dire quelle metrique soutient quelle affirmation, et dans quel tissu.
 2. L'effet de categorie est **du meme ordre par degre de liberte que l'effet de
    position**, et dix a vingt fois plus petit que l'effet de station.
-3. Le hindgut ne montre rien avec aucune metrique.
+3. Le hindgut est le tissu le plus faible : aucune metrique ne le detecte dans les 3 runs, quel que soit le dispositif. Seul Jaccard atteint la significativite, dans 2 runs sur 3 en sequentiel (p = 0.036, 0.041, 0.063) et 1 sur 3 a station bloquee (p = 0.042, 0.052, 0.123). Les trois autres metriques ne detectent rien dans aucun run. CORRECTION 2026-08-31 : la redaction anterieure disait « ne montre rien avec aucune metrique », ce qui contredisait la grille de detectabilite de ce meme document.
 4. L'analyse "intermediaire vs transgressif" devra se faire la ou le gradient existe
    intra-station (3 stations, 74 individus) en sachant que c'est aussi la que le
    confondant de position est le plus fort.
