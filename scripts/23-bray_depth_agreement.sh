@@ -20,13 +20,20 @@ set -eEuo pipefail
 # sensibilite a 500 que s'il y est mesure comme invariant a la profondeur.
 #
 # PROTOCOLE IDENTIQUE AU SCRIPT 22. Jeu d'echantillons FIXE (les 1 784 retenus a 3000),
-# rarefaction a 500 / 1000 / 2000, N = 20 tirages, comparaison a une reference recalculee
-# a 3000 AVEC LE MEME CODE (et non a la matrice N=400 existante) pour que l'ecart mesure
-# la profondeur et non une difference d'implementation.
+# rarefaction a 500 / 1000 / 2000, comparaison a la reference a 3000.
 #
-# TEMOIN QUI PEUT ECHOUER. La reference recalculee ici a 3000 (N=20, vegdist) est en plus
-# comparee a beta_mean_bray_N400.rds. Un desaccord signalerait une erreur de lecture de
-# table ou d'appariement d'identifiants, pas un manque d'iterations.
+# REFERENCE = beta_mean_bray_N400.rds. Le script 15 l'a produite avec exactement le meme
+# appel (rrarefy(X, DEPTH) puis vegdist(R,"bray")) : c'est donc bien le meme code, et la
+# recalculer serait payer 20 tirages a 7 min piece pour rien.
+#
+# TEMOIN QUI PEUT ECHOUER. Un petit recalcul a 3000 (3 tirages) est compare a cette
+# reference. Un desaccord signalerait une erreur de lecture de table ou d'appariement
+# d'identifiants — pas un manque d'iterations.
+#
+# COUT. Un tirage (rrarefy + vegdist sur 1784 x 44200) prend ~7 min en serie : la premiere
+# version de ce script, serielle et a N=20 par profondeur, demandait ~10 h et n'ecrivait
+# qu'a la fin. Corrige : tirages repartis par mclapply, N = 10 par profondeur, et ecriture
+# incrementale apres chaque profondeur.
 #
 # Lecture de la table : meme methode que le script 15 (scan typé), qui fonctionne.
 #
@@ -41,7 +48,8 @@ printf '%s\tSTART\t%s\t%s\t%s\n' "$(date -Is)" "${SLURM_JOB_ID:-local}" "$GIT_HA
 $HOME/bin/envs/dada2/bin/Rscript - <<'RS' 2>&1 | tee results/depth_agreement/bray_depth_agreement.txt
 suppressMessages({library(vegan); library(parallel)})
 NCPU <- as.integer(Sys.getenv("SLURM_CPUS_PER_TASK", "8"))
-REF_DEPTH <- 3000; DEPTHS <- c(500, 1000, 2000); NDRAW <- 20
+REF_DEPTH <- 3000; DEPTHS <- c(500, 1000, 2000); NDRAW <- 10
+NWORK <- min(NCPU, 16L)   # rrarefy alloue une matrice complete par worker
 OUT <- "results/depth_agreement"
 t0 <- Sys.time()
 lg <- function(...) { cat(sprintf("[%6.1fs] ", as.numeric(difftime(Sys.time(), t0, units="secs"))),
@@ -61,34 +69,38 @@ NS <- nrow(X)
 lg("jeu FIXE : ", NS, " echantillons x ", ncol(X), " ASV")
 stopifnot(NS == 1784)
 
-# --- une moyenne de matrices Bray sur NDRAW tirages, a une profondeur donnee ---
+# --- moyenne de matrices Bray sur ndraw tirages, tirages repartis sur les coeurs ---
 mean_bray <- function(depth, ndraw, seed0) {
-  acc <- NULL
-  for (k in seq_len(ndraw)) {
+  out <- mclapply(seq_len(ndraw), function(k) {
     set.seed(seed0 + k)
-    R <- rrarefy(X, depth)
-    v <- as.vector(vegdist(R, "bray"))
-    acc <- if (is.null(acc)) v else acc + v
-    if (k %% 5 == 0) lg("   ", depth, " : tirage ", k, "/", ndraw)
-  }
-  acc / ndraw
+    as.vector(vegdist(rrarefy(X, depth), "bray"))
+  }, mc.cores = NWORK)
+  # mclapply rend des objets d'erreur SANS lever : sans ce controle la moyenne serait fausse
+  bad <- which(!vapply(out, is.numeric, logical(1)))
+  if (length(bad)) stop("mclapply a echoue sur ", length(bad), " tirage(s) : ",
+                        paste(utils::head(as.character(out[[bad[1]]]), 1), collapse=" "))
+  Reduce(`+`, out) / ndraw
 }
 
-lg("=== reference recalculee a ", REF_DEPTH, " (meme code) ===")
-ref <- mean_bray(REF_DEPTH, NDRAW, seed0 = 90000)
-
-# TEMOIN : accord avec la matrice N=400 existante (lecture + appariement)
-lg("=== temoin : accord avec beta_mean_bray_N400.rds ===")
+# REFERENCE : la matrice N=400 du script 15 (meme appel rrarefy + vegdist)
+lg("=== reference : beta_mean_bray_N400.rds ===")
 D400 <- readRDS("results/rarefaction/beta_mean_bray_N400.rds")
-lab400 <- attr(D400, "Labels")
-stopifnot(identical(lab400, rownames(X)))   # meme ordre : sinon la comparaison est fausse
-v400 <- as.vector(D400)
-r_w <- cor(ref, v400)
+stopifnot(identical(attr(D400, "Labels"), rownames(X)))  # meme ordre, sinon tout est faux
+ref <- as.vector(D400)
+lg("   ", length(ref), " paires | distance moyenne ", sprintf("%.4f", mean(ref)))
+
+# TEMOIN : petit recalcul a 3000 avec le code d'ici
+lg("=== temoin : recalcul a ", REF_DEPTH, " (3 tirages) vs la reference ===")
+chk <- mean_bray(REF_DEPTH, 3L, seed0 = 90000)
+r_w <- cor(chk, ref)
 lg("   r = ", sprintf("%.6f", r_w), " | ecart absolu moyen = ",
-   sprintf("%.5f", mean(abs(ref - v400))))
+   sprintf("%.5f", mean(abs(chk - ref))))
 stopifnot(r_w > 0.999)
 lg("   -> lecture de table et appariement confirmes")
 
+TSV <- file.path(OUT, "bray_depth_agreement.tsv")
+cat("profondeur\tmetrique\tr_pearson\tbiais_moyen\tecart_absolu_moyen\tdistance_moyenne_ref\tecart_relatif\n",
+    file = TSV)
 rows <- list()
 for (d in DEPTHS) {
   lg("=== profondeur ", d, " ===")
@@ -98,13 +110,12 @@ for (d in DEPTHS) {
     profondeur = d, metrique = "bray", r_pearson = r, biais_moyen = bias,
     ecart_absolu_moyen = mad, distance_moyenne_ref = mean(ref),
     ecart_relatif = mad / mean(ref))
+  cat(sprintf("%d\tbray\t%.6f\t%.6f\t%.6f\t%.6f\t%.6f\n",
+              d, r, bias, mad, mean(ref), mad / mean(ref)), file = TSV, append = TRUE)
   lg("  bray  r=", sprintf("%.4f", r), " | biais ", sprintf("%+.4f", bias),
      " | ecart abs moyen ", sprintf("%.4f", mad),
      " (", sprintf("%.1f", 100 * mad / mean(ref)), " % de la distance moyenne)")
 }
-res <- do.call(rbind, rows)
-write.table(res, file.path(OUT, "bray_depth_agreement.tsv"), sep = "\t",
-            quote = FALSE, row.names = FALSE)
 lg("TERMINE")
 RS
 
