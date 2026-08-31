@@ -59,3 +59,5 @@
 2026-08-31T17:42:48+02:00	END	10318102	812e51f	20-variance_partition_category.sh
 2026-08-31T18:15:38+02:00	START	10318514	ee79bcc	23-bray_depth_agreement.sh
 2026-08-31T19:07:36+02:00	END	10318514	ee79bcc	23-bray_depth_agreement.sh
+2026-08-31T20:43:05+02:00	START	10320058	5c17c01	24-permdisp.sh
+2026-08-31T20:43:50+02:00	END	10320058	5c17c01	24-permdisp.sh
