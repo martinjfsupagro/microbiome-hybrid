@@ -1,0 +1,7 @@
+Verification exhaustive du depot PRJEB124417
+echantillons 727 | champs 3472 | conformes 3472 | ecarts 0
+collection date	727
+geographic location (latitude)	727
+geographic location (longitude)	727
+geographic location (region and locality)	727
+host scientific name	564

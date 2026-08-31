@@ -1,0 +1,24 @@
+bloc,item,détail,qui,état,coût
+A. Erreur vive,Table S1 : rivières et coordonnées,"5 rivières fausses, 6 écarts >5 km jusqu'à 41,4 km — Table S1 réécrite par station depuis station_reference.csv",moi,FAIT (commit f35bbcc),—
+A. Erreur vive,Table S1 : structure à deux stations,"Ain/Cab = Pont-d'Ain + Chavannes-sur-Suran, 25,4 km, barrière franchissable vers l'aval seulement (la checklist annonçait 17 km : c'était l'écart dépôt/réel, pas la distance inter-stations — corrigé)",moi,FAIT (commit be1cc1e),—
+A. Erreur vive,Effectif total : 180 et non 181,"coquille 15Per2015Ch03A (préfixe d'année) scindait un poisson en deux ; 180 dans tous les documents, et la Note S2 explique désormais pourquoi le dépôt en montre 181",moi,FAIT,—
+A. Erreur vive,"Dépôt ENA : coordonnées, dates, identités","PRJEB124417 corrigé par MODIFY le 2026-08-31 : 3 472 champs sur 727 échantillons, vérifiés un par un, 0 écart ; accessions, alias et fichiers inchangés",session ENA,FAIT ET VÉRIFIÉ,—
+B. Résultat rédigé,Effet de position dans la plaque,"scripts 17/18 ; §8.8, Table S6, Figure S1",moi,FAIT,—
+B. Résultat rédigé,Catégories génotypiques,script 19 : Cn 59 / Hy 30 / Pt 91 ; 8 individus reclassés ; §1 et §8.9,moi,FAIT,—
+B. Résultat rédigé,Stations réelles et coordonnées,script 16 ; §1 et Table S1,moi,FAIT,—
+B. Résultat rédigé,Métriques phylogénétiques,"script 21 : UniFrac ×2 + Faith PD, N=400 ; §8.6",moi,FAIT,—
+B. Résultat rédigé,Partition encadrée de la catégorie,"script 20 : R² 1,4–3,3 % ; §8.9, Table S8",moi,FAIT,—
+B. Résultat rédigé,Seuil de raréfaction et sensibilité,"scripts 22/23 ; §8.6, Table S7, Figure S2",moi,FAIT,—
+B. Résultat rédigé,PERMDISP,"script 24 : prédiction transgressive NON soutenue, sens inverse (hybrides les moins dispersés, 31/48, p=9,4e-6) ; contrôle décisif sur la caudale ; §8.9, Table S9, Figure S3",moi,FAIT,—
+C. Placeholder,"§1 : dates, effectifs, coordonnées",réécrit dans l'Article et le M&M,moi,FAIT,—
+C. Placeholder,§8.6 fin : modèles statistiques,"cadre écrit : stratification par tissu (contrainte), station comme unité, double ordre séquentiel, PERMDISP",moi,FAIT,—
+C. Placeholder,"§2 capture, euthanasie, autorisations","transposé du manuscrit d'origine, à confirmer pour le lot Durance",André,ATTENTE,—
+C. Placeholder,§3 extraction et librairies,"transposé (Qiagen Food Mericon, Kozich 2013, Galan 2016)",André,ATTENTE,—
+C. Placeholder,§4 contrôles mock et négatifs,"transposé, à confirmer pour le lot Durance",André,ATTENTE,—
+C. Placeholder,§9 : DOI Zenodo,dépôt GitHub privé en place (98 commits) ; DOI à créer à la soumission,toi,ATTENTE,—
+D. Ouvert — ENA,Dates de Pertuis : assignation par individu,"deux pêches la même année (2014-07-07 et 2014-08-20) ; déposées en intervalle ISO 8601, ce qui est licite mais n'assigne pas les individus. Un second MODIFY affinerait si André tranche",André puis session ENA,OUVERT,~30 min
+D. Ouvert — ENA,'host subject id' non unique entre campagnes,24 identifiants réutilisés entre 2014 et 2015 : un réutilisateur groupant sur ce champ seul fusionne 24 paires de poissons. Le préfixer par la campagne supprimerait le piège (second MODIFY d'un champ). Documenté en Note S2 en attendant,toi (décision),OUVERT,~30 min
+E. Analyse manquante,Faith PD non exploité,calculé (script 21) mais aucun test alpha ne l'utilise,moi,À ÉCRIRE,inclus dans l'écologie
+E. Analyse manquante,Abondance différentielle,aucun script ; annoncée dans le §8.6,moi,MÉTHODE À CHOISIR,~3 h
+E. Analyse manquante,Script d'analyse écologique,"25 scripts existent, tous QC ou technique — aucun n'analyse la question biologique",moi,À ÉCRIRE,le gros du travail
+F. Optionnel,Bray-Curtis à 500,validé comme utilisable ; 2e métrique pondérée pour le témoin de sensibilité,moi,DÉCISION,~4 h cluster
