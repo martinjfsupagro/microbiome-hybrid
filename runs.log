@@ -52,3 +52,10 @@
 2026-08-31T16:57:35+02:00	END	10316927	2955a28	22-depth_agreement.sh
 2026-08-31T16:58:57+02:00	START	10316956	bedfb15	22-depth_agreement.sh
 2026-08-31T17:09:57+02:00	END	10316956	bedfb15	22-depth_agreement.sh
+2026-08-31T17:22:26+02:00	START	10318101	812e51f	23-bray_depth_agreement.sh
+2026-08-31T17:22:29+02:00	START	10318102	812e51f	21-unifrac_faith.sh
+2026-08-31T17:41:57+02:00	END	10318102	812e51f	21-unifrac_faith.sh
+2026-08-31T17:42:00+02:00	START	10318102	812e51f	20-variance_partition_category.sh
+2026-08-31T17:42:48+02:00	END	10318102	812e51f	20-variance_partition_category.sh
+2026-08-31T18:15:38+02:00	START	10318514	ee79bcc	23-bray_depth_agreement.sh
+2026-08-31T19:07:36+02:00	END	10318514	ee79bcc	23-bray_depth_agreement.sh

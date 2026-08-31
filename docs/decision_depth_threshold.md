@@ -81,3 +81,82 @@ l'analyse de sensibilite a 500, il faut le mesurer d'abord (job R avec vegan, ~1
 - `results/depth_agreement/depth_agreement{,_low}.{tsv,txt}`
 - `results/depth_agreement/fig_depth_tradeoff.png`
 - `results/depth_agreement/retention_par_station_tissu.csv`
+
+
+---
+
+# COMPLEMENT 2026-08-31 — Bray-Curtis mesure, et sensibilite a 500 executee
+
+## 1. Bray-Curtis : le point non verifie est leve (script 23)
+
+Meme protocole que le script 22, jeu fixe de 1 784 echantillons, reference =
+`beta_mean_bray_N400.rds` (le script 15 l'a produite avec exactement le meme appel
+`rrarefy` + `vegdist(R,"bray")`). Temoin de recalcul a 3000 (3 tirages) contre cette
+reference : **r = 0.999830**, ecart absolu moyen 0.00144 — lecture de table et
+appariement des identifiants confirmes.
+
+| Profondeur | r avec la matrice a 3000 | ecart relatif |
+|---|---|---|
+| 500 | **0.9985** | 0.5 % |
+| 1000 | 0.9996 | 0.2 % |
+| 2000 | 0.9999 | 0.1 % |
+
+**Bray-Curtis est invariant a la profondeur**, comme UniFrac pondere. La classification
+est donc complete et entierement mesuree :
+
+| Famille | Metrique | r a 500 |
+|---|---|---|
+| **Ponderee — invariante** | UniFrac pondere | 0.9994 |
+| | Bray-Curtis | 0.9985 |
+| **Presence — degrade** | Jaccard | 0.9617 |
+| | UniFrac non pondere | 0.9373 |
+| alpha | richesse observee | 0.9623 (-42 % de valeur) |
+
+**Defaut de ma premiere version du script 23, corrige.** Elle etait serielle : 7 min par
+tirage, N=20 par profondeur plus une reference recalculee, soit ~10 h pour un walltime de
+6 h — et elle n'ecrivait qu'a la fin, donc un depassement n'aurait rien rendu. Corrige :
+tirages repartis par `mclapply` (avec controle explicite des objets d'erreur, que
+`mclapply` rend sans lever), reference prise sur la matrice existante, N=10, ecriture
+incrementale apres chaque profondeur.
+
+## 2. Sensibilite a 500 : le signal caudal survit
+
+Executee avec **le meme code** que l'analyse principale (scripts 21 et 20 parametres par
+`PHYLO_DEPTH` / `CATPART_GLOB`), sur UniFrac pondere, N=400, deux chaines. Jeu elargi :
+**2 067 echantillons** contre 1 784 a 3000 (+16 %). Convergence a 500 : erreur MC
+relative 0.00135, r entre chaines 0.999946.
+
+| Tissu | n (3000) | n (500) | sequentiel 3000 | sequentiel 500 | bloque 3000 | bloque 500 |
+|---|---|---|---|---|---|---|
+| **caudale** | 141 | 168 | **3/3** | **3/3** | **3/3** | **3/3** |
+| branchie | 161 | 179 | 3/3 | 3/3 | 0/3 | 0/3 |
+| midgut | 147 | 172 | 0/3 | 3/3 | 3/3 | 3/3 |
+| hindgut | 154 | 173 | 0/3 | 0/3 | 0/3 | 1/3 |
+
+Encadrement du R² de la categorie : 0.0165–0.0319 a 3000, **0.0161–0.0283 a 500**.
+
+**Le controle pouvait echouer et n'a pas echoue.** Le biais de selection dans la caudale
+passe de +30.4 a +2.5 points entre les deux seuils ; si le signal de categorie y avait
+ete produit par la selection, il aurait du disparaitre a 500. Il est identique : 3/3 dans
+les deux dispositifs, aux deux seuils. **Le signal caudal n'est pas un artefact du filtre
+de profondeur.**
+
+Le midgut passe de 0/3 a 3/3 en sequentiel — mais son biais reste a +15 points a 500,
+donc ce n'est pas une lecture affranchie de la selection.
+
+Le hindgut ne montre rien aux deux seuils, ce qui est coherent avec les quatre metriques
+a 3000.
+
+## 3. Ce qui reste ouvert
+
+**Bray-Curtis a 500 n'a PAS ete calcule.** Il est maintenant valide comme utilisable a
+cette profondeur, mais la matrice a 500 (2 067 echantillons, N=400) demanderait ~4 h
+(vegdist ~9 min par tirage, reparti sur 16 coeurs). Elle apporterait une seconde metrique
+ponderee au controle — utile puisque Bray-Curtis donnait 2/3 pour la caudale a 3000,
+contre 3/3 pour UniFrac pondere.
+
+## Fichiers ajoutes
+- `scripts/23-bray_depth_agreement.sh`
+- `results/depth_agreement/bray_depth_agreement.{tsv,txt}`
+- `results/phylo_diversity_d500/`, `results/rarefaction_d500/`,
+  `results/var_partition_cat_d500/`
