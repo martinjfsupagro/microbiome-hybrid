@@ -50,13 +50,15 @@ export OMP_NUM_THREADS="${SLURM_CPUS_PER_TASK:-8}"
 export TMPDIR=/scratch/users/martinj/tmp_depth_${SLURM_JOB_ID:-local}
 mkdir -p "$TMPDIR"
 
-apptainer exec "$IMG" python - <<'PY' 2>&1 | tee results/depth_agreement/depth_agreement.txt
+apptainer exec "$IMG" python - <<'PY' 2>&1 | tee "${AGREE_OUT:-results/depth_agreement/depth_agreement.txt}"
 import os, sys, time, gzip
 import numpy as np, h5py, biom, unifrac
 from scipy.sparse import csc_matrix
 
 T0=time.time()
-REF_DEPTH=3000; DEPTHS=[1000,1500,2000]; NDRAW=20
+REF_DEPTH=3000
+DEPTHS=[int(x) for x in os.environ.get("AGREE_DEPTHS","1000,1500,2000").split(",")]
+NDRAW=20
 OUT="results/depth_agreement"; TREE="results/phylogeny/tree.nwk"
 TABLE="results/decontam/asv_table_clean.tsv"
 def log(*a): print(f"[{time.time()-T0:7.1f}s]",*a); sys.stdout.flush()
@@ -185,7 +187,7 @@ for d in DEPTHS:
 
 ks=["profondeur","metrique","r_pearson","biais_moyen","ecart_absolu_moyen",
     "distance_moyenne_ref","ecart_relatif"]
-with open(os.path.join(OUT,"depth_agreement.tsv"),"w") as fh:
+with open(os.path.join(OUT, os.environ.get("AGREE_TSV","depth_agreement.tsv")),"w") as fh:
     fh.write("\t".join(ks)+"\n")
     for r_ in rows: fh.write("\t".join(str(r_[k]) for k in ks)+"\n")
 log("TERMINE")
