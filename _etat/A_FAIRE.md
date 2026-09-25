@@ -29,7 +29,8 @@ Chaque section est réécrite par la session concernée à sa clôture (cf. `REA
   *Host identity*, Note S2 ; Figures S1 et S3 régénérées (`docs/manuscrit/figures/`) ; introduction alignée
   (position selon D2, Suran : 2 hybrides à Pont-d'Ain, témoin par retraits aléatoires) ; styles Word corrigés
   (texte courant des §8.8, §8.9, Note S2 en Normal ; titres 8.8–8.9 en Titre 2). Le supplément n'est **plus** à
-  régénérer pour les coordonnées ; `DATA_AVAILABILITY.md` n'en porte aucune (vérifié).
+  régénérer pour les coordonnées : Table S1 comparée le 25/09 à `station_reference.csv`, 9/9 stations conformes
+  (coordonnées, rivière, dates) ; `DATA_AVAILABILITY.md` ne porte aucune coordonnée ni rivière (grep, 25/09).
 - **Erreurs à corriger dans la note grise de l'introduction** (écrites le 25/09 par cette session) :
   (iv) dit les paramètres 4H « pas encore fixés » — ils le sont (D5) ; ce qui manque est leur description au §8.6.
   (v) dit l'introgression « sur un seul chromosome » invérifiable — R16 l'établit pour 17 des 22 quasi-purs ;
