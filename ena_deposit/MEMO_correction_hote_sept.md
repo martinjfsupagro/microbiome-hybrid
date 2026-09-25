@@ -28,8 +28,8 @@ le 31/08 à 21:16) et n'y change que trois champs, sur **568 échantillons** :
 Ne sont **pas** soumis : les 41 contrôles et les 159 échantillons déjà corrects. Accessions, alias,
 fichiers, EXPERIMENT et RUN sont inchangés.
 
-Choix de libellé à valider : `host common name` des hybrides = **`nase x toxostome hybrid`** (aucun
-nom commun n'existait pour eux). Le changer = éditer `COMMON` dans le script 28 et le relancer.
+`host common name` des hybrides = **`nasus x toxostoma`** (décision JF Martin, 2026-09-25 ; aucun
+nom commun n'existait pour eux). Parentaux : `nase`, `toxostome`.
 
 ## Contrôles déjà passés (sans soumission)
 

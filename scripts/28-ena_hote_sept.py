@@ -32,7 +32,7 @@ RECU = f"{D}/receipt_modify_prod_20260831_211649.xml"
 
 SCI = {"Cn": "Chondrostoma nasus", "Pt": "Parachondrostoma toxostoma",
        "Hy": "Chondrostoma nasus x Parachondrostoma toxostoma"}
-COMMON = {"Cn": "nase", "Pt": "toxostome", "Hy": "nase x toxostome hybrid"}
+COMMON = {"Cn": "nase", "Pt": "toxostome", "Hy": "nasus x toxostoma"}   # hybrides : libelle decide par JF Martin, 2026-09-25
 TISSUS = (" caudal fin ", " gill ", " midgut ", " hindgut ")
 
 # --- classification par echantillon depose (durance1 = un echantillon par tissu et poisson)
