@@ -36,7 +36,7 @@ Lecture, en nuançant le constat d'origine :
 - **Le canal du Largue l'est modérément** : 8 / 4 / 8 devient 8 / 6 / 6.
 - **Rosières et Manosque changent davantage que le canal** (3 individus chacun, 4 → 7 et 2 → 5
   hybrides), mais ce sont des stations à deux catégories. Rosières compte : c'est le « témoin propre »
-  du §8.9, la seule station où catégorie et position sont indépendantes.
+  du §8.9, la seule station où catégorie et position sont indépendantes (voir section 4).
 - **Büech-Méouge a deux individus qui changent mais une composition identique** (11 / 10 / 14) : un
   hybride devient toxostome et un toxostome devient hybride. Les étiquettes individuelles changent,
   donc les tests aussi, même si les effectifs non.
@@ -46,9 +46,19 @@ Lecture, en nuançant le constat d'origine :
 
 La décision D1 du 25 septembre retient deux passes : 20 hybrides à génome intermédiaire avec les 22
 quasi-purs **exclus** (n = 158), puis les 42 (n = 180). **La classification d'août ne correspond à
-aucune des deux** : ses 30 hybrides contiennent les 20 intermédiaires plus 10 quasi-purs, ceux que les
-12 premiers chromosomes détectaient déjà. Les résultats actuels portent donc sur une classe
-intermédiaire entre les deux définitions retenues, et il faut recalculer deux fois — pas une.
+aucune des deux.** Croisée avec le type de génome de septembre, sa classe Hy se décompose ainsi :
+
+| classe d'août | intermédiaire | quasi-pur | pur | total |
+|---|---|---|---|---|
+| Cn | 0 | 1 | 58 | 59 |
+| **Hy** | **20** | **8** | **2** | **30** |
+| Pt | 0 | 13 | 78 | 91 |
+
+Les 30 hybrides d'août contiennent donc les 20 intermédiaires, **8** des 22 quasi-purs, et **2
+individus que les 25 chromosomes classent purs** (`2015_Bue_1006`, devenu Pt, et `2015_Jus_1011`,
+devenu Cn). Les 14 autres quasi-purs étaient classés parentaux en août (1 Cn, 13 Pt). Les résultats
+actuels portent donc sur une classe qui n'est ni l'une ni l'autre des deux définitions retenues, et
+qui contient même deux non-hybrides : il faut recalculer deux fois — pas une.
 
 Conséquence sur la phrase du §8.9 « three carry all three categories (74 individuals) » : elle reste
 vraie en passe 2 (Büech 35 + canal 20 + Saint-Just 19 = 74), mais en passe 1 les trois stations ne
@@ -70,12 +80,17 @@ dans l'ordre de numérotation à cinq stations sur neuf (rho de Spearman de 0,87
 pas si l'effet colonne vient de l'extraction ou du délai de dissection, mais cela explique pourquoi
 colonne et catégorie sont associées.
 
-**Le V de Cramér de 0,48 est à recalculer avec le reste.** Recalculé ici entre catégorie et colonne
-de plaque : 0,505 avec les classes d'août au niveau individu (0,504 au niveau échantillon), 0,479
-avec les 42 hybrides et 0,527 en passe 1. Je ne retrouve pas le 0,48 du texte avec les classes
-d'août, qui sont celles des fichiers d'analyse : il a donc été calculé sur une autre unité ou un
-autre sous-ensemble, que la conversation d'analyse connaît. La valeur proche obtenue avec les 42 est
-une coïncidence, pas une confirmation. L'association reste forte dans les trois cas.
+**Le V de Cramér de 0,48 du §8.8 est doublement périmé.** Il ne vient pas de la classification
+d'août mais du **taxon morphologique d'avant génotypage** : `roadmap_analyse.md` (addendum du
+30 août) donne 0,477 pour « ancien taxon (avant génotypage) » et 0,504 pour les catégories d'août.
+Recalculé ici entre catégorie et colonne de plaque : 0,504 avec les classes d'août au niveau
+échantillon (0,505 au niveau individu), ce qui reproduit la feuille de route ; 0,479 avec les
+42 hybrides ; 0,527 en passe 1. La proximité entre 0,479 et le 0,48 du texte est une coïncidence.
+L'association reste forte dans les trois cas.
+
+**Rosières est bien le témoin indépendant du §8.9** (V = 0,181, p = 0,35 dans la feuille de route).
+Il passe de 4 à 7 hybrides en passe 2 et tombe à 1 hybride en passe 1 : en passe 1, le témoin
+propre ne témoigne plus de rien.
 
 ## 5. Liste de recalcul
 
