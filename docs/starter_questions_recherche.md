@@ -149,9 +149,15 @@ polluaient les requêtes lexicales. La bibliographie est donc bien centrée sur 
 
 ## 8. ÉTAT DE L'ÉCRITURE
 
-- **Materials & Methods** : rédigé de l'échantillonnage à la préparation des données
-  (`docs/materials_and_methods.docx`, v7). Reste : §1 (dates/coordonnées de collecte),
-  §8.6 (analyses statistiques, dépend de l'index hybride), §9 (accession ENA).
+- **Materials & Methods** : les sections Methods vivent desormais dans
+  `docs/manuscrit/Article.docx` (§1 a §9). Le fichier autonome
+  `docs/materials_and_methods.docx` est **SUPERSEDE depuis le 2026-08-31** : il ne doit plus
+  etre edite ni cite (voir `docs/decision_manuscrit.md`). Etat des sections dans l'Article :
+  §1 (stations, coordonnees, dates) redige ; §8.6 a 8.9 rediges (metriques phylogenetiques,
+  accord entre profondeurs, effet de position, structure du confondant, PERMDISP) ; §9 porte
+  l'accession ENA `PRJEB124417`, corrigee le 2026-08-31. Restent : §2, §3 et §4 (protocoles
+  transposes, a confirmer par Andre) et le DOI Zenodo du §9. Suivi complet dans
+  `docs/checklist_avant_ecologie.csv`.
 - **Introduction** : à écrire — objet de la prochaine conversation.
 - **Manuscrit d'origine** : un draft antérieur existe (`MS_hybrid and microbiota_draft1.docx`),
   portant sur une **partie seulement** des données (branchie et midgut). Son introduction a
