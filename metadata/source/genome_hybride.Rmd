@@ -1,0 +1,407 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
+
+title: "Analyse du génome hybride"
+output: html_document
+date: "2026-09-07"
+------------------
+
+# 1. Préparation des données
+
+## Chargement des packages
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(cluster)
+library(dendextend)
+library(pheatmap)
+```
+
+## Chargement des données
+
+Le fichier contenant les Q-values est chargé puis la première colonne, correspondant à l'identifiant des individus, est utilisée comme nom de ligne.
+
+```{r chargement-donnees}
+path <- "/Users/andregilles/Desktop/Desktop/programme recherche/Etudiant_es/Jef_article/hybride"
+
+setwd(path)
+
+data <- read.csv2(
+  "genome_hotox.csv",
+  header = TRUE,
+  dec = ",",
+  check.names = FALSE
+)
+
+head(data)
+str(data)
+```
+
+## Construction de la matrice de Q-values
+
+```{r matrice}
+mat <- data[, -1]
+
+rownames(mat) <- data$Individu
+
+head(mat)
+```
+
+# 2. Clustering hiérarchique
+
+Le clustering est réalisé à partir des profils de Q-values des individus.
+
+La distance euclidienne mesure la différence entre les profils, puis la méthode de Ward (`ward.D2`) permet de construire le dendrogramme.
+
+```{r clustering}
+dist_mat <- dist(mat, method = "euclidean")
+
+hc <- hclust(
+  dist_mat,
+  method = "ward.D2"
+)
+```
+
+## Choix du nombre de clusters
+
+La largeur moyenne de silhouette est calculée pour différents nombres de clusters, de 2 à 15.
+
+```{r silhouette-calcul}
+silhouette_moyenne <- numeric(15)
+
+for (k in 2:15) {
+  
+  groups_k <- cutree(hc, k = k)
+  
+  sil <- silhouette(
+    groups_k,
+    dist_mat
+  )
+  
+  silhouette_moyenne[k] <- mean(sil[, 3])
+}
+```
+
+### Largeur moyenne de silhouette
+
+```{r silhouette-graphique}
+plot(
+  2:15,
+  silhouette_moyenne[2:15],
+  type = "b",
+  xlab = "Nombre de clusters",
+  ylab = "Largeur moyenne de silhouette",
+  main = "Choix du nombre de clusters"
+)
+```
+
+## Définition des clusters
+
+Pour la représentation du dendrogramme, les individus sont répartis en 7 clusters.
+(mais on recupere 15 hybrides à k=8 qui sont completement introgressés)
+
+## Dendrogramme 7
+
+```{r dendrogramme}
+groups <- cutree(hc, k = 7)
+
+table(groups)
+
+dend <- as.dendrogram(hc)
+
+dend <- color_branches(dend, k = 7,  col = c("darkgreen","orange","blue","green",  "red", "purple", "black"))
+
+plot(
+  dend,
+  main = "Clustering hiérarchique des individus",
+  ylab = "Distance",
+  leaflab = "none"
+)
+```
+## Dendrogramme 8
+```{r clusters}
+
+groups <- cutree(hc, k = 8)
+
+table(groups)
+
+dend <- color_branches(dend, k = 8,  col = c("darkgreen","yellow","blue","green",  "red", "orange","purple", "black"))
+
+plot(dend,
+     main = "Clustering hiérarchique des individus",
+     ylab = "Distance",
+     leaflab = "none")
+```
+
+# 3. Heatmap des Q-values
+
+La heatmap permet de visualiser les profils de Q-values des différents individus.
+
+L'échelle est fixée entre 0 et 1, indépendamment des valeurs effectivement présentes dans les données.
+
+```{r heatmap}
+col_fun <- colorRampPalette(
+  c("blue", "yellow", "red")
+)(100)
+
+breaks <- seq(
+  0,
+  1,
+  length.out = 101
+)
+
+pheatmap(
+  mat,
+  cluster_rows = hc,
+  cluster_cols = FALSE,
+  color = col_fun,
+  breaks = breaks,
+  show_rownames = FALSE,
+  show_colnames = TRUE,
+  fontsize_col = 9,
+  border_color = NA,
+  main = "Q-values - clustering hiérarchique",
+  legend_breaks = c(0, 0.05, 0.5, 0.95, 1),
+  legend_labels = c("0", "0.05", "0.50", "0.95", "1")
+)
+```
+
+# 4. Indice hybride : médiane et écart maximal
+
+Pour chaque individu, deux paramètres sont calculés :
+
+* la **médiane des Q-values** ;
+* l'**écart maximal à la médiane**.
+
+L'écart maximal correspond à la plus grande différence entre la médiane et la valeur minimale ou maximale observée.
+
+## Calcul de la médiane
+
+```{r mediane}
+mediane <- apply(
+  mat,
+  1,
+  median,
+  na.rm = TRUE
+)
+```
+
+## Calcul de l'écart maximal
+
+```{r ecart-max}
+ecart_max <- apply(
+  mat,
+  1,
+  function(x) {
+    
+    med <- median(
+      x,
+      na.rm = TRUE
+    )
+    
+    max(
+      max(x, na.rm = TRUE) - med,
+      med - min(x, na.rm = TRUE)
+    )
+  }
+)
+```
+
+## Tableau récapitulatif
+
+```{r resultats}
+resultats <- data.frame(
+  Individu = rownames(mat),
+  Mediane = mediane,
+  Ecart_max = ecart_max,
+  Cluster = factor(groups)
+)
+
+resultats
+```
+
+# 5. Classification des individus
+
+Les individus sont ensuite classés selon leur médiane et leur écart maximal.
+
+## Initialisation
+
+```{r classification}
+resultats$Groupe <- "Autres"
+```
+
+## Groupe Rouge
+
+Médiane inférieure à 0.05 et écart maximal inférieur à 0.12.
+
+```{r groupe-rouge}
+resultats$Groupe[
+  resultats$Mediane < 0.05 &
+    resultats$Ecart_max < 0.12
+] <- "Rouge"
+```
+
+## Groupe Bleu
+
+Médiane supérieure à 0.94 et écart maximal inférieur à 0.12.
+
+```{r groupe-bleu}
+resultats$Groupe[
+  resultats$Mediane > 0.94 &
+    resultats$Ecart_max < 0.12
+] <- "Bleu"
+```
+
+## Groupe Vert
+
+```{r groupe-vert}
+resultats$Groupe[
+  resultats$Mediane > 0.05 &
+    resultats$Mediane < 0.94 |
+    resultats$Ecart_max > 0.12
+] <- "Vert"
+```
+
+> **Attention :** dans ton script original, cette condition utilise `|`, donc **OU**. Cela signifie qu'un individu est classé Vert si sa médiane est entre 0.05 et 0.94 **OU** si son écart maximal est supérieur à 0.12. Je l'ai conservée exactement comme dans ton script.
+
+# 6. Visualisation de la classification
+
+## Attribution des couleurs
+
+```{r couleurs}
+couleurs <- ifelse(resultats$Groupe == "Rouge", "red",
+                   ifelse(resultats$Groupe == "Bleu", "blue",
+                          ifelse(resultats$Groupe == "Vert", "green",
+                                 "black")))
+```
+
+## Graphique
+
+```{r graphique-classification}
+plot(
+  resultats$Mediane,
+  resultats$Ecart_max,
+  col = couleurs,
+  pch = 19,
+  xlab = "Médiane des Q",
+  ylab = "Écart maximal à la médiane",
+  main = "Classification des individus selon les profils Q",
+  xlim = c(0, 1)
+)
+
+abline(v = 0.05, lty = 2)
+abline(v = 0.94, lty = 2)
+abline(h = 0.12, lty = 2)
+
+legend("topright",
+       legend = c("Rouge", "Bleu", "Vert", "Autres"),
+       col = c("red", "blue", "green", "black"),
+       pch = 19)
+```
+
+## Nombre d'individus dans chaque groupe
+
+```{r effectifs-groupes}
+table(resultats$Groupe)
+```
+
+## Liste des individus par groupe
+
+```{r individus-groupes}
+split(
+  resultats$Individu,
+  resultats$Groupe
+)
+```
+
+# 7. Nombre de chromosomes introgressés
+
+Pour les individus présentant une médiane inférieure à 0.05, on compte les chromosomes dont la Q-value est supérieure à 0.12.
+
+Pour les individus présentant une médiane supérieure à 0.94, on compte les chromosomes dont la Q-value est inférieure à 0.88.
+
+```{r chromosomes-introgresses}
+Nb_chr_introgresses <- apply(
+  mat,
+  1,
+  function(x) {
+    
+    med <- median(
+      x,
+      na.rm = TRUE
+    )
+    
+    if (med < 0.05) {
+      
+      sum(
+        x > 0.12,
+        na.rm = TRUE
+      )
+      
+    } else if (med > 0.94) {
+      
+      sum(
+        x < 0.88,
+        na.rm = TRUE
+      )
+      
+    } else {
+      
+      NA
+    }
+  }
+)
+
+Nb_chr_introgresses
+```
+# 8. L'acp ne detecte pas les individus fortement introgressés des purs
+```{r acp}
+acp <- prcomp(mat, scale. = FALSE)
+
+plot(acp,
+     main = "ACP des profils STRUCTURE")
+
+summary(acp)
+
+groups <- cutree(hc, k = 8)
+
+plot(acp$x[,1], acp$x[,2],
+     col = groups,
+     pch = 19,
+     xlab = "PC1",
+     ylab = "PC2",
+     main = "ACP des profils STRUCTURE")
+
+
+```
+
+# Visualisons les differents groupes
+```{r groupe}
+split(data$Individu, groups)
+```
+
+
+# Par exemple le groupe 3 est constitue de purs et d'hybrides, pourquoi ?
+```{r groupe 3}
+couleurs <- rep("grey", nrow(acp$x))
+couleurs[groups == 3] <- "red"
+
+plot(acp$x[,1], acp$x[,2],
+     col = couleurs,
+     pch = 19,
+     xlab = "PC1",
+     ylab = "PC2",
+     main = "ACP des profils STRUCTURE")
+
+text(acp$x[groups == 3, 1],
+     acp$x[groups == 3, 2],
+     labels = data$Individu[groups == 3],
+     col = "red",
+     pos = 3,
+     cex = 0.7)
+split(data$Individu, groups)
+```

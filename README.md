@@ -243,6 +243,28 @@ used, what was measured, and what remains open.
 **Still pending the hybrid index**: statistical models, hybrid-zone gradient
 contrasts, and the final choice of retained populations.
 
+## Design and decision record
+
+The design, feasibility and decision work carried out alongside the pipeline lives in `docs/`.
+Entry points, in reading order:
+
+| document | content |
+|---|---|
+| `docs/bilan_analyses_projet.md` | what has been analysed across the project, with the artefacts named |
+| `docs/decisions_a_prendre.md` | the seven design decisions, the arbitration retained for each, and the options discarded with their cost |
+| `docs/point_etape_25sept.md` | status after the collaborator's answers of 2026-09-25, with the consequences quantified |
+| `docs/pour_andre_questions_ouvertes.md` | the three points still awaiting the collaborator |
+| `docs/synthese_genotypage_25chr.md` | verification of the 25-chromosome genotyping and analysis of the two hybrid sub-types |
+| `docs/note_indice_4H.md`, `note_parametres_4H.md`, `note_sensibilite_4H.md` | the 4H framework (Camper et al. 2024): applicability, a priori parameters, sensitivity |
+| `docs/note_guivier2017_implications.md` | what the team's 2017 companion study changes for positioning |
+| `docs/biblio/microbiome_hybrid_all_refs.bib` | 225 references with abstracts, thematic keywords and provenance |
+
+`docs/figures/` holds the figures these documents refer to. Note that this departs from the
+convention stated under *Not version-controlled*: figures produced by the pipeline scripts stay
+untracked because they are regenerable from `results/`, whereas these were produced outside the
+repository and are not reproducible from anything committed here. They are tracked so that the
+documents citing them remain readable.
+
 ## Structure
 ```
 microbiome-hybrid/
@@ -285,6 +307,8 @@ microbiome-hybrid/
 ├── results/                <- {jobname}_{jobid}/ per run (not versioned)
 ├── logs/                   <- SLURM .out / .err
 ├── docs/                   <- notes, decisions, manuscript
+│   ├── biblio/             <- bibliography (.bib, screening tables)
+│   └── figures/            <- figures cited by the decision notes
 └── runs.log                <- register of every job
 ```
 

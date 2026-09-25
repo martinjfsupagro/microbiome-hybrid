@@ -1,0 +1,6 @@
+individu,individual_id,classe,med,D,ligne_xlsx,bloc_csv,numeros_csv,position_trou
+14Bue1001,2014_Bue_1001,Cn,0.9878,0.0,27,27–41 (14Bue),1003–1019,début de bloc
+14Bue1002,2014_Bue_1002,Cn,0.9897,0.0,28,27–41 (14Bue),1003–1019,début de bloc
+15Bue1014,2015_Bue_1014,Pt,0.0017,0.0,119,104–120 (15Bue),"1001–1013, 1015–1018",trou isolé
+15Cab1011,2015_Cab_1011,Pt,0.0004,0.0,154,141–158 (15Cab),"1001–1010, 1012–1019",trou isolé
+15Jus1008,2015_Jus_1008,Pt,0.0455,0.01,170,159–176 (15Jus),"1001–1007, 1009–1019",trou isolé
