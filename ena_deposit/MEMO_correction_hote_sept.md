@@ -67,3 +67,23 @@ indéterminé : ne pas relancer à l'aveugle, lancer `bash 6_etat_du_depot.sh`.
 - Pertuis : dates déposées en intervalle `2014-07-07/2014-08-20`, assignation par individu inconnue.
 - `host subject id` non unique entre campagnes (24 paires) : table
   `ena_corrections_subject_id.tsv` prête depuis le 31/08, jamais soumise, décision en attente.
+
+
+---
+
+## État au 2026-09-25 18:09 — soumis en production
+
+| étape | résultat |
+|---|---|
+| test (wwwdev) 18:05–18:07 | **non concluant** : deux réponses vides, puis `success=false` avec 568 × « No new BioSample was created » et « Failed to submit samples to BioSamples ». Le test n'a rien validé. |
+| production 18:08 | `success=true`, 0 erreur, 0 avertissement ; 568/568 alias et accessions identiques au XML soumis → MODIFY, aucune création |
+| vérification exhaustive | **à faire** : `bash 9_verifier_hote_sept.sh`, quelques heures après |
+
+Le test a échoué sur des alias neufs (suffixe `_VAL180214`), en ADD, avec le même mécanisme qui avait
+fonctionné le 31/08 : l'hypothèse la plus simple est une indisponibilité du service BioSamples
+de test, mais elle **n'est pas établie** (le message de commit `01cd77d` l'affirme à tort comme un
+fait). Ce qui compte : la production valide elle aussi contre ERC000013 et n'a renvoyé aucune
+erreur. L'application effective des valeurs reste à confirmer par la vérification.
+
+Reçus : `receipt_hote_sept_prod_20260925_180826.xml` (+ `_accessions.tsv`),
+`receipt_hote_sept_test_20260925_180605.xml`.
