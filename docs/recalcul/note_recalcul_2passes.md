@@ -67,14 +67,19 @@ Passe 1 = 20 hybrides intermédiaires, quasi-purs exclus, n = 158. Passe 2 = 42 
   disparaît quand on y ajoute les quasi-purs.
   *Hypothèse, non testée isolément* : 13 des 16 changements de classe sont des Pt → Hy. Inclure des
   quasi-purs à fond Pt diluerait le contraste Hy–Pt.
-- **« Inchangé à 500 lectures » ne tient dans aucune passe.** À 500 lectures, la caudale en UniFrac
-  pondéré donne 0/0 en passe 2 et 0/0 en passe 1 (p 0,07–0,14). En passe 1, le signal à 3 000 lectures
-  n'est donc plus confirmé par l'analyse de sensibilité. Je n'ai pas lancé le témoin d'effectif à 500 :
-  on ne sait pas si cette perte tient à l'effectif ou à la profondeur.
-- **« Le hindgut est le plus faible » ne tient pas en passe 2.** Avec position, en schéma station
-  bloquée, les quatre métriques le détectent dans au moins 2 runs sur 3 (Jaccard 3/3 et 3/3). En
-  passe 1, la baisse relève surtout de l'**effectif** d'après le témoin (Bray-Curtis et Jaccard en
-  séquentiel reproduits par ≥ 25 % des retraits aléatoires).
+- **« Inchangé à 500 lectures » ne tient plus.** *(Corrigé le 2026-09-25 : la première version de cette
+  note ne rapportait que le modèle avec position.)* Dans le modèle **principal** (sans position), la
+  caudale en UniFrac pondéré à 500 lectures est **partielle en passe 1** (séquentiel 3/3, p 0,022–0,049 ;
+  station bloquée 1/3, p 0,034–0,073) et **absente en passe 2** (p 0,055–0,177). Avec position, elle est
+  absente dans les deux passes (passe 1 : p 0,069–0,141). Le témoin d'effectif n'a pas été lancé à 500 :
+  la cause de l'affaiblissement en passe 1 (effectif ou profondeur) n'est pas établie.
+- **« Le hindgut est le plus faible » ne tient pas en passe 2.** Modèle principal : en schéma station
+  bloquée, les quatre métriques le détectent dans les 3 runs (séquentiel : BC 2/3, UF pondéré 1/3, J et
+  UF non pondéré 0/3). En passe 1, il redevient le plus faible (seul Jaccard, 1/3 en bloqué). *(Corrigé :
+  la première version attribuait cette baisse « surtout à l'effectif », ce qui ne vaut que pour le
+  modèle avec position.)* Dans le modèle principal, le témoin ne tranche pas : indéterminé pour BC, J et
+  UF non pondéré (5 à 25 % des retraits aléatoires reproduisent la baisse), définition des hybrides pour
+  UF pondéré.
 - **Témoin Rosières en passe 1** : avec 1 hybride pour 18 Pt, la permutation libre n'offre que 17 à 19
   arrangements distincts, soit un p minimal de 0,053 à 0,059, et le midgut n'a aucun hybride. Les
   6/36 tests significatifs après position y sont portés par **un seul poisson** ; ils ne sont pas
@@ -94,8 +99,8 @@ Passe 1 = 20 hybrides intermédiaires, quasi-purs exclus, n = 158. Passe 2 = 42 
 
 ## 5. Décision D2 : les conclusions diffèrent entre les modèles avec et sans position
 
-C'est à remonter, pas à trancher ici. Sur 32 cellules de la Table S8, **14 diffèrent**, dont **8
-changent de classe** (robuste 3/3 ↔ partiel ↔ aucun). Détail dans `d2_avec_vs_sans_position.csv`.
+C'est à remonter, pas à trancher ici. Sur les 32 cellules de la Table S8 (16 par passe), **14 diffèrent** (7 par passe), dont **8
+changent de classe** (5 en passe 1, 3 en passe 2) (robuste 3/3 ↔ partiel ↔ aucun). Détail dans `d2_avec_vs_sans_position.csv`.
 Exemples : en passe 2, Jaccard/hindgut et UniFrac non pondéré/midgut perdent leur robustesse sans
 position ; en passe 1, Bray-Curtis/branchie devient robuste sans position. **Le résultat caudal en
 UniFrac pondéré ne dépend pas de ce choix** : il est présent en passe 1 et absent en passe 2, avec
