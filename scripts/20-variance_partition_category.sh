@@ -78,6 +78,18 @@ MD <- read.csv("metadata/analysis_metadata.csv", stringsAsFactors = FALSE)
 for (cn in c("dada2_id","individual_id","run_label","tissue","station","categorie",
              "well_col","col_rank_station"))
   stopifnot(cn %in% names(MD))
+
+# ---------------------------------------------------------------- PASSE (2026-09-25)
+# PASSE=aout : categorie d'aout (12 chr) | 2 : septembre, 42 Hy, n=180 |
+# 1 : septembre, 22 quasi-purs EXCLUS (pas reverses dans leur classe parentale), n=158.
+PASSE <- Sys.getenv("PASSE", "")
+if (!PASSE %in% c("aout","2","1")) stop("PASSE doit valoir aout, 2 ou 1 (recu : '", PASSE, "')")
+stopifnot(all(c("categorie","categorie_aout_12chr","inclus_passe1") %in% names(MD)))
+if (PASSE == "aout") MD$categorie <- MD$categorie_aout_12chr
+if (PASSE == "1")    MD <- MD[as.character(MD$inclus_passe1) %in% c("True","TRUE"), ]
+.u <- !duplicated(MD$individual_id)
+cat(sprintf("PASSE=%s : %d echantillons, %d individus | %s\n", PASSE, nrow(MD), sum(.u),
+            paste(names(table(MD$categorie[.u])), table(MD$categorie[.u]), sep="=", collapse=" ")))
 rownames(MD) <- MD$dada2_id
 
 fmt <- function(x) if (is.null(x) || length(x)==0 || is.na(x)) "NA" else
@@ -158,6 +170,23 @@ for (f in files) {
       cat(sprintf("   [station fixee] categorie R2=%.4f  p=%s\n",
                   gv(aBLK,"cat"), fmt(gv(aBLK,"cat","p"))))
 
+      # SANS POSITION (decision D2, 2026-09-25) : modele principal. Les modeles avec position
+      # ci-dessus deviennent l'analyse de sensibilite. Le flux aleatoire est sauvegarde puis
+      # restaure : les modeles d'origine recoivent exactement les memes permutations qu'avant,
+      # donc la passe "aout" doit reproduire a l'identique les R2 ET les p-values d'aout.
+      .rs <- get(".Random.seed", envir = globalenv())
+      .k <- utf8ToInt(paste(met, run, tis)); set.seed(20260925L + sum(.k * seq_along(.k)))  # distincte par strate ET par run
+      aN1 <- safe(adonis2(D ~ st + cat, data=md, permutations=NPERM, by="terms", parallel=NCPU))
+      emit(aN1, met, "complet", run, tis, n, "sanspos_MIN_st_cat")
+      aN2 <- safe(adonis2(D ~ cat + st, data=md, permutations=NPERM, by="terms", parallel=NCPU))
+      emit(aN2, met, "complet", run, tis, n, "sanspos_MAX_cat_st")
+      aN3 <- safe(adonis2(D ~ cat, data=md, permutations=how(nperm=NPERM, blocks=md$st),
+                          by="terms", parallel=NCPU))
+      emit(aN3, met, "complet", run, tis, n, "sanspos_cat_station_bloquee")
+      assign(".Random.seed", .rs, envir = globalenv())
+      cat(sprintf("   [SANS position] categorie R2 min=%.4f max=%.4f | station fixee R2=%.4f p=%s\n",
+                  gv(aN1,"cat"), gv(aN2,"cat"), gv(aN3,"cat"), fmt(gv(aN3,"cat","p"))))
+
       # TEMOIN (c) : sous-plan separable
       sids <- intersect(ids, shared_ids(md))
       if (length(sids) >= 30) {
@@ -207,6 +236,15 @@ for (me in unique(t$metrique)) {
   cat(sprintf("  %-10s R2 min median=%.4f | max median=%.4f | unique median=%.4f  (%d strates)\n",
               me, median(mn$R2,na.rm=TRUE), median(mx$R2,na.rm=TRUE),
               median(mg$R2,na.rm=TRUE), nrow(mn)))
+}
+cat("\n--- SANS POSITION (D2) : encadrement et station fixee ---\n")
+for (me in unique(t$metrique)) {
+  mn <- t[t$metrique==me & t$modele=="sanspos_MIN_st_cat" & t$terme=="cat",]
+  mx <- t[t$metrique==me & t$modele=="sanspos_MAX_cat_st" & t$terme=="cat",]
+  bk <- t[t$metrique==me & t$modele=="sanspos_cat_station_bloquee" & t$terme=="cat",]
+  cat(sprintf("  %-20s R2 min median=%.4f | max median=%.4f | station fixee %2d/%2d p<0.05\n",
+              me, median(mn$R2,na.rm=TRUE), median(mx$R2,na.rm=TRUE),
+              sum(bk$p<0.05,na.rm=TRUE), nrow(bk)))
 }
 cat("\n--- categorie a station fixee : significativite par strate ---\n")
 b <- t[t$modele=="cat_apres_pos_station_bloquee" & t$terme=="cat",]

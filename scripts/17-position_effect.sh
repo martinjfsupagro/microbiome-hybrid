@@ -60,7 +60,7 @@ set -eEuo pipefail
 # un depassement de walltime ne perde pas tout (defaut du script 15, corrige ici).
 
 cd "$HOME/work/projects/microbiome-hybrid"
-OUT=results/position_effect
+OUT="${POS_OUTDIR:-results/position_effect}"
 mkdir -p "$OUT" logs
 
 RSCRIPT=$HOME/bin/envs/dada2/bin/Rscript
@@ -72,7 +72,7 @@ suppressMessages({library(vegan); library(permute)})
 set.seed(20260830)
 NPERM <- 999
 NCPU  <- as.integer(Sys.getenv("SLURM_CPUS_PER_TASK", "8"))
-OUT   <- "results/position_effect"
+OUT   <- Sys.getenv("POS_OUTDIR", "results/position_effect")
 
 TESTS <- file.path(OUT, "position_tests.tsv")
 EFFS  <- file.path(OUT, "position_effect_sizes.tsv")
@@ -81,6 +81,27 @@ cat("run\ttissue\tn\tterm\tR2_first\tR2_after_site\tp_blocked\n", file = EFFS)
 
 meta <- read.csv("metadata/samples_all.csv", stringsAsFactors = FALSE)
 rownames(meta) <- meta$dada2_id
+
+# ---------------------------------------------------------------- PASSE (2026-09-25)
+# PASSE=morpho : comportement d'origine (taxon morphologique de samples_all.csv).
+# PASSE=aout   : categorie genotypique d'aout (12 chr), 180 individus.
+# PASSE=2      : categorie de septembre (25 chr), 42 Hy, 180 individus.
+# PASSE=1      : categorie de septembre, 22 quasi-purs EXCLUS, 158 individus.
+PASSE <- Sys.getenv("PASSE", "")
+if (!PASSE %in% c("morpho","aout","2","1"))
+  stop("PASSE doit valoir morpho, aout, 2 ou 1 (recu : '", PASSE, "')")
+if (PASSE != "morpho") {
+  AM <- read.csv("metadata/analysis_metadata.csv", stringsAsFactors = FALSE)
+  stopifnot(all(c("dada2_id","individual_id","categorie","categorie_aout_12chr","inclus_passe1") %in% names(AM)))
+  if (PASSE == "1") AM <- AM[as.character(AM$inclus_passe1) %in% c("True","TRUE"), ]
+  catv <- if (PASSE == "aout") AM$categorie_aout_12chr else AM$categorie
+  names(catv) <- AM$dada2_id
+  meta <- meta[rownames(meta) %in% AM$dada2_id, , drop = FALSE]
+  meta$taxon <- unname(catv[rownames(meta)])
+  u <- !duplicated(AM$individual_id)
+  cat(sprintf("PASSE=%s : %d echantillons dans meta, %d individus | %s\n", PASSE, nrow(meta),
+              sum(u), paste(names(table(catv[u])), table(catv[u]), sep="=", collapse=" ")))
+} else cat("PASSE=morpho : taxon morphologique de samples_all.csv (comportement d'origine)\n")
 
 add_rows <- function(a, run, tis, n, model) {
   if (is.null(a)) return(invisible(NULL))
@@ -209,9 +230,10 @@ cat("\n=== termine ===\n")
 RS
 
 # synthese lisible
-$HOME/bin/envs/dada2/bin/Rscript - <<'RS' > results/position_effect/position_summary.txt
-t <- read.delim("results/position_effect/position_tests.tsv", stringsAsFactors = FALSE)
-e <- read.delim("results/position_effect/position_effect_sizes.tsv", stringsAsFactors = FALSE)
+$HOME/bin/envs/dada2/bin/Rscript - <<'RS' > "$OUT"/position_summary.txt
+OUT <- Sys.getenv("POS_OUTDIR", "results/position_effect")
+t <- read.delim(file.path(OUT, "position_tests.tsv"), stringsAsFactors = FALSE)
+e <- read.delim(file.path(OUT, "position_effect_sizes.tsv"), stringsAsFactors = FALSE)
 cat("=== EFFET DE POSITION SUR LA COMPOSITION ===\n\n")
 cat("Test principal : colonne de plaque, permutations contraintes dans les blocs de\n")
 cat("site (le site est fixe par construction, un effet colonne ne peut pas etre un\n")
@@ -245,4 +267,4 @@ cat(sprintf("R2 du site (en premier) : median %.4f  [%.4f - %.4f]\n",
 RS
 
 printf '%s\tEND\t%s\t%s\t%s\n' "$(date -Is)" "${SLURM_JOB_ID:-local}" "$GIT_HASH" "$(basename "$0")" >> runs.log
-cat results/position_effect/position_summary.txt
+cat "$OUT"/position_summary.txt

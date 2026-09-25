@@ -42,17 +42,18 @@ set -eEuo pipefail
 # Sortie : results/permdisp/permdisp.tsv (ecriture incrementale) + .txt
 
 cd "$HOME/work/projects/microbiome-hybrid"
-OUT=results/permdisp
+OUT="${PERMDISP_OUTDIR:-results/permdisp}"
 mkdir -p "$OUT" logs
 GIT_HASH=$(git rev-parse --short HEAD 2>/dev/null || echo NA)
 printf '%s\tSTART\t%s\t%s\t%s\n' "$(date -Is)" "${SLURM_JOB_ID:-local}" "$GIT_HASH" "$(basename "$0")" >> runs.log
 
-$HOME/bin/envs/dada2/bin/Rscript - <<'RS' 2>&1 | tee results/permdisp/permdisp.txt
+$HOME/bin/envs/dada2/bin/Rscript - <<'RS' 2>&1 | tee "$OUT"/permdisp.txt
 suppressMessages({library(vegan); library(permute)})
 t0 <- Sys.time()
 lg <- function(...) { cat(sprintf("[%6.1fs] ", as.numeric(difftime(Sys.time(), t0, units="secs"))),
                           ..., "\n", sep=""); flush.console() }
-OUT <- "results/permdisp"; NPERM <- 999
+OUT <- Sys.getenv("PERMDISP_OUTDIR", "results/permdisp"); NPERM <- 999
+set.seed(20260925)   # absent de la version d'aout : ses p-values ne sont pas reproductibles au tirage pres
 
 # ---------------------------------------------------------------- VALIDATION
 lg("=== validation des interfaces ===")
@@ -66,6 +67,18 @@ lg("  vegan ", as.character(packageVersion("vegan")))
 TYPE <- "median"   # mediane spatiale, plus robuste que le centroide
 
 MD <- read.csv("metadata/analysis_metadata.csv", stringsAsFactors = FALSE)
+
+# ---------------------------------------------------------------- PASSE (2026-09-25)
+# PASSE=aout : categorie d'aout (12 chr) | 2 : septembre, 42 Hy, n=180 |
+# 1 : septembre, 22 quasi-purs EXCLUS (pas reverses dans leur classe parentale), n=158.
+PASSE <- Sys.getenv("PASSE", "")
+if (!PASSE %in% c("aout","2","1")) stop("PASSE doit valoir aout, 2 ou 1 (recu : '", PASSE, "')")
+stopifnot(all(c("categorie","categorie_aout_12chr","inclus_passe1") %in% names(MD)))
+if (PASSE == "aout") MD$categorie <- MD$categorie_aout_12chr
+if (PASSE == "1")    MD <- MD[as.character(MD$inclus_passe1) %in% c("True","TRUE"), ]
+.u <- !duplicated(MD$individual_id)
+cat(sprintf("PASSE=%s : %d echantillons, %d individus | %s\n", PASSE, nrow(MD), sum(.u),
+            paste(names(table(MD$categorie[.u])), table(MD$categorie[.u]), sep="=", collapse=" ")))
 rownames(MD) <- MD$dada2_id
 files <- Sys.glob("results/rarefaction/beta_mean_*.rds")
 stopifnot(length(files) > 0)

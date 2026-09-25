@@ -44,6 +44,31 @@
 #
 # Sortie : metadata/analysis_metadata.csv, une ligne par ECHANTILLON sequence
 #          (echantillon x run), avec l'individu et sa categorie.
+#
+# ---------------------------------------------------------------------------------------
+# MISE A JOUR 2026-09-25 — CLASSIFICATION A 25 CHROMOSOMES (septembre)
+# ---------------------------------------------------------------------------------------
+# Source : metadata/genotypes_verifies_sept_180.csv (Andre, septembre 2026, verifie contre
+# les Q-values par chromosome). Colonnes utilisees : individual_id, classe_sept_25chr,
+# type_genome, classe_aout_12chr, Qvalues_presentes.
+#
+#   `categorie`             = classe_sept_25chr   (59 Cn / 42 Hy / 79 Pt)  <- NOUVELLE valeur
+#   `categorie_aout_12chr`  = colonne P du fichier d'aout (59 / 30 / 91), CONSERVEE pour
+#                             la tracabilite, jamais ecrasee
+#   `type_genome`           = intermediaire (20) / quasi-pur (22) / pur (138)
+#   `inclus_passe1`         = False pour les 22 quasi-purs
+#
+# DECISION D1 (Andre, 2026-09-25) : deux passes. Passe 1 = 20 hybrides intermediaires, les
+# 22 quasi-purs EXCLUS (pas reverses dans leur classe parentale), n = 158. Passe 2 = les 42
+# hybrides, n = 180. Le filtre de passe est applique par les scripts d'analyse, pas ici :
+# cette table porte les 180 individus.
+#
+# TEMOIN. Le fichier de septembre porte aussi la classe d'aout (classe_aout_12chr). Elle
+# doit concorder avec la colonne P du fichier d'aout pour les 180 individus : un desaccord
+# signalerait une jointure mal alignee ou une version differente des sources.
+#
+# 5 individus sans Q-values (2014_Bue_1001, 2014_Bue_1002, 2015_Bue_1014, 2015_Cab_1011,
+# 2015_Jus_1008), tous purs, identifies a partir d'autres tissus que le foie : conserves.
 
 import csv, collections, sys, os
 
@@ -88,6 +113,26 @@ for r in geno:
 print(f"genotypes lus      : {len(cat)} individus")
 print(f"lignes ecartees    : {len(skipped)} -> {skipped}")
 assert skipped == ["2015_Per_2015"], f"ligne ecartee inattendue : {skipped}"
+
+# --- classification de septembre (25 chromosomes) ---
+with open("metadata/genotypes_verifies_sept_180.csv", newline="", encoding="utf-8-sig") as fh:
+    sept = [{k: (v or "").strip() for k, v in r.items()} for r in csv.DictReader(fh)]
+for cname in ("individual_id","classe_sept_25chr","type_genome","classe_aout_12chr","Qvalues_presentes"):
+    assert cname in sept[0], f"colonne absente de genotypes_verifies_sept_180.csv : {cname!r}"
+sept = {r["individual_id"]: r for r in sept}
+assert set(sept) == set(cat), (
+    f"individus differents entre aout et septembre : "
+    f"{sorted(set(sept) ^ set(cat))[:5]}")
+# temoin : la classe d'aout portee par le fichier de septembre == la colonne P d'aout
+dis = [(i, cat[i], sept[i]["classe_aout_12chr"]) for i in cat if cat[i] != sept[i]["classe_aout_12chr"]]
+assert not dis, f"classe d'aout discordante entre les deux fichiers : {dis[:5]}"
+for i, r in sept.items():
+    assert r["classe_sept_25chr"] in ("Cn","Hy","Pt"), f"classe inattendue {r['classe_sept_25chr']!r} pour {i}"
+    assert r["type_genome"] in ("intermediaire","quasi-pur","pur"), f"type inattendu {r['type_genome']!r} pour {i}"
+    # un quasi-pur ou un intermediaire est Hy ; un pur est parental
+    assert (r["type_genome"] == "pur") == (r["classe_sept_25chr"] != "Hy"), f"incoherence classe/type pour {i}"
+print(f"septembre lus      : {len(sept)} individus | classe d'aout concordante pour les {len(cat)}")
+print(f"changements aout -> septembre : {sum(1 for i in cat if cat[i] != sept[i]['classe_sept_25chr'])}")
 
 # --- station et corrections d'identite ---
 # station_mapping.csv : colonnes reelles year, site, individual, station
@@ -152,7 +197,11 @@ for s in samples:
         "individual": s["individual"], "station": stn,
         "riviere": si.get("river",""), "latitude": si.get("latitude_WGS84",""),
         "longitude": si.get("longitude_WGS84",""), "date_collecte": si.get("collection_date",""),
-        "categorie": cat[iid],
+        "categorie": sept[iid]["classe_sept_25chr"],          # septembre, 25 chromosomes
+        "categorie_aout_12chr": cat[iid],                      # aout, 12 chromosomes (trace)
+        "type_genome": sept[iid]["type_genome"],
+        "inclus_passe1": str(sept[iid]["type_genome"] != "quasi-pur"),
+        "qvalues_foie": sept[iid]["Qvalues_presentes"],
         "index_mediane_andre": med[iid],       # colonne Q, VERBATIM (1 = Cn, 0 = Pt)
         "delta_mediane_quart": dlt[iid],
         "taxon_code_avant_genotypage": s["taxon_code"],
@@ -180,6 +229,7 @@ for key, out in (("site_code","col_rank_site"), ("station","col_rank_station")):
 
 FIELDS = ["dada2_id","individual_id","run_label","library","tissue","site_code","station",
           "riviere","latitude","longitude","date_collecte","annee","individual","categorie",
+          "categorie_aout_12chr","type_genome","inclus_passe1","qvalues_foie",
           "index_mediane_andre","delta_mediane_quart","taxon_code_avant_genotypage",
           "plate","well","well_row","well_col","col_rank_site","col_rank_station","qc_flag"]
 with open("metadata/analysis_metadata.csv","w",newline="") as fh:
@@ -190,8 +240,18 @@ print("\n=== CONTROLES ===")
 ind = {r["individual_id"] for r in rows}
 print(f"individus : {len(ind)} (attendu 180)")
 assert len(ind) == 180, f"effectif individu inattendu : {len(ind)}"
-print("par categorie (individus) :",
-      dict(collections.Counter(cat[i] for i in ind)))
+cnt_sept = collections.Counter(sept[i]["classe_sept_25chr"] for i in ind)
+cnt_aout = collections.Counter(cat[i] for i in ind)
+cnt_type = collections.Counter(sept[i]["type_genome"] for i in ind)
+print("categorie septembre (individus) :", dict(cnt_sept))
+print("categorie aout      (individus) :", dict(cnt_aout))
+print("type_genome         (individus) :", dict(cnt_type))
+assert (cnt_sept["Cn"], cnt_sept["Hy"], cnt_sept["Pt"]) == (59, 42, 79), f"septembre : {cnt_sept}"
+assert (cnt_aout["Cn"], cnt_aout["Hy"], cnt_aout["Pt"]) == (59, 30, 91), f"aout : {cnt_aout}"
+assert (cnt_type["intermediaire"], cnt_type["quasi-pur"], cnt_type["pur"]) == (20, 22, 138), f"type : {cnt_type}"
+n_p1 = sum(1 for i in ind if sept[i]["type_genome"] != "quasi-pur")
+print(f"passe 1 (quasi-purs exclus) : {n_p1} individus")
+assert n_p1 == 158, f"passe 1 : {n_p1}"
 print("par run (echantillons)    :",
       dict(collections.Counter(r["run_label"] for r in rows)))
 print("par tissu (echantillons)  :",
@@ -207,18 +267,23 @@ manquants = sorted(set(hdr) - have)
 print(f"  absents de analysis_metadata   : {len(manquants)}")
 assert not manquants, f"echantillons de la table propre non couverts : {manquants[:5]}"
 
-# categories par station : le controle qui decide de la faisabilite
-print("\n=== categories par STATION (individus) ===")
-bys = collections.defaultdict(collections.Counter)
-seen = set()
+# categories par station : le controle qui decide de la faisabilite, pour chaque definition
+first = {}
 for r in rows:
-    if r["individual_id"] in seen: continue
-    seen.add(r["individual_id"]); bys[r["station"]][r["categorie"]] += 1
-print(f"{'station':26} {'Cn':>4} {'Hy':>4} {'Pt':>4} {'tot':>5}  categories")
-for stn in sorted(bys):
-    c = bys[stn]; n3 = sum(1 for k in ("Cn","Hy","Pt") if c[k] > 0)
-    print(f"{stn:26} {c['Cn']:4} {c['Hy']:4} {c['Pt']:4} {sum(c.values()):5}  {n3}")
-full = [s for s in bys if all(bys[s][k] > 0 for k in ("Cn","Hy","Pt"))]
-print(f"\nstations a gradient complet (Cn+Hy+Pt) : {len(full)} -> {sorted(full)}")
-print(f"individus dans ces stations : {sum(sum(bys[s].values()) for s in full)}")
+    first.setdefault(r["individual_id"], r)
+for label, col, keep in (("AOUT (12 chr)", "categorie_aout_12chr", lambda r: True),
+                         ("PASSE 2 (42 Hy)", "categorie", lambda r: True),
+                         ("PASSE 1 (20 Hy, quasi-purs exclus)", "categorie",
+                          lambda r: r["inclus_passe1"] == "True")):
+    bys = collections.defaultdict(collections.Counter)
+    for r in first.values():
+        if keep(r): bys[r["station"]][r[col]] += 1
+    print(f"\n=== {label} : categories par STATION (individus) ===")
+    print(f"{'station':26} {'Cn':>4} {'Hy':>4} {'Pt':>4} {'tot':>5}  categories")
+    for stn in sorted(bys):
+        c = bys[stn]; n3 = sum(1 for k in ("Cn","Hy","Pt") if c[k] > 0)
+        print(f"{stn:26} {c['Cn']:4} {c['Hy']:4} {c['Pt']:4} {sum(c.values()):5}  {n3}")
+    full = [s for s in bys if all(bys[s][k] > 0 for k in ("Cn","Hy","Pt"))]
+    print(f"stations a gradient complet : {len(full)} -> {sorted(full)} | "
+          f"individus : {sum(sum(bys[s].values()) for s in full)}")
 print("\nOK -> metadata/analysis_metadata.csv")
