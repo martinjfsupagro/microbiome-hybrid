@@ -1,0 +1,5 @@
+Verification exhaustive du depot PRJEB124417
+echantillons 727 | champs 1199 | conformes 1199 | ecarts 0
+TITLE	568
+host common name	568
+host scientific name	63

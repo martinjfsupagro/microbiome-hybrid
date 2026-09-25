@@ -1,7 +1,8 @@
 # A_FAIRE — passations par type de session
 
-État au **2026-09-25, 18 h 30**. Sections *Analyse*, *Rédaction* et *Soumission de données* réécrites à la clôture
-de la conversation du 25/09 qui a couvert ces trois types ; *Bibliographie* et *Autre* inchangées.
+État au **2026-09-25, 18 h 45**. Sections *Analyse*, *Rédaction* et *Soumission de données* réécrites à la clôture
+de la conversation du 25/09 qui a couvert ces trois types ; *Soumission de données* réécrite à nouveau le 25/09 à
+18 h 45, après la vérification du dépôt ; *Bibliographie* et *Autre* inchangées.
 Chaque section est réécrite par la session concernée à sa clôture (cf. `README.md` du dossier).
 
 ---
@@ -59,10 +60,12 @@ de la note grise de l'introduction, puis attendre D7. Fichier : `docs/manuscrit/
 - **État** : PRJEB124417 soumis (768 échantillons, 2 304 runs). Métadonnées corrigées le 31/08 (727/727 vérifiés),
   puis **identité d'hôte corrigée le 25/09 à 18:08** : 568 échantillons, 1 199 champs (titre, nom scientifique,
   nom commun ; hybrides `nasus x toxostoma`) — reçu success=true, 568/568 accessions identiques.
-  Le test wwwdev a échoué (« No new BioSample was created ») ; cause probable une panne du service de test `[À CONFIRMER]`.
-- **À faire EN PREMIER** : `cd ena_deposit && bash 9_verifier_hote_sept.sh` — attendu
-  `conformes 727 | non conformes 0`. Si oui : R26 → `validé`, retirer la note grise ENA du supplément.
-  Si non : ne rien resoumettre, lire `verification_hote_sept_*.txt`.
+  Le test wwwdev a échoué (« No new BioSample was created ») ; cause probable une panne du service de test `[À CONFIRMER]`
+  — sans conséquence pour le dépôt, la production ayant été vérifiée depuis.
+- **Fait le 25/09 à 18:38** : vérification exhaustive du dépôt (`9_verifier_hote_sept.sh`, 8 lots) —
+  **727 échantillons interrogés, 1 199 champs conformes, 0 non conforme, 0 introuvable** (TITLE 568,
+  host common name 568, host scientific name 63). Rapport `ena_deposit/verification_hote_sept_20260925_1838.txt`.
+  Conséquences appliquées : **R26 → `validé`** et **note grise ENA retirée** de `Supplementary_Data.docx` sous *Host identity*.
 - **Reste** : affichage public du dépôt ; modèle ENA (2 304 experiments déclarés / 1 536 réels) ; dates de Pertuis
   (déposées en intervalle `2014-07-07/2014-08-20`) ; `host subject id` non unique entre campagnes (24 paires) —
   table `ena_corrections_subject_id.tsv` prête, non soumise, décision JF.
@@ -70,8 +73,11 @@ de la note grise de l'introduction, puis attendre D7. Fichier : `docs/manuscrit/
   conteneur directement (cf. notes du cluster et `ena_deposit/GUIDE_depot_ENA.md`). Les MODIFY passent par
   `curl` sur le drop-box, identifiants lus au clavier (jamais écrits) : un humain lance le script.
 
-**Passation.** Une seule action en attente : lancer `9_verifier_hote_sept.sh`. Lire d'abord
-`ena_deposit/MEMO_correction_hote_sept.md`. Le rappel `A_FAIRE_prochaine_session.md` de la racine est absorbé ici.
+**Passation.** L'identité d'hôte est close : dépôt vérifié (727/727, 0 écart), R26 validé, note grise retirée du supplément.
+Plus rien n'est en attente d'exécution côté soumission ; les quatre points de « Reste » attendent une décision, pas un calcul,
+et le plus mûr est `host subject id` (24 paires, `ena_corrections_subject_id.tsv` prête, décision JF).
+Lire d'abord `ena_deposit/MEMO_correction_hote_sept.md`, puis le rapport de vérification.
+Le rappel `A_FAIRE_prochaine_session.md` de la racine est absorbé ici.
 
 ## Autre (données d'André, hygiène du dépôt)
 
