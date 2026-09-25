@@ -1,0 +1,15 @@
+passe,metrique,tissu,avec_position,sans_position,change_de_classe,classe_avec,classe_sans
+2,Bray–Curtis,hindgut,1 / 3,2 / 3,False,partiel,partiel
+2,Jaccard,hindgut,3 / 3,0 / 3,True,3/3 les deux,partiel
+2,Unweighted UniFrac,branchie,0 / 0,1 / 0,True,aucun,partiel
+2,Unweighted UniFrac,midgut,3 / 3,2 / 3,True,3/3 les deux,partiel
+2,Unweighted UniFrac,hindgut,0 / 2,0 / 3,False,partiel,partiel
+2,Weighted UniFrac,midgut,0 / 3,2 / 3,False,partiel,partiel
+2,Weighted UniFrac,hindgut,0 / 3,1 / 3,False,partiel,partiel
+1,Bray–Curtis,branchie,3 / 1,3 / 3,True,partiel,3/3 les deux
+1,Jaccard,branchie,2 / 3,3 / 2,False,partiel,partiel
+1,Jaccard,hindgut,1 / 3,0 / 1,False,partiel,partiel
+1,Unweighted UniFrac,caudale,1 / 1,0 / 0,True,partiel,aucun
+1,Unweighted UniFrac,midgut,3 / 3,2 / 3,True,3/3 les deux,partiel
+1,Unweighted UniFrac,hindgut,0 / 2,0 / 0,True,partiel,aucun
+1,Weighted UniFrac,midgut,0 / 0,2 / 0,True,aucun,partiel

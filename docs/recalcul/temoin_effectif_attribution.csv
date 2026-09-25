@@ -1,0 +1,65 @@
+metrique,tissu,modele,passe2,passe1,aleatoire_mediane,aleatoire_distribution,frac_aleatoire_comme_passe1,attribution
+bray,caudale,ordre_MIN_pos_st_cat,0,1,0.0,{0: np.int64(20)},0.0,identité des 22 retirés = définition des hybrides (< 5 % des retraits aléatoires)
+bray,caudale,cat_apres_pos_station_bloquee,0,0,0.0,{0: np.int64(20)},,inchangé
+bray,caudale,sanspos_MIN_st_cat,0,1,0.0,{0: np.int64(20)},0.0,identité des 22 retirés = définition des hybrides (< 5 % des retraits aléatoires)
+bray,caudale,sanspos_cat_station_bloquee,0,0,0.0,"{0: np.int64(19), 3: np.int64(1)}",,inchangé
+bray,branchie,ordre_MIN_pos_st_cat,3,3,3.0,"{0: np.int64(1), 1: np.int64(4), 2: np.int64(4), 3: np.int64(11)}",,inchangé
+bray,branchie,cat_apres_pos_station_bloquee,3,1,2.0,"{0: np.int64(3), 1: np.int64(6), 2: np.int64(4), 3: np.int64(7)}",0.45,effectif (reproduit par ≥ 25 % des retraits aléatoires)
+bray,branchie,sanspos_MIN_st_cat,3,3,3.0,"{1: np.int64(2), 3: np.int64(18)}",,inchangé
+bray,branchie,sanspos_cat_station_bloquee,3,3,2.5,"{1: np.int64(8), 2: np.int64(2), 3: np.int64(10)}",,inchangé
+bray,midgut,ordre_MIN_pos_st_cat,0,3,0.0,{0: np.int64(20)},0.0,identité des 22 retirés = définition des hybrides (< 5 % des retraits aléatoires)
+bray,midgut,cat_apres_pos_station_bloquee,3,0,3.0,"{0: np.int64(2), 1: np.int64(5), 2: np.int64(1), 3: np.int64(12)}",0.1,indéterminé (5–25 %)
+bray,midgut,sanspos_MIN_st_cat,0,3,0.0,{0: np.int64(20)},0.0,identité des 22 retirés = définition des hybrides (< 5 % des retraits aléatoires)
+bray,midgut,sanspos_cat_station_bloquee,3,0,3.0,"{1: np.int64(1), 3: np.int64(19)}",0.0,identité des 22 retirés = définition des hybrides (< 5 % des retraits aléatoires)
+bray,hindgut,ordre_MIN_pos_st_cat,1,0,0.0,"{0: np.int64(15), 1: np.int64(2), 2: np.int64(3)}",0.75,effectif (reproduit par ≥ 25 % des retraits aléatoires)
+bray,hindgut,cat_apres_pos_station_bloquee,3,0,2.0,"{0: np.int64(5), 1: np.int64(3), 2: np.int64(4), 3: np.int64(8)}",0.25,effectif (reproduit par ≥ 25 % des retraits aléatoires)
+bray,hindgut,sanspos_MIN_st_cat,2,0,0.5,"{0: np.int64(10), 1: np.int64(3), 2: np.int64(5), 3: np.int64(2)}",0.5,effectif (reproduit par ≥ 25 % des retraits aléatoires)
+bray,hindgut,sanspos_cat_station_bloquee,3,0,3.0,"{0: np.int64(1), 1: np.int64(3), 2: np.int64(2), 3: np.int64(14)}",0.05,indéterminé (5–25 %)
+jaccard,caudale,ordre_MIN_pos_st_cat,0,0,0.0,{0: np.int64(20)},,inchangé
+jaccard,caudale,cat_apres_pos_station_bloquee,0,0,0.0,"{0: np.int64(19), 2: np.int64(1)}",,inchangé
+jaccard,caudale,sanspos_MIN_st_cat,0,0,0.0,{0: np.int64(20)},,inchangé
+jaccard,caudale,sanspos_cat_station_bloquee,0,0,0.0,"{0: np.int64(18), 2: np.int64(1), 3: np.int64(1)}",,inchangé
+jaccard,branchie,ordre_MIN_pos_st_cat,3,2,3.0,"{0: np.int64(1), 1: np.int64(4), 2: np.int64(3), 3: np.int64(12)}",0.4,effectif (reproduit par ≥ 25 % des retraits aléatoires)
+jaccard,branchie,cat_apres_pos_station_bloquee,3,3,3.0,{3: np.int64(20)},,inchangé
+jaccard,branchie,sanspos_MIN_st_cat,3,3,3.0,"{2: np.int64(5), 3: np.int64(15)}",,inchangé
+jaccard,branchie,sanspos_cat_station_bloquee,3,2,3.0,{3: np.int64(20)},0.0,identité des 22 retirés = définition des hybrides (< 5 % des retraits aléatoires)
+jaccard,midgut,ordre_MIN_pos_st_cat,3,3,2.0,"{0: np.int64(1), 1: np.int64(5), 2: np.int64(7), 3: np.int64(7)}",,inchangé
+jaccard,midgut,cat_apres_pos_station_bloquee,3,3,3.0,{3: np.int64(20)},,inchangé
+jaccard,midgut,sanspos_MIN_st_cat,3,3,2.0,"{0: np.int64(5), 1: np.int64(4), 2: np.int64(5), 3: np.int64(6)}",,inchangé
+jaccard,midgut,sanspos_cat_station_bloquee,3,3,3.0,{3: np.int64(20)},,inchangé
+jaccard,hindgut,ordre_MIN_pos_st_cat,3,1,1.0,"{1: np.int64(12), 2: np.int64(6), 3: np.int64(2)}",0.6,effectif (reproduit par ≥ 25 % des retraits aléatoires)
+jaccard,hindgut,cat_apres_pos_station_bloquee,3,3,3.0,"{2: np.int64(9), 3: np.int64(11)}",,inchangé
+jaccard,hindgut,sanspos_MIN_st_cat,0,0,0.0,"{0: np.int64(17), 1: np.int64(1), 2: np.int64(2)}",,inchangé
+jaccard,hindgut,sanspos_cat_station_bloquee,3,1,2.5,"{1: np.int64(1), 2: np.int64(9), 3: np.int64(10)}",0.05,indéterminé (5–25 %)
+unifrac_unweighted,caudale,ordre_MIN_pos_st_cat,0,1,0.0,{0: np.int64(20)},0.0,identité des 22 retirés = définition des hybrides (< 5 % des retraits aléatoires)
+unifrac_unweighted,caudale,cat_apres_pos_station_bloquee,1,1,0.0,"{0: np.int64(12), 1: np.int64(4), 2: np.int64(3), 3: np.int64(1)}",,inchangé
+unifrac_unweighted,caudale,sanspos_MIN_st_cat,0,0,0.0,{0: np.int64(20)},,inchangé
+unifrac_unweighted,caudale,sanspos_cat_station_bloquee,1,0,0.0,"{0: np.int64(14), 1: np.int64(3), 2: np.int64(2), 3: np.int64(1)}",0.7,effectif (reproduit par ≥ 25 % des retraits aléatoires)
+unifrac_unweighted,branchie,ordre_MIN_pos_st_cat,0,0,0.0,"{0: np.int64(19), 1: np.int64(1)}",,inchangé
+unifrac_unweighted,branchie,cat_apres_pos_station_bloquee,0,0,0.0,"{0: np.int64(19), 1: np.int64(1)}",,inchangé
+unifrac_unweighted,branchie,sanspos_MIN_st_cat,1,0,0.0,"{0: np.int64(12), 1: np.int64(4), 2: np.int64(4)}",0.6,effectif (reproduit par ≥ 25 % des retraits aléatoires)
+unifrac_unweighted,branchie,sanspos_cat_station_bloquee,0,0,0.0,{0: np.int64(20)},,inchangé
+unifrac_unweighted,midgut,ordre_MIN_pos_st_cat,3,3,2.0,"{1: np.int64(1), 2: np.int64(12), 3: np.int64(7)}",,inchangé
+unifrac_unweighted,midgut,cat_apres_pos_station_bloquee,3,3,3.0,{3: np.int64(20)},,inchangé
+unifrac_unweighted,midgut,sanspos_MIN_st_cat,2,2,2.0,"{0: np.int64(3), 1: np.int64(6), 2: np.int64(6), 3: np.int64(5)}",,inchangé
+unifrac_unweighted,midgut,sanspos_cat_station_bloquee,3,3,3.0,{3: np.int64(20)},,inchangé
+unifrac_unweighted,hindgut,ordre_MIN_pos_st_cat,0,0,0.0,"{0: np.int64(15), 1: np.int64(3), 2: np.int64(2)}",,inchangé
+unifrac_unweighted,hindgut,cat_apres_pos_station_bloquee,2,2,2.0,"{0: np.int64(3), 1: np.int64(6), 2: np.int64(6), 3: np.int64(5)}",,inchangé
+unifrac_unweighted,hindgut,sanspos_MIN_st_cat,0,0,0.0,"{0: np.int64(17), 1: np.int64(2), 2: np.int64(1)}",,inchangé
+unifrac_unweighted,hindgut,sanspos_cat_station_bloquee,3,0,2.0,"{0: np.int64(4), 1: np.int64(5), 2: np.int64(5), 3: np.int64(6)}",0.2,indéterminé (5–25 %)
+unifrac_weighted,caudale,ordre_MIN_pos_st_cat,0,3,0.0,{0: np.int64(20)},0.0,identité des 22 retirés = définition des hybrides (< 5 % des retraits aléatoires)
+unifrac_weighted,caudale,cat_apres_pos_station_bloquee,0,3,0.0,{0: np.int64(20)},0.0,identité des 22 retirés = définition des hybrides (< 5 % des retraits aléatoires)
+unifrac_weighted,caudale,sanspos_MIN_st_cat,0,3,0.0,"{0: np.int64(19), 1: np.int64(1)}",0.0,identité des 22 retirés = définition des hybrides (< 5 % des retraits aléatoires)
+unifrac_weighted,caudale,sanspos_cat_station_bloquee,0,3,0.0,"{0: np.int64(18), 1: np.int64(1), 2: np.int64(1)}",0.0,identité des 22 retirés = définition des hybrides (< 5 % des retraits aléatoires)
+unifrac_weighted,branchie,ordre_MIN_pos_st_cat,0,1,0.0,"{0: np.int64(18), 1: np.int64(2)}",0.1,indéterminé (5–25 %)
+unifrac_weighted,branchie,cat_apres_pos_station_bloquee,0,0,0.0,{0: np.int64(20)},,inchangé
+unifrac_weighted,branchie,sanspos_MIN_st_cat,0,1,0.0,"{0: np.int64(16), 1: np.int64(4)}",0.2,indéterminé (5–25 %)
+unifrac_weighted,branchie,sanspos_cat_station_bloquee,0,0,0.0,{0: np.int64(20)},,inchangé
+unifrac_weighted,midgut,ordre_MIN_pos_st_cat,0,0,0.0,"{0: np.int64(19), 2: np.int64(1)}",,inchangé
+unifrac_weighted,midgut,cat_apres_pos_station_bloquee,3,0,3.0,{3: np.int64(20)},0.0,identité des 22 retirés = définition des hybrides (< 5 % des retraits aléatoires)
+unifrac_weighted,midgut,sanspos_MIN_st_cat,2,2,0.0,"{0: np.int64(13), 2: np.int64(5), 3: np.int64(2)}",,inchangé
+unifrac_weighted,midgut,sanspos_cat_station_bloquee,3,0,3.0,{3: np.int64(20)},0.0,identité des 22 retirés = définition des hybrides (< 5 % des retraits aléatoires)
+unifrac_weighted,hindgut,ordre_MIN_pos_st_cat,0,0,0.0,"{0: np.int64(19), 1: np.int64(1)}",,inchangé
+unifrac_weighted,hindgut,cat_apres_pos_station_bloquee,3,0,3.0,"{0: np.int64(1), 1: np.int64(3), 2: np.int64(2), 3: np.int64(14)}",0.05,indéterminé (5–25 %)
+unifrac_weighted,hindgut,sanspos_MIN_st_cat,1,0,1.5,"{0: np.int64(5), 1: np.int64(5), 2: np.int64(5), 3: np.int64(5)}",0.25,effectif (reproduit par ≥ 25 % des retraits aléatoires)
+unifrac_weighted,hindgut,sanspos_cat_station_bloquee,3,0,3.0,"{1: np.int64(1), 2: np.int64(1), 3: np.int64(18)}",0.0,identité des 22 retirés = définition des hybrides (< 5 % des retraits aléatoires)
