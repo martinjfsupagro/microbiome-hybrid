@@ -61,6 +61,13 @@ bash 4_corriger_metadonnees.sh prod
 bash 5_verifier_correction.sh
 ```
 
+> **Construction vérifiée le 2026-09-30** (frontale, sans soumission) : les deux tables
+> cumulées donnent 771 corrections sur 727 échantillons — 44 dates et 727 sujets — pour
+> 768 objets SAMPLE et 41 contrôles inchangés, dans un `submission.xml` portant bien
+> `<MODIFY/>`. Contrôle ponctuel sur `14Per2015Ch01A` : `collection date = 2014-08-20`
+> (série 2xxx, pêche du 20 août) et `host subject id = 14Per2015`. La ligne de commande
+> ci-dessus est donc testée, pas supposée.
+
 Rappel de recette, à ne pas redécouvrir : le FTP Webin est inutilisable, les MODIFY passent par
 `curl` sur le drop-box. Le script s'arrête si une seule accession du reçu diffère.
 
