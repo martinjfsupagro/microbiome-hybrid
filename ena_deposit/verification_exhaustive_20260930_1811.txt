@@ -1,0 +1,66 @@
+Verification exhaustive du depot PRJEB124417
+echantillons 727 | champs 3472 | conformes 3413 | ecarts 59
+collection date	727
+geographic location (latitude)	727
+geographic location (longitude)	727
+geographic location (region and locality)	727
+host scientific name	505
+ECART	ERS31168056	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168067	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168069	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168139	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma nasus
+ECART	ERS31168170	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168171	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168178	host scientific name	Chondrostoma nasus x Parachondrostoma toxostoma	Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168180	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168183	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168184	host scientific name	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma nasus	Chondrostoma sp.
+ECART	ERS31168187	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168194	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168195	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168207	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168223	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168248	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168261	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168331	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma nasus
+ECART	ERS31168362	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168363	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168370	host scientific name	Chondrostoma nasus x Parachondrostoma toxostoma	Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168372	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168375	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168376	host scientific name	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma nasus	Chondrostoma sp.
+ECART	ERS31168379	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168386	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168387	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168399	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168415	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168440	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168451	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168453	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168523	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma nasus
+ECART	ERS31168554	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168555	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168562	host scientific name	Chondrostoma nasus x Parachondrostoma toxostoma	Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168564	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168567	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168568	host scientific name	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma nasus	Chondrostoma sp.
+ECART	ERS31168571	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168578	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168579	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168591	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168607	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168631	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168633	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168703	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma nasus
+ECART	ERS31168715	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168746	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168747	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168754	host scientific name	Chondrostoma nasus x Parachondrostoma toxostoma	Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168756	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168759	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168760	host scientific name	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma nasus	Chondrostoma sp.
+ECART	ERS31168763	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168770	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168771	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168783	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
+ECART	ERS31168799	host scientific name	Parachondrostoma toxostoma	Chondrostoma nasus x Parachondrostoma toxostoma	Chondrostoma sp.
