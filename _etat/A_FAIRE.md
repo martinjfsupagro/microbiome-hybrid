@@ -1,6 +1,7 @@
 # A_FAIRE — passations par type de session
 
-État au **2026-09-25, 18 h 45**. Sections *Analyse*, *Rédaction* et *Soumission de données* réécrites à la clôture
+État au **2026-09-30, 20 h 30**. Section *Soumission de données* réécrite à la clôture de la conversation ENA du 30/09
+(vérification cumulée du dépôt). Sections *Analyse*, *Rédaction* et *Soumission de données* réécrites à la clôture
 de la conversation du 25/09 qui a couvert ces trois types ; *Soumission de données* réécrite à nouveau le 25/09 à
 18 h 45, après la vérification du dépôt ; *Bibliographie* et *Autre* inchangées.
 Chaque section est réécrite par la session concernée à sa clôture (cf. `README.md` du dossier).
@@ -61,27 +62,42 @@ de la note grise de l'introduction, puis attendre D7. Fichier : `docs/manuscrit/
 
 ## Soumission de données
 
-- **État** : PRJEB124417 soumis (768 échantillons, 2 304 runs). Métadonnées corrigées le 31/08 (727/727 vérifiés),
-  puis **identité d'hôte corrigée le 25/09 à 18:08** : 568 échantillons, 1 199 champs (titre, nom scientifique,
-  nom commun ; hybrides `nasus x toxostoma`) — reçu success=true, 568/568 accessions identiques.
-  Le test wwwdev a échoué (« No new BioSample was created ») ; cause probable une panne du service de test `[À CONFIRMER]`
-  — sans conséquence pour le dépôt, la production ayant été vérifiée depuis.
-- **Fait le 25/09 à 18:38** : vérification exhaustive du dépôt (`9_verifier_hote_sept.sh`, 8 lots) —
-  **727 échantillons interrogés, 1 199 champs conformes, 0 non conforme, 0 introuvable** (TITLE 568,
-  host common name 568, host scientific name 63). Rapport `ena_deposit/verification_hote_sept_20260925_1838.txt`.
-  Conséquences appliquées : **R26 → `validé`** et **note grise ENA retirée** de `Supplementary_Data.docx` sous *Host identity*.
-- **Reste** : affichage public du dépôt ; modèle ENA (2 304 experiments déclarés / 1 536 réels) ; dates de Pertuis
-  (déposées en intervalle `2014-07-07/2014-08-20`) ; `host subject id` non unique entre campagnes (24 paires) —
-  table `ena_corrections_subject_id.tsv` prête, non soumise, décision JF.
-- **Recette à ne pas re-découvrir** : le FTP Webin est inutilisable, passer par `webin-cli -ascp` en appelant le
-  conteneur directement (cf. notes du cluster et `ena_deposit/GUIDE_depot_ENA.md`). Les MODIFY passent par
-  `curl` sur le drop-box, identifiants lus au clavier (jamais écrits) : un humain lance le script.
+- **État** : PRJEB124417 soumis (768 échantillons, 2 304 runs), **corrigé en deux campagnes et vérifié**.
+  Métadonnées du 31/08 (5 attributs, 3 472 champs) ; identité d'hôte du 25/09 (titre, nom scientifique,
+  nom commun — 568 échantillons, 1 199 champs). Le dépôt est **en ligne mais non public**.
+- **Fait le 30/09** : vérification **cumulée** des deux campagnes en une passe — **4 612 champs conformes
+  sur 4 612**, 727 échantillons, 0 écart, 0 rupture de chaînage (**R28**, rapport
+  `ena_deposit/verification_cumulee_20260930_2019.txt`). Plus rien n'est à vérifier sur le dépôt.
+- **Le vérificateur a été refait** : `7_verifier_exhaustif.sh` ne comparait qu'à la table d'août et avait
+  signalé 59 faux écarts (les valeurs de septembre, correctes). Il chaîne maintenant **toutes** les tables
+  soumises et contrôle la cohérence du chaînage. **Si les tables Pertuis ou `host subject id` sont soumises,
+  les ajouter en fin de liste** dans l'en-tête du script, sinon il produira de faux écarts. Cf. `DECISIONS.md`
+  du 30/09.
+- **Prêt à soumettre, en attente de décision JF** — les deux tables ne se recouvrent pas et peuvent partir
+  dans **une seule** soumission (`--corrections` est répétable) :
+  `ena_corrections_pertuis_dates.tsv` (`ENA-PERT`, 44 dates, décidées par André le 30/09) et
+  `ena_corrections_subject_id.tsv` (`ENA-SUBJ`, 727 lignes, 156 identifiants → 180 sujets).
+  Ligne de commande testée le 30/09 dans `MEMO_corrections_restantes.md` : 771 corrections, 41 contrôles
+  inchangés, `<MODIFY/>`.
+- **Reste, sans échéance** : affichage public du dépôt (à décider à la soumission de l'article) ; modèle ENA
+  (2 304 experiments déclarés / 1 536 réels) — restructuration, pas un MODIFY, à traiter séparément.
+- **Recette à ne pas re-découvrir** : le FTP Webin est inutilisable, passer par `webin-cli -ascp` en appelant
+  le conteneur directement. Les MODIFY passent par `curl` sur le drop-box ; les identifiants sont lus au
+  clavier et jamais écrits, **un humain lance le script**. Un reçu vide ne veut pas dire « échec » : lancer
+  `6_etat_du_depot.sh` avant toute relance (arrivé le 31/08).
+- **Incident du 30/09, réparé** : cette session a écrasé `docs/manuscrit/Article.docx` et
+  `Supplementary_Data.docx` avec des versions dérivées de ses propres artefacts d'août (23 k caractères
+  contre 53 k), croyant y corriger des chiffres qui étaient **déjà justes**. Restauré par
+  `git checkout --`, identique à `HEAD`, rien de perdu ; copie de l'écrasement dans
+  `/scratch/users/martinj/ecrase_30sept/`. **Leçon** : ne jamais écrire dans `docs/manuscrit/` depuis une
+  session Soumission — la version qui fait foi est celle du dépôt git, pas celle d'un artefact de
+  conversation. Les versions propres à cette lignée vivent dans `docs/manuscrit/version_session_ena/`.
 
-**Passation.** L'identité d'hôte est close : dépôt vérifié (727/727, 0 écart), R26 validé, note grise retirée du supplément.
-Plus rien n'est en attente d'exécution côté soumission ; les quatre points de « Reste » attendent une décision, pas un calcul,
-et le plus mûr est `host subject id` (24 paires, `ena_corrections_subject_id.tsv` prête, décision JF).
-Lire d'abord `ena_deposit/MEMO_correction_hote_sept.md`, puis le rapport de vérification.
-Le rappel `A_FAIRE_prochaine_session.md` de la racine est absorbé ici.
+**Passation.** Le dépôt est **intégralement vérifié** : R28, 4 612/4 612, plus rien en attente d'exécution.
+Deux tables sont prêtes et attendent un **oui de JF**, pas un calcul : dates de Pertuis (44) et
+`host subject id` (727) — une seule soumission suffit pour les deux.
+Si elles partent, les ajouter à la liste de tables chaînées de `7_verifier_exhaustif.sh` avant de revérifier.
+Lire d'abord `ena_deposit/MEMO_corrections_restantes.md`, puis `DECISIONS.md` du 30/09.
 
 ## Autre (données d'André, hygiène du dépôt)
 
