@@ -1,6 +1,6 @@
-individu,individual_id,classe,med,D,ligne_xlsx,bloc_csv,numeros_csv,position_trou
-14Bue1001,2014_Bue_1001,Cn,0.9878,0.0,27,27–41 (14Bue),1003–1019,début de bloc
-14Bue1002,2014_Bue_1002,Cn,0.9897,0.0,28,27–41 (14Bue),1003–1019,début de bloc
-15Bue1014,2015_Bue_1014,Pt,0.0017,0.0,119,104–120 (15Bue),"1001–1013, 1015–1018",trou isolé
-15Cab1011,2015_Cab_1011,Pt,0.0004,0.0,154,141–158 (15Cab),"1001–1010, 1012–1019",trou isolé
-15Jus1008,2015_Jus_1008,Pt,0.0455,0.01,170,159–176 (15Jus),"1001–1007, 1009–1019",trou isolé
+individu,individual_id,classe,med_tableau,D_tableau,med_midgut,D_midgut,med_caudale,D_caudale,voie_identification,concordance,decision_publication,ligne_xlsx,bloc_csv,numeros_csv,position_trou
+14Bue1001,2014_Bue_1001,Cn,0.9878,0.0,NA,NA,NA,NA,"methode anterieure d'Arnaud, proche mais distincte ; aucune trace de Q-values","sans objet, une seule source","NA pour la mediane et le D (Andre, 2026-09-30) ; la classe Cn est documentee, pas l'index",27,27-41 (14Bue),1003-1019,debut de bloc
+14Bue1002,2014_Bue_1002,Cn,0.9897,0.0,NA,NA,NA,NA,"methode anterieure d'Arnaud, proche mais distincte ; aucune trace de Q-values","sans objet, une seule source","NA pour la mediane et le D (Andre, 2026-09-30) ; la classe Cn est documentee, pas l'index",28,27-41 (14Bue),1003-1019,debut de bloc
+15Bue1014,2015_Bue_1014,Pt,0.0017,0.0,0.0001,0.0431,0.0001,0.0117,"ajustement des Q-scores sur midgut et caudale (Andre, 2026-09-30)","Pt par les deux tissus, D max 0.0431 contre un seuil a 0.12","publier les deux ajustements en nommant le tissu ; med_tableau et D_tableau ne correspondent a aucun des deux, provenance inconnue, ne pas les publier",119,104-120 (15Bue),"1001-1013, 1015-1018",trou isole
+15Cab1011,2015_Cab_1011,Pt,0.0004,0.0,0.0001,0.0100,0.0001,0.0382,"ajustement des Q-scores sur midgut et caudale (Andre, 2026-09-30)","Pt par les deux tissus, D max 0.0382 contre un seuil a 0.12","publier les deux ajustements en nommant le tissu ; med_tableau et D_tableau ne correspondent a aucun des deux, provenance inconnue, ne pas les publier",154,141-158 (15Cab),"1001-1010, 1012-1019",trou isole
+15Jus1008,2015_Jus_1008,Pt,0.0455,0.01,0.0288,0.0577,0.0001,0.0104,"ajustement des Q-scores sur midgut et caudale (Andre, 2026-09-30)","Pt par les deux tissus, D max 0.0577 contre un seuil a 0.12","publier les deux ajustements en nommant le tissu ; med_tableau et D_tableau ne correspondent a aucun des deux, provenance inconnue, ne pas les publier",170,159-176 (15Jus),"1001-1007, 1009-1019",trou isole
