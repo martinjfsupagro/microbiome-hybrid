@@ -14,8 +14,9 @@ n'ont aucune trace de Q-values : André tranche **NA** pour leur médiane et leu
 **Réserve.** Les valeurs actuellement dans le tableau pour les trois premiers ne correspondent ni à
 l'ajustement sur midgut ni à celui sur caudale — les médianes diffèrent d'un facteur 10 à 450 et le
 D du tableau vaut 0,00 là où les deux ajustements donnent des valeurs positives. Leur provenance
-reste inconnue. Décision à prendre par JF avant de publier une table de génotypage individuelle :
-publier les deux ajustements en nommant le tissu, ou ne rien publier.
+reste inconnue. **Arbitrage rendu par JF le 2026-09-30** : publier les deux ajustements en nommant
+le tissu, et ne pas publier les valeurs du tableau. Appliqué dans
+`docs/manuscrit/table_genotypes_individuels.csv`.
 
 ## 2. Les sections de protocole — PARTIELLEMENT OUVERT
 

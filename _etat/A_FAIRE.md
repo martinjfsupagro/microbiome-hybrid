@@ -84,10 +84,12 @@ Le rappel `A_FAIRE_prochaine_session.md` de la racine est absorbé ici.
 - **Réponses d'André reçues le 30/09** — les trois points sont traités :
   (1) les 5 individus sans foie : trois ajustés sur midgut et caudale, concordants (`Pt` par les
   deux voies, D de 0,0104 à 0,0577 contre un seuil à 0,12) ; deux sans trace de Q-values, médiane
-  et D passés à **NA** sur décision d'André. **Réserve ouverte** : les valeurs actuelles du tableau
-  pour les trois premiers ne correspondent à aucun des deux ajustements — provenance inconnue,
-  arbitrage JF avant de publier une table de génotypage individuelle. Détail dans
-  `docs/decision_individus_sans_qvalues.md`. Portée analytique nulle (`index_mediane_andre` n'est
+  et D passés à **NA** sur décision d'André. Les valeurs actuelles du tableau pour les trois
+  premiers ne correspondent à aucun des deux ajustements et leur provenance reste inconnue ;
+  **arbitrage rendu par JF le 30/09** : publier les deux ajustements en nommant le tissu, ne pas
+  publier les valeurs du tableau. Appliqué dans `docs/manuscrit/table_genotypes_individuels.csv`
+  (180 lignes) ; numérotation de la table et insertion dans le supplément à la charge de la
+  Rédaction. Détail dans `docs/decision_individus_sans_qvalues.md`. Portée analytique nulle (`index_mediane_andre` n'est
   consommé par aucun script).
   (2) protocoles : **seul le financement est réglé** — même contrat qu'en 2017, EDF via FACIES avec
   l'appui de la Fédération de l'Ain ; section *Funding* ajoutée à `Article.docx`. Les §2, §3 et §4

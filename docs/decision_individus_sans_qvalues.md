@@ -52,10 +52,10 @@ pas établie.
 1. **`14Bue1001` et `14Bue1002` : médiane et D à NA**, conformément à la réponse d'André. Ces deux
    individus restent classés `Cn` ; c'est la classe qui est documentée, pas l'index.
 2. **`15Bue1014`, `15Cab1011`, `15Jus1008` : les valeurs du tableau ne doivent pas être publiées
-   telles quelles**, leur provenance n'étant pas établie. Recommandation : publier les deux
+   telles quelles**, leur provenance n'étant pas établie. **Tranché par JF le 2026-09-30** : publier les deux
    ajustements en nommant le tissu, plutôt que d'en choisir un — aucun des deux n'est le foie, et
    n'en montrer qu'un masquerait que le génotype de ces trois individus repose sur deux ajustements
-   hors foie qui concordent. À arbitrer par JF.
+   hors foie qui concordent.
 3. **Le tissu de génotypage est le foie**, cinquième tissu absent du jeu microbiote. Écrit au §1 de
    `Article.docx`, désormais avec le détail des deux voies de secours.
 
@@ -66,6 +66,10 @@ pas établie.
 recherche dans `scripts/` et `docs/recalcul/`). Les analyses portent sur `categorie`, qui ne change
 pas. Le passage à NA est donc éditorial et ne déplace aucun résultat.
 
-Aucune table du supplément ne publie aujourd'hui la médiane et le D par individu : les Tables S1 à
-S9 ne contiennent pas de tableau de génotypage individuel. La décision porte donc sur une table à
-produire, pas sur une table à corriger.
+Aucune table du supplément ne publiait la médiane et le D par individu : les Tables S1 à S9 ne
+contiennent pas de tableau de génotypage individuel. La décision portait donc sur une table à
+produire, et cette table est maintenant produite —
+`docs/manuscrit/table_genotypes_individuels.csv`, 180 lignes, l'arbitrage y étant appliqué
+colonne par colonne : index et D du foie pour les 175, colonnes par tissu pour les trois ajustés
+avec `median_index`/`D` laissés vides, tout vide pour les deux sans trace. Son numéro de table et
+son insertion dans `Supplementary_Data.docx` reviennent à la session de rédaction.
