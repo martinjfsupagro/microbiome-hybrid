@@ -18,7 +18,23 @@ depuis les scripts et le `git log` : la décision est certaine, sa date est appr
 - **Impact** : Table S6, Figure S1 et §8.8 reconstruits en deux passes ; V catégorie × colonne 0,527 (passe 1) / 0,479 (passe 2).
 - **Session** : Analyse + Rédaction. Réf. `docs/recalcul/note_recalcul_2passes.md` §1, commits `bb93a53`, `eed4ec3`, `691a155`.
 
-## 2026-09-25 — D7 : métrique de diversité, **NON TRANCHÉE**
+## 2026-09-30 — D7 : métrique de diversité, **TRANCHÉE**
+- **Décision** : pas de métrique unique. Les quatre métriques sont rapportées partout ; un
+  résultat n'est énoncé comme établi que s'il est soutenu par au moins une métrique pondérée par
+  l'abondance **et** une métrique de présence, sinon il est rapporté comme dépendant de la
+  métrique en nommant laquelle. Chiffres du texte courant : Shannon en alpha, Bray-Curtis en
+  composition. Validée par JF le 2026-09-30.
+- **Raison** : l'instruction chiffrée (R27) montre que le clivage pondéré/non pondéré n'est pas
+  le même axe en alpha et en composition — Bray-Curtis, pourtant pondéré, se comporte comme
+  Jaccard et l'UniFrac pondéré est isolé. Une règle « ne garder que les métriques pondérées »
+  supprimerait le résultat digestif et ne conserverait que la métrique atypique.
+- **Impact** : les statuts `préliminaire (D7)` de `RESULTATS.md` sont levés pour les résultats
+  déjà calculés sur les quatre métriques ; R8 reste préliminaire (richesse seule, non refait) ;
+  le contraste midgut/hindgut et l'inversion du dimorphisme sexuel sont retirés de
+  `note_guivier2017_implications.md` ; la règle est écrite au §8.6 de `Article.docx`.
+- **Session** : Analyse + Rédaction. Réf. `docs/decision_D7_metrique.md`, `scripts/29-d7_metriques.py`.
+
+## 2026-09-25 — D7 : métrique de diversité, **NON TRANCHÉE** *(remplacée par l'entrée du 2026-09-30)*
 - **Décision** : aucune. La métrique portant le résultat principal reste ouverte.
 - **Raison** : les analyses existantes reposaient sur la richesse ASV, mais 48 % seulement des
   ASV à 1–3 lectures sont retrouvés au reséquençage ; `docs/recommandations_consolidees.md`

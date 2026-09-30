@@ -12,7 +12,10 @@ Chaque section est réécrite par la session concernée à sa clôture (cf. `REA
 - **Fait le 25/09** : recalcul en deux passes **interprété** — `docs/recalcul/note_recalcul_2passes.md` et
   `correspondance_ancien_nouveau.csv` (chiffres en R21–R25). Reproduction d'août au bit près. `categorie`
   d'`analysis_metadata.csv` **est** la classification de septembre (vérifié : 59/42/79) — point levé.
-- **Bloque** : **D7** (métrique de diversité) — tout R² de catégorie reste `préliminaire`.
+- **D7 tranchée le 30/09** : règle du quatuor déclaré, un résultat n'est établi que s'il est
+  soutenu par au moins une métrique pondérée et une métrique de présence (R27,
+  `docs/decision_D7_metrique.md`). Les statuts `préliminaire (D7)` sont levés dans `RESULTATS.md`
+  pour les résultats déjà calculés sur les quatre métriques.
 - **Attendu de JF** : arbitrer D7 ; lire la note §5 — **D2 change des conclusions** (14 cellules sur 32 de la
   Table S8 diffèrent avec/sans position, 8 changent de classe) : décider ce que le texte en affirme.
 - **Ouvert** : témoin d'effectif à 500 lectures non lancé (cause de l'affaiblissement caudal en passe 1 non
@@ -21,8 +24,9 @@ Chaque section est réécrite par la session concernée à sa clôture (cf. `REA
 - **Non commencé** : indice 4H (`HybridMicrobiomes` v0.1.1) — paramètres fixés (D5), dépend de D7 et de
   l'intégration d'`IDX-HYB`.
 
-**Passation.** Le recalcul est fait et rédigé ; rien n'avance sans D7. Lire d'abord `docs/recalcul/note_recalcul_2passes.md`
-(§3 ce qui tombe, §5 D2). Prochain calcul utile une fois D7 tranchée : 4H en deux passes.
+**Passation.** D7 est tranchée, le verrou est levé. **Le prochain calcul utile est l'indice 4H en deux
+passes** (paramètres figés par D5). Reste à arbitrer côté JF : D2, ce que le texte affirme de l'effet de
+position (note §5). Lire d'abord `docs/decision_D7_metrique.md`, puis `docs/recalcul/note_recalcul_2passes.md`.
 
 ## Rédaction
 

@@ -132,7 +132,7 @@ Une règle du type « ne garder que les métriques pondérées » serait donc fa
 supprimerait le résultat digestif porté par Bray-Curtis et Jaccard pour ne conserver que la
 métrique dont le comportement est atypique.
 
-## 4. Recommandation
+## 4. Recommandation — **validée par JF le 2026-09-30**
 
 **Ne pas désigner une métrique unique, mais un quatuor déclaré et une règle d'assertion.**
 

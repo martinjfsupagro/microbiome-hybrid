@@ -74,7 +74,9 @@ toute rédaction, en particulier :
 
 - le contraste midgut/hindgut, dont l'écart est le plus faible des six (0,83) et donc le plus
   susceptible d'être un artefact de taxons rares — c'est précisément le résultat que je présentais
-  comme une non-réplication de Guivier 2017 ;
+  comme une non-réplication de Guivier 2017. **Vérifié le 2026-09-30 : la prédiction tient** —
+  le contraste disparaît sur les deux indices pondérés et la non-réplication annoncée tombe
+  (`docs/decision_D7_metrique.md`) ;
 - les SD résiduelles servant de base aux calculs de puissance (0,44 en peau à 0,76 en midgut), qui
   changeront sur une métrique pondérée et donc déplaceront tous les seuils d'effectif annoncés.
 

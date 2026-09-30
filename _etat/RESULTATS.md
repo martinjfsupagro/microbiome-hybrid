@@ -3,9 +3,13 @@
 Règle : une entrée n'est admise que si elle pointe vers **un script** et vers **des données
 référencées dans `DONNEES.md`**. Statuts : `préliminaire` / `validé` / `dans le manuscrit`.
 
-> **D7 est ouverte** (métrique de diversité, cf. `DECISIONS.md` du 2026-09-25). Tout résultat
-> dont la valeur dépend du choix de métrique reste **préliminaire**, même s'il est déjà écrit
-> dans le manuscrit. Ne pas le promouvoir sans décision consignée.
+> **D7 est tranchée** (2026-09-30, cf. `DECISIONS.md` et `docs/decision_D7_metrique.md`).
+> Règle retenue : les quatre métriques sont rapportées partout ; **un résultat n'est énoncé
+> comme établi que s'il est soutenu par au moins une métrique pondérée par l'abondance ET
+> une métrique de présence**, sinon il est rapporté comme dépendant de la métrique, en
+> nommant laquelle. Chiffres du texte courant : Shannon en alpha, Bray-Curtis en composition.
+> Un résultat calculé sur la seule richesse ASV observée reste **préliminaire** tant qu'il
+> n'a pas été refait.
 
 ---
 
@@ -33,7 +37,7 @@ Script `15-rarefaction_converge.sh` · Entrées `ASV-CLEAN` → `BETA-*` · **va
 Script `13-run_design.sh` · Entrées `META-SAMP`, `ASV-CLEAN` · **validé**, dans le manuscrit (§8.7)
 
 **R8 — La variance de la richesse ASV se répartit en tissu 18,7 %, site-année 10,9 %, run 0,26 %, résiduel 69 %.**
-Script `14-variance_partition.sh` · Entrées `ASV-CLEAN`, `META-ANA` · **préliminaire** (richesse ASV, D7)
+Script `14-variance_partition.sh` · Entrées `ASV-CLEAN`, `META-ANA` · **préliminaire** (richesse ASV seule, écartée par la règle D7 ; non refait)
 
 ## Profondeur et choix de métrique
 
@@ -46,13 +50,13 @@ Script `20-variance_partition_category.sh` (mode d500) · Entrées `BETA-WUF`, `
 ## Structure de la variance : station, position, catégorie
 
 **R11 — La station domine la composition : R² = 0,15–0,31 selon tissu et métrique, soit 10 à 20 × l'effet de la catégorie génotypique.**
-Script `20-variance_partition_category.sh` · Entrées `BETA-*`, `META-ANA` · **préliminaire** (D7), dans le manuscrit (§8.9)
+Script `20-variance_partition_category.sh` · Entrées `BETA-*`, `META-ANA` · **validé sous la règle D7** (rapporté sur les quatre métriques), dans le manuscrit (§8.9)
 
 **R12 — La catégorie génotypique explique 1,4 à 3,3 % de la variance selon la métrique et l'ordre d'entrée ; servie en premier elle atteint 3,3 % (UniFrac pondéré).**
-Script `20-variance_partition_category.sh` · Entrées `BETA-*`, `META-ANA` · **préliminaire** (D7 + classification d'août) — **remplacé dans le manuscrit par R23** le 2026-09-25
+Script `20-variance_partition_category.sh` · Entrées `BETA-*`, `META-ANA` · **périmé** (classification d'août) — **remplacé dans le manuscrit par R23** le 2026-09-25
 
 **R13 — Aucun tissu n'est significatif de façon robuste dans les deux dispositifs pour les quatre métriques : branchie 2/4, midgut 2/4, hindgut 0/4. Conclure sur deux métriques seules serait une surinterprétation.**
-Script `20-variance_partition_category.sh` · Entrées `BETA-*` · **préliminaire** (D7) · Réf. `docs/decision_phylo_and_category.md`
+Script `20-variance_partition_category.sh` · Entrées `BETA-*` · **validé sous la règle D7** (rapporté sur les quatre métriques) · Réf. `docs/decision_phylo_and_category.md`
 
 **R14 — L'effet de position dans la plaque est réel : R² = 0,18–0,40, significatif dans 9 à 12 strates sur 12, et confondu avec la catégorie (V de Cramér 0,477 → 0,504 après génotypage, jusqu'à 0,559–0,694 aux trois stations à gradient).**
 Scripts `17-position_effect.sh`, `18-position_control.sh` · Entrées `BETA-*`, `META-ANA` · **validé** ; sorti du modèle principal par D2, conservé en sensibilité · dans le manuscrit (§8.8)
@@ -81,16 +85,16 @@ Passe 1 = 20 hybrides intermédiaires, quasi-purs exclus (n = 158) ; passe 2 = 4
 chiffres ci-dessous : `docs/recalcul/note_recalcul_2passes.md` et `correspondance_ancien_nouveau.csv`.
 
 **R21 — Seule détection robuste dans les six combinaisons (3 jeux de catégories × avec/sans position) : Jaccard dans le midgut, 3/3 runs en séquentiel et en station bloquée.**
-Scripts `20-variance_partition_category.sh` via `26-recalcul_categories.sh` · Entrées `RECAT`, `BETA-JAC`, `META-ANA` · **préliminaire** (D7), dans le manuscrit (§8.9)
+Scripts `20-variance_partition_category.sh` via `26-recalcul_categories.sh` · Entrées `RECAT`, `BETA-JAC`, `META-ANA` · **validé sous la règle D7** (rapporté sur les quatre métriques), dans le manuscrit (§8.9)
 
 **R22 — Le signal de la nageoire caudale en UniFrac pondéré est présent en passe 1 (3/3 runs, deux schémas, avec et sans position) et absent en passe 2 (p bloqué sans position 0,073–0,095). Aucun de 20 retraits aléatoires de 22 poissons non quasi-purs ne le restaure (0/20) : il dépend de la définition des hybrides, pas de l'effectif.**
-Scripts `26-recalcul_categories.sh`, `27-recat_witness_effectif.sh` · Entrées `RECAT`, `BETA-WUF`, `META-ANA` · **préliminaire** (D7), dans le manuscrit (§8.9). Mécanisme (dilution du contraste Hy–Pt par les quasi-purs à fond Pt, 13 des 16 changements de classe) : `[À CONFIRMER]`, non testé isolément.
+Scripts `26-recalcul_categories.sh`, `27-recat_witness_effectif.sh` · Entrées `RECAT`, `BETA-WUF`, `META-ANA` · **dépendant de la métrique sous la règle D7** : le signal caudal n'existe que sur l'UniFrac pondéré et seulement en passe 1 (R27), dans le manuscrit (§8.9). Mécanisme (dilution du contraste Hy–Pt par les quasi-purs à fond Pt, 13 des 16 changements de classe) : `[À CONFIRMER]`, non testé isolément.
 
 **R23 — Parts de variance en deux passes : catégorie 1,3–3,7 %, station 14–29 % (médianes par métrique — agrégat différent de l'étendue par strate de R11, ne pas les comparer) ; aucun tissu détecté par les quatre métriques dans les deux schémas, dans aucune passe, avec ou sans position.**
-Script `20-variance_partition_category.sh` via `26` · Entrées `RECAT`, `BETA-*`, `META-ANA` · **préliminaire** (D7), dans le manuscrit (§8.9, Table S8)
+Script `20-variance_partition_category.sh` via `26` · Entrées `RECAT`, `BETA-*`, `META-ANA` · **validé sous la règle D7** (rapporté sur les quatre métriques), dans le manuscrit (§8.9, Table S8)
 
 **R24 — D2 change des conclusions : sur les 32 cellules de la Table S8, 14 diffèrent entre modèles avec et sans position, dont 8 changent de classe (robuste ↔ partiel ↔ aucun). Le résultat caudal R22 n'en dépend pas.**
-Script `20-variance_partition_category.sh` (modèles `sanspos_*`) · Entrées `RECAT`, `RECAT-DOC` · **préliminaire** (D7) — **à arbitrer par JF** (note §5), dans le manuscrit (Table S8, deux versions)
+Script `20-variance_partition_category.sh` (modèles `sanspos_*`) · Entrées `RECAT`, `RECAT-DOC` · **à arbitrer par JF** (D2, note §5), dans le manuscrit (Table S8, deux versions)
 
 **R25 — PERMDISP en deux passes : hybrides les moins dispersés dans 34 (passe 2) et 32 (passe 1) tests sur 48 en station bloquée ; sur les 68 strates intra-station communes aux trois jeux, ils restent les moins dispersés partout. Les 5 tests transgressifs significatifs de la passe 2 portent tous sur la branchie de Saint-Just (3–4 Pt par strate).**
 Script `24-permdisp.sh` via `26` · Entrées `RECAT`, `BETA-*`, `META-ANA` · **validé** (même réserve que R15), dans le manuscrit (§8.9, Table S9, Figure S3)
@@ -102,3 +106,6 @@ Scripts `ena_deposit/4_corriger_metadonnees.sh`, `5_verifier_correction.sh` · E
 
 **R26 — Correction de l'identité d'hôte du 2026-09-25 : 568 échantillons (1 199 champs), reçu de production success=true, 0 erreur, 568/568 alias et accessions identiques (MODIFY, aucune création). Application vérifiée sur le dépôt le 2026-09-25 à 18:38 : 727 échantillons interrogés, 1 199 champs vérifiés, 1 199 conformes, 0 non conforme, 0 introuvable (TITLE 568, host common name 568, host scientific name 63).**
 Scripts `scripts/28-ena_hote_sept.py`, `ena_deposit/8_corriger_hote_sept.sh`, vérification `9_verifier_hote_sept.sh` (lancée au clavier par JF, 8 lots) · Entrées `ENA-HOTE`, `META-ANA` · **validé** · rapport `ena_deposit/verification_hote_sept_20260925_1838.txt` · conséquence : note grise ENA retirée du supplément (`MS-SUP`)
+
+**R27 — La métrique décide de trois conclusions sur cinq. Indifférents au choix : le gradient externe/interne (significatif sur les quatre indices, p < 10⁻¹⁶, mais d'amplitude 1,51 en Shannon à 2,99 en inverse Simpson) et l'ampleur de l'effet de catégorie (R² médian 0,013–0,036 sur les quatre métriques en passe 2). Décidés par la métrique : le contraste midgut/hindgut, significatif sur les seuls indices non pondérés (0,83 p = 0,009 ; Faith PD 0,87 p = 0,003) et non significatif sur Shannon et l'inverse Simpson ; le compartiment du dimorphisme sexuel, interne sur les indices non pondérés mais externe sur Shannon ; et le compartiment portant l'effet de catégorie, la caudale n'existant que sur l'UniFrac pondéré en passe 1 tandis que le midgut est détecté par 4 métriques sur 4 et le hindgut par 3 sur 4 en passe 2. En composition le clivage n'est pas pondéré/non pondéré : Bray-Curtis, pourtant pondéré, se comporte comme Jaccard, et l'UniFrac pondéré est la métrique isolée.**
+Script `29-d7_metriques.py` · Entrées `RECAT`, `BETA-*`, `ALPHA-PHYLO`, `META-ANA` · **validé** · recoupement 14/14 avec `docs/recalcul/d2_avec_vs_sans_position.csv` · Réf. `docs/decision_D7_metrique.md`, `docs/figures/fig_d7_metriques.png`

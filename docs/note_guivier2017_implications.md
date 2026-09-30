@@ -58,7 +58,13 @@ abondance de phyla. Les auteurs en concluaient une composition constante sur la 
 
 Test apparié sur les 134 individus ayant les deux compartiments exploitables (richesse ASV, moyenne
 sur les runs) : le midgut porte **0,83 fois** la richesse du hindgut (IC95 0,73–0,95 ; t=-2,83,
-p=0,005). L'écart est modeste mais significatif. À titre de comparaison, les autres contrastes
+p=0,005). L'écart est modeste mais significatif.
+
+> **Correction du 2026-09-30, règle D7.** Ce contraste n'est significatif que sur les deux indices
+> **non pondérés** — richesse observée (0,83 ; p = 0,009 sur 136 individus appariés) et Faith PD
+> (0,87 ; p = 0,003). Il ne l'est ni sur Shannon (0,94 ; p = 0,18) ni sur l'inverse Simpson
+> (0,87 ; p = 0,25). Sous la règle D7, il n'est donc **pas établi**, et le résultat négatif de 2017
+> tient sur les métriques reproductibles. Voir `docs/decision_D7_metrique.md`. À titre de comparaison, les autres contrastes
 appariés vont de 1,44 à 2,46 avec des p entre 1e-6 et 2e-19 : midgut/hindgut reste de loin le
 contraste le plus faible des six, ce qui est cohérent avec l'absence de détection sur 16 poissons.
 
@@ -74,10 +80,16 @@ terme à terme — c'est lui qui trancherait vraiment.
 En 2017, la différenciation externe (caudale, branchie) / interne (midgut, hindgut) était le
 résultat principal, avec le tissu comme premier facteur explicatif (R² de 0,11 à 0,22 selon la
 métrique). Ici, les tissus externes portent 1,8 fois la richesse des internes (coefficient 0,598
-sur log-richesse, z=8,7) et le tissu explique 18,7 % de la variance. Réplication franche, sur des
+sur log-richesse, z=8,7) et le tissu explique 18,7 % de la variance.
+
+> **Précision du 2026-09-30, règle D7.** La réplication tient sur les quatre indices, tous à
+> p < 10⁻¹⁶ sur 174 individus appariés, mais l'amplitude dépend fortement de l'indice : 1,93 en
+> richesse observée, 1,62 en Faith PD, **1,51 en Shannon** et 2,99 en inverse Simpson. Le « 1,8 »
+> ci-dessus est une valeur de richesse observée et ne doit pas être cité sans son indice.
+ Réplication franche, sur des
 rivières, des années et une pipeline différentes. C'est l'argument le plus solide de l'article.
 
-### 3. Le dimorphisme sexuel s'inverse — et c'est peut-être un artefact.
+### 3. Le dimorphisme sexuel : l'inversion annoncée n'est pas établie
 
 En 2017 : le dimorphisme sexuel était **plus marqué sur les tissus externes**, plus diverses chez
 les femelles, tandis que le microbiote intestinal était similaire entre sexes. Les auteurs
@@ -87,6 +99,14 @@ Ici, le motif est inversé : l'interaction tissu×sexe est significative (z=3,21
 dimorphisme est plus fort en **interne** (ratio femelles/mâles 1,52) qu'en externe (1,17). Par
 tissu : hindgut 1,55 (p=0,006), midgut 1,66 (p=0,030), branchie 1,27 (p=0,048), caudale 1,17
 (p=0,283). L'effet survit à l'ajout de la taille en covariable (sexe z=-3,58 ; taille p=0,031).
+
+> **Correction du 2026-09-30, règle D7 — l'inversion est retirée.** Le compartiment où le
+> dimorphisme est significatif **change avec l'indice** : interne sur la richesse observée
+> (1,43 ; p = 0,007) et sur Faith PD (1,29 ; p = 0,007), mais **externe** sur Shannon
+> (1,12 ; p = 0,032), et nulle part sur l'inverse Simpson. Sur Shannon, le motif est donc celui de
+> 2017 et ne s'inverse pas : l'inversion était un effet du choix de la richesse observée. Le biais
+> d'échantillonnage décrit ci-dessous reste valable et s'y ajoute. Réserve sur ces tests-ci : non
+> appariés et non ajustés sur la taille, contrairement à ceux du paragraphe précédent.
 
 **Ne pas rapporter ce résultat sans son biais.** Le sexe n'est déterminé que pour 108 individus sur
 181, et les 73 indéterminés sont nettement plus petits (taille moyenne 14,2 cm contre 22,6 pour les
