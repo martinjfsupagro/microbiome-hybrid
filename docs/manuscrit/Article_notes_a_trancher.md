@@ -41,6 +41,14 @@ un participant peut valider.
 
 ### Le §3 mérite une attention particulière
 
+> **RÉSOLU le 2026-09-30 — et le raisonnement ci-dessous était faux.** Les fiches de run
+> `RunParameters.xml` de durance1 et durance3 donnent `ReagentKitVersion=Version3`, un
+> code-barres de kit `MS…-600V3` et une structure de lectures 251 / 8 / 8 / 251. La chimie est
+> donc bien **v3**, mais c'est le kit **600 cycles**, lancé en 2 × 251 avec deux index de 8 pb,
+> soit 518 des 600 cycles. L'hypothèse d'un kit v2 500 cycles formulée plus bas est écartée :
+> seule la mention « 2 × 300 » était fausse, pas la version du kit. durance2 n'a pas de dossier
+> de run, mais ses lectures mesurent aussi 251 pb. Le §3 de `Article.docx` est corrigé.
+
 Le texte affirme : *« loaded on an Illumina MiSeq flow cell with reagent kit v3
 (2 × 300 cycles) »*. Or les lectures des trois runs mesurent **251 pb** — vérifié
 directement sur les fichiers déposés — et le M&M lui-même s'appuie sur cette valeur en

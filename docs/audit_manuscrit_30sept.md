@@ -90,6 +90,19 @@ alors que les quatre autres transpositions de 2017 en portent une.
 
 ---
 
+## Les six écarts sont corrigés (2026-09-30)
+
+| écart | correction |
+|---|---|
+| notes (iv) et (v) fausses | (iv) renvoie désormais à D5 et à ses paramètres ; (v) porte les chiffres relus — 17 quasi-purs sur un chromosome, 4 sur deux, 1 sur six |
+| introduction généralisant 17/22 | « introgressed on one or a few chromosomes — a single one in 17 of the 22 such individuals » ; le §1 porte la même ventilation |
+| §9 muet sur la correction ENA du 25/09 | second paragraphe ajouté : 568 échantillons, 1 199 champs, vérification 727/1 199 conformes, 0 écart |
+| §9 contradictoire sur les dates | « day resolution for every station except Pertuis », intervalle nommé, et note grise sur la correction préparée non soumise |
+| 25 contre 75 puits vides | §4 et §8.2 disent 25 puits et 75 échantillons, convention alignée sur celle des blancs |
+| §3 « v3 (2 × 300 cycles) » | **résolu sur les fiches de run, pas seulement signalé** |
+
+**Le sixième écart s'est retourné.** `Article_notes_a_trancher.md` supposait une transposition erronée depuis 2017 et concluait à un kit v2 500 cycles, « ce qui correspond exactement aux données ». Les `RunParameters.xml` de durance1 et durance3 disent autre chose : `ReagentKitVersion=Version3`, code-barres `MS…-600V3`, lectures 251 / 8 / 8 / 251. La version du kit était **juste**, c'est le nombre de cycles qui était faux — kit v3 **600 cycles** lancé en 2 × 251 avec deux index de 8 pb, soit 518 cycles utilisés sur 600. Le §3 porte maintenant cette formulation, et la note périmée est marquée comme telle. Le désaccord était possible : les fiches auraient pu confirmer le v2.
+
 ## Ce qui n'est pas un écart mais une attente déclarée
 
 - **Le 4H n'a pas de section Methods.** L'introduction l'annonce comme analyse complémentaire,
