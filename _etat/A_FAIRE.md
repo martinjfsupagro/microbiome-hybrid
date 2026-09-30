@@ -81,10 +81,26 @@ Le rappel `A_FAIRE_prochaine_session.md` de la racine est absorbé ici.
 
 ## Autre (données d'André, hygiène du dépôt)
 
-- **Attendu d'André**, trois points (détail dans `docs/pour_andre_questions_ouvertes.md`) :
-  (1) provenance de la médiane et du D des 5 individus sans foie — cellules à vider ou à
-  documenter avant publication du supplément ; (2) les trois sections de protocole ci-dessus ;
-  (3) les dates de pêche de Pertuis.
+- **Réponses d'André reçues le 30/09** — les trois points sont traités :
+  (1) les 5 individus sans foie : trois ajustés sur midgut et caudale, concordants (`Pt` par les
+  deux voies, D de 0,0104 à 0,0577 contre un seuil à 0,12) ; deux sans trace de Q-values, médiane
+  et D passés à **NA** sur décision d'André. **Réserve ouverte** : les valeurs actuelles du tableau
+  pour les trois premiers ne correspondent à aucun des deux ajustements — provenance inconnue,
+  arbitrage JF avant de publier une table de génotypage individuelle. Détail dans
+  `docs/decision_individus_sans_qvalues.md`. Portée analytique nulle (`index_mediane_andre` n'est
+  consommé par aucun script).
+  (2) protocoles : **seul le financement est réglé** — même contrat qu'en 2017, EDF via FACIES avec
+  l'appui de la Fédération de l'Ain ; section *Funding* ajoutée à `Article.docx`. Les §2, §3 et §4
+  restent transposés et non confirmés.
+  (3) dates de Pertuis : série 1011-1014 le 07/07/2014, série 2011-2015 le 20/08/2014 — confirme ce
+  que `decision_stations.md` §5 portait déjà. Table `ena_deposit/ena_corrections_pertuis_dates.tsv`
+  prête (44 échantillons), **non soumise**, MODIFY à lancer par un humain.
+  **Attention** : la question 3 était double ; son « oui » ne couvre pas les séries 1036+ de l'Ain
+  et d'Avignon, qui s'expliquent par des chevesnes intercalés dans la numérotation et gardent leur
+  date unique.
+- **Attendu d'André**, ce qui reste : les trois sections de protocole (§2, §3, §4), le délai entre
+  capture et dissection avec l'ordre de prélèvement des tissus, et la référence exacte du contrat
+  EDF avec le nom légal de la Fédération.
 - **Hygiène à faire, sans urgence** :
   `CLAUDE.md` est périmé (état de juillet, annonce « analyse écologique pas commencée ») ;
   33 fichiers de sortie traînent à la racine du projet en doublon de `results/` ;
