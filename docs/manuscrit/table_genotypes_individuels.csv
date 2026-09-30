@@ -1,18 +1,18 @@
 individual,station,river,year,morphological_identification,genotypic_category,genome_type,n_introgressed_chromosomes,genotyping_tissue,median_index,D,median_index_midgut,D_midgut,median_index_caudal_fin,D_caudal_fin,sex,total_length_cm
-2014_Ain_1001,Pont-d'Ain,Ain,2014,Cn,Cn,parental,0.0,liver,0.9999,0.0322,,,,,M,30.0
-2014_Ain_1002,Pont-d'Ain,Ain,2014,Cn,Cn,parental,0.0,liver,0.9999,0.0347,,,,,M,30.0
-2014_Ain_1011,Chavannes-sur-Suran,Ain,2014,Pt,Pt,parental,0.0,liver,0.0001,0.0298,,,,,M,15.0
-2014_Ain_1012,Chavannes-sur-Suran,Ain,2014,Pt,Pt,parental,0.0,liver,0.0001,0.0340,,,,,F,17.5
-2014_Ain_1013,Chavannes-sur-Suran,Ain,2014,Pt,Pt,parental,0.0,liver,0.0001,0.0100,,,,,M,14.0
-2014_Ain_1014,Chavannes-sur-Suran,Ain,2014,Pt,Pt,parental,0.0,liver,0.0001,0.0275,,,,,M,15.0
-2014_Ain_1036,Pont-d'Ain,Ain,2014,Cn,Cn,parental,0.0,liver,0.9696,0.0594,,,,,M,33.0
-2014_Ain_1037,Pont-d'Ain,Ain,2014,Cn,Cn,parental,0.0,liver,0.9999,0.0504,,,,,F,39.5
-2014_Ain_1038,Chavannes-sur-Suran,Ain,2014,Pt,Pt,parental,0.0,liver,0.0001,0.0106,,,,,X,10.5
-2014_Ain_1039,Chavannes-sur-Suran,Ain,2014,Pt,Pt,parental,0.0,liver,0.0001,0.0143,,,,,F,20.0
-2014_Ain_1040,Chavannes-sur-Suran,Ain,2014,Pt,Pt,parental,0.0,liver,0.0001,0.0293,,,,,F,18.5
-2014_Ain_1041,Chavannes-sur-Suran,Ain,2014,Pt,Pt,parental,0.0,liver,0.0001,0.0043,,,,,F,20.0
-2014_Ain_1042,Chavannes-sur-Suran,Ain,2014,Pt,Pt,parental,0.0,liver,0.0001,0.0253,,,,,F,13.5
-2014_Ain_1043,Chavannes-sur-Suran,Ain,2014,Pt,Pt,parental,0.0,liver,0.0001,0.0064,,,,,F,13.0
+2014_Ain_1001,Pont-d'Ain,Suran,2014,Cn,Cn,parental,0.0,liver,0.9999,0.0322,,,,,M,30.0
+2014_Ain_1002,Pont-d'Ain,Suran,2014,Cn,Cn,parental,0.0,liver,0.9999,0.0347,,,,,M,30.0
+2014_Ain_1011,Chavannes-sur-Suran,Suran,2014,Pt,Pt,parental,0.0,liver,0.0001,0.0298,,,,,M,15.0
+2014_Ain_1012,Chavannes-sur-Suran,Suran,2014,Pt,Pt,parental,0.0,liver,0.0001,0.0340,,,,,F,17.5
+2014_Ain_1013,Chavannes-sur-Suran,Suran,2014,Pt,Pt,parental,0.0,liver,0.0001,0.0100,,,,,M,14.0
+2014_Ain_1014,Chavannes-sur-Suran,Suran,2014,Pt,Pt,parental,0.0,liver,0.0001,0.0275,,,,,M,15.0
+2014_Ain_1036,Pont-d'Ain,Suran,2014,Cn,Cn,parental,0.0,liver,0.9696,0.0594,,,,,M,33.0
+2014_Ain_1037,Pont-d'Ain,Suran,2014,Cn,Cn,parental,0.0,liver,0.9999,0.0504,,,,,F,39.5
+2014_Ain_1038,Chavannes-sur-Suran,Suran,2014,Pt,Pt,parental,0.0,liver,0.0001,0.0106,,,,,X,10.5
+2014_Ain_1039,Chavannes-sur-Suran,Suran,2014,Pt,Pt,parental,0.0,liver,0.0001,0.0143,,,,,F,20.0
+2014_Ain_1040,Chavannes-sur-Suran,Suran,2014,Pt,Pt,parental,0.0,liver,0.0001,0.0293,,,,,F,18.5
+2014_Ain_1041,Chavannes-sur-Suran,Suran,2014,Pt,Pt,parental,0.0,liver,0.0001,0.0043,,,,,F,20.0
+2014_Ain_1042,Chavannes-sur-Suran,Suran,2014,Pt,Pt,parental,0.0,liver,0.0001,0.0253,,,,,F,13.5
+2014_Ain_1043,Chavannes-sur-Suran,Suran,2014,Pt,Pt,parental,0.0,liver,0.0001,0.0064,,,,,F,13.0
 2014_Avi_1001,Avignon,Durance,2014,Cn,Cn,parental,0.0,liver,0.9999,0.0443,,,,,M,29.5
 2014_Avi_1002,Avignon,Durance,2014,Cn,Cn,parental,0.0,liver,0.9999,0.0260,,,,,X,10.0
 2014_Avi_1003,Avignon,Durance,2014,Cn,Cn,parental,0.0,liver,0.9999,0.0823,,,,,M,27.5
@@ -24,23 +24,23 @@ individual,station,river,year,morphological_identification,genotypic_category,ge
 2014_Avi_1036,Avignon,Durance,2014,Cn,Cn,parental,0.0,liver,0.9999,0.0252,,,,,M,27.0
 2014_Avi_1037,Avignon,Durance,2014,Cn,Cn,parental,0.0,liver,0.9999,0.1141,,,,,M,35.0
 2014_Avi_1038,Avignon,Durance,2014,Cn,Cn,parental,0.0,liver,0.9999,0.0311,,,,,M,34.5
-2014_Bue_1001,Confluence Buech-Meouge,Durance,2014,Cn,Cn,parental,,"other method, no Q-score record",,,,,,,,15.5
-2014_Bue_1002,Confluence Buech-Meouge,Durance,2014,Cn,Cn,parental,,"other method, no Q-score record",,,,,,,,13.5
-2014_Bue_1003,Confluence Buech-Meouge,Durance,2014,Cn,Cn,parental,0.0,liver,0.9998,0.0786,,,,,,18.0
-2014_Bue_1004,Confluence Buech-Meouge,Durance,2014,Cn,Cn,parental,0.0,liver,0.9999,0.0807,,,,,,18.5
-2014_Bue_1005,Confluence Buech-Meouge,Durance,2014,Cn,Cn,parental,0.0,liver,0.9999,0.0899,,,,,,29.0
-2014_Bue_1006,Confluence Buech-Meouge,Durance,2014,Cn,Hy,intermediate,,liver,0.9122,0.1301,,,,,,27.0
-2014_Bue_1007,Confluence Buech-Meouge,Durance,2014,Cn,Cn,parental,0.0,liver,0.9999,0.0513,,,,,,26.0
-2014_Bue_1008,Confluence Buech-Meouge,Durance,2014,Cn,Cn,parental,0.0,liver,0.9999,0.0878,,,,,,23.5
-2014_Bue_1011,Confluence Buech-Meouge,Durance,2014,Ch,Pt,parental,0.0,liver,0.0001,0.0232,,,,,M,14.5
-2014_Bue_1012,Confluence Buech-Meouge,Durance,2014,Ch,Pt,parental,0.0,liver,0.0001,0.0053,,,,,M,18.5
-2014_Bue_1013,Confluence Buech-Meouge,Durance,2014,Ch,Pt,parental,0.0,liver,0.0001,0.0234,,,,,,13.5
-2014_Bue_1014,Confluence Buech-Meouge,Durance,2014,Ch,Pt,parental,0.0,liver,0.0001,0.0233,,,,,,13.0
-2014_Bue_1015,Confluence Buech-Meouge,Durance,2014,Ch,Pt,parental,0.0,liver,0.0001,0.0272,,,,,,12.5
-2014_Bue_1016,Confluence Buech-Meouge,Durance,2014,Ch,Hy,near-parental,1.0,liver,0.0001,0.5485,,,,,,18.5
-2014_Bue_1017,Confluence Buech-Meouge,Durance,2014,Ch,Pt,parental,0.0,liver,0.0008,0.0462,,,,,,13.5
-2014_Bue_1018,Confluence Buech-Meouge,Durance,2014,Ch,Pt,parental,0.0,liver,0.0001,0.0096,,,,,,15.5
-2014_Bue_1019,Confluence Buech-Meouge,Durance,2014,Ch,Pt,parental,0.0,liver,0.0001,0.0142,,,,,,12.5
+2014_Bue_1001,Confluence Buech-Meouge,Buech,2014,Cn,Cn,parental,,"other method, no Q-score record",,,,,,,,15.5
+2014_Bue_1002,Confluence Buech-Meouge,Buech,2014,Cn,Cn,parental,,"other method, no Q-score record",,,,,,,,13.5
+2014_Bue_1003,Confluence Buech-Meouge,Buech,2014,Cn,Cn,parental,0.0,liver,0.9998,0.0786,,,,,,18.0
+2014_Bue_1004,Confluence Buech-Meouge,Buech,2014,Cn,Cn,parental,0.0,liver,0.9999,0.0807,,,,,,18.5
+2014_Bue_1005,Confluence Buech-Meouge,Buech,2014,Cn,Cn,parental,0.0,liver,0.9999,0.0899,,,,,,29.0
+2014_Bue_1006,Confluence Buech-Meouge,Buech,2014,Cn,Hy,intermediate,,liver,0.9122,0.1301,,,,,,27.0
+2014_Bue_1007,Confluence Buech-Meouge,Buech,2014,Cn,Cn,parental,0.0,liver,0.9999,0.0513,,,,,,26.0
+2014_Bue_1008,Confluence Buech-Meouge,Buech,2014,Cn,Cn,parental,0.0,liver,0.9999,0.0878,,,,,,23.5
+2014_Bue_1011,Confluence Buech-Meouge,Buech,2014,Ch,Pt,parental,0.0,liver,0.0001,0.0232,,,,,M,14.5
+2014_Bue_1012,Confluence Buech-Meouge,Buech,2014,Ch,Pt,parental,0.0,liver,0.0001,0.0053,,,,,M,18.5
+2014_Bue_1013,Confluence Buech-Meouge,Buech,2014,Ch,Pt,parental,0.0,liver,0.0001,0.0234,,,,,,13.5
+2014_Bue_1014,Confluence Buech-Meouge,Buech,2014,Ch,Pt,parental,0.0,liver,0.0001,0.0233,,,,,,13.0
+2014_Bue_1015,Confluence Buech-Meouge,Buech,2014,Ch,Pt,parental,0.0,liver,0.0001,0.0272,,,,,,12.5
+2014_Bue_1016,Confluence Buech-Meouge,Buech,2014,Ch,Hy,near-parental,1.0,liver,0.0001,0.5485,,,,,,18.5
+2014_Bue_1017,Confluence Buech-Meouge,Buech,2014,Ch,Pt,parental,0.0,liver,0.0008,0.0462,,,,,,13.5
+2014_Bue_1018,Confluence Buech-Meouge,Buech,2014,Ch,Pt,parental,0.0,liver,0.0001,0.0096,,,,,,15.5
+2014_Bue_1019,Confluence Buech-Meouge,Buech,2014,Ch,Pt,parental,0.0,liver,0.0001,0.0142,,,,,,12.5
 2014_Man_1001,Manosque-Oraison,Durance,2014,Cn,Pt,parental,0.0,liver,0.0001,0.0031,,,,,X,13.0
 2014_Man_1002,Manosque-Oraison,Durance,2014,Cn,Hy,near-parental,1.0,liver,0.0033,0.3655,,,,,M,14.5
 2014_Man_1010,Manosque-Oraison,Durance,2014,Cn,Hy,near-parental,1.0,liver,0.0001,0.5419,,,,,X,11.5
@@ -78,104 +78,104 @@ individual,station,river,year,morphological_identification,genotypic_category,ge
 2015_Avi_1011,Avignon,Durance,2015,Cn,Hy,near-parental,1.0,liver,0.9999,0.2730,,,,,X,13.0
 2015_Avi_1012,Avignon,Durance,2015,Pt,Hy,near-parental,1.0,liver,0.0001,0.3909,,,,,F,20.0
 2015_Avi_1013,Avignon,Durance,2015,Pt,Hy,intermediate,,liver,0.4865,0.4855,,,,,M,23.0
-2015_Bau_1001,Rosieres,Ardèche,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0150,,,,,F,21.5
-2015_Bau_1002,Rosieres,Ardèche,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0005,,,,,F,17.5
-2015_Bau_1003,Rosieres,Ardèche,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0047,,,,,M,23.0
-2015_Bau_1004,Rosieres,Ardèche,2015,Ch,Hy,near-parental,1.0,liver,0.0001,0.5447,,,,,F,17.0
-2015_Bau_1005,Rosieres,Ardèche,2015,Ch,Pt,parental,0.0,liver,0.0004,0.0439,,,,,M,21.0
-2015_Bau_1006,Rosieres,Ardèche,2015,Ch,Hy,intermediate,,liver,0.5323,0.1176,,,,,F,24.0
-2015_Bau_1007,Rosieres,Ardèche,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0083,,,,,F,24.0
-2015_Bau_1008,Rosieres,Ardèche,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0390,,,,,M,18.0
-2015_Bau_1009,Rosieres,Ardèche,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0392,,,,,F,22.0
-2015_Bau_1010,Rosieres,Ardèche,2015,Ch,Hy,near-parental,2.0,liver,0.0001,0.4365,,,,,M,18.5
-2015_Bau_1011,Rosieres,Ardèche,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0441,,,,,M,21.0
-2015_Bau_1012,Rosieres,Ardèche,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0142,,,,,F,17.5
-2015_Bau_1013,Rosieres,Ardèche,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0409,,,,,M,16.0
-2015_Bau_1014,Rosieres,Ardèche,2015,Ch,Pt,parental,0.0,liver,0.0042,0.0386,,,,,,22.0
-2015_Bau_1015,Rosieres,Ardèche,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0171,,,,,M,19.0
-2015_Bau_1016,Rosieres,Ardèche,2015,Ch,Hy,near-parental,6.0,liver,0.0214,0.5148,,,,,F,18.0
-2015_Bau_1017,Rosieres,Ardèche,2015,Ch,Pt,parental,0.0,liver,0.0156,0.0436,,,,,M,17.0
-2015_Bau_1018,Rosieres,Ardèche,2015,Ch,Pt,parental,0.0,liver,0.0028,0.1117,,,,,M,19.5
-2015_Bau_1019,Rosieres,Ardèche,2015,Ch,Hy,near-parental,1.0,liver,0.0001,0.4675,,,,,M,15.0
-2015_Bau_1020,Rosieres,Ardèche,2015,Ch,Hy,near-parental,1.0,liver,0.0001,0.2065,,,,,M,18.5
-2015_Bau_1021,Rosieres,Ardèche,2015,Ch,Hy,near-parental,2.0,liver,0.0001,0.2230,,,,,F,18.0
-2015_Bau_1022,Rosieres,Ardèche,2015,Ch,Pt,parental,0.0,liver,0.0260,0.0555,,,,,M,16.5
-2015_Bau_1023,Rosieres,Ardèche,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0308,,,,,M,17.0
-2015_Bau_1024,Rosieres,Ardèche,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0626,,,,,M,17.0
-2015_Bau_1025,Rosieres,Ardèche,2015,Ch,Pt,parental,0.0,liver,0.0279,0.0676,,,,,M,18.0
-2015_Bue_1001,Confluence Buech-Meouge,Durance,2015,Ch,Cn,parental,0.0,liver,0.9999,0.1125,,,,,M,30.5
-2015_Bue_1002,Confluence Buech-Meouge,Durance,2015,Ch,Cn,parental,0.0,liver,0.9999,0.0620,,,,,M,30.5
-2015_Bue_1003,Confluence Buech-Meouge,Durance,2015,Ch,Cn,parental,0.0,liver,0.9999,0.0500,,,,,M,33.5
-2015_Bue_1004,Confluence Buech-Meouge,Durance,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0133,,,,,M,16.5
-2015_Bue_1005,Confluence Buech-Meouge,Durance,2015,Ch,Hy,intermediate,,liver,0.1096,0.0915,,,,,F,16.0
-2015_Bue_1006,Confluence Buech-Meouge,Durance,2015,Ch,Pt,parental,1.0,liver,0.0098,0.1120,,,,,F,18.0
-2015_Bue_1007,Confluence Buech-Meouge,Durance,2015,Ch,Hy,intermediate,,liver,0.1950,0.2510,,,,,M,15.0
-2015_Bue_1008,Confluence Buech-Meouge,Durance,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0095,,,,,M,12.5
-2015_Bue_1009,Confluence Buech-Meouge,Durance,2015,Ch,Hy,intermediate,,liver,0.9237,0.1175,,,,,M,30.5
-2015_Bue_1010,Confluence Buech-Meouge,Durance,2015,Ch,Hy,intermediate,,liver,0.5328,0.1191,,,,,M,25.0
-2015_Bue_1011,Confluence Buech-Meouge,Durance,2015,Ch,Hy,intermediate,,liver,0.7016,0.1848,,,,,X,29.0
-2015_Bue_1012,Confluence Buech-Meouge,Durance,2015,Ch,Hy,near-parental,2.0,liver,0.0001,0.3930,,,,,M,19.5
-2015_Bue_1013,Confluence Buech-Meouge,Durance,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0262,,,,,M,21.0
-2015_Bue_1014,Confluence Buech-Meouge,Durance,2015,Ch,Pt,parental,,midgut and caudal fin,,,0.0001,0.0431,0.0001,0.0117,M,18.0
-2015_Bue_1015,Confluence Buech-Meouge,Durance,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0320,,,,,M,16.0
-2015_Bue_1016,Confluence Buech-Meouge,Durance,2015,Ch,Hy,intermediate,,liver,0.8773,0.1445,,,,,M,30.0
-2015_Bue_1017,Confluence Buech-Meouge,Durance,2015,Ch,Cn,parental,0.0,liver,0.9986,0.1128,,,,,M,31.5
-2015_Bue_1018,Confluence Buech-Meouge,Durance,2015,Ch,Hy,intermediate,,liver,0.9036,0.0938,,,,,X,31.0
-2015_Caa_1001,Canal (usine du Largue),Durance,2015,Ch,Cn,parental,0.0,liver,0.9453,0.0629,,,,,X,14.0
-2015_Caa_1002,Canal (usine du Largue),Durance,2015,Ch,Cn,parental,0.0,liver,0.9883,0.0915,,,,,X,13.0
-2015_Caa_1003,Canal (usine du Largue),Durance,2015,Ch,Cn,parental,0.0,liver,0.9999,0.1054,,,,,X,12.0
-2015_Caa_1004,Canal (usine du Largue),Durance,2015,Ch,Cn,parental,0.0,liver,0.9999,0.0346,,,,,X,12.5
-2015_Caa_1005,Canal (usine du Largue),Durance,2015,Ch,Cn,parental,0.0,liver,0.9999,0.0543,,,,,X,13.0
-2015_Caa_1006,Canal (usine du Largue),Durance,2015,Ch,Hy,intermediate,,liver,0.9290,0.1325,,,,,X,11.5
-2015_Caa_1007,Canal (usine du Largue),Durance,2015,Ch,Cn,parental,0.0,liver,0.9938,0.0560,,,,,X,11.5
-2015_Caa_1008,Canal (usine du Largue),Durance,2015,Ch,Hy,intermediate,,liver,0.9088,0.0838,,,,,X,11.5
-2015_Caa_1009,Canal (usine du Largue),Durance,2015,Ch,Cn,parental,0.0,liver,0.9999,0.0422,,,,,X,12.0
-2015_Caa_1010,Canal (usine du Largue),Durance,2015,Ch,Cn,parental,0.0,liver,0.9999,0.0448,,,,,X,11.5
-2015_Caa_1011,Canal (usine du Largue),Durance,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0906,,,,,F,18.0
-2015_Caa_1012,Canal (usine du Largue),Durance,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0416,,,,,M,15.5
-2015_Caa_1013,Canal (usine du Largue),Durance,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0215,,,,,M,16.5
-2015_Caa_1014,Canal (usine du Largue),Durance,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0167,,,,,M,15.0
-2015_Caa_1015,Canal (usine du Largue),Durance,2015,Ch,Hy,intermediate,,liver,0.7577,0.5366,,,,,M,14.5
-2015_Caa_1016,Canal (usine du Largue),Durance,2015,Ch,Hy,near-parental,1.0,liver,0.0001,0.2173,,,,,X,11.5
-2015_Caa_1017,Canal (usine du Largue),Durance,2015,Ch,Hy,intermediate,,liver,0.0943,0.0909,,,,,X,12.5
-2015_Caa_1018,Canal (usine du Largue),Durance,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0258,,,,,X,10.5
-2015_Caa_1019,Canal (usine du Largue),Durance,2015,Ch,Hy,near-parental,1.0,liver,0.0001,0.2045,,,,,X,12.0
-2015_Caa_1020,Canal (usine du Largue),Durance,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0261,,,,,X,9.5
-2015_Cab_1001,Pont-d'Ain,Ain,2015,Ch,Cn,parental,0.0,liver,0.9999,0.0701,,,,,F,50.0
-2015_Cab_1002,Pont-d'Ain,Ain,2015,Ch,Cn,parental,2.0,liver,0.9621,0.1188,,,,,F,50.0
-2015_Cab_1003,Pont-d'Ain,Ain,2015,Ch,Cn,parental,0.0,liver,0.9853,0.0704,,,,,M,19.0
-2015_Cab_1004,Pont-d'Ain,Ain,2015,Ch,Cn,parental,0.0,liver,0.9929,0.0960,,,,,M,42.5
-2015_Cab_1005,Pont-d'Ain,Ain,2015,Ch,Cn,parental,0.0,liver,0.9999,0.0679,,,,,F,43.0
-2015_Cab_1006,Pont-d'Ain,Ain,2015,Ch,Cn,parental,1.0,liver,0.9640,0.1128,,,,,F,32.5
-2015_Cab_1007,Pont-d'Ain,Ain,2015,Ch,Cn,parental,0.0,liver,0.9952,0.0947,,,,,M,26.0
-2015_Cab_1008,Pont-d'Ain,Ain,2015,Ch,Cn,parental,0.0,liver,0.9999,0.0432,,,,,M,47.0
-2015_Cab_1009,Pont-d'Ain,Ain,2015,Ch,Hy,intermediate,,liver,0.8902,0.1147,,,,,F,42.0
-2015_Cab_1010,Pont-d'Ain,Ain,2015,Ch,Hy,intermediate,,liver,0.7684,0.0880,,,,,M,40.0
-2015_Cab_1011,Chavannes-sur-Suran,Ain,2015,Ch,Pt,parental,,midgut and caudal fin,,,0.0001,0.0100,0.0001,0.0382,F,23.0
-2015_Cab_1012,Chavannes-sur-Suran,Ain,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0457,,,,,F,18.0
-2015_Cab_1013,Chavannes-sur-Suran,Ain,2015,Ch,Pt,parental,0.0,liver,0.0012,0.0674,,,,,F,22.0
-2015_Cab_1014,Chavannes-sur-Suran,Ain,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0327,,,,,F,18.5
-2015_Cab_1015,Chavannes-sur-Suran,Ain,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0122,,,,,M,17.5
-2015_Cab_1016,Chavannes-sur-Suran,Ain,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0112,,,,,M,18.0
-2015_Cab_1017,Chavannes-sur-Suran,Ain,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0293,,,,,M,17.0
-2015_Cab_1018,Chavannes-sur-Suran,Ain,2015,Ch,Pt,parental,0.0,liver,0.0014,0.0655,,,,,M,19.0
-2015_Cab_1019,Chavannes-sur-Suran,Ain,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0103,,,,,M,18.0
-2015_Jus_1001,Saint-Just-d'Ardeche,Ardèche,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0000,,,,,F,16.0
-2015_Jus_1002,Saint-Just-d'Ardeche,Ardèche,2015,Ch,Hy,near-parental,1.0,liver,0.0001,0.5853,,,,,M,22.0
-2015_Jus_1003,Saint-Just-d'Ardeche,Ardèche,2015,Ch,Hy,near-parental,1.0,liver,0.0308,0.2173,,,,,X,15.5
-2015_Jus_1004,Saint-Just-d'Ardeche,Ardèche,2015,Ch,Hy,near-parental,1.0,liver,0.0001,0.5998,,,,,M,16.0
-2015_Jus_1005,Saint-Just-d'Ardeche,Ardèche,2015,Ch,Hy,near-parental,1.0,liver,0.0001,0.5155,,,,,M,15.5
-2015_Jus_1006,Saint-Just-d'Ardeche,Ardèche,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0212,,,,,X,15.0
-2015_Jus_1007,Saint-Just-d'Ardeche,Ardèche,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0142,,,,,M,17.0
-2015_Jus_1008,Saint-Just-d'Ardeche,Ardèche,2015,Ch,Pt,parental,,midgut and caudal fin,,,0.0288,0.0577,0.0001,0.0104,X,16.0
-2015_Jus_1009,Saint-Just-d'Ardeche,Ardèche,2015,Ch,Hy,intermediate,,liver,0.4733,0.4715,,,,,X,14.0
-2015_Jus_1010,Saint-Just-d'Ardeche,Ardèche,2015,Ch,Cn,parental,0.0,liver,0.9999,0.1021,,,,,M,43.0
-2015_Jus_1011,Saint-Just-d'Ardeche,Ardèche,2015,Ch,Cn,parental,3.0,liver,0.9626,0.0847,,,,,M,43.5
-2015_Jus_1012,Saint-Just-d'Ardeche,Ardèche,2015,Ch,Cn,parental,0.0,liver,0.9999,0.1061,,,,,M,42.5
-2015_Jus_1013,Saint-Just-d'Ardeche,Ardèche,2015,Ch,Cn,parental,1.0,liver,0.9569,0.0798,,,,,M,44.0
-2015_Jus_1014,Saint-Just-d'Ardeche,Ardèche,2015,Ch,Cn,parental,1.0,liver,0.9524,0.0708,,,,,X,16.0
-2015_Jus_1015,Saint-Just-d'Ardeche,Ardèche,2015,Ch,Cn,parental,0.0,liver,0.9999,0.1045,,,,,X,16.0
-2015_Jus_1016,Saint-Just-d'Ardeche,Ardèche,2015,Ch,Hy,near-parental,1.0,liver,0.9999,0.2304,,,,,X,15.0
-2015_Jus_1017,Saint-Just-d'Ardeche,Ardèche,2015,Ch,Cn,parental,0.0,liver,0.9999,0.0995,,,,,X,14.5
-2015_Jus_1018,Saint-Just-d'Ardeche,Ardèche,2015,Ch,Cn,parental,0.0,liver,0.9999,0.0541,,,,,X,16.0
-2015_Jus_1019,Saint-Just-d'Ardeche,Ardèche,2015,Ch,Cn,parental,0.0,liver,0.9999,0.0558,,,,,X,11.5
+2015_Bau_1001,Rosieres,Beaume,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0150,,,,,F,21.5
+2015_Bau_1002,Rosieres,Beaume,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0005,,,,,F,17.5
+2015_Bau_1003,Rosieres,Beaume,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0047,,,,,M,23.0
+2015_Bau_1004,Rosieres,Beaume,2015,Ch,Hy,near-parental,1.0,liver,0.0001,0.5447,,,,,F,17.0
+2015_Bau_1005,Rosieres,Beaume,2015,Ch,Pt,parental,0.0,liver,0.0004,0.0439,,,,,M,21.0
+2015_Bau_1006,Rosieres,Beaume,2015,Ch,Hy,intermediate,,liver,0.5323,0.1176,,,,,F,24.0
+2015_Bau_1007,Rosieres,Beaume,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0083,,,,,F,24.0
+2015_Bau_1008,Rosieres,Beaume,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0390,,,,,M,18.0
+2015_Bau_1009,Rosieres,Beaume,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0392,,,,,F,22.0
+2015_Bau_1010,Rosieres,Beaume,2015,Ch,Hy,near-parental,2.0,liver,0.0001,0.4365,,,,,M,18.5
+2015_Bau_1011,Rosieres,Beaume,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0441,,,,,M,21.0
+2015_Bau_1012,Rosieres,Beaume,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0142,,,,,F,17.5
+2015_Bau_1013,Rosieres,Beaume,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0409,,,,,M,16.0
+2015_Bau_1014,Rosieres,Beaume,2015,Ch,Pt,parental,0.0,liver,0.0042,0.0386,,,,,,22.0
+2015_Bau_1015,Rosieres,Beaume,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0171,,,,,M,19.0
+2015_Bau_1016,Rosieres,Beaume,2015,Ch,Hy,near-parental,6.0,liver,0.0214,0.5148,,,,,F,18.0
+2015_Bau_1017,Rosieres,Beaume,2015,Ch,Pt,parental,0.0,liver,0.0156,0.0436,,,,,M,17.0
+2015_Bau_1018,Rosieres,Beaume,2015,Ch,Pt,parental,0.0,liver,0.0028,0.1117,,,,,M,19.5
+2015_Bau_1019,Rosieres,Beaume,2015,Ch,Hy,near-parental,1.0,liver,0.0001,0.4675,,,,,M,15.0
+2015_Bau_1020,Rosieres,Beaume,2015,Ch,Hy,near-parental,1.0,liver,0.0001,0.2065,,,,,M,18.5
+2015_Bau_1021,Rosieres,Beaume,2015,Ch,Hy,near-parental,2.0,liver,0.0001,0.2230,,,,,F,18.0
+2015_Bau_1022,Rosieres,Beaume,2015,Ch,Pt,parental,0.0,liver,0.0260,0.0555,,,,,M,16.5
+2015_Bau_1023,Rosieres,Beaume,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0308,,,,,M,17.0
+2015_Bau_1024,Rosieres,Beaume,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0626,,,,,M,17.0
+2015_Bau_1025,Rosieres,Beaume,2015,Ch,Pt,parental,0.0,liver,0.0279,0.0676,,,,,M,18.0
+2015_Bue_1001,Confluence Buech-Meouge,Buech,2015,Ch,Cn,parental,0.0,liver,0.9999,0.1125,,,,,M,30.5
+2015_Bue_1002,Confluence Buech-Meouge,Buech,2015,Ch,Cn,parental,0.0,liver,0.9999,0.0620,,,,,M,30.5
+2015_Bue_1003,Confluence Buech-Meouge,Buech,2015,Ch,Cn,parental,0.0,liver,0.9999,0.0500,,,,,M,33.5
+2015_Bue_1004,Confluence Buech-Meouge,Buech,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0133,,,,,M,16.5
+2015_Bue_1005,Confluence Buech-Meouge,Buech,2015,Ch,Hy,intermediate,,liver,0.1096,0.0915,,,,,F,16.0
+2015_Bue_1006,Confluence Buech-Meouge,Buech,2015,Ch,Pt,parental,1.0,liver,0.0098,0.1120,,,,,F,18.0
+2015_Bue_1007,Confluence Buech-Meouge,Buech,2015,Ch,Hy,intermediate,,liver,0.1950,0.2510,,,,,M,15.0
+2015_Bue_1008,Confluence Buech-Meouge,Buech,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0095,,,,,M,12.5
+2015_Bue_1009,Confluence Buech-Meouge,Buech,2015,Ch,Hy,intermediate,,liver,0.9237,0.1175,,,,,M,30.5
+2015_Bue_1010,Confluence Buech-Meouge,Buech,2015,Ch,Hy,intermediate,,liver,0.5328,0.1191,,,,,M,25.0
+2015_Bue_1011,Confluence Buech-Meouge,Buech,2015,Ch,Hy,intermediate,,liver,0.7016,0.1848,,,,,X,29.0
+2015_Bue_1012,Confluence Buech-Meouge,Buech,2015,Ch,Hy,near-parental,2.0,liver,0.0001,0.3930,,,,,M,19.5
+2015_Bue_1013,Confluence Buech-Meouge,Buech,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0262,,,,,M,21.0
+2015_Bue_1014,Confluence Buech-Meouge,Buech,2015,Ch,Pt,parental,,midgut and caudal fin,,,0.0001,0.0431,0.0001,0.0117,M,18.0
+2015_Bue_1015,Confluence Buech-Meouge,Buech,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0320,,,,,M,16.0
+2015_Bue_1016,Confluence Buech-Meouge,Buech,2015,Ch,Hy,intermediate,,liver,0.8773,0.1445,,,,,M,30.0
+2015_Bue_1017,Confluence Buech-Meouge,Buech,2015,Ch,Cn,parental,0.0,liver,0.9986,0.1128,,,,,M,31.5
+2015_Bue_1018,Confluence Buech-Meouge,Buech,2015,Ch,Hy,intermediate,,liver,0.9036,0.0938,,,,,X,31.0
+2015_Caa_1001,Canal (usine du Largue),Canal,2015,Ch,Cn,parental,0.0,liver,0.9453,0.0629,,,,,X,14.0
+2015_Caa_1002,Canal (usine du Largue),Canal,2015,Ch,Cn,parental,0.0,liver,0.9883,0.0915,,,,,X,13.0
+2015_Caa_1003,Canal (usine du Largue),Canal,2015,Ch,Cn,parental,0.0,liver,0.9999,0.1054,,,,,X,12.0
+2015_Caa_1004,Canal (usine du Largue),Canal,2015,Ch,Cn,parental,0.0,liver,0.9999,0.0346,,,,,X,12.5
+2015_Caa_1005,Canal (usine du Largue),Canal,2015,Ch,Cn,parental,0.0,liver,0.9999,0.0543,,,,,X,13.0
+2015_Caa_1006,Canal (usine du Largue),Canal,2015,Ch,Hy,intermediate,,liver,0.9290,0.1325,,,,,X,11.5
+2015_Caa_1007,Canal (usine du Largue),Canal,2015,Ch,Cn,parental,0.0,liver,0.9938,0.0560,,,,,X,11.5
+2015_Caa_1008,Canal (usine du Largue),Canal,2015,Ch,Hy,intermediate,,liver,0.9088,0.0838,,,,,X,11.5
+2015_Caa_1009,Canal (usine du Largue),Canal,2015,Ch,Cn,parental,0.0,liver,0.9999,0.0422,,,,,X,12.0
+2015_Caa_1010,Canal (usine du Largue),Canal,2015,Ch,Cn,parental,0.0,liver,0.9999,0.0448,,,,,X,11.5
+2015_Caa_1011,Canal (usine du Largue),Canal,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0906,,,,,F,18.0
+2015_Caa_1012,Canal (usine du Largue),Canal,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0416,,,,,M,15.5
+2015_Caa_1013,Canal (usine du Largue),Canal,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0215,,,,,M,16.5
+2015_Caa_1014,Canal (usine du Largue),Canal,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0167,,,,,M,15.0
+2015_Caa_1015,Canal (usine du Largue),Canal,2015,Ch,Hy,intermediate,,liver,0.7577,0.5366,,,,,M,14.5
+2015_Caa_1016,Canal (usine du Largue),Canal,2015,Ch,Hy,near-parental,1.0,liver,0.0001,0.2173,,,,,X,11.5
+2015_Caa_1017,Canal (usine du Largue),Canal,2015,Ch,Hy,intermediate,,liver,0.0943,0.0909,,,,,X,12.5
+2015_Caa_1018,Canal (usine du Largue),Canal,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0258,,,,,X,10.5
+2015_Caa_1019,Canal (usine du Largue),Canal,2015,Ch,Hy,near-parental,1.0,liver,0.0001,0.2045,,,,,X,12.0
+2015_Caa_1020,Canal (usine du Largue),Canal,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0261,,,,,X,9.5
+2015_Cab_1001,Pont-d'Ain,Suran,2015,Ch,Cn,parental,0.0,liver,0.9999,0.0701,,,,,F,50.0
+2015_Cab_1002,Pont-d'Ain,Suran,2015,Ch,Cn,parental,2.0,liver,0.9621,0.1188,,,,,F,50.0
+2015_Cab_1003,Pont-d'Ain,Suran,2015,Ch,Cn,parental,0.0,liver,0.9853,0.0704,,,,,M,19.0
+2015_Cab_1004,Pont-d'Ain,Suran,2015,Ch,Cn,parental,0.0,liver,0.9929,0.0960,,,,,M,42.5
+2015_Cab_1005,Pont-d'Ain,Suran,2015,Ch,Cn,parental,0.0,liver,0.9999,0.0679,,,,,F,43.0
+2015_Cab_1006,Pont-d'Ain,Suran,2015,Ch,Cn,parental,1.0,liver,0.9640,0.1128,,,,,F,32.5
+2015_Cab_1007,Pont-d'Ain,Suran,2015,Ch,Cn,parental,0.0,liver,0.9952,0.0947,,,,,M,26.0
+2015_Cab_1008,Pont-d'Ain,Suran,2015,Ch,Cn,parental,0.0,liver,0.9999,0.0432,,,,,M,47.0
+2015_Cab_1009,Pont-d'Ain,Suran,2015,Ch,Hy,intermediate,,liver,0.8902,0.1147,,,,,F,42.0
+2015_Cab_1010,Pont-d'Ain,Suran,2015,Ch,Hy,intermediate,,liver,0.7684,0.0880,,,,,M,40.0
+2015_Cab_1011,Chavannes-sur-Suran,Suran,2015,Ch,Pt,parental,,midgut and caudal fin,,,0.0001,0.0100,0.0001,0.0382,F,23.0
+2015_Cab_1012,Chavannes-sur-Suran,Suran,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0457,,,,,F,18.0
+2015_Cab_1013,Chavannes-sur-Suran,Suran,2015,Ch,Pt,parental,0.0,liver,0.0012,0.0674,,,,,F,22.0
+2015_Cab_1014,Chavannes-sur-Suran,Suran,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0327,,,,,F,18.5
+2015_Cab_1015,Chavannes-sur-Suran,Suran,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0122,,,,,M,17.5
+2015_Cab_1016,Chavannes-sur-Suran,Suran,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0112,,,,,M,18.0
+2015_Cab_1017,Chavannes-sur-Suran,Suran,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0293,,,,,M,17.0
+2015_Cab_1018,Chavannes-sur-Suran,Suran,2015,Ch,Pt,parental,0.0,liver,0.0014,0.0655,,,,,M,19.0
+2015_Cab_1019,Chavannes-sur-Suran,Suran,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0103,,,,,M,18.0
+2015_Jus_1001,Saint-Just-d'Ardeche,Ardeche,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0000,,,,,F,16.0
+2015_Jus_1002,Saint-Just-d'Ardeche,Ardeche,2015,Ch,Hy,near-parental,1.0,liver,0.0001,0.5853,,,,,M,22.0
+2015_Jus_1003,Saint-Just-d'Ardeche,Ardeche,2015,Ch,Hy,near-parental,1.0,liver,0.0308,0.2173,,,,,X,15.5
+2015_Jus_1004,Saint-Just-d'Ardeche,Ardeche,2015,Ch,Hy,near-parental,1.0,liver,0.0001,0.5998,,,,,M,16.0
+2015_Jus_1005,Saint-Just-d'Ardeche,Ardeche,2015,Ch,Hy,near-parental,1.0,liver,0.0001,0.5155,,,,,M,15.5
+2015_Jus_1006,Saint-Just-d'Ardeche,Ardeche,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0212,,,,,X,15.0
+2015_Jus_1007,Saint-Just-d'Ardeche,Ardeche,2015,Ch,Pt,parental,0.0,liver,0.0001,0.0142,,,,,M,17.0
+2015_Jus_1008,Saint-Just-d'Ardeche,Ardeche,2015,Ch,Pt,parental,,midgut and caudal fin,,,0.0288,0.0577,0.0001,0.0104,X,16.0
+2015_Jus_1009,Saint-Just-d'Ardeche,Ardeche,2015,Ch,Hy,intermediate,,liver,0.4733,0.4715,,,,,X,14.0
+2015_Jus_1010,Saint-Just-d'Ardeche,Ardeche,2015,Ch,Cn,parental,0.0,liver,0.9999,0.1021,,,,,M,43.0
+2015_Jus_1011,Saint-Just-d'Ardeche,Ardeche,2015,Ch,Cn,parental,3.0,liver,0.9626,0.0847,,,,,M,43.5
+2015_Jus_1012,Saint-Just-d'Ardeche,Ardeche,2015,Ch,Cn,parental,0.0,liver,0.9999,0.1061,,,,,M,42.5
+2015_Jus_1013,Saint-Just-d'Ardeche,Ardeche,2015,Ch,Cn,parental,1.0,liver,0.9569,0.0798,,,,,M,44.0
+2015_Jus_1014,Saint-Just-d'Ardeche,Ardeche,2015,Ch,Cn,parental,1.0,liver,0.9524,0.0708,,,,,X,16.0
+2015_Jus_1015,Saint-Just-d'Ardeche,Ardeche,2015,Ch,Cn,parental,0.0,liver,0.9999,0.1045,,,,,X,16.0
+2015_Jus_1016,Saint-Just-d'Ardeche,Ardeche,2015,Ch,Hy,near-parental,1.0,liver,0.9999,0.2304,,,,,X,15.0
+2015_Jus_1017,Saint-Just-d'Ardeche,Ardeche,2015,Ch,Cn,parental,0.0,liver,0.9999,0.0995,,,,,X,14.5
+2015_Jus_1018,Saint-Just-d'Ardeche,Ardeche,2015,Ch,Cn,parental,0.0,liver,0.9999,0.0541,,,,,X,16.0
+2015_Jus_1019,Saint-Just-d'Ardeche,Ardeche,2015,Ch,Cn,parental,0.0,liver,0.9999,0.0558,,,,,X,11.5

@@ -73,3 +73,12 @@ produire, et cette table est maintenant produite —
 colonne par colonne : index et D du foie pour les 175, colonnes par tissu pour les trois ajustés
 avec `median_index`/`D` laissés vides, tout vide pour les deux sans trace. Son numéro de table et
 son insertion dans `Supplementary_Data.docx` reviennent à la session de rédaction.
+
+**Défaut de ma première version de cette table, corrigé.** La colonne `river` avait été reprise
+de `genotypes_verifies_sept_180.csv`, qui porte l'assignation de rivière antérieure aux réponses
+d'André du 30 août : 113 des 180 individus recevaient une rivière fausse — le canal du Largue
+donné en Durance (20 individus), les deux stations du Suran en Ain (33), le Büech en Durance (35)
+et la Beaume en Ardèche (25) — et 19 de plus ne différaient que par l'accent de « Ardèche ». La
+colonne est désormais sourcée depuis `metadata/station_reference.csv`, la seule référence qui
+fasse foi, avec contrôle que les 180 lignes concordent après correction. Rien d'autre dans la
+table n'était touché : catégories, types de génome et valeurs de génotypage étaient corrects.
