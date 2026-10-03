@@ -148,8 +148,16 @@ run_task <- function(k) {
   list(t = t, N = N, n_samples = nsamples(ps), n_taxa = ntaxa(ps), res = res, log = log,
        sec = as.numeric(difftime(Sys.time(), t0, units = "secs")))
 }
-R <- mclapply(seq_len(nrow(tasks)), run_task, mc.cores = min(NCPU, nrow(tasks)), mc.preschedule = FALSE)
-saveRDS(R, file.path(OUTDIR, if (SMOKE) "fourH_smoke.rds" else "fourH_brut.rds"))
+# REUSE_RDS=<chemin> : relit des sorties brutes deja calculees (mise en forme seule, pas de bootstrap)
+REUSE <- Sys.getenv("REUSE_RDS", "")
+if (nzchar(REUSE)) {
+  R <- readRDS(REUSE); cat("REUSE_RDS :", REUSE, "|", length(R), "taches relues\n")
+  stopifnot(length(R) == nrow(tasks), all(sapply(seq_along(R), function(k) R[[k]]$t$reglage == tasks$reglage[k] &&
+            R[[k]]$t$tissu == tasks$tissu[k] && R[[k]]$t$run == tasks$run[k] && R[[k]]$t$passe == tasks$passe[k])))
+} else {
+  R <- mclapply(seq_len(nrow(tasks)), run_task, mc.cores = min(NCPU, nrow(tasks)), mc.preschedule = FALSE)
+  saveRDS(R, file.path(OUTDIR, if (SMOKE) "fourH_smoke.rds" else "fourH_brut.rds"))
+}
 
 if (SMOKE) {   # STRUCTURE seulement, aucune valeur d'indice
   for (x in R) {
@@ -194,8 +202,12 @@ for (x in R) {
       avertissement_critere_aide = mean(d$core_fraction_H) < 0.5 * pm, lignes_log = length(x$log))
   }
 }
-wr <- function(L, f) if (length(L)) write.table(do.call(rbind, L), file.path(OUTDIR, f), sep = "\t",
+rbind_fill <- function(L) { cols <- unique(unlist(lapply(L, names)))   # FourHnull : 5 colonnes, FourHbootstrap : 7
+  do.call(rbind, lapply(L, function(d) { for (cc in setdiff(cols, names(d))) d[[cc]] <- NA; d[, cols] })) }
+wr <- function(L, f) if (length(L)) write.table(rbind_fill(L), file.path(OUTDIR, f), sep = "\t",
                                                 quote = FALSE, row.names = FALSE)
 wr(B, "bootstraps.tsv"); wr(C, "centroides.tsv"); wr(NP, "plan_nul.tsv"); wr(PRE, "preanalyse.tsv"); wr(ERR, "erreurs.tsv")
+W_all <- unlist(lapply(R, function(x) substr(x$log, 1, 90)))
+cat("messages captures par tache (", length(W_all), ") :\n"); print(head(sort(table(W_all), decreasing = TRUE), 10))
 cat(sprintf("OK : %d bootstrap-sets, %d centroides, %d plans nuls, %d preanalyses, %d erreurs\n",
             length(B), length(C), length(NP), length(PRE), length(ERR)))
