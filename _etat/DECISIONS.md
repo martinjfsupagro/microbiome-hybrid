@@ -6,6 +6,29 @@ depuis les scripts et le `git log` : la décision est certaine, sa date est appr
 
 ---
 
+## 2026-10-03 — D2 suspendue ; test du séjour en vivier déclaré a priori
+- **Décision** : JF suspend D2 (option d de la question 2.1) jusqu'au résultat d'un test validé a priori (2.2). On compare, aux quatre stations où colonne de plaque et ordre de dissection se découplent, un modèle avec la colonne et un modèle avec le rang de dissection. La règle de lecture est écrite avant calcul.
+- **Raison** : André, 2026-10-03 : poissons gardés vivants en vivier jusqu'à la dissection (4–6 min par poisson, ordre fixe). Le délai post-mortem est court et constant, alors que la durée de séjour (de quelques minutes à environ 2 h, hotus d'abord) est confondue avec la catégorie, et avec la colonne à cinq stations sur neuf (ρ 0,87–0,95). L'effet de position R14 pourrait donc être en partie un effet de séjour : hypothèse non testée.
+- **Impact** : §8.8–8.9 non réécrits avant le résultat. Cinq tests lancés (2.3), dont (c) et (d) redéfinis sur deux défauts du registre : R8 sans script (diagnostic de conversation, attribué à tort au script 14), et Faith PD déjà exploité dans R27.
+- **Session** : Analyse. Réf. `docs/plan_tests_2026-10-03.md`, `docs/reponses_JF_2026-10-03.md`, `docs/reponses_andre_2026-10-03.md`.
+
+## 2026-10-03 — Manuscrit : cible Animal Microbiome, titre provisoire, Table S2, Funding
+- **Décision** :
+  - cible **Animal Microbiome**, à revérifier en fin d'écriture ; le manuscrit est construit pour cette revue ;
+  - titre provisoire = sous-titre du supplément ;
+  - table de génotypage individuel insérée en **Table S2**, les Tables S2–S9 devenant S3–S10 ;
+  - Funding : contrat de thèse EDF-CNRS **AGDI 428481** (André) ;
+  - lien vers le dépôt GitHub public au §9 ;
+  - abondance différentielle reportée.
+- **Raison** : réponses de JF aux questions 2.4 à 2.9 et 2.13.
+- **Impact** : les registres et notes qui citent les Tables S8 et S9 (Table S8 de la D2, Table S9 du PERMDISP) renvoient désormais aux Tables **S9** et **S10**. Le rattachement de la thèse d'A. Ungaro au contrat FACIES reste sans confirmation explicite. Le miroir GitHub public s'arrêtait au 2026-09-25 ; il est à synchroniser.
+- **Session** : Rédaction. Réf. `docs/reponses_JF_2026-10-03.md`.
+
+## 2026-10-03 — ENA : une seule soumission pour Pertuis et host subject id ; pas de restructuration
+- **Décision** : JF accepte de soumettre en une seule fois les dates de Pertuis (44) et le `host subject id` préfixé par la campagne (727 lignes). Le modèle à 2 304 experiments est conservé pour l'instant. Le dépôt sera ouvert à la soumission de l'article.
+- **Impact** : la soumission reste à lancer par un humain (identifiants Webin au clavier). Après soumission, ajouter les deux tables en fin de liste de `7_verifier_exhaustif.sh`, puis mettre à jour le §9 et la Note S2.
+- **Session** : Soumission de données. Réf. `ena_deposit/MEMO_corrections_restantes.md`.
+
 ## 2026-09-30 — Vérification du dépôt ENA : chaîner **toutes** les tables de correction soumises, pas la dernière
 - **Décision** : `ena_deposit/7_verifier_exhaustif.sh` construit l'état attendu en appliquant successivement **toutes** les tables de correction déjà soumises, dans l'ordre chronologique (`ena_corrections.tsv` puis `ena_corrections_hote_sept.tsv`), et contrôle la cohérence du chaînage : si une table part d'un état que la précédente ne produit pas, il le signale au lieu de comparer. Règle inscrite en tête du script : **ne lister que les tables effectivement soumises** — y mettre une table préparée mais non soumise produirait de faux écarts. Le script couvre les sept champs corrigés, `TITLE` compris, qui n'est pas un attribut d'échantillon mais un élément du XML et échappait à la version d'août.
 - **Raison** : La version d'août ne comparait le dépôt qu'à la table d'août. Relancée le 30/09 après la campagne du 25/09, elle a signalé **59 champs « non conformes » qui étaient corrects** : les valeurs de septembre, correctement appliquées. Le dépôt était juste, le vérificateur périmé. Les 59 sont exactement les recouvrements entre les deux tables — 63 noms scientifiques changés en septembre, dont 59 déjà corrigés en août ; les 4 autres partaient de la valeur d'origine du dépôt et n'étaient donc pas attendus par l'ancien script.
