@@ -20,7 +20,7 @@ réorganisation dépend-elle du **compartiment tissulaire** ?
 |---|---|
 | Taxons | `Cn` *Chondrostoma nasus* (hotu) · `Pt` *Parachondrostoma toxostoma* (toxostome) · `Ch` chondrostome **non identifié** (ni hybride, ni chevesne) · `Hy` hybride (après génotypage) |
 | Catégories (25 chr, sept. 2026) | 59 Cn / 42 Hy / 79 Pt sur 180 individus |
-| Tissus | 4 : `01` nageoire caudale, `02` midgut, `03` hindgut, `05` branchie — certaines notes récentes appellent `01` « peau » `[À CONFIRMER]` |
+| Tissus | 4 : `01` **lobe de nageoire caudale** (André, 2026-10-03 ; « peau » dans d'anciennes notes est faux), `02` midgut, `03` hindgut, `05` branchie ; ordre de dissection 01 → 05 → 03 → 02, 4–6 min par poisson, poissons gardés vivants en vivier jusque-là |
 | Marqueur | 16S V4, amorces 515F/806R (Caporaso 2011), **déjà retirées des lectures** (protocole Schloss) |
 | Sites / stations | 9 codes : Ain, Avi, Bau, Bue, Caa, Cab, Jus, Man, Per — le Suran porte **2 stations** (Pont-d'Ain aval / Chavannes-sur-Suran amont, 25,4 km, barrière de 2,5 m) |
 | Période | Pêches 2014 et 2015 ; séquençage 2017 ; analyse 2026 |
@@ -53,7 +53,7 @@ réorganisation dépend-elle du **compartiment tissulaire** ?
 | Scripts | `scripts/` (`01`→`27`, lanceur + worker) ; variables : `config/project.env` |
 | Sorties d'analyse | `results/<analyse>/` — **non versionnées** (`.gitignore`) |
 | Figures | `docs/figures/` (versionnées) ; `results/*/fig_*.png` (non versionnées) |
-| Manuscrit | `docs/manuscrit/` (`Article.docx`, `Supplementary_Data.docx`) |
+| Manuscrit | `docs/manuscrit/` (`Article.docx`, `Supplementary_Data.docx`) ; cible **Animal Microbiome** (JF, 2026-10-03) ; Tables S1–S10 (S2 = génotypes, depuis le 03/10) |
 | Bibliographie | `docs/biblio/` (`microbiome_hybrid_all_refs.bib` fait foi) |
 | Dépôt de séquences | `ena_deposit/` — ENA **PRJEB124417** |
 | Décisions détaillées | `docs/decision_*.md` (20 fichiers) |

@@ -36,8 +36,8 @@ Script `15-rarefaction_converge.sh` · Entrées `ASV-CLEAN` → `BETA-*` · **va
 **R7 — La structure de réplication est nichée : Bray-Curtis intra-librairie 0,118 vs inter-librairie 0,248 ; l'index i7 diffère pour 384 des 768 librairies et l'i5 pour 576 entre les deux préparations.**
 Script `13-run_design.sh` · Entrées `META-SAMP`, `ASV-CLEAN` · **validé**, dans le manuscrit (§8.7)
 
-**R8 — La variance de la richesse ASV se répartit en tissu 18,7 %, site-année 10,9 %, run 0,26 %, résiduel 69 %.**
-Script `14-variance_partition.sh` · Entrées `ASV-CLEAN`, `META-ANA` · **préliminaire** (richesse ASV seule, écartée par la règle D7 ; non refait)
+**R8 — La variance de log(diversité alpha) se répartit, selon l'indice, en tissu 19–26 % (marginal), individu 17–21 %, site-année 10–14 % (séquentiel), technique ≤ 0,3 %, résiduel 38–45 %, avec le même ordre des facteurs sur les quatre indices.**
+Script `scripts/34-alpha_partition.R` · Entrées `ALPHA`, `META-ANA` → `TESTS-1003` · **validé sous la règle D7** (quatre indices) · remplacé le 2026-10-03. *Correction* : l'ancien R8 (tissu 18,7 %, site-année 10,9 %, run 0,26 %, résiduel 69 %) était attribué à tort au script 14, qui est une PERMANOVA de composition ; il venait d'un diagnostic de conversation sans script (`docs/diagnostic_questions_recherche.md`). Les deux jeux de chiffres ne sont pas comparables (pas de terme individu dans l'ancien). Réf. `docs/recalcul/note_tests_2026-10-03.md` §(d).
 
 ## Profondeur et choix de métrique
 
@@ -61,6 +61,7 @@ Script `20-variance_partition_category.sh` · Entrées `BETA-*` · **validé sou
 **R14 — L'effet de position dans la plaque est réel : R² = 0,18–0,40, significatif dans 9 à 12 strates sur 12, et confondu avec la catégorie (V de Cramér 0,477 → 0,504 après génotypage, jusqu'à 0,559–0,694 aux trois stations à gradient).**
 Scripts `17-position_effect.sh`, `18-position_control.sh` · Entrées `BETA-*`, `META-ANA` · **validé** ; sorti du modèle principal par D2, conservé en sensibilité · dans le manuscrit (§8.8)
 *Correction 2026-09-25* : les V 0,477 / 0,504 portaient sur le taxon morphologique puis sur la classe d'août (les scripts 17–18 lisaient `samples_all.csv`). Sur la classification à 25 chromosomes : **V = 0,527 (passe 1), 0,479 (passe 2)** — `docs/recalcul/note_recalcul_2passes.md` §1–2, entrées `RECAT`, `META-ANA`.
+*Correction 2026-10-03* : la colonne de plaque suit l'ordre de traitement des poissons **dans chaque campagne** (ρ 0,55–0,93), et pas seulement à cinq stations : l'effet de position est inséparable de l'ordre de traitement et de la durée de séjour en vivier (R32).
 
 **R15 — La prédiction transgressive en dispersion n'est pas soutenue et le sens est inversé : les hybrides sont les MOINS dispersés dans 31 tests sur 48 (p = 9,4 × 10⁻⁶), un seul test est significatif dans le sens transgressif, aucun en intra-station.**
 Script `24-permdisp.sh` · Entrées `BETA-*`, `META-ANA` · **validé** ; réserve : `betadisper` n'accepte pas de covariable, la position n'y est pas ajustée · dans le manuscrit
@@ -88,16 +89,16 @@ chiffres ci-dessous : `docs/recalcul/note_recalcul_2passes.md` et `correspondanc
 Scripts `20-variance_partition_category.sh` via `26-recalcul_categories.sh` · Entrées `RECAT`, `BETA-JAC`, `META-ANA` · **validé sous la règle D7** (rapporté sur les quatre métriques), dans le manuscrit (§8.9)
 
 **R22 — Le signal de la nageoire caudale en UniFrac pondéré est présent en passe 1 (3/3 runs, deux schémas, avec et sans position) et absent en passe 2 (p bloqué sans position 0,073–0,095). Aucun de 20 retraits aléatoires de 22 poissons non quasi-purs ne le restaure (0/20) : il dépend de la définition des hybrides, pas de l'effectif.**
-Scripts `26-recalcul_categories.sh`, `27-recat_witness_effectif.sh` · Entrées `RECAT`, `BETA-WUF`, `META-ANA` · **dépendant de la métrique sous la règle D7** : le signal caudal n'existe que sur l'UniFrac pondéré et seulement en passe 1 (R27), dans le manuscrit (§8.9). Mécanisme (dilution du contraste Hy–Pt par les quasi-purs à fond Pt, 13 des 16 changements de classe) : `[À CONFIRMER]`, non testé isolément.
+Scripts `26-recalcul_categories.sh`, `27-recat_witness_effectif.sh` · Entrées `RECAT`, `BETA-WUF`, `META-ANA` · **dépendant de la métrique sous la règle D7** : le signal caudal n'existe que sur l'UniFrac pondéré et seulement en passe 1 (R27), dans le manuscrit (§8.9). Mécanisme (dilution du contraste Hy–Pt par les quasi-purs à fond Pt, 13 des 16 changements de classe) : `[À CONFIRMER]` — testé le 2026-10-03 (R30) : compatible, non établi.
 
 **R23 — Parts de variance en deux passes : catégorie 1,3–3,7 %, station 14–29 % (médianes par métrique — agrégat différent de l'étendue par strate de R11, ne pas les comparer) ; aucun tissu détecté par les quatre métriques dans les deux schémas, dans aucune passe, avec ou sans position.**
-Script `20-variance_partition_category.sh` via `26` · Entrées `RECAT`, `BETA-*`, `META-ANA` · **validé sous la règle D7** (rapporté sur les quatre métriques), dans le manuscrit (§8.9, Table S8)
+Script `20-variance_partition_category.sh` via `26` · Entrées `RECAT`, `BETA-*`, `META-ANA` · **validé sous la règle D7** (rapporté sur les quatre métriques), dans le manuscrit (§8.9, Table S9)
 
-**R24 — D2 change des conclusions : sur les 32 cellules de la Table S8, 14 diffèrent entre modèles avec et sans position, dont 8 changent de classe (robuste ↔ partiel ↔ aucun). Le résultat caudal R22 n'en dépend pas.**
-Script `20-variance_partition_category.sh` (modèles `sanspos_*`) · Entrées `RECAT`, `RECAT-DOC` · **à arbitrer par JF** (D2, note §5), dans le manuscrit (Table S8, deux versions)
+**R24 — D2 change des conclusions : sur les 32 cellules de la Table S9, 14 diffèrent entre modèles avec et sans position, dont 8 changent de classe (robuste ↔ partiel ↔ aucun). Le résultat caudal R22 n'en dépend pas.**
+Script `20-variance_partition_category.sh` (modèles `sanspos_*`) · Entrées `RECAT`, `RECAT-DOC` · **à arbitrer par JF** (D2, note §5), dans le manuscrit (Table S9, deux versions)
 
 **R25 — PERMDISP en deux passes : hybrides les moins dispersés dans 34 (passe 2) et 32 (passe 1) tests sur 48 en station bloquée ; sur les 68 strates intra-station communes aux trois jeux, ils restent les moins dispersés partout. Les 5 tests transgressifs significatifs de la passe 2 portent tous sur la branchie de Saint-Just (3–4 Pt par strate).**
-Script `24-permdisp.sh` via `26` · Entrées `RECAT`, `BETA-*`, `META-ANA` · **validé** (même réserve que R15), dans le manuscrit (§8.9, Table S9, Figure S3)
+Script `24-permdisp.sh` via `26` · Entrées `RECAT`, `BETA-*`, `META-ANA` · **validé** (même réserve que R15), dans le manuscrit (§8.9, Table S10, Figure S3)
 
 ## Dépôt de données
 
@@ -113,3 +114,19 @@ Script `ena_deposit/7_verifier_exhaustif.sh` · Entrées `ENA-CORR`, `ENA-HOTE`,
 
 **R27 — La métrique décide de trois conclusions sur cinq. Indifférents au choix : le gradient externe/interne (significatif sur les quatre indices, p < 10⁻¹⁶, mais d'amplitude 1,51 en Shannon à 2,99 en inverse Simpson) et l'ampleur de l'effet de catégorie (R² médian 0,013–0,036 sur les quatre métriques en passe 2). Décidés par la métrique : le contraste midgut/hindgut, significatif sur les seuls indices non pondérés (0,83 p = 0,009 ; Faith PD 0,87 p = 0,003) et non significatif sur Shannon et l'inverse Simpson ; le compartiment du dimorphisme sexuel, interne sur les indices non pondérés mais externe sur Shannon ; et le compartiment portant l'effet de catégorie, la caudale n'existant que sur l'UniFrac pondéré en passe 1 tandis que le midgut est détecté par 4 métriques sur 4 et le hindgut par 3 sur 4 en passe 2. En composition le clivage n'est pas pondéré/non pondéré : Bray-Curtis, pourtant pondéré, se comporte comme Jaccard, et l'UniFrac pondéré est la métrique isolée.**
 Script `29-d7_metriques.py` · Entrées `RECAT`, `BETA-*`, `ALPHA-PHYLO`, `META-ANA` · **validé** · recoupement 14/14 avec `docs/recalcul/d2_avec_vs_sans_position.csv` · Réf. `docs/decision_D7_metrique.md`, `docs/figures/fig_d7_metriques.png`
+
+## Tests déclarés a priori du 2026-10-03
+
+Plan `docs/plan_tests_2026-10-03.md` (commit `bd6ba3d`, avant calcul), verdicts appliqués mécaniquement par `scripts/36-lecture_tests.py` ; interprétation `docs/recalcul/note_tests_2026-10-03.md`.
+
+**R29 — L'affaiblissement du signal caudal (UniFrac pondéré, passe 1) à 500 lectures ne tient ni à la profondeur ni à l'effectif : sur les mêmes échantillons, 500 et 3 000 lectures donnent le même résultat (3/3 runs, p 0,010–0,026 contre 0,009–0,023) ; il tient aux échantillons de caudale qui ne passent le seuil qu'à 500 lectures (n 147–151 contre 120–124). Aucun de 20 retraits aléatoires de 22 poissons ne reproduit le motif de la passe 1 (0/20).**
+Scripts `scripts/35-temoin_ensemble_d500.sh`, `scripts/27-recat_witness_effectif.sh` (mode 500) · Entrées `BETA-WUF`, `BETA-WUF-500`, `META-ANA` → `TESTS-1003` · **dépendant de la métrique** (UniFrac pondéré seul existe à 500 lectures) · raison de la dilution par ces échantillons `[À CONFIRMER]`, non isolée
+
+**R30 — Réétiqueter Hy 19 Pt et 3 Cn tirés dans les stations des quasi-purs supprime le signal caudal de la passe 1 dans 16 tirages sur 20 (référence sans injection : signal présent) ; mais les 19 quasi-purs à fond Pt ne se distinguent ni des Pt (p 0,28–0,60) ni des 20 intermédiaires (p 0,15–0,26, n 25–26). Dilution suffisante, non établie : verdict déclaré « indéterminée ».**
+Script `scripts/32-dilution_quasipurs.sh` · Entrées `BETA-WUF`, `META-ANA` → `TESTS-1003` · **validé** (verdict indéterminé) · non évaluable à cette puissance pour QPpt contre intermédiaires
+
+**R31 — En diversité alpha, les hybrides ne sont transgressifs dans aucune combinaison (0/32). Le seul classement établi selon D7 est « dominant Cn » (Hy non distinct de Cn, distinct de Pt) : caudale en passe 1 (4 indices sur 4, p catégorie 0,012–0,128, stable avec position) et midgut en passe 2 (3 sur 4, p 0,040–0,111, **instable** avec position). Aucun classement établi ailleurs.**
+Script `scripts/33-alpha_categorie.py` · Entrées `ALPHA`, `META-ANA` → `TESTS-1003` · **validé sous la règle D7** ; p non corrigées (5 tests sur 32 à p < 0,05) ; « dominant » = absence de différence avec Cn, pas égalité ; confusion possible avec l'ordre de traitement (hotus d'abord) `[À CONFIRMER]`, non testée
+
+**R32 — Dans chaque campagne de pêche, la colonne de plaque suit l'ordre de traitement des poissons (ρ de Spearman 0,55–0,93) : l'effet de position (R14) est inséparable de l'ordre de traitement et de la durée de séjour en vivier dans ce dispositif. Le découplage apparent à quatre stations venait d'un calcul par station mélangeant 2014 et 2015. Le test colonne contre rang qui devait départager D2 est donc sans portée (verdict mécanique : indéterminé).**
+Script `scripts/31-sejour_vivier.sh` (`spearman_rang_pos.tsv`, `sejour_tests.tsv`) · Entrées `BETA-*`, `META-ANA` → `TESTS-1003` · **validé** · conséquence pour D2 à arbitrer par JF
