@@ -18,12 +18,13 @@ Chaque section est réécrite par la session concernée à sa clôture (cf. `REA
 ## Rédaction
 
 - **Fait le 03/10** : réponses d'André intégrées à `Article.docx` (§1 séquence pêche → vivier → dissection, §2 lobe caudal, ordre de dissection, deux tubes ; notes grises §3–§4 retirées) ; titre provisoire = sous-titre du supplément ; Funding avec le contrat EDF-CNRS **AGDI 428481** ; lien GitHub public au §9 ; **Table S2 = génotypes individuels** insérée, anciennes S2–S9 renumérotées S3–S10 (8 renvois dans l'article, 12 dans le supplément) ; note *Host identity* corrigée (elle disait « microsatellite ») ; légende de la Table S2 corrigée après relecture (D minimal 0,0100 ; D ne sépare pas les intermédiaires).
+- **Fait le 03/10, en fin de session** : règle D7 restaurée au §8.6 (perdue au commit `f2dd265` du 30/09) ; §8.8 (plaque chargée dans l'ordre de traitement dans chaque campagne, R32) et §8.9 (affaiblissement à 500 lectures dû à l'ensemble d'échantillons, R29) corrigés.
 - **Notes grises restantes** : autorisations des stations de l'Ain et de l'Ardèche, euthanasie, température du tube en éthanol (questions de suivi à André, envoyées le 03/10) ; DOI Zenodo ; rattachement de la thèse d'A. Ungaro au contrat FACIES non confirmé ; code de sexe « X » (52 individus) non documenté ; Acknowledgements en fin d'écriture.
 - **Signalé, non corrigé** : l'ordre des premières citations des tables n'est pas croissant (1, 2, 5, 3, 8, 7, 9, 10, 4), alors que le supplément annonce le contraire — le défaut préexistait (1, 4, 2, 7, 6, 8, 9, 3).
 - **Cible Animal Microbiome** (JF) : structure Background / Methods / Results / Discussion / Conclusions et section Declarations à mettre en place ; titre définitif en fin d'écriture ; références Wang 2015 et Sevellec 2014 : JF cherche les textes intégraux.
 - **Bloque** : D2 pour les §8.8–8.9 (le §8.8 cite encore « the delay between capture and dissection » parmi les mécanismes possibles ; à reformuler avec R32) ; Results et Discussion pas commencés.
 
-**Passation.** Les Methods reflètent les réponses d'André du 03/10 et la numérotation S1–S10. Commencer par reformuler le §8.8 avec R32 **après** l'arbitrage D2 de JF. Fichier : `docs/manuscrit/Article.docx` (lire depuis le cluster, texte ajouté en bleu).
+**Passation.** Les Methods reflètent les réponses d'André du 03/10 et la numérotation S1–S10. Commencer par reformuler le mécanisme du §8.8 (note grise) avec R32 **après** l'arbitrage D2 de JF ; puis rédiger les résultats alpha (R27, R31, R8), absents de l'article. Fichier : `docs/manuscrit/Article.docx` (lire depuis le cluster, texte ajouté en bleu).
 
 ## Bibliographie
 

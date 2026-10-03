@@ -6,6 +6,17 @@ depuis les scripts et le `git log` : la décision est certaine, sa date est appr
 
 ---
 
+## 2026-10-03 — Article : règle D7 restaurée, §8.8 et §8.9 alignés sur les tests du jour
+- **Décision** :
+  - restaurer **mot pour mot** au §8.6 les cinq phrases de la règle D7, depuis le commit `c2c1171` ;
+  - corriger au §8.8 la phrase sur le chargement des plaques ;
+  - préciser au §8.9 l'affaiblissement caudal à 500 lectures (R29).
+  
+  La reformulation du mécanisme de l'effet de colonne au §8.8 (« the delay between capture and dissection ») attend l'arbitrage D2 et reste signalée par une note grise.
+- **Raison** : la règle D7, écrite le 30/09 à 17 h 24 (`c2c1171`), a disparu au commit suivant (`f2dd265`, 17 h 36), où le paragraphe « Statistical framework » a été repris d'une version antérieure. C'est la seule perte entre ces deux commits. Les registres affirmaient depuis que la règle figurait au §8.6. Les deux phrases du §8.8 et du §8.9 étaient contredites par R32 et R29.
+- **Impact** : le §8.6 porte de nouveau la règle D7 (texte bleu). Le §8.8 indique que la plaque suit l'ordre de traitement dans **chaque** campagne (ρ 0,55–0,95). Le §8.9 attribue l'affaiblissement à 500 lectures à l'ensemble d'échantillons, non à la profondeur.
+- **Session** : Rédaction. Réf. `RESULTATS.md` R29, R32 ; `docs/recalcul/note_tests_2026-10-03.md`.
+
 ## 2026-10-03 — D2 suspendue ; test du séjour en vivier déclaré a priori
 - **Décision** : JF suspend D2 (option d de la question 2.1) jusqu'au résultat d'un test validé a priori (2.2). On compare, aux quatre stations où colonne de plaque et ordre de dissection se découplent, un modèle avec la colonne et un modèle avec le rang de dissection. La règle de lecture est écrite avant calcul.
 - **Raison** : André, 2026-10-03 : poissons gardés vivants en vivier jusqu'à la dissection (4–6 min par poisson, ordre fixe). Le délai post-mortem est court et constant, alors que la durée de séjour (de quelques minutes à environ 2 h, hotus d'abord) est confondue avec la catégorie, et avec la colonne à cinq stations sur neuf (ρ 0,87–0,95). L'effet de position R14 pourrait donc être en partie un effet de séjour : hypothèse non testée.
@@ -60,7 +71,7 @@ depuis les scripts et le `git log` : la décision est certaine, sa date est appr
 - **Impact** : les statuts `préliminaire (D7)` de `RESULTATS.md` sont levés pour les résultats
   déjà calculés sur les quatre métriques ; R8 reste préliminaire (richesse seule, non refait) ;
   le contraste midgut/hindgut et l'inversion du dimorphisme sexuel sont retirés de
-  `note_guivier2017_implications.md` ; la règle est écrite au §8.6 de `Article.docx`.
+  `note_guivier2017_implications.md` ; la règle est écrite au §8.6 de `Article.docx` (commit `c2c1171`) — *perdue douze minutes plus tard au commit `f2dd265`, restaurée mot pour mot le 2026-10-03 (entrée du 2026-10-03)*.
 - **Session** : Analyse + Rédaction. Réf. `docs/decision_D7_metrique.md`, `scripts/29-d7_metriques.py`.
 
 ## 2026-09-25 — D7 : métrique de diversité, **NON TRANCHÉE** *(remplacée par l'entrée du 2026-09-30)*
