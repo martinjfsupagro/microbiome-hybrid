@@ -40,6 +40,12 @@ set -eEuo pipefail
 # PAS separe ici. A declarer comme reserve, pas a passer sous silence.
 #
 # Sortie : results/permdisp/permdisp.tsv (ecriture incrementale) + .txt
+#
+# CORRECTION DE PETIT EFFECTIF (2026-10-03). Sans bias.adjust, betadisper sous-estime la distance
+# au centre des petits groupes (facteur sqrt((n-1)/n)) ; les hybrides sont la plus petite categorie
+# de chaque strate, ce qui biaise le test vers "hybrides moins disperses". PERMDISP_BIAS=1 active
+# bias.adjust = TRUE. Defaut 0 = comportement d'origine (sorties existantes reproductibles).
+# Plan : docs/plan_permdisp_biais_2026-10-03.md.
 
 cd "$HOME/work/projects/microbiome-hybrid"
 OUT="${PERMDISP_OUTDIR:-results/permdisp}"
@@ -60,7 +66,9 @@ lg("=== validation des interfaces ===")
 fb <- names(formals(betadisper)); fp <- names(formals(vegan:::permutest.betadisper))
 lg("  betadisper : ", paste(fb, collapse=", "))
 lg("  permutest  : ", paste(fp, collapse=", "))
-stopifnot(all(c("d","group","type") %in% fb))
+stopifnot(all(c("d","group","type","bias.adjust") %in% fb))
+BIAS <- Sys.getenv("PERMDISP_BIAS", "0") == "1"
+lg("  bias.adjust = ", BIAS)
 stopifnot(all(c("pairwise","permutations") %in% fp))
 lg("  vegan ", as.character(packageVersion("vegan")))
 # type par defaut : on l'explicite pour ne pas dependre de la version
@@ -98,7 +106,7 @@ one <- function(D, md, metrique, dispositif, station, tissu, run) {
   g <- droplevels(g)
   if (nlevels(g) < 2) return(invisible(NULL))
   if (min(table(g)) < 3) return(invisible(NULL))
-  bd <- betadisper(D, g, type = TYPE)
+  bd <- betadisper(D, g, type = TYPE, bias.adjust = BIAS)
   # part de valeurs propres negatives : la matrice moyennee n'est pas garantie metrique
   ev <- bd$eig; negpct <- 100 * sum(abs(ev[ev < 0])) / sum(abs(ev))
   h  <- how(nperm = NPERM)
