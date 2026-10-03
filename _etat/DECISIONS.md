@@ -6,6 +6,24 @@ depuis les scripts et le `git log` : la décision est certaine, sa date est appr
 
 ---
 
+## 2026-10-03 (soir) — Article restructuré pour Animal Microbiome ; références numérotées
+- **Décision** : Abstract structuré (306 mots) et mots-clés ; Background / Methods (méthodes seules) / Results / Discussion / Conclusions / Abbreviations / Declarations / References / Figure legends ; résultats des anciens §8.7–8.9 déplacés en Results avec leur mise en forme ; nouveaux §8.7 (cadre statistique), §8.10 (alpha), §8.11 (4H), §8.12 (contrôles pré-déclarés) ; 51 références numérotées dans l'ordre de citation, dont 15 notices logicielles ou manquantes ajoutées depuis Crossref (DADA2, SILVA, cutadapt, QIIME 2, MAFFT, FastTree 2, UniFrac, Faith, PERMANOVA, PERMDISP, Stier et al. 2013, phyloseq, vegan, HybridMicrobiomes ; Kozich 2013, Small 2019 et Sevellec 2019 en version publiée) ; cinq figures principales.
+- **Raison** : choix de JF du 03/10 (installer et calculer le 4H, Methods = méthodes seules, 4–5 figures). Contrat de la revue : section Declarations complète, références numérotées.
+- **Impact** : contrôle chiffré `scripts/40-verif_article_v2.py` 59/59 ; `scripts/30-verif_article.py` 41/44 (2 attentes périmées du script 30, 1 écart de métadonnées préexistant, cf. A_FAIRE). Contraste femelles/mâles (R27) non rapporté tant que le code « X » n'est pas confirmé. Ordre de première citation des tables S toujours non croissant.
+- **Session** : Rédaction. Réf. `docs/manuscrit/Article.docx` (md5 `5bbfdb78501626a507d4b63ca78660f9`).
+
+## 2026-10-03 (soir) — PERMDISP : correction de petit effectif adoptée, R15/R25 remplacés
+- **Décision** : `bias.adjust = TRUE` devient la version de référence de PERMDISP ; les sorties non corrigées sont conservées pour comparaison.
+- **Raison** : sans correction, `betadisper` sous-estime la distance au centre des petits groupes, et les hybrides sont la plus petite catégorie de chaque strate. Le biais va dans le sens du résultat rapporté (« hybrides moins dispersés »). Défaut de l'analyse antérieure de l'agent, trouvé en rédigeant la Discussion.
+- **Impact** : R34 remplace R15/R25 ; paragraphes Dispersion et Figure 4 réécrits ; Table S10 et Figure S3 du supplément à régénérer.
+- **Session** : Analyse. Réf. `docs/plan_permdisp_biais_2026-10-03.md`, scripts 24 (`ecef636`) et 39 (`ec5e318`).
+
+## 2026-10-03 (soir) — Indice 4H : profondeur, effectif et règles de lecture fixés avant calcul
+- **Décision** (technique, prise par l'agent dans le cadre de D4–D6, **à valider par JF**) : raréfaction 4H à **1 000 lectures assignées au genre** (1 749/1 784 échantillons) ; N = plus petite classe de la passe 1 − 1, commun aux deux passes ; 500 bootstraps ; version Bray-Curtis, pré-analyse, plan nul et hybride nul ; règles de lecture 1–7 ; `FourHcompare` non utilisé (p dépendant du nombre de bootstraps).
+- **Raison** : le package raréfie la table agrégée ; à 3 000 lectures assignées, trois tissus de la passe 1 tombaient sous 10 hybrides (abandon D6). Camper et al. : axe parental stable à ± 0,067 entre 1 000 et 10 000 lectures.
+- **Impact** : R33. Couverture au genre 64,1 % des lectures, déclarée.
+- **Session** : Analyse. Réf. `docs/plan_4H_2026-10-03.md` (`6372af6`), `docs/recalcul/note_4H_2026-10-03.md`.
+
 ## 2026-10-03 — Article : règle D7 restaurée, §8.8 et §8.9 alignés sur les tests du jour
 - **Décision** :
   - restaurer **mot pour mot** au §8.6 les cinq phrases de la règle D7, depuis le commit `c2c1171` ;

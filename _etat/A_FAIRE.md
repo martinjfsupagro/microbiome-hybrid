@@ -1,30 +1,28 @@
 # A_FAIRE — passations par type de session
 
-État au **2026-10-03, soir**. Sections *Analyse*, *Rédaction*, *Soumission de données* et *Autre* réécrites à la clôture de la session du 03/10 (réponses d'André et de JF, cinq tests déclarés a priori, manuscrit) ; *Bibliographie* inchangée.
+État au **2026-10-03, nuit**. Sections *Analyse* et *Rédaction* réécrites à la clôture de la session du 03/10 soir (4H, PERMDISP corrigé, article restructuré) ; *Bibliographie*, *Soumission de données* et *Autre* inchangées depuis le 03/10 soir.
 Chaque section est réécrite par la session concernée à sa clôture (cf. `README.md` du dossier).
 
 ---
 
 ## Analyse
 
-- **Fait le 03/10** : cinq tests **déclarés a priori** (`docs/plan_tests_2026-10-03.md`, commité avant calcul) et lancés (scripts 31–36, `results/tests_20261003/`) ; interprétation dans `docs/recalcul/note_tests_2026-10-03.md`, chiffres en R8 (refait) et R29–R32.
-- **Défauts du registre corrigés** : R8 n'avait pas de script (diagnostic de conversation attribué à tort au script 14) ; « Faith PD non exploité » était périmé (utilisé dans R27).
-- **Erreur de cette session, consignée** : le test du séjour en vivier reposait sur quatre stations « découplées » ; le découplage venait d'un ρ calculé par station en mélangeant 2014 et 2015. Dans chaque campagne, colonne et ordre de traitement sont corrélés (ρ 0,55–0,93) : le test ne pouvait pas trancher (R32).
-- **Attendu de JF** : **D2**, qu'il avait suspendue à ce test. Le test ne départage rien : la position est confondue avec l'ordre de traitement par construction du plan. Options (a) à (c) de la question 2.1, plus une formulation « colonne de plaque confondue avec l'ordre de traitement ».
-- **Ouvert** : indice 4H en deux passes (paramètres D5) ; abondance différentielle reportée par JF ; mécanismes de R22 (dilution, R30) et de R29 `[À CONFIRMER]` ; proximité Hy–Cn en alpha (R31) possiblement confondue avec l'ordre de traitement, non testée.
+- **Fait le 03/10 (soir)** : HybridMicrobiomes 0.1.1 installé (`~/bin/envs/hm4h`, recette dans les notes meso) ; **indice 4H** pré-déclaré (`docs/plan_4H_2026-10-03.md`, `6372af6`) puis calculé et lu mécaniquement (scripts 37–38) → R33 : aucun axe transgressif robuste ; axe parental robuste en branchie (passe 2) ; rétention des taxons partagés partout.
+- **Défaut de l'analyse antérieure, corrigé** : PERMDISP sans `bias.adjust` (R15/R25). Reprise pré-déclarée (`docs/plan_permdisp_biais_2026-10-03.md`) → R34 : « hybrides moins dispersés » ne tient qu'en station bloquée (passe 1 de justesse, 22/48) ; retiré en intra-station.
+- **Signalé, non traité** : `metadata/analysis_metadata.csv` a 2 181 lignes contre 2 180 échantillons dans `ASV-CLEAN` (ligne en trop `15Bue1014Ch03A__durance3`, script 30) ; préexistant, à expliquer.
+- **Attendu de JF** : D2 (inchangé) ; validation des choix techniques du 4H (1 000 lectures assignées au genre, N commun).
+- **Ouvert** : abondance différentielle (reportée) ; mécanismes R22/R29/R30 `[À CONFIRMER]` ; R31 possiblement confondu avec l'ordre de traitement, non testé ; Table S10 et Figure S3 à régénérer depuis `PERMDISP-B`.
 
-**Passation.** Les cinq tests sont faits et lus. Le prochain calcul utile reste **l'indice 4H en deux passes** ; D2 attend JF, qui dispose désormais de R32. Lire d'abord `docs/recalcul/note_tests_2026-10-03.md`, puis `docs/plan_tests_2026-10-03.md`.
+**Passation.** 4H et PERMDISP corrigé sont faits et lus. Prochain calcul : régénérer Table S10 / Figure S3 depuis `results/recat/{1,2}/permdisp_bias/`. Lire d'abord `docs/recalcul/note_4H_2026-10-03.md` puis `docs/plan_permdisp_biais_2026-10-03.md`.
 
 ## Rédaction
 
-- **Fait le 03/10** : réponses d'André intégrées à `Article.docx` (§1 séquence pêche → vivier → dissection, §2 lobe caudal, ordre de dissection, deux tubes ; notes grises §3–§4 retirées) ; titre provisoire = sous-titre du supplément ; Funding avec le contrat EDF-CNRS **AGDI 428481** ; lien GitHub public au §9 ; **Table S2 = génotypes individuels** insérée, anciennes S2–S9 renumérotées S3–S10 (8 renvois dans l'article, 12 dans le supplément) ; note *Host identity* corrigée (elle disait « microsatellite ») ; légende de la Table S2 corrigée après relecture (D minimal 0,0100 ; D ne sépare pas les intermédiaires).
-- **Fait le 03/10, en fin de session** : règle D7 restaurée au §8.6 (perdue au commit `f2dd265` du 30/09) ; §8.8 (plaque chargée dans l'ordre de traitement dans chaque campagne, R32) et §8.9 (affaiblissement à 500 lectures dû à l'ensemble d'échantillons, R29) corrigés.
-- **Notes grises restantes** : autorisations des stations de l'Ain et de l'Ardèche, euthanasie, température du tube en éthanol (questions de suivi à André, envoyées le 03/10) ; DOI Zenodo ; rattachement de la thèse d'A. Ungaro au contrat FACIES non confirmé ; code de sexe « X » (52 individus) non documenté ; Acknowledgements en fin d'écriture.
-- **Signalé, non corrigé** : l'ordre des premières citations des tables n'est pas croissant (1, 2, 5, 3, 8, 7, 9, 10, 4), alors que le supplément annonce le contraire — le défaut préexistait (1, 4, 2, 7, 6, 8, 9, 3).
-- **Cible Animal Microbiome** (JF) : structure Background / Methods / Results / Discussion / Conclusions et section Declarations à mettre en place ; titre définitif en fin d'écriture ; références Wang 2015 et Sevellec 2014 : JF cherche les textes intégraux.
-- **Bloque** : D2 pour les §8.8–8.9 (le §8.8 cite encore « the delay between capture and dissection » parmi les mécanismes possibles ; à reformuler avec R32) ; Results et Discussion pas commencés.
+- **Fait le 03/10 (soir)** : `Article.docx` restructuré pour Animal Microbiome (Abstract 306 mots, Background, Methods = méthodes seules, Results, Discussion, Conclusions, Abbreviations, Declarations, 51 références numérotées, légendes) ; cinq figures dans `docs/manuscrit/figures/` ; dispersion réécrite d'après R34 ; contrôle chiffré **59/59** (`scripts/40-verif_article_v2.py`), script 30 41/44 (2 attentes périmées du script 30, 1 écart de métadonnées préexistant).
+- **Notes grises à lever** : autorisations Ain/Ardèche, euthanasie, température du tube (André) ; Competing interests, Authors' contributions, Acknowledgements ; DOI Zenodo ; FACIES ; Sinama 2013 (deux notices possibles) ; « not as a result of it » (paragraphe venu des Methods) ; mécanisme de l'effet de colonne (D2) ; code de sexe « X ».
+- **Défauts connus** : ordre de première citation des tables S non croissant (S1, S2, S5, S3, S8, S10, S4, S7, S9) ; revues non abrégées (NLM) ; Table S10 et Figure S3 du supplément non corrigées (PERMDISP) ; texte principal ≈ 12 500 mots, à resserrer.
+- **Bloque** : D2 (JF) pour la phrase sur le mécanisme de l'effet de colonne.
 
-**Passation.** Les Methods reflètent les réponses d'André du 03/10 et la numérotation S1–S10. Commencer par reformuler le mécanisme du §8.8 (note grise) avec R32 **après** l'arbitrage D2 de JF ; puis rédiger les résultats alpha (R27, R31, R8), absents de l'article. Fichier : `docs/manuscrit/Article.docx` (lire depuis le cluster, texte ajouté en bleu).
+**Passation.** L'article a sa structure complète. Prochaine étape : JF relit Results et Discussion ; puis mise à jour du supplément (S10, S3, ordre des tables). Fichier : `docs/manuscrit/Article.docx` (md5 `5bbfdb78501626a507d4b63ca78660f9`), texte nouveau en bleu.
 
 ## Bibliographie
 
