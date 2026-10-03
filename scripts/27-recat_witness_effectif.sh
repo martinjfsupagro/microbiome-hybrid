@@ -22,14 +22,16 @@ set -eEuo pipefail
 #   et leurs versions sans position (st + cat ; cat a station bloquee).
 # Sortie : results/recat/temoin_effectif/witness.tsv (une ligne par tirage x strate x modele).
 cd "$HOME/work/projects/microbiome-hybrid"
-OUT=results/recat/temoin_effectif; mkdir -p "$OUT" logs
+# 2026-10-03 : WITNESS_OUTDIR et WITNESS_GLOB permettent de relancer le temoin sur d'autres matrices
+# (test (a) de docs/plan_tests_2026-10-03.md, 500 lectures). Sans ces variables, comportement inchange.
+OUT="${WITNESS_OUTDIR:-results/recat/temoin_effectif}"; mkdir -p "$OUT" logs
 GIT_HASH=$(git rev-parse --short HEAD 2>/dev/null || echo NA)
 printf '%s\tSTART\t%s\t%s\t%s\n' "$(date -Is)" "${SLURM_JOB_ID:-local}" "$GIT_HASH" "$(basename "$0")" >> runs.log
 $HOME/bin/envs/dada2/bin/Rscript - <<'RS' 2>&1 | tee "$OUT"/witness.txt
 suppressMessages({library(vegan); library(permute); library(parallel)})
 NREP <- as.integer(Sys.getenv("NREP", "20")); NPERM <- 999
 NCPU <- as.integer(Sys.getenv("SLURM_CPUS_PER_TASK", "8"))
-OUT <- "results/recat/temoin_effectif"; TSV <- file.path(OUT, "witness.tsv")
+OUT <- Sys.getenv("WITNESS_OUTDIR", "results/recat/temoin_effectif"); TSV <- file.path(OUT, "witness.tsv")
 MD <- read.csv("metadata/analysis_metadata.csv", stringsAsFactors = FALSE)
 stopifnot(all(c("categorie","inclus_passe1","individual_id","col_rank_station") %in% names(MD)))
 rownames(MD) <- MD$dada2_id
@@ -43,7 +45,7 @@ cat("metrique\trep\trun\ttissu\tn\tn_Hy\tmodele\tR2\tp\n", file = TSV)
 gv <- function(a) { if (is.null(a)) return(c(NA,NA)); d <- as.data.frame(a); i <- match("cat", rownames(d))
   c(d$R2[i], d[[grep("^Pr", names(d))[1]]][i]) }
 safe <- function(e) tryCatch(e, error = function(x) NULL)
-for (f in Sys.glob("results/rarefaction/beta_mean_*.rds")) {
+for (f in Sys.glob(Sys.getenv("WITNESS_GLOB", "results/rarefaction/beta_mean_*.rds"))) {
   met <- sub("^beta_mean_(.*)_N[0-9]+\\.rds$", "\\1", basename(f))
   M <- as.matrix(readRDS(f)); lab <- rownames(M)
   res <- mclapply(seq_len(NREP), function(i) {

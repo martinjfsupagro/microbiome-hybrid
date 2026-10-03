@@ -198,3 +198,25 @@ pas de modèle mixte faute de lme4 sur meso) :
 On rapporte la part de somme des carrés de chaque terme, en ordre séquentiel (dans l'ordre ci-dessus)
 et en marginal (`drop1`), plus la part résiduelle. R8 est remplacé par ce calcul. Le texte dira que la
 méthode diffère du diagnostic historique, qui n'est pas reproductible faute de script.
+
+## Précisions de mise en œuvre, ajoutées avant tout calcul (2026-10-03)
+
+Elles ne changent aucune règle de lecture ; elles fixent des cas que le texte ci-dessus laissait ouverts.
+
+1. **Scripts.**
+   - (e) `scripts/31-sejour_vivier.sh` ;
+   - (b) `scripts/32-dilution_quasipurs.sh` ;
+   - (c) `scripts/33-alpha_categorie.py` ;
+   - (d) `scripts/34-alpha_partition.R` ;
+   - (a2) `scripts/35-temoin_ensemble_d500.sh` (ajouté : le plan initial ne prévoyait que 31 à 34) ;
+   - (a1) `scripts/27-recat_witness_effectif.sh`, avec `WITNESS_GLOB` et `WITNESS_OUTDIR` ;
+   - application mécanique des règles ci-dessus : `scripts/36-lecture_tests.py`, écrit avant calcul.
+2. **(c), cas multiples.** Si plusieurs critères de classement sont satisfaits en même temps (par
+   exemple intermédiaire et dominant Cn), la classe est « indéterminé » et les critères satisfaits sont
+   nommés. Une classe n'est attribuée que si un seul critère est satisfait.
+3. **(d), termes emboîtés.** `site_annee` est emboîté dans `individu`, et `library` dans `run`. Ces deux
+   termes n'ont donc pas de part marginale propre (notée NA). On rapporte en plus la part marginale
+   conjointe du bloc technique (`library` + `run`).
+4. **(e), M1.** Si une strate ne porte qu'une catégorie, `cat` est retiré du modèle.
+5. **Graines.** Elles sont fixées dans chaque script, et le script 27 garde la sienne : les tirages de
+   (a1) sont les mêmes qu'à 3 000 lectures.
