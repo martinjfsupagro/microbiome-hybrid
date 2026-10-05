@@ -1,0 +1,396 @@
+{
+ "1": {
+  "old": "PLOS Biology",
+  "medline_ta": "PLoS Biol",
+  "container_crossref": "PLOS Biology",
+  "issn": [
+   "1545-7885"
+  ]
+ },
+ "2": {
+  "old": "Trends in Ecology & Evolution",
+  "medline_ta": "Trends Ecol Evol",
+  "container_crossref": "Trends in Ecology & Evolution",
+  "issn": [
+   "0169-5347"
+  ]
+ },
+ "3": {
+  "old": "mBio",
+  "medline_ta": "mBio",
+  "container_crossref": "mBio",
+  "issn": [
+   "2161-2129",
+   "2150-7511"
+  ]
+ },
+ "4": {
+  "old": "Current Opinion in Microbiology",
+  "medline_ta": "Curr Opin Microbiol",
+  "container_crossref": "Current Opinion in Microbiology",
+  "issn": [
+   "1369-5274"
+  ]
+ },
+ "5": {
+  "old": "Frontiers in Microbiology",
+  "medline_ta": "Front Microbiol",
+  "container_crossref": "Frontiers in Microbiology",
+  "issn": [
+   "1664-302X"
+  ]
+ },
+ "6": {
+  "old": "Journal of Evolutionary Biology",
+  "medline_ta": "J Evol Biol",
+  "container_crossref": "Journal of Evolutionary Biology",
+  "issn": [
+   "1010-061X",
+   "1420-9101"
+  ]
+ },
+ "7": {
+  "old": "The ISME Journal",
+  "medline_ta": "ISME J",
+  "container_crossref": "The ISME Journal",
+  "issn": [
+   "1751-7362",
+   "1751-7370"
+  ]
+ },
+ "8": {
+  "old": "Microbiome",
+  "medline_ta": "Microbiome",
+  "container_crossref": "Microbiome",
+  "issn": [
+   "2049-2618"
+  ]
+ },
+ "9": {
+  "old": "Science",
+  "medline_ta": "Science",
+  "container_crossref": "Science",
+  "issn": [
+   "0036-8075",
+   "1095-9203"
+  ]
+ },
+ "10": {
+  "old": "mSystems",
+  "medline_ta": "mSystems",
+  "container_crossref": "mSystems",
+  "issn": [
+   "2379-5077"
+  ]
+ },
+ "11": {
+  "old": "Nature Communications",
+  "medline_ta": "Nat Commun",
+  "container_crossref": "Nature Communications",
+  "issn": [
+   "2041-1723"
+  ]
+ },
+ "12": {
+  "old": "Proceedings of the Royal Society B: Biological Sciences",
+  "medline_ta": "Proc Biol Sci",
+  "container_crossref": "Proceedings of the Royal Society B: Biological Sciences",
+  "issn": [
+   "0962-8452",
+   "1471-2954"
+  ]
+ },
+ "13": {
+  "old": "Science",
+  "medline_ta": "Science",
+  "container_crossref": "Science",
+  "issn": [
+   "0036-8075",
+   "1095-9203"
+  ]
+ },
+ "14": {
+  "old": "Methods in Ecology and Evolution",
+  "medline_ta": "Methods Ecol Evol",
+  "container_crossref": "Methods in Ecology and Evolution",
+  "issn": [
+   "2041-210X",
+   "2041-210X"
+  ]
+ },
+ "15": {
+  "old": "Microbiome",
+  "medline_ta": "Microbiome",
+  "container_crossref": "Microbiome",
+  "issn": [
+   "2049-2618"
+  ]
+ },
+ "16": {
+  "old": "Frontiers in Microbiology",
+  "medline_ta": "Front Microbiol",
+  "container_crossref": "Frontiers in Microbiology",
+  "issn": [
+   "1664-302X"
+  ]
+ },
+ "17": {
+  "old": "mSystems",
+  "medline_ta": "mSystems",
+  "container_crossref": "mSystems",
+  "issn": [
+   "2379-5077"
+  ]
+ },
+ "18": {
+  "old": "Journal of Applied Microbiology",
+  "medline_ta": "J Appl Microbiol",
+  "container_crossref": "Journal of Applied Microbiology",
+  "issn": [
+   "1365-2672",
+   "1364-5072"
+  ]
+ },
+ "19": {
+  "old": "Ecology and Evolution",
+  "medline_ta": "Ecol Evol",
+  "container_crossref": "Ecology and Evolution",
+  "issn": [
+   "2045-7758",
+   "2045-7758"
+  ]
+ },
+ "20": {
+  "old": "Microorganisms",
+  "medline_ta": "Microorganisms",
+  "container_crossref": "Microorganisms",
+  "issn": [
+   "2076-2607"
+  ]
+ },
+ "21": {
+  "old": "Ecology Letters",
+  "medline_ta": "Ecol Lett",
+  "container_crossref": "Ecology Letters",
+  "issn": [
+   "1461-023X",
+   "1461-0248"
+  ]
+ },
+ "23": {
+  "old": "Proceedings of the Royal Society B: Biological Sciences",
+  "medline_ta": "Proc Biol Sci",
+  "container_crossref": "Proceedings of the Royal Society B: Biological Sciences",
+  "issn": [
+   "0962-8452",
+   "1471-2954"
+  ]
+ },
+ "24": {
+  "old": "Molecular Ecology",
+  "medline_ta": "Mol Ecol",
+  "container_crossref": "Molecular Ecology",
+  "issn": [
+   "0962-1083",
+   "1365-294X"
+  ]
+ },
+ "25": {
+  "old": "Ecosphere",
+  "medline_ta": "Ecosphere",
+  "container_crossref": "Ecosphere",
+  "issn": [
+   "2150-8925",
+   "2150-8925"
+  ]
+ },
+ "27": {
+  "old": "Biological Journal of the Linnean Society",
+  "medline_ta": "Biol J Linn Soc Lond",
+  "container_crossref": "Biological Journal of the Linnean Society",
+  "issn": [
+   "0024-4066",
+   "1095-8312"
+  ]
+ },
+ "28": {
+  "old": "Frontiers in Zoology",
+  "medline_ta": "Front Zool",
+  "container_crossref": "Frontiers in Zoology",
+  "issn": [
+   "1742-9994"
+  ]
+ },
+ "29": {
+  "old": "Hydrobiologia",
+  "medline_ta": "Hydrobiologia",
+  "container_crossref": "Hydrobiologia",
+  "issn": [
+   "0018-8158",
+   "1573-5117"
+  ]
+ },
+ "30": {
+  "old": "Molecular Ecology",
+  "medline_ta": "Mol Ecol",
+  "container_crossref": "Molecular Ecology",
+  "issn": [
+   "0962-1083",
+   "1365-294X"
+  ]
+ },
+ "31": {
+  "old": "Microbial Ecology",
+  "medline_ta": "Microb Ecol",
+  "container_crossref": "Microbial Ecology",
+  "issn": [
+   "0095-3628",
+   "1432-184X"
+  ]
+ },
+ "32": {
+  "old": "Applied and Environmental Microbiology",
+  "medline_ta": "Appl Environ Microbiol",
+  "container_crossref": "Applied and Environmental Microbiology",
+  "issn": [
+   "0099-2240",
+   "1098-5336"
+  ]
+ },
+ "33": {
+  "old": "mSystems",
+  "medline_ta": "mSystems",
+  "container_crossref": "mSystems",
+  "issn": [
+   "2379-5077"
+  ]
+ },
+ "34": {
+  "old": "EMBnet.journal",
+  "medline_ta": "EMBnet J",
+  "container_crossref": "EMBnet.journal",
+  "issn": [
+   "2226-6089"
+  ]
+ },
+ "35": {
+  "old": "Nature Methods",
+  "medline_ta": "Nat Methods",
+  "container_crossref": "Nature Methods",
+  "issn": [
+   "1548-7091",
+   "1548-7105"
+  ]
+ },
+ "36": {
+  "old": "Nucleic Acids Research",
+  "medline_ta": "Nucleic Acids Res",
+  "container_crossref": "Nucleic Acids Research",
+  "issn": [
+   "0305-1048",
+   "1362-4962"
+  ]
+ },
+ "37": {
+  "old": "Microbiome",
+  "medline_ta": "Microbiome",
+  "container_crossref": "Microbiome",
+  "issn": [
+   "2049-2618"
+  ]
+ },
+ "38": {
+  "old": "Nature Biotechnology",
+  "medline_ta": "Nat Biotechnol",
+  "container_crossref": "Nature Biotechnology",
+  "issn": [
+   "1087-0156",
+   "1546-1696"
+  ]
+ },
+ "39": {
+  "old": "Molecular Biology and Evolution",
+  "medline_ta": "Mol Biol Evol",
+  "container_crossref": "Molecular Biology and Evolution",
+  "issn": [
+   "0737-4038",
+   "1537-1719"
+  ]
+ },
+ "40": {
+  "old": "PLoS ONE",
+  "medline_ta": "PLoS One",
+  "container_crossref": "PLoS ONE",
+  "issn": [
+   "1932-6203"
+  ]
+ },
+ "41": {
+  "old": "Applied and Environmental Microbiology",
+  "medline_ta": "Appl Environ Microbiol",
+  "container_crossref": "Applied and Environmental Microbiology",
+  "issn": [
+   "0099-2240",
+   "1098-5336"
+  ]
+ },
+ "42": {
+  "old": "Biological Conservation",
+  "medline_ta": "Biol Conserv",
+  "container_crossref": "Biological Conservation",
+  "issn": [
+   "0006-3207"
+  ]
+ },
+ "43": {
+  "old": "mSphere",
+  "medline_ta": "mSphere",
+  "container_crossref": "mSphere",
+  "issn": [
+   "2379-5042"
+  ]
+ },
+ "44": {
+  "old": "Scientific Reports",
+  "medline_ta": "Sci Rep",
+  "container_crossref": "Scientific Reports",
+  "issn": [
+   "2045-2322"
+  ]
+ },
+ "45": {
+  "old": "Austral Ecology",
+  "medline_ta": "Austral Ecol",
+  "container_crossref": "Austral Ecology",
+  "issn": [
+   "1442-9985",
+   "1442-9993"
+  ]
+ },
+ "46": {
+  "old": "Biometrics",
+  "medline_ta": "Biometrics",
+  "container_crossref": "Biometrics",
+  "issn": [
+   "0006-341X",
+   "1541-0420"
+  ]
+ },
+ "48": {
+  "old": "Ecology",
+  "medline_ta": "Ecology",
+  "container_crossref": "Ecology",
+  "issn": [
+   "0012-9658",
+   "1939-9170"
+  ]
+ },
+ "50": {
+  "old": "PLoS ONE",
+  "medline_ta": "PLoS One",
+  "container_crossref": "PLoS ONE",
+  "issn": [
+   "1932-6203"
+  ]
+ }
+}

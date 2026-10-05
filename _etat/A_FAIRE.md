@@ -1,6 +1,6 @@
 # A_FAIRE — passations par type de session
 
-État au **2026-10-05** (Table S10 / Figure S3 régénérées ; tables S renumérotées ; texte principal resserré dans `Article_resserre.docx`) ; avant cela, **2026-10-03, nuit**. Sections *Analyse* et *Rédaction* réécrites à la clôture de la session du 03/10 soir (4H, PERMDISP corrigé, article restructuré) ; *Bibliographie*, *Soumission de données* et *Autre* inchangées depuis le 03/10 soir.
+État au **2026-10-05** (Table S10 / Figure S3 régénérées ; tables S renumérotées ; texte principal resserré dans `Article_resserre.docx` ; corrections mécaniques sur les deux versions) ; avant cela, **2026-10-03, nuit**. Sections *Analyse* et *Rédaction* réécrites à la clôture de la session du 03/10 soir (4H, PERMDISP corrigé, article restructuré) ; *Bibliographie*, *Soumission de données* et *Autre* inchangées depuis le 03/10 soir.
 Chaque section est réécrite par la session concernée à sa clôture (cf. `README.md` du dossier).
 
 ---
@@ -17,13 +17,13 @@ Chaque section est réécrite par la session concernée à sa clôture (cf. `REA
 
 ## Rédaction
 
-- **Fait le 05/10** : texte principal **resserré** à 7 904 mots (10 677 avant) dans `docs/manuscrit/Article_resserre.docx`, détails techniques en Note S2 de `Supplementary_Data_resserre.docx` (ancienne Note S2 → S3) ; contrôle 65/65 (script 40) ; tables S dans l'ordre de citation ; Table S10 et Figure S3 sur PERMDISP corrigé ; deux paragraphes de dispersion périmés retirés (erreur du 03/10).
-- **Attendu de JF** : relire `Article_resserre.docx` avec `docs/manuscrit/resserrement_2026-10-05_comparaison.docx` ; s'il valide, la version resserrée remplace `Article.docx` et `Supplementary_Data.docx` (le script 40 sur la référence passera alors à 65/65). Trancher la phrase retirée sur l'abondance différentielle (note grise au §8.7).
-- **Notes grises à lever** : autorisations Ain/Ardèche, euthanasie, température du tube (André) ; Competing interests, Authors' contributions, Acknowledgements ; DOI Zenodo ; FACIES ; Sinama 2013 (deux notices possibles) ; mécanisme de l'effet de colonne (D2) ; code de sexe « X ». (« not as a result of it » : levée dans la version resserrée.)
-- **Défauts connus** : ordre des **figures** S non croissant (S2 citée avant S1) ; revues non abrégées (NLM) ; note grise ENA « A TRANCHER » de la Note S3 (ex-S2) périmée (JF a décidé de préfixer le host subject id).
+- **Fait le 05/10** : texte principal resserré (7 904 mots) dans `Article_resserre.docx` + Note S2 du supplément resserré ; puis, **dans les deux versions** (script 44) : titres des Tables S6/S8/S9/S10, **figures S dans l'ordre de citation** (S1 = compromis profondeur, régénérée en anglais ; S2 = position), **références abrégées NLM** (31), Figure 4 titres/légende alignés, note ENA périmée remplacée, Discussion « one of the two forms » (Camper et al.). Contrôle chiffré : script 40 étendu (voir `VERIF-V2`).
+- **Attendu de JF** : (a) valider la version resserrée (`docs/manuscrit/resserrement_2026-10-05_comparaison.docx`) ; (b) **§8.6 : écarts de rétention d'un seul run (durance1) ou étendue sur les trois runs** (note grise ; le midgut passe 1 varie de 5,7 à 14,0 points) ; (c) phrase retirée sur l'abondance différentielle (note grise §8.7) ; (d) correction de l'attente du script 30.
+- **Notes grises à lever** : autorisations Ain/Ardèche, euthanasie, température du tube (André) ; Competing interests, Authors' contributions, Acknowledgements ; DOI Zenodo ; FACIES ; Sinama 2013 (deux notices possibles) ; mécanisme de l'effet de colonne (D2) ; code de sexe « X ».
+- **Défauts connus** : R2 (« 14 à 67 % » de 12S) et §5 de l'article (« 15–67% ») ne concordent pas, préexistant, non vérifié ; image des figures du supplément plus large (16,3 cm) que la zone de texte (15,2 cm), préexistant.
 - **Bloque** : D2 (JF) pour la phrase sur le mécanisme de l'effet de colonne.
 
-**Passation.** Deux versions coexistent : `Article.docx` (référence, `68caaeb7…`) et `Article_resserre.docx` (`965b24f6…`, 7 904 mots, en relecture). Ne rien éditer dans l'une sans décider du sort de l'autre. Lire d'abord `docs/manuscrit/journal_resserrement_2026-10-05.md`. Ensuite : ordre des figures S, abréviations NLM.
+**Passation.** Deux versions coexistent et portent les mêmes corrections du 05/10 : `Article.docx` (référence) et `Article_resserre.docx` (en relecture). Lire d'abord `DECISIONS.md` (deux entrées du 05/10), puis `docs/manuscrit/journal_resserrement_2026-10-05.md`. Ensuite : arbitrages (a)–(d) de JF.
 
 ## Bibliographie
 
@@ -32,15 +32,14 @@ Chaque section est réécrite par la session concernée à sa clôture (cf. `REA
   fait foi ; les autres `.bib` du dossier sont thématiques (`hybrid_microbiome_refs`,
   `fish_microbiome_key_refs`, `batch_effect_sota`, `rarefaction_sota`).
 - **Ouvert** : trois références sans DOI (dépôts institutionnels non résolus) ;
-  texte intégral du cadre 4H (DOI `10.1111/2041-210x.14279`) non récupéré — nécessaire pour
-  valider la formule de l'indice sur un index continu.
+  texte intégral du cadre 4H (DOI `10.1111/2041-210x.14279`) **relu le 05/10** (artefact du projet, PDF non déposé sur le dépôt public) : valeurs de la Discussion conformes à leur Table 3 ; leurs **tables supplémentaires** (source de « 0,067 » et de l'exclusion de ρ ≥ 0,8) restent à récupérer pour revérification.
 - **Attendu de la Rédaction** : rien en attente ; la biblio suit la rédaction.
 
 ## Soumission de données
 
 - **État** : PRJEB124417 vérifié (R28, 4 612/4 612), en ligne, non public.
 - **Décidé par JF le 03/10** : soumettre **en une seule fois** les dates de Pertuis (`ENA-PERT`, 44) et le `host subject id` préfixé par la campagne (`ENA-SUBJ`, 727) ; **pas de restructuration** des 2 304 experiments pour l'instant ; ouverture publique **à la soumission de l'article**.
-- **À faire, par un humain** (identifiants Webin au clavier) : la soumission, selon la ligne de commande testée de `ena_deposit/MEMO_corrections_restantes.md` ; puis ajouter les deux tables **en fin de liste** de `7_verifier_exhaustif.sh` et revérifier ; puis mettre à jour le §9 et la Note S2.
+- **À faire, par un humain** (identifiants Webin au clavier) : la soumission, selon la ligne de commande testée de `ena_deposit/MEMO_corrections_restantes.md` ; puis ajouter les deux tables **en fin de liste** de `7_verifier_exhaustif.sh` et revérifier ; puis mettre à jour le §9 et la note sur le host subject id (Note S2 de `Supplementary_Data.docx`, Note S3 de la version resserrée).
 - **Recette à ne pas re-découvrir** : FTP Webin inutilisable, `webin-cli -ascp` en appelant le conteneur ; MODIFY par `curl` ; un reçu vide n'est pas un échec (`6_etat_du_depot.sh` avant toute relance).
 - **Leçon du 30/09, toujours valable** : ne jamais écrire dans `docs/manuscrit/` depuis une session Soumission.
 

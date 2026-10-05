@@ -46,6 +46,7 @@ Scripts `22-depth_agreement.sh`, `23-bray_depth_agreement.sh` · Entrées `BETA-
 
 **R10 — Aucune profondeur ne corrige le biais de sélection : sur la nageoire caudale il passe de +30,4 points à 3 000 lectures à +2,5 à 500, mais le signal de catégorie y est identique (3/3 dans les deux dispositifs).**
 Script `20-variance_partition_category.sh` (mode d500) · Entrées `BETA-WUF`, `BETA-WUF-500`, `META-ANA` · **validé**
+*Correction 2026-10-05* : les écarts de rétention de cette entrée (+30,4 → +2,5) viennent d'une trace antérieure à la reclassification de septembre et n'étaient produits par aucun script ; remplacés par R35. Le constat sur le signal de catégorie n'est pas touché.
 
 ## Structure de la variance : station, position, catégorie
 
@@ -139,3 +140,7 @@ Scripts `scripts/37-indice_4H.R` (calcul `6372af6`, mise en forme `144bb98`), `s
 
 **R34 — PERMDISP corrigé du biais de petit effectif (`bias.adjust = TRUE`) : la prédiction transgressive en dispersion n'est soutenue dans aucune passe ni aucun dispositif ; « hybrides moins dispersés » n'est maintenu qu'en station bloquée (passe 1 : 22/48, binomiale p = 0,048 ; passe 2 : 32/48, p = 2,4 × 10⁻⁶), et retiré en intra-station (25/68 ; 39/120). Porté surtout par Bray-Curtis en passe 2 (écart médian −0,068). Caudale : dispersion homogène sauf 1 run en UniFrac pondéré passe 1 (p = 0,048, Hy les plus dispersés).**
 Scripts `scripts/24-permdisp.sh` (`PERMDISP_BIAS=1`, commit `ecef636`), `scripts/39-lecture_permdisp_biais.py` (`ec5e318`) · Entrées `BETA-*`, `META-ANA` → `PERMDISP-B` · plan `docs/plan_permdisp_biais_2026-10-03.md` (commité avant calcul ; les décomptes de direction avaient été calculés avant, déclaré) · **validé**, dans le manuscrit (Results « Dispersion », Discussion, Figure 4 ; supplément Table S10 et Figure S3 depuis le 2026-10-05) · **défaut de l'analyse antérieure de l'agent**, remplace R15/R25.
+
+
+**R35 — Biais de sélection de la raréfaction, recalculé : à 3 000 lectures en caudale, P. toxostoma est retenu plus souvent que les hybrides de 36,4 points (passe 1) et 19,8 (passe 2) dans le run durance1, 29,0–36,4 et 14,7–19,8 sur les trois runs ; à 500 lectures, 3,8 et 5,7 (durance1 ; 2,6–3,8 et 3,4–5,7 sur les runs). En midgut à 500 lectures : 14,0 et 8,9 dans durance1, 5,7–14,0 et 7,8–8,9 sur les runs. À la station Confluence Buech-Meouge : 48,2 et 35,7 (durance1), 19,6–48,2 et 7,1–35,7 sur les runs.**
+Script `scripts/43-retention_profondeur.py` · Entrées `ASV-CLEAN`, `META-ANA` → `RETENTION` · **validé** ; dans le manuscrit (§8.6, valeurs durance1, précisé le 2026-10-05 ; Figure S1 c–d). Le choix entre un run et l'étendue reste à trancher (A_FAIRE, Rédaction (b)).

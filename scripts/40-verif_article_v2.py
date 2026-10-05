@@ -203,6 +203,39 @@ for m in re.finditer(r"Tables?\s+S(\d+)", TXT):
     n = int(m.group(1))
     if n not in order: order.append(n)
 chk("Tables S", "ordre de première citation = S1…S10, toutes citées", "Supplementary Table S10", str(order), order == list(range(1, 11)))
+# ------------------------------------------------------------ §8.6 : rétention selon la profondeur (ajout 2026-10-05, script 43)
+RT = pd.read_csv("results/depth_agreement/retention_par_categorie.tsv", sep="\t")
+RE = pd.read_csv("results/depth_agreement/retention_effectifs.tsv", sep="\t")
+def rt(ps, tis, d, col, run="durance1"):
+    x = RT[(RT.passe == ps) & (RT.tissu == tis) & (RT.profondeur == d) & (RT.run == run)]
+    assert len(x) == 1, (ps, tis, d, run); return float(x[col].iloc[0])
+h1, p1_ = rt(1, "caudale", 3000, "retention_Hy"), rt(1, "caudale", 3000, "retention_Pt")
+h2 = rt(2, "caudale", 3000, "retention_Hy")
+g1, g2 = rt(1, "caudale", 3000, "ecart_Pt_moins_Hy"), rt(2, "caudale", 3000, "ecart_Pt_moins_Hy")
+chk("Methods/8.6", "rétention caudale à 3 000 (durance1) : Hy p1, Pt, Hy p2",
+    f"in sequencing run durance1, {h1:.0f} % of intermediate hybrids passed the threshold against {p1_:.0f} % of P. toxostoma (pass 1), and {h2:.0f} % of all 42 hybrids (pass 2)",
+    f"{h1:.2f} / {p1_:.2f} / {h2:.2f}", (f"{h1:.0f}", f"{p1_:.0f}", f"{h2:.0f}") == ("50", "86", "67"))
+chk("Methods/8.6", "écart caudal à 3 000 (durance1)", f"a gap of {g1:.0f} and {g2:.0f} points", f"{g1:.2f} / {g2:.2f}",
+    (f"{g1:.0f}", f"{g2:.0f}") == ("36", "20"))
+c1, c2 = rt(1, "caudale", 500, "ecart_Pt_moins_Hy"), rt(2, "caudale", 500, "ecart_Pt_moins_Hy")
+chk("Methods/8.6", "écart caudal à 500 (durance1)", f"falls to {c1:.1f} points (pass 1) and {c2:.1f} points (pass 2)",
+    f"{c1:.2f} / {c2:.2f}", (f"{c1:.1f}", f"{c2:.1f}") == ("3.8", "5.7"))
+m1, m2 = rt(1, "midgut", 500, "ecart_Pt_moins_Hy"), rt(2, "midgut", 500, "ecart_Pt_moins_Hy")
+chk("Methods/8.6", "écart midgut à 500 (durance1)", f"({m1:.1f} and {m2:.1f} points)", f"{m1:.2f} / {m2:.2f}",
+    (f"{m1:.1f}", f"{m2:.1f}") == ("14.0", "8.9"))
+n2 = int(RE[(RE.passe == 2) & (RE.profondeur == 500)].n_retenus.iloc[0]); n1 = int(RE[(RE.passe == 1) & (RE.profondeur == 500)].n_retenus.iloc[0])
+chk("Methods/8.6", "échantillons retenus à 500 (tous runs)", f"{n2:,} samples are retained ({n1:,} in pass 1)", f"{n2} / {n1}", (n2, n1) == (2067, 1825))
+# ------------------------------------------------------------ figures supplémentaires : ordre de première citation (ajout 2026-10-05)
+forder = []
+for m in re.finditer(r"Figures?\s+S(\d+)", TXT):
+    n = int(m.group(1))
+    if n not in forder: forder.append(n)
+chk("Figures S", "ordre de première citation des figures = S1…S3", "Figure S3", str(forder), forder == [1, 2, 3])
+# ------------------------------------------------------------ références : noms de revues abrégés (NLM), ajout 2026-10-05
+NLMA = json.load(open("docs/biblio/nlm_abreviations.json"))
+reste = [o for o, n in NLMA.values() if o != n and f". {o}. " in TXT]
+ROWS.append(dict(section="absence", affirmation="noms de revues non abrégés absents (31 attendus abrégés)", texte="; ".join(reste),
+                 calcule=str(len(reste)), valeur_ok=True, dans_docx=bool(reste), statut="OK" if not reste else "ECART"))
 # ------------------------------------------------------------ notes supplémentaires : ordre de première citation (ajout 2026-10-05)
 norder = []
 for m in re.finditer(r"Notes?\s+S(\d+)", TXT):
