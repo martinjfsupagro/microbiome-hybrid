@@ -1,30 +1,28 @@
 # A_FAIRE — passations par type de session
 
-État au **2026-10-05** (Table S10 / Figure S3 régénérées ; tables S renumérotées ; texte principal resserré dans `Article_resserre.docx` ; corrections mécaniques sur les deux versions ; liste « sans décision » exécutée le soir) ; avant cela, **2026-10-03, nuit**. Sections *Analyse* et *Rédaction* réécrites à la clôture de la session du 03/10 soir (4H, PERMDISP corrigé, article restructuré) ; *Bibliographie*, *Soumission de données* et *Autre* inchangées depuis le 03/10 soir.
+État au **2026-10-05, clôture du soir** (commit `cfe939b`). Sections *Analyse* et *Rédaction* réécrites à cette clôture ; *Bibliographie* mise à jour en cours de session (05/10) ; *Soumission de données* inchangée depuis le 03/10 soir ; *Autre* : point `IDX-HYB` réglé le 05/10.
 Chaque section est réécrite par la session concernée à sa clôture (cf. `README.md` du dossier).
 
 ---
 
 ## Analyse
 
-- **Fait le 03/10 (soir)** : HybridMicrobiomes 0.1.1 installé (`~/bin/envs/hm4h`, recette dans les notes meso) ; **indice 4H** pré-déclaré (`docs/plan_4H_2026-10-03.md`, `6372af6`) puis calculé et lu mécaniquement (scripts 37–38) → R33 : aucun axe transgressif robuste ; axe parental robuste en branchie (passe 2) ; rétention des taxons partagés partout.
-- **Défaut de l'analyse antérieure, corrigé** : PERMDISP sans `bias.adjust` (R15/R25). Reprise pré-déclarée (`docs/plan_permdisp_biais_2026-10-03.md`) → R34 : « hybrides moins dispersés » ne tient qu'en station bloquée (passe 1 de justesse, 22/48) ; retiré en intra-station.
-- **Expliqué le 05/10** : la ligne en trop de `analysis_metadata.csv` (`15Bue1014Ch03A__durance3`) est le réplicat durance3 dont `filterAndTrim` a retiré toutes les lectures (13 paires brutes) ; le script 19 part de l'inventaire et ne filtre pas sur la table ASV. Aucun effet sur les résultats (`docs/recalcul/note_ligne_metadonnees_2026-10-05.md`). **Attendu de JF** : accord pour corriger l'attente du script 30 (métadonnées ⊇ table, différence = échantillons vidés par DADA2) — c'est désormais son seul écart (43/44 le 05/10).
-- **Attendu de JF** : D2 (inchangé) ; validation des choix techniques du 4H (1 000 lectures assignées au genre, N commun).
-- **Ouvert** : abondance différentielle (reportée) ; mécanismes R22/R29/R30 `[À CONFIRMER]` ; R31 possiblement confondu avec l'ordre de traitement, non testé ; Table S10 et Figure S3 : fait le 2026-10-05 (script 41).
+- **Fait le 05/10** : ligne en trop de `analysis_metadata.csv` expliquée (`15Bue1014Ch03A__durance3`, vidé par `filterAndTrim` ; aucun effet ; `docs/recalcul/note_ligne_metadonnees_2026-10-05.md`) ; rétention selon la profondeur recalculée par catégorie, tissu, passe et run (`scripts/43`, `RETENTION`, R35) — les chiffres du §8.6 sont ceux du run durance1 ; part du 12S recalculée (`scripts/45`, `PART-12S`, R2 annoté) ; index hybride d'André : sens vérifié (0 = hotu), non utilisé.
+- **Rappel 03/10** : 4H pré-déclaré, calculé et lu (R33) ; PERMDISP corrigé du biais de petit effectif (R34).
+- **Attendu de JF** : D2 (mécanisme de l'effet de colonne) ; choix techniques du 4H (1 000 lectures au genre, N commun) ; accord pour l'attente « métadonnées ⊇ table » du script 30 (son seul écart, 43/44) ; tester ou non R31 (dominance de *C. nasus* et ordre de traitement), avec un plan pré-déclaré.
+- **Ouvert** : abondance différentielle (reportée, cf. Rédaction (c)) ; mécanismes R22/R29/R30 `[À CONFIRMER]`.
 
-**Passation.** 4H et PERMDISP corrigé sont faits et lus ; Table S10 et Figure S3 régénérées (05/10, script 41). Rien de calculé en attente hors arbitrages de JF (D2, choix 4H). Lire d'abord `docs/recalcul/note_4H_2026-10-03.md`.
+**Passation.** Rien de calculé en attente : tout ce qui pouvait l'être sans arbitrage l'est (scripts 43 et 45 du 05/10). Prochaine analyse possible : test R31 si JF le valide. Lire d'abord `RESULTATS.md` (R35, R2) puis `docs/recalcul/note_4H_2026-10-03.md`.
 
 ## Rédaction
 
-- **Fait le 05/10** : texte principal resserré (7 904 mots) dans `Article_resserre.docx` + Note S2 du supplément resserré ; puis, **dans les deux versions** (script 44) : titres des Tables S6/S8/S9/S10, **figures S dans l'ordre de citation** (S1 = compromis profondeur, régénérée en anglais ; S2 = position), **références abrégées NLM** (31), Figure 4 titres/légende alignés, note ENA périmée remplacée, Discussion « one of the two forms » (Camper et al.). Contrôle chiffré : script 40 étendu (voir `VERIF-V2`).
-- **Attendu de JF** : (a) valider la version resserrée (`docs/manuscrit/resserrement_2026-10-05_comparaison.docx`) ; (b) **§8.6 : écarts de rétention d'un seul run (durance1) ou étendue sur les trois runs** (note grise ; le midgut passe 1 varie de 5,7 à 14,0 points) ; (c) phrase retirée sur l'abondance différentielle (note grise §8.7) ; (d) correction de l'attente du script 30.
-- **Notes grises à lever** : autorisations Ain/Ardèche, euthanasie, température du tube (André) ; Competing interests, Authors' contributions, Acknowledgements ; DOI Zenodo ; FACIES ; Sinama 2013 (deux notices possibles) ; mécanisme de l'effet de colonne (D2) ; code de sexe « X ».
-- **Fait le 05/10 (soir), liste « sans décision »** : part du 12S recalculée et corrigée (§5, Note S2, R2 ; script 45) ; images du supplément ramenées à 15,24 cm ; note de la Figure S1 corrigée (« ex-Figure S2 ») ; note grise d'introduction réduite à (i) titre et (ii) Wang 2015 / Sevellec 2014 ; `.bib` : Small 2019 et Sevellec 2019 propagés (script 46) ; script 30 : deux attentes périmées mises à jour (43/44). Scripts 46–47.
-- **Réglé le 05/10 (soir)** : Supporting Information de Camper et al. fournies par JF (`CAMPER-SI`) ; exclusion de ρ ≥ 0,8 confirmée (Intersection = 0, Tables S.2.1–S.2.2) ; « 0.067 » corrigé en **0.066** au §8.11 des deux versions (Table S.4.1 : 0,0664 ; script 48), contrôlé par le script 40.
-- **Bloque** : D2 (JF) pour la phrase sur le mécanisme de l'effet de colonne.
+- **Fait le 05/10** : (1) texte principal resserré (10 677 → 7 904 mots) dans `Article_resserre.docx`, détails techniques déplacés verbatim en Note S2 du supplément resserré (ancienne Note S2 → S3) ; (2) **dans les deux versions** : figures S dans l'ordre de citation (S1 = compromis profondeur, régénérée en anglais avec des valeurs recalculées ; S2 = position), titres des Tables S6/S8/S9/S10, 31 revues abrégées NLM, Figure 4 titres et légende alignés, §8.6 « run durance1 » précisé, §5 part du 12S corrigée (14–15 % par run), §8.11 0,067 → 0,066 (Camper et al., SI), Discussion « one of the two forms », notes grises périmées remplacées, images du supplément à 15,24 cm. Scripts 42, 44, 47, 48.
+- **Contrôles en fin de session** : script 40 **75/75** sur `Article_resserre.docx`, 74/75 sur `Article.docx` (seul écart : ordre des notes, la référence ne citant que la Note S1) ; script 30 **43/44**.
+- **Attendu de JF** : (a) valider ou non la version resserrée (comparaison : `docs/manuscrit/resserrement_2026-10-05_comparaison.docx`) ; (b) §8.6 : un run (durance1) ou l'étendue sur les trois runs (midgut passe 1 : 5,7–14,0 points) ; (c) phrase retirée sur l'abondance différentielle (note grise §8.7) ; (d) D2, phrase sur le mécanisme de l'effet de colonne (séjour en vivier) ; (e) références : année du volume imprimé, notice Sinama 2013, pertinence de Wang 2015 [11] et Sevellec 2014 [6], appel à la Table S5 ; (f) titre définitif ; (g) Declarations : auteurs et contributions, conflits d'intérêts, DOI Zenodo ; (h) notes grises historiques à retirer avant soumission.
+- **Attendu d'André** : autorisations couvrant l'Ain et l'Ardèche ; euthanasie ; température du tube en éthanol ; rattachement du contrat AGDI 428481 à FACIES ; code de sexe « X » ; remerciements ; sa part des contributions.
+- **Bloque** : D2 (JF) pour la phrase sur le mécanisme ; (a) pour savoir quelle version porte la suite du travail.
 
-**Passation.** Deux versions coexistent et portent les mêmes corrections du 05/10 : `Article.docx` (référence) et `Article_resserre.docx` (en relecture). Lire d'abord `DECISIONS.md` (deux entrées du 05/10), puis `docs/manuscrit/journal_resserrement_2026-10-05.md`. Ensuite : arbitrages (a)–(d) de JF.
+**Passation.** Deux versions coexistent et portent les mêmes corrections : `Article.docx` (référence, `c3884a23…`) et `Article_resserre.docx` (en relecture, `1baaab97…`). Toute nouvelle correction s'applique aux deux tant que (a) n'est pas tranché. Plus rien à faire sans décision de JF ou réponse d'André. Lire d'abord les entrées du 05/10 de `DECISIONS.md`, puis la liste (a)–(h) ci-dessus.
 
 ## Bibliographie
 
