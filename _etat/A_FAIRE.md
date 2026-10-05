@@ -1,6 +1,6 @@
 # A_FAIRE — passations par type de session
 
-État au **2026-10-05** (Table S10 / Figure S3 régénérées ; tables S renumérotées ; texte principal resserré dans `Article_resserre.docx` ; corrections mécaniques sur les deux versions) ; avant cela, **2026-10-03, nuit**. Sections *Analyse* et *Rédaction* réécrites à la clôture de la session du 03/10 soir (4H, PERMDISP corrigé, article restructuré) ; *Bibliographie*, *Soumission de données* et *Autre* inchangées depuis le 03/10 soir.
+État au **2026-10-05** (Table S10 / Figure S3 régénérées ; tables S renumérotées ; texte principal resserré dans `Article_resserre.docx` ; corrections mécaniques sur les deux versions ; liste « sans décision » exécutée le soir) ; avant cela, **2026-10-03, nuit**. Sections *Analyse* et *Rédaction* réécrites à la clôture de la session du 03/10 soir (4H, PERMDISP corrigé, article restructuré) ; *Bibliographie*, *Soumission de données* et *Autre* inchangées depuis le 03/10 soir.
 Chaque section est réécrite par la session concernée à sa clôture (cf. `README.md` du dossier).
 
 ---
@@ -9,7 +9,7 @@ Chaque section est réécrite par la session concernée à sa clôture (cf. `REA
 
 - **Fait le 03/10 (soir)** : HybridMicrobiomes 0.1.1 installé (`~/bin/envs/hm4h`, recette dans les notes meso) ; **indice 4H** pré-déclaré (`docs/plan_4H_2026-10-03.md`, `6372af6`) puis calculé et lu mécaniquement (scripts 37–38) → R33 : aucun axe transgressif robuste ; axe parental robuste en branchie (passe 2) ; rétention des taxons partagés partout.
 - **Défaut de l'analyse antérieure, corrigé** : PERMDISP sans `bias.adjust` (R15/R25). Reprise pré-déclarée (`docs/plan_permdisp_biais_2026-10-03.md`) → R34 : « hybrides moins dispersés » ne tient qu'en station bloquée (passe 1 de justesse, 22/48) ; retiré en intra-station.
-- **Expliqué le 05/10** : la ligne en trop de `analysis_metadata.csv` (`15Bue1014Ch03A__durance3`) est le réplicat durance3 dont `filterAndTrim` a retiré toutes les lectures (13 paires brutes) ; le script 19 part de l'inventaire et ne filtre pas sur la table ASV. Aucun effet sur les résultats (`docs/recalcul/note_ligne_metadonnees_2026-10-05.md`). **Attendu de JF** : accord pour corriger l'attente du script 30 (métadonnées ⊇ table, différence = échantillons vidés par DADA2).
+- **Expliqué le 05/10** : la ligne en trop de `analysis_metadata.csv` (`15Bue1014Ch03A__durance3`) est le réplicat durance3 dont `filterAndTrim` a retiré toutes les lectures (13 paires brutes) ; le script 19 part de l'inventaire et ne filtre pas sur la table ASV. Aucun effet sur les résultats (`docs/recalcul/note_ligne_metadonnees_2026-10-05.md`). **Attendu de JF** : accord pour corriger l'attente du script 30 (métadonnées ⊇ table, différence = échantillons vidés par DADA2) — c'est désormais son seul écart (43/44 le 05/10).
 - **Attendu de JF** : D2 (inchangé) ; validation des choix techniques du 4H (1 000 lectures assignées au genre, N commun).
 - **Ouvert** : abondance différentielle (reportée) ; mécanismes R22/R29/R30 `[À CONFIRMER]` ; R31 possiblement confondu avec l'ordre de traitement, non testé ; Table S10 et Figure S3 : fait le 2026-10-05 (script 41).
 
@@ -20,7 +20,8 @@ Chaque section est réécrite par la session concernée à sa clôture (cf. `REA
 - **Fait le 05/10** : texte principal resserré (7 904 mots) dans `Article_resserre.docx` + Note S2 du supplément resserré ; puis, **dans les deux versions** (script 44) : titres des Tables S6/S8/S9/S10, **figures S dans l'ordre de citation** (S1 = compromis profondeur, régénérée en anglais ; S2 = position), **références abrégées NLM** (31), Figure 4 titres/légende alignés, note ENA périmée remplacée, Discussion « one of the two forms » (Camper et al.). Contrôle chiffré : script 40 étendu (voir `VERIF-V2`).
 - **Attendu de JF** : (a) valider la version resserrée (`docs/manuscrit/resserrement_2026-10-05_comparaison.docx`) ; (b) **§8.6 : écarts de rétention d'un seul run (durance1) ou étendue sur les trois runs** (note grise ; le midgut passe 1 varie de 5,7 à 14,0 points) ; (c) phrase retirée sur l'abondance différentielle (note grise §8.7) ; (d) correction de l'attente du script 30.
 - **Notes grises à lever** : autorisations Ain/Ardèche, euthanasie, température du tube (André) ; Competing interests, Authors' contributions, Acknowledgements ; DOI Zenodo ; FACIES ; Sinama 2013 (deux notices possibles) ; mécanisme de l'effet de colonne (D2) ; code de sexe « X ».
-- **Défauts connus** : R2 (« 14 à 67 % » de 12S) et §5 de l'article (« 15–67% ») ne concordent pas, préexistant, non vérifié ; image des figures du supplément plus large (16,3 cm) que la zone de texte (15,2 cm), préexistant.
+- **Fait le 05/10 (soir), liste « sans décision »** : part du 12S recalculée et corrigée (§5, Note S2, R2 ; script 45) ; images du supplément ramenées à 15,24 cm ; note de la Figure S1 corrigée (« ex-Figure S2 ») ; note grise d'introduction réduite à (i) titre et (ii) Wang 2015 / Sevellec 2014 ; `.bib` : Small 2019 et Sevellec 2019 propagés (script 46) ; script 30 : deux attentes périmées mises à jour (43/44). Scripts 46–47.
+- **Bloqué** : tables supplémentaires de Camper et al. 2024 (source de « 0,067 » et de l'exclusion de ρ ≥ 0,8) — le site de Wiley refuse tout client automatisé (403) ; **à télécharger par JF depuis un navigateur** puis à déposer dans le projet.
 - **Bloque** : D2 (JF) pour la phrase sur le mécanisme de l'effet de colonne.
 
 **Passation.** Deux versions coexistent et portent les mêmes corrections du 05/10 : `Article.docx` (référence) et `Article_resserre.docx` (en relecture). Lire d'abord `DECISIONS.md` (deux entrées du 05/10), puis `docs/manuscrit/journal_resserrement_2026-10-05.md`. Ensuite : arbitrages (a)–(d) de JF.
@@ -31,8 +32,8 @@ Chaque section est réécrite par la session concernée à sa clôture (cf. `REA
   `author` reconstruits le 25/09 et validés contre Crossref sur 40 DOI. C'est le fichier qui
   fait foi ; les autres `.bib` du dossier sont thématiques (`hybrid_microbiome_refs`,
   `fish_microbiome_key_refs`, `batch_effect_sota`, `rarefaction_sota`).
-- **Ouvert** : trois références sans DOI (dépôts institutionnels non résolus) ;
-  texte intégral du cadre 4H (DOI `10.1111/2041-210x.14279`) **relu le 05/10** (artefact du projet, PDF non déposé sur le dépôt public) : valeurs de la Discussion conformes à leur Table 3 ; leurs **tables supplémentaires** (source de « 0,067 » et de l'exclusion de ρ ≥ 0,8) restent à récupérer pour revérification.
+- **Réglé le 05/10** : les trois références sans DOI (thèses de Kiel et de Washington University, notice MPDL de Wang & Baines 2014) n'ont pas de version publiée dans Crossref ; aucune n'est citée dans l'article. Small 2019 et Sevellec 2019 propagés dans la `.bib` (script 46).
+- **Ouvert** : texte intégral du cadre 4H (DOI `10.1111/2041-210x.14279`) **relu le 05/10** (artefact du projet, PDF non déposé sur le dépôt public) : valeurs de la Discussion conformes à leur Table 3 ; leurs **tables supplémentaires** (source de « 0,067 » et de l'exclusion de ρ ≥ 0,8) restent à récupérer : Wiley refuse le téléchargement automatisé (403, 05/10), à faire par JF depuis un navigateur.
 - **Attendu de la Rédaction** : rien en attente ; la biblio suit la rédaction.
 
 ## Soumission de données
@@ -51,6 +52,6 @@ Chaque section est réécrite par la session concernée à sa clôture (cf. `REA
 - **Attendu d'André** (questions de suivi transmises par JF le 03/10) : couverture des stations de l'**Ain** et de l'**Ardèche** par une autorisation DDT ; euthanasie par dislocation cervicale juste avant chaque dissection ; température de conservation du tube en éthanol. Plus, en fin d'écriture, les remerciements.
 - **Réponses de JF du 03/10** : `docs/reponses_JF_2026-10-03.md`.
 - **Dépôt GitHub public** (JF) : le miroir s'arrêtait au 25/09 (`72666a3`) ; le manuscrit et les notes internes y deviennent publics à chaque synchronisation.
-- **Hygiène, sans urgence** : `CLAUDE.md` périmé ; 33 fichiers en doublon à la racine ; 0,97 Go de tables ASV redondantes ; `results/fastqc_durance*` et `ena_deposit/webin_out_*` archivables. `metadata/index_hybride_andre.csv` est décrit « 0 = hotu → 1 = toxostome » dans `DONNEES.md`, alors que l'index de `analysis_metadata.csv` vaut 0,9999 pour les Cn : sens à vérifier avant toute intégration (`IDX-HYB`) `[À CONFIRMER]`.
+- **Hygiène, sans urgence** : `CLAUDE.md` périmé ; 33 fichiers en doublon à la racine ; 0,97 Go de tables ASV redondantes ; `results/fastqc_durance*` et `ena_deposit/webin_out_*` archivables. `metadata/index_hybride_andre.csv` (`IDX-HYB`) : sens **vérifié le 05/10** (0 = hotu, 1 = toxostome ; convention inverse de la colonne Q d'`analysis_metadata.csv`) ; formulaire rempli pour 49/180 individus seulement, non utilisé par les analyses.
 - **Attention** : dépôt modifié en parallèle par d'autres sessions ; `git status` et relecture avant toute écriture dans `_etat/`.
 

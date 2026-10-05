@@ -20,6 +20,7 @@ Script `scripts/05-merge_taxonomy.sh` puis `12-clean_table.py` · Entrées `RAW-
 
 **R2 — Le 12S mitochondrial de l'hôte représentait 14 à 67 % des lectures ; 1 144 ASV Mitochondria retirés.**
 Script `scripts/02-remove_12S_worker.sh` · Entrées `RAW-D1/2/3` · **validé**, dans le manuscrit
+*Correction 2026-10-05* : « 14 à 67 % » (ici) et « 15–67 % » (article, §5) n'étaient reproduits par aucun calcul. Recalcul (`scripts/45-resume_12S.py` → `PART-12S`) : lectures écartées comme 12S ou dimères = 14,1–15,1 % par run ; par échantillon biologique, médiane 12,2 %, étendue 0–99,4 %. Article corrigé (§5, Note S2).
 
 **R3 — Le mock restitue 8/8 espèces attendues à 100 % ; fuite inter-puits (crosstalk) de 0,0002 %.**
 Scripts `06-validate_mock.sh`, `10-crosstalk.sh` · Entrées `ASV-FILT`, `MOCK-REF` · **validé**, dans le manuscrit

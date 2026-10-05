@@ -1,0 +1,32 @@
+{
+ "10.1002/ece3.5676": {
+  "title": "Evidence for host effect on the intestinal microbiota of whitefish (<i>Coregonus</i> sp.) species pairs and their hybrids",
+  "journal": "Ecology and Evolution",
+  "year": 2019,
+  "volume": "9",
+  "issue": "20",
+  "page": "11762-11774",
+  "authors": [
+   "Sevellec, Maelle",
+   "Laporte, Martin",
+   "Bernatchez, Alex",
+   "Derome, Nicolas",
+   "Bernatchez, Louis"
+  ]
+ },
+ "10.1128/msystems.00331-19": {
+  "title": "Highly Reproducible 16S Sequencing Facilitates Measurement of Host Genetic Influences on the Stickleback Gut Microbiome",
+  "journal": "mSystems",
+  "year": 2019,
+  "volume": "4",
+  "issue": "4",
+  "page": "e00331-19",
+  "authors": [
+   "Small, Clayton M.",
+   "Currey, Mark",
+   "Beck, Emily A.",
+   "Bassham, Susan",
+   "Cresko, William A."
+  ]
+ }
+}

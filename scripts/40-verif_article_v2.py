@@ -225,6 +225,11 @@ chk("Methods/8.6", "écart midgut à 500 (durance1)", f"({m1:.1f} and {m2:.1f} p
     (f"{m1:.1f}", f"{m2:.1f}") == ("14.0", "8.9"))
 n2 = int(RE[(RE.passe == 2) & (RE.profondeur == 500)].n_retenus.iloc[0]); n1 = int(RE[(RE.passe == 1) & (RE.profondeur == 500)].n_retenus.iloc[0])
 chk("Methods/8.6", "échantillons retenus à 500 (tous runs)", f"{n2:,} samples are retained ({n1:,} in pass 1)", f"{n2} / {n1}", (n2, n1) == (2067, 1825))
+# ------------------------------------------------------------ §5 : 12S de l'hôte et dimères (ajout 2026-10-05, script 45)
+P12 = pd.read_csv("results/verif_article/part_12S.tsv", sep="\t")
+r3 = P12[P12.run != "tous"]; tt = P12[P12.run == "tous"].iloc[0]
+s12 = f"{r3.pct_global.min():.0f}–{r3.pct_global.max():.0f} % of reads per run; median {tt.mediane:.0f} % per biological sample, range {tt.minimum:.0f}–{tt.maximum:.0f} %"
+chk("Methods/5", "part 12S + dimères par run et par échantillon", s12, s12, len(r3) == 3)
 # ------------------------------------------------------------ figures supplémentaires : ordre de première citation (ajout 2026-10-05)
 forder = []
 for m in re.finditer(r"Figures?\s+S(\d+)", TXT):

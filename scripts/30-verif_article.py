@@ -107,9 +107,9 @@ k01 = float(re.search(r"Lectures conservees @0.1\s*:\s*\d+ \(([\d.]+)%", t).grou
 k05 = float(re.search(r"Lectures conservees @0.5\s*:\s*\d+ \(([\d.]+)%", t).group(1))
 chk("§8.1", "66 ASV contaminants (0,15 %), 99,76 % des lectures conservees", "66 / 0.15 % / 99.76 %",
     "66 / 0.15 %% / %.2f %%" % k01, near(k01, 99.76, 0.01), "decontam_summary.txt")
-chk("§8.1", "le seuil 0,5 retire 2,12 % de lectures EN PLUS", "additionally 2.12 %",
+chk("§8.1", "le seuil 0,5 retire 1,89 point de lectures EN PLUS (2,13 % au total)", "1.89 points more ; 2.13 % in total",
     "en plus %.2f pt ; au total %.2f %%" % (k01 - k05, 100 - k05),
-    near(k01 - k05, 2.12, 0.05), "decontam_summary.txt")
+    near(k01 - k05, 1.89, 0.005) and near(100 - k05, 2.13, 0.005), "decontam_summary.txt")  # attente mise à jour le 2026-10-05
 c_ = open("crosstalk_summary.txt", encoding="utf-8").read()
 chk("§8.2", "41 lectures sur 26,8 M dans 67 puits vides, mediane 0, max 13", "41 / 26.8 M / 67 / 0 / 13",
     "41 / 26.82 M / 67 / 0 / 13",
@@ -125,8 +125,8 @@ chk("§8.7", "intra-librairie Bray 0,118 / Jaccard 0,445", "0.118 / 0.445",
     "%.3f / %.3f" % (float(intra[2]), float(intra[3])),
     near(float(intra[2]), 0.118, 0.001) and near(float(intra[3]), 0.445, 0.001), "run_design_summary.txt")
 eb = np.mean([float(x[2]) for x in extra]); ej = np.mean([float(x[3]) for x in extra])
-chk("§8.7", "inter-librairie Bray 0,248 / Jaccard 0,719", "0.248 / 0.719",
-    "%.3f / %.3f" % (eb, ej), near(eb, 0.248, 0.001) and near(ej, 0.719, 0.001), "run_design_summary.txt")
+chk("§8.7", "inter-librairie Bray 0,248 / Jaccard 0,720", "0.248 / 0.720",
+    "%.3f / %.3f" % (eb, ej), near(eb, 0.248, 0.001) and near(ej, 0.720, 0.0005), "run_design_summary.txt")  # attente mise à jour le 2026-10-05
 er = np.mean([float(x[4]) for x in extra])
 chk("§8.7", "recapture des ASV rares 0,48 intra vs 0,19 inter", "0.48 / 0.19",
     "%.3f / %.3f" % (float(intra[4]), er),
