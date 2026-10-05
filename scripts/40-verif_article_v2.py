@@ -9,6 +9,7 @@ import numpy as np, pandas as pd
 from scipy.stats import binomtest, spearmanr
 
 DOCX = sys.argv[1] if len(sys.argv) > 1 else "docs/manuscrit/Article.docx"
+OUT = sys.argv[2] if len(sys.argv) > 2 else "results/verif_article/verif_article_v2.tsv"  # ajout 2026-10-05 : vérifier une variante sans écraser la référence
 xml = zipfile.ZipFile(DOCX).read("word/document.xml").decode("utf-8")
 paras = [re.sub(r"<[^>]+>", "", p) for p in re.findall(r"<w:p[ >].*?</w:p>", xml, flags=re.S)]
 TXT = "\n".join(paras).replace("&amp;", "&").replace("&lt;", "<").replace("&gt;", ">")
@@ -202,6 +203,12 @@ for m in re.finditer(r"Tables?\s+S(\d+)", TXT):
     n = int(m.group(1))
     if n not in order: order.append(n)
 chk("Tables S", "ordre de première citation = S1…S10, toutes citées", "Supplementary Table S10", str(order), order == list(range(1, 11)))
-out = pd.DataFrame(ROWS); out.to_csv("results/verif_article/verif_article_v2.tsv", sep="\t", index=False)
+# ------------------------------------------------------------ notes supplémentaires : ordre de première citation (ajout 2026-10-05)
+norder = []
+for m in re.finditer(r"Notes?\s+S(\d+)", TXT):
+    n = int(m.group(1))
+    if n not in norder: norder.append(n)
+chk("Notes S", "ordre de première citation des notes = S1…S3, toutes citées", "Supplementary Note S3", str(norder), norder == [1, 2, 3])
+out = pd.DataFrame(ROWS); out.to_csv(OUT, sep="\t", index=False)
 print(out[["section", "affirmation", "calcule", "valeur_ok", "dans_docx", "statut"]].to_string(index=False))
 print(f"\n{(out.statut=='OK').sum()} OK / {len(out)} ; écarts : {(out.statut!='OK').sum()}")

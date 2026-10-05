@@ -1,0 +1,58 @@
+par	section	intertitre	avant	apres	destination	retire
+7	Background		232	208		« which selects among available resources » (détail).
+8	Background		267	192		« range expansion into enlarged ecological niches » ; « never realised in pure form » ; « in the same sense as a beta-diversity measure ».
+9	Background		277	219		« along a 180 km transect » (lémuriens) ; « relatedness or between-population genetic distance » (babouins) ; « on two replicates of the same hybrid zone » (souris).
+10	Background		266	226		« closed by announcing the exploration of hybrid microbiota rearrangement ».
+11	Background		407	208		Justifications des trois points de conception (déjà dans les Methods §1, §8.7, §8.11, §8.12) ; phrase sur la référence interne des deux stations du Suran (14 et 19 individus), qui n'est exploitée nulle part dans les Results.
+16	Methods	1. Study system and sampling	111	103		
+19	Methods	1. Study system and sampling	60	63		L'historique des coordonnées extrapolées : déjà dans la note de la Table S1.
+20	Methods	1. Study system and sampling	73	0	supprimé (contenu conservé ailleurs)	Explication 180/156 condensée en une incise ; version longue déjà dans la note de la Table S1 (« Individual counts »).
+21	Methods	1. Study system and sampling	285	226		
+26	Methods	3. DNA extraction, 16S library preparation and sequencing	130	125	déplacé verbatim dans la Note S2	
+27	Methods	3. DNA extraction, 16S library preparation and sequencing	200	127	déplacé verbatim dans la Note S2	
+28	Methods	3. DNA extraction, 16S library preparation and sequencing	56	0	supprimé (contenu conservé ailleurs)	
+30	Methods	4. Controls	140	85	déplacé verbatim dans la Note S2	
+31	Methods	4. Controls	30	0	supprimé (contenu conservé ailleurs)	
+33	Methods	5. Sequence processing overview	79	144	déplacé verbatim dans la Note S2	
+34	Methods	5.1 Quality control	3	0	supprimé (contenu conservé ailleurs)	
+35	Methods	5.1 Quality control	11	0	déplacé verbatim dans la Note S2	
+36	Methods	5.2 Removal of co-amplified host 12S rRNA	7	0	supprimé (contenu conservé ailleurs)	
+37	Methods	5.2 Removal of co-amplified host 12S rRNA	132	0	déplacé verbatim dans la Note S2	
+38	Methods	5.3 ASV inference (DADA2, per run)	6	0	supprimé (contenu conservé ailleurs)	
+39	Methods	5.3 ASV inference (DADA2, per run)	84	0	déplacé verbatim dans la Note S2	
+40	Methods	5.4 Table merging, chimera removal and taxonomy	7	0	supprimé (contenu conservé ailleurs)	
+41	Methods	5.4 Table merging, chimera removal and taxonomy	72	0	déplacé verbatim dans la Note S2	
+42	Methods	5.5 Non-target filtering	3	0	supprimé (contenu conservé ailleurs)	
+43	Methods	5.5 Non-target filtering	34	0	déplacé verbatim dans la Note S2	
+45	Methods	6. Resulting dataset	80	39	déplacé verbatim dans la Note S2	
+47	Methods	7. Positive-control validation with the mock community	168	68	déplacé verbatim dans la Note S2	
+48	Methods	7. Positive-control validation with the mock community	99	0	déplacé verbatim dans la Note S2	
+51	Methods	8.1 Decontamination	178	77	déplacé verbatim dans la Note S2	
+53	Methods	8.2 Index-hopping assessment	79	38	déplacé verbatim dans la Note S2	
+55	Methods	8.3 Mock-derived sample-level artefacts	143	92	déplacé verbatim dans la Note S2	
+59	Methods	8.5 Phylogenetic tree	81	45	déplacé verbatim dans la Note S2	
+61	Methods	8.6 Normalization of sequencing effort	117	56	déplacé verbatim dans la Note S2	
+62	Methods	8.6 Normalization of sequencing effort	70	81	déplacé verbatim dans la Note S2	
+63	Methods	8.6 Normalization of sequencing effort	176	0	déplacé verbatim dans la Note S2	
+64	Methods	8.6 Normalization of sequencing effort	42	0	déplacé verbatim dans la Note S2	
+65	Methods	8.6 Normalization of sequencing effort	120	0	déplacé verbatim dans la Note S2	
+66	Methods	8.6 Normalization of sequencing effort	268	183	déplacé verbatim dans la Note S2	
+68	Methods	8.7 Statistical framework	440	336		« The choice of a differential-abundance method remains to be fixed. » — signalée en note grise, à trancher.
+74	Methods	8.10 Alpha diversity	275	229		
+76	Methods	8.11 Four-dimensional (4H) index	435	382		Dernière phrase (motif et non processus) : déjà dans le Background.
+81	Methods	9. Reproducibility and data availability	167	70	déplacé verbatim dans la Note S2	
+82	Methods	9. Reproducibility and data availability	113	63	déplacé verbatim dans la Note S2	
+83	Methods	9. Reproducibility and data availability	47	0	déplacé verbatim dans la Note S2	
+91	Results	Technical variation is small relative to biological variation	114	138		
+92	Results	Technical variation is small relative to biological variation	88	0	supprimé (contenu conservé ailleurs)	Renvoi Table S3 / Note S1 déplacé au §3.
+93	Results	Technical variation is small relative to biological variation	133	101		
+96	Results	Plate position	270	181		Historique du témoin « station mono-catégorie » d'une analyse antérieure ; « No site code carries a single genotypic category » ; phrase de renvoi aux Methods sur l'exclusion de la colonne des modèles principaux.
+103	Results	Composition by genotypic category	522	469		Ouverture « A preliminary variance partition… not as a result of it » (signalée en note grise) ; « the analysis must say which metric supports which claim… » ; « in pass 1 Rosières is not interpretable » (déjà dans « Genotypic design »). Le paragraphe 104 d'origine (médianes de station) est fusionné ici.
+104	Results	Composition by genotypic category	172	103		Phrase d'introduction de la Figure 3 et médianes de station : fusionnées dans le paragraphe précédent.
+107	Results	Dispersion	201	193		
+112	Discussion		211	170		Phrase récapitulative « Hybrids were transgressive in none of 32… » (redit l'Abstract et les Results).
+113	Discussion		174	161		
+114	Discussion		138	123		« reporting both passes shows how much of any conclusion rests on that decision » (condensé).
+115	Discussion		161	155		
+116	Discussion		203	192		
+117	Discussion		160	147		

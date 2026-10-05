@@ -1,6 +1,6 @@
 # A_FAIRE — passations par type de session
 
-État au **2026-10-05** (Table S10 / Figure S3 régénérées ; tables S renumérotées) ; avant cela, **2026-10-03, nuit**. Sections *Analyse* et *Rédaction* réécrites à la clôture de la session du 03/10 soir (4H, PERMDISP corrigé, article restructuré) ; *Bibliographie*, *Soumission de données* et *Autre* inchangées depuis le 03/10 soir.
+État au **2026-10-05** (Table S10 / Figure S3 régénérées ; tables S renumérotées ; texte principal resserré dans `Article_resserre.docx`) ; avant cela, **2026-10-03, nuit**. Sections *Analyse* et *Rédaction* réécrites à la clôture de la session du 03/10 soir (4H, PERMDISP corrigé, article restructuré) ; *Bibliographie*, *Soumission de données* et *Autre* inchangées depuis le 03/10 soir.
 Chaque section est réécrite par la session concernée à sa clôture (cf. `README.md` du dossier).
 
 ---
@@ -17,12 +17,13 @@ Chaque section est réécrite par la session concernée à sa clôture (cf. `REA
 
 ## Rédaction
 
-- **Fait le 03/10 (soir)** : `Article.docx` restructuré pour Animal Microbiome (Abstract 306 mots, Background, Methods = méthodes seules, Results, Discussion, Conclusions, Abbreviations, Declarations, 51 références numérotées, légendes) ; cinq figures dans `docs/manuscrit/figures/` ; dispersion réécrite d'après R34 ; contrôle chiffré **59/59** (`scripts/40-verif_article_v2.py`), script 30 41/44 (2 attentes périmées du script 30, 1 écart de métadonnées préexistant).
-- **Notes grises à lever** : autorisations Ain/Ardèche, euthanasie, température du tube (André) ; Competing interests, Authors' contributions, Acknowledgements ; DOI Zenodo ; FACIES ; Sinama 2013 (deux notices possibles) ; « not as a result of it » (paragraphe venu des Methods) ; mécanisme de l'effet de colonne (D2) ; code de sexe « X ».
-- **Défauts connus** : ordre des **figures** S non croissant (S2 citée avant S1) ; revues non abrégées (NLM) ; texte principal ≈ 12 000 mots, à resserrer. **Corrigé le 05/10** : tables S dans l'ordre de citation ; deux paragraphes de dispersion périmés retirés des Methods (erreur du 03/10).
+- **Fait le 05/10** : texte principal **resserré** à 7 904 mots (10 677 avant) dans `docs/manuscrit/Article_resserre.docx`, détails techniques en Note S2 de `Supplementary_Data_resserre.docx` (ancienne Note S2 → S3) ; contrôle 65/65 (script 40) ; tables S dans l'ordre de citation ; Table S10 et Figure S3 sur PERMDISP corrigé ; deux paragraphes de dispersion périmés retirés (erreur du 03/10).
+- **Attendu de JF** : relire `Article_resserre.docx` avec `docs/manuscrit/resserrement_2026-10-05_comparaison.docx` ; s'il valide, la version resserrée remplace `Article.docx` et `Supplementary_Data.docx` (le script 40 sur la référence passera alors à 65/65). Trancher la phrase retirée sur l'abondance différentielle (note grise au §8.7).
+- **Notes grises à lever** : autorisations Ain/Ardèche, euthanasie, température du tube (André) ; Competing interests, Authors' contributions, Acknowledgements ; DOI Zenodo ; FACIES ; Sinama 2013 (deux notices possibles) ; mécanisme de l'effet de colonne (D2) ; code de sexe « X ». (« not as a result of it » : levée dans la version resserrée.)
+- **Défauts connus** : ordre des **figures** S non croissant (S2 citée avant S1) ; revues non abrégées (NLM) ; note grise ENA « A TRANCHER » de la Note S3 (ex-S2) périmée (JF a décidé de préfixer le host subject id).
 - **Bloque** : D2 (JF) pour la phrase sur le mécanisme de l'effet de colonne.
 
-**Passation.** L'article a sa structure complète. Prochaine étape : JF relit Results et Discussion ; puis ordre des figures S, abréviations des revues, resserrement (tables S et S10/S3 faits le 05/10). Fichier : `docs/manuscrit/Article.docx` (md5 `68caaeb7c55ec2716a7fa36010d898dd`), texte nouveau en bleu.
+**Passation.** Deux versions coexistent : `Article.docx` (référence, `68caaeb7…`) et `Article_resserre.docx` (`965b24f6…`, 7 904 mots, en relecture). Ne rien éditer dans l'une sans décider du sort de l'autre. Lire d'abord `docs/manuscrit/journal_resserrement_2026-10-05.md`. Ensuite : ordre des figures S, abréviations NLM.
 
 ## Bibliographie
 
