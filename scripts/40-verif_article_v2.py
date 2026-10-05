@@ -230,6 +230,15 @@ P12 = pd.read_csv("results/verif_article/part_12S.tsv", sep="\t")
 r3 = P12[P12.run != "tous"]; tt = P12[P12.run == "tous"].iloc[0]
 s12 = f"{r3.pct_global.min():.0f}–{r3.pct_global.max():.0f} % of reads per run; median {tt.mediane:.0f} % per biological sample, range {tt.minimum:.0f}–{tt.maximum:.0f} %"
 chk("Methods/5", "part 12S + dimères par run et par échantillon", s12, s12, len(r3) == 3)
+# ------------------------------------------------------------ §8.11 : Camper et al. 2024, Supporting Information (ajout 2026-10-05)
+CS = pd.read_csv("docs/biblio/camper2024_SI_coeur_profondeur.tsv", sep="\t")
+liz = CS.systeme.str.startswith("Aspidoscelis")
+dep = CS[liz & (CS.table == "S.4.1") & CS.valeur.between(1000, 10000)].U_plus_I
+chk("Methods/4H", "axe parental du lézard, 1 000 → 10 000 lectures (Table S.4.1)", f"varies by at most {dep.max() - dep.min():.3f} between 1,000 and 10,000 reads",
+    f"{dep.max() - dep.min():.4f}", len(dep) == 5)
+i08 = CS[liz & CS.table.isin(["S.2.1", "S.2.2"]) & (CS.valeur == 0.8)].I
+chk("Methods/4H", "Intersection nulle à ρ = 0,8 chez le lézard (Tables S.2.1, S.2.2)", "ρ ≥ 0.8 was excluded because the Intersection dimension vanishes there",
+    str(list(i08)), len(i08) == 2 and (i08 == 0).all())
 # ------------------------------------------------------------ figures supplémentaires : ordre de première citation (ajout 2026-10-05)
 forder = []
 for m in re.finditer(r"Figures?\s+S(\d+)", TXT):
