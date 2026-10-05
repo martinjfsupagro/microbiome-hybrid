@@ -1,6 +1,6 @@
 # A_FAIRE — passations par type de session
 
-État au **2026-10-03, nuit**. Sections *Analyse* et *Rédaction* réécrites à la clôture de la session du 03/10 soir (4H, PERMDISP corrigé, article restructuré) ; *Bibliographie*, *Soumission de données* et *Autre* inchangées depuis le 03/10 soir.
+État au **2026-10-05** (Table S10 / Figure S3 régénérées) ; avant cela, **2026-10-03, nuit**. Sections *Analyse* et *Rédaction* réécrites à la clôture de la session du 03/10 soir (4H, PERMDISP corrigé, article restructuré) ; *Bibliographie*, *Soumission de données* et *Autre* inchangées depuis le 03/10 soir.
 Chaque section est réécrite par la session concernée à sa clôture (cf. `README.md` du dossier).
 
 ---
@@ -11,18 +11,18 @@ Chaque section est réécrite par la session concernée à sa clôture (cf. `REA
 - **Défaut de l'analyse antérieure, corrigé** : PERMDISP sans `bias.adjust` (R15/R25). Reprise pré-déclarée (`docs/plan_permdisp_biais_2026-10-03.md`) → R34 : « hybrides moins dispersés » ne tient qu'en station bloquée (passe 1 de justesse, 22/48) ; retiré en intra-station.
 - **Signalé, non traité** : `metadata/analysis_metadata.csv` a 2 181 lignes contre 2 180 échantillons dans `ASV-CLEAN` (ligne en trop `15Bue1014Ch03A__durance3`, script 30) ; préexistant, à expliquer.
 - **Attendu de JF** : D2 (inchangé) ; validation des choix techniques du 4H (1 000 lectures assignées au genre, N commun).
-- **Ouvert** : abondance différentielle (reportée) ; mécanismes R22/R29/R30 `[À CONFIRMER]` ; R31 possiblement confondu avec l'ordre de traitement, non testé ; Table S10 et Figure S3 à régénérer depuis `PERMDISP-B`.
+- **Ouvert** : abondance différentielle (reportée) ; mécanismes R22/R29/R30 `[À CONFIRMER]` ; R31 possiblement confondu avec l'ordre de traitement, non testé ; Table S10 et Figure S3 : fait le 2026-10-05 (script 41).
 
-**Passation.** 4H et PERMDISP corrigé sont faits et lus. Prochain calcul : régénérer Table S10 / Figure S3 depuis `results/recat/{1,2}/permdisp_bias/`. Lire d'abord `docs/recalcul/note_4H_2026-10-03.md` puis `docs/plan_permdisp_biais_2026-10-03.md`.
+**Passation.** 4H et PERMDISP corrigé sont faits et lus ; Table S10 et Figure S3 régénérées (05/10, script 41). Rien de calculé en attente hors arbitrages de JF (D2, choix 4H). Lire d'abord `docs/recalcul/note_4H_2026-10-03.md`.
 
 ## Rédaction
 
 - **Fait le 03/10 (soir)** : `Article.docx` restructuré pour Animal Microbiome (Abstract 306 mots, Background, Methods = méthodes seules, Results, Discussion, Conclusions, Abbreviations, Declarations, 51 références numérotées, légendes) ; cinq figures dans `docs/manuscrit/figures/` ; dispersion réécrite d'après R34 ; contrôle chiffré **59/59** (`scripts/40-verif_article_v2.py`), script 30 41/44 (2 attentes périmées du script 30, 1 écart de métadonnées préexistant).
 - **Notes grises à lever** : autorisations Ain/Ardèche, euthanasie, température du tube (André) ; Competing interests, Authors' contributions, Acknowledgements ; DOI Zenodo ; FACIES ; Sinama 2013 (deux notices possibles) ; « not as a result of it » (paragraphe venu des Methods) ; mécanisme de l'effet de colonne (D2) ; code de sexe « X ».
-- **Défauts connus** : ordre de première citation des tables S non croissant (S1, S2, S5, S3, S8, S10, S4, S7, S9) ; revues non abrégées (NLM) ; Table S10 et Figure S3 du supplément non corrigées (PERMDISP) ; texte principal ≈ 12 500 mots, à resserrer.
+- **Défauts connus** : ordre de première citation des tables S non croissant (S1, S2, S5, S3, S8, S10, S4, S7, S9) ; revues non abrégées (NLM) ; texte principal ≈ 12 500 mots, à resserrer.
 - **Bloque** : D2 (JF) pour la phrase sur le mécanisme de l'effet de colonne.
 
-**Passation.** L'article a sa structure complète. Prochaine étape : JF relit Results et Discussion ; puis mise à jour du supplément (S10, S3, ordre des tables). Fichier : `docs/manuscrit/Article.docx` (md5 `5bbfdb78501626a507d4b63ca78660f9`), texte nouveau en bleu.
+**Passation.** L'article a sa structure complète. Prochaine étape : JF relit Results et Discussion ; puis ordre des tables S (S10 et S3 faits le 05/10). Fichier : `docs/manuscrit/Article.docx` (md5 `01461e48e5f395cd795801e2189d0690`), texte nouveau en bleu.
 
 ## Bibliographie
 

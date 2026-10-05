@@ -6,6 +6,12 @@ depuis les scripts et le `git log` : la décision est certaine, sa date est appr
 
 ---
 
+## 2026-10-05 — Supplément : Table S10 et Figure S3 régénérées sur PERMDISP corrigé
+- **Décision** : Table S10 (32 lignes) et Figure S3 recalculées depuis `results/recat/{1,2}/permdisp_bias/` ; libellés de la table traduits en anglais (« caudale », « UniFrac non pondéré » → termes du texte principal) ; Figure S3 recolorée avec la palette des figures principales (l'ancienne colorait les hybrides en orange, couleur de *P. toxostoma* dans l'article) ; titres de panneaux recalculés sur les données corrigées.
+- **Raison** : R34 (2026-10-03) ; le supplément portait encore les valeurs non corrigées. Le code d'origine de la Table S10 n'avait pas été conservé : agrégation reconstruite et validée contre l'ancienne table (32/32 lignes reproduites à partir des sorties non corrigées).
+- **Impact** : 12 cellules « station bloquée », 9 « intra-station », 6 « Hy most dispersed » changent (caudale passe 1 : Bray-Curtis, Jaccard et UniFrac non pondéré 3/3 → 0/3 ; UniFrac pondéré 0/3 → 1/3). Note de la table et légende S3 mises à jour ; note grise de l'article actualisée.
+- **Session** : Rédaction. Réf. `scripts/41-supp_S10_S3.py`, `docs/plan_permdisp_biais_2026-10-03.md`.
+
 ## 2026-10-03 (soir) — Article restructuré pour Animal Microbiome ; références numérotées
 - **Décision** : Abstract structuré (306 mots) et mots-clés ; Background / Methods (méthodes seules) / Results / Discussion / Conclusions / Abbreviations / Declarations / References / Figure legends ; résultats des anciens §8.7–8.9 déplacés en Results avec leur mise en forme ; nouveaux §8.7 (cadre statistique), §8.10 (alpha), §8.11 (4H), §8.12 (contrôles pré-déclarés) ; 51 références numérotées dans l'ordre de citation, dont 15 notices logicielles ou manquantes ajoutées depuis Crossref (DADA2, SILVA, cutadapt, QIIME 2, MAFFT, FastTree 2, UniFrac, Faith, PERMANOVA, PERMDISP, Stier et al. 2013, phyloseq, vegan, HybridMicrobiomes ; Kozich 2013, Small 2019 et Sevellec 2019 en version publiée) ; cinq figures principales.
 - **Raison** : choix de JF du 03/10 (installer et calculer le 4H, Methods = méthodes seules, 4–5 figures). Contrat de la revue : section Declarations complète, références numérotées.
