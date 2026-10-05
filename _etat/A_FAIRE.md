@@ -1,6 +1,6 @@
 # A_FAIRE — passations par type de session
 
-État au **2026-10-05** (Table S10 / Figure S3 régénérées) ; avant cela, **2026-10-03, nuit**. Sections *Analyse* et *Rédaction* réécrites à la clôture de la session du 03/10 soir (4H, PERMDISP corrigé, article restructuré) ; *Bibliographie*, *Soumission de données* et *Autre* inchangées depuis le 03/10 soir.
+État au **2026-10-05** (Table S10 / Figure S3 régénérées ; tables S renumérotées) ; avant cela, **2026-10-03, nuit**. Sections *Analyse* et *Rédaction* réécrites à la clôture de la session du 03/10 soir (4H, PERMDISP corrigé, article restructuré) ; *Bibliographie*, *Soumission de données* et *Autre* inchangées depuis le 03/10 soir.
 Chaque section est réécrite par la session concernée à sa clôture (cf. `README.md` du dossier).
 
 ---
@@ -19,10 +19,10 @@ Chaque section est réécrite par la session concernée à sa clôture (cf. `REA
 
 - **Fait le 03/10 (soir)** : `Article.docx` restructuré pour Animal Microbiome (Abstract 306 mots, Background, Methods = méthodes seules, Results, Discussion, Conclusions, Abbreviations, Declarations, 51 références numérotées, légendes) ; cinq figures dans `docs/manuscrit/figures/` ; dispersion réécrite d'après R34 ; contrôle chiffré **59/59** (`scripts/40-verif_article_v2.py`), script 30 41/44 (2 attentes périmées du script 30, 1 écart de métadonnées préexistant).
 - **Notes grises à lever** : autorisations Ain/Ardèche, euthanasie, température du tube (André) ; Competing interests, Authors' contributions, Acknowledgements ; DOI Zenodo ; FACIES ; Sinama 2013 (deux notices possibles) ; « not as a result of it » (paragraphe venu des Methods) ; mécanisme de l'effet de colonne (D2) ; code de sexe « X ».
-- **Défauts connus** : ordre de première citation des tables S non croissant (S1, S2, S5, S3, S8, S10, S4, S7, S9) ; revues non abrégées (NLM) ; texte principal ≈ 12 500 mots, à resserrer.
+- **Défauts connus** : ordre des **figures** S non croissant (S2 citée avant S1) ; revues non abrégées (NLM) ; texte principal ≈ 12 000 mots, à resserrer. **Corrigé le 05/10** : tables S dans l'ordre de citation ; deux paragraphes de dispersion périmés retirés des Methods (erreur du 03/10).
 - **Bloque** : D2 (JF) pour la phrase sur le mécanisme de l'effet de colonne.
 
-**Passation.** L'article a sa structure complète. Prochaine étape : JF relit Results et Discussion ; puis ordre des tables S (S10 et S3 faits le 05/10). Fichier : `docs/manuscrit/Article.docx` (md5 `01461e48e5f395cd795801e2189d0690`), texte nouveau en bleu.
+**Passation.** L'article a sa structure complète. Prochaine étape : JF relit Results et Discussion ; puis ordre des figures S, abréviations des revues, resserrement (tables S et S10/S3 faits le 05/10). Fichier : `docs/manuscrit/Article.docx` (md5 `68caaeb7c55ec2716a7fa36010d898dd`), texte nouveau en bleu.
 
 ## Bibliographie
 

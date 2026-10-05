@@ -186,6 +186,22 @@ SP.to_csv("results/verif_article/spearman_toutes_campagnes.tsv", sep="\t", index
 chk("Results/plate", "ρ 0.55–0.95 dans toutes les campagnes", "0.55–0.95", f"{SP.rho.min():.3f}–{SP.rho.max():.3f} ({SP.camp.nunique()} campagnes)",
     f"{SP.rho.min():.2f}–{SP.rho.max():.2f}" == "0.55–0.95")
 
+# ------------------------------------------------------------ chiffres périmés qui doivent être ABSENTS (ajout 2026-10-05)
+# Les deux anciens paragraphes de dispersion (PERMDISP non corrigé) étaient restés dans les Methods après la
+# restructuration du 03/10 ; un contrôle de présence seul ne pouvait pas le voir.
+GREY_FREE = TXT  # les notes grises peuvent citer les anciens chiffres ; on contrôle des formulations du texte d'origine
+for s_old in ["hybrids are the least dispersed of the three categories in 32 (pass 1) and 34 (pass 2)",
+              "Within stations the pattern holds in pass 1 (45 of 68",
+              "In the caudal fin, dispersion is heterogeneous on Jaccard in all three runs",
+              "binomial p = 2.4 × 10-6 and 1.2 × 10-7"]:
+    ROWS.append(dict(section="absence", affirmation="formulation périmée absente", texte=s_old, calcule="",
+                     valeur_ok=True, dans_docx=s_old in TXT, statut="OK" if s_old not in TXT else "ECART"))
+# ------------------------------------------------------------ tables supplémentaires : ordre de première citation
+order = []
+for m in re.finditer(r"Tables?\s+S(\d+)", TXT):
+    n = int(m.group(1))
+    if n not in order: order.append(n)
+chk("Tables S", "ordre de première citation = S1…S10, toutes citées", "Supplementary Table S10", str(order), order == list(range(1, 11)))
 out = pd.DataFrame(ROWS); out.to_csv("results/verif_article/verif_article_v2.tsv", sep="\t", index=False)
 print(out[["section", "affirmation", "calcule", "valeur_ok", "dans_docx", "statut"]].to_string(index=False))
 print(f"\n{(out.statut=='OK').sum()} OK / {len(out)} ; écarts : {(out.statut!='OK').sum()}")
