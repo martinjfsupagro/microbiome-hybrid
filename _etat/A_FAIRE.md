@@ -9,7 +9,7 @@ Chaque section est réécrite par la session concernée à sa clôture (cf. `REA
 
 - **Fait le 03/10 (soir)** : HybridMicrobiomes 0.1.1 installé (`~/bin/envs/hm4h`, recette dans les notes meso) ; **indice 4H** pré-déclaré (`docs/plan_4H_2026-10-03.md`, `6372af6`) puis calculé et lu mécaniquement (scripts 37–38) → R33 : aucun axe transgressif robuste ; axe parental robuste en branchie (passe 2) ; rétention des taxons partagés partout.
 - **Défaut de l'analyse antérieure, corrigé** : PERMDISP sans `bias.adjust` (R15/R25). Reprise pré-déclarée (`docs/plan_permdisp_biais_2026-10-03.md`) → R34 : « hybrides moins dispersés » ne tient qu'en station bloquée (passe 1 de justesse, 22/48) ; retiré en intra-station.
-- **Signalé, non traité** : `metadata/analysis_metadata.csv` a 2 181 lignes contre 2 180 échantillons dans `ASV-CLEAN` (ligne en trop `15Bue1014Ch03A__durance3`, script 30) ; préexistant, à expliquer.
+- **Expliqué le 05/10** : la ligne en trop de `analysis_metadata.csv` (`15Bue1014Ch03A__durance3`) est le réplicat durance3 dont `filterAndTrim` a retiré toutes les lectures (13 paires brutes) ; le script 19 part de l'inventaire et ne filtre pas sur la table ASV. Aucun effet sur les résultats (`docs/recalcul/note_ligne_metadonnees_2026-10-05.md`). **Attendu de JF** : accord pour corriger l'attente du script 30 (métadonnées ⊇ table, différence = échantillons vidés par DADA2).
 - **Attendu de JF** : D2 (inchangé) ; validation des choix techniques du 4H (1 000 lectures assignées au genre, N commun).
 - **Ouvert** : abondance différentielle (reportée) ; mécanismes R22/R29/R30 `[À CONFIRMER]` ; R31 possiblement confondu avec l'ordre de traitement, non testé ; Table S10 et Figure S3 : fait le 2026-10-05 (script 41).
 
