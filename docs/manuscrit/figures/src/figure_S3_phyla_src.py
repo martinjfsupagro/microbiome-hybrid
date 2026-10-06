@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 
 SRC = sys.argv[1] if len(sys.argv) > 1 else "results/phyla_composition/"
-OUT = sys.argv[2] if len(sys.argv) > 2 else "fig_S4_phyla"
+OUT = sys.argv[2] if len(sys.argv) > 2 else "fig_S3_phyla"   # Figure S3 depuis scripts/62 (ex fig_S4_phyla)
 T = pd.read_csv(SRC + "trois_stations.tsv", sep="\t")
 A = pd.read_csv(SRC + "station_tous_poissons.tsv", sep="\t")
 ST = [("Chavannes-sur-Suran", "Chavannes"), ("Pont-d'Ain", "Pont-d'Ain"), ("Rosieres", "Rosières"), ("Saint-Just-d'Ardeche", "Saint-Just"),

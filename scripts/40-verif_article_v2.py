@@ -256,7 +256,21 @@ forder = []
 for m in re.finditer(r"Figures?\s+S(\d+)", TXT):
     n = int(m.group(1))
     if n not in forder: forder.append(n)
-chk("Figures S", "ordre de première citation des figures = S1…S3", "Figure S3", str(forder), forder == [1, 2, 3])
+chk("Figures S", "ordre de première citation des figures = S1…S4 (S3 = phylums, ajout 2026-10-06)", "Figure S4", str(forder), forder == [1, 2, 3, 4])
+# ------------------------------------------------------------ Figure S3, composition en phylums (ajout 2026-10-06, scripts/59, 61, 62)
+_ST = pd.read_csv("results/phyla_composition/station_tous_poissons.tsv", sep="\t")
+_PH = [c for c in _ST.columns if c not in ("tissu", "station", "n", "n_par_categorie")]
+_dom = _ST.set_index(["tissu", "station"])[_PH].idxmax(axis=1)
+chk("Results/composition", "Pseudomonadota premier dans 33 des 36 profils tissu × station (Figure S3a)",
+    "most abundant phylum in 33 of the 36 tissue × station profiles", f"{int((_dom == 'Pseudomonadota').sum())}/{len(_dom)}",
+    (int((_dom == "Pseudomonadota").sum()), len(_dom)) == (33, 36))
+_T3 = pd.read_csv("results/phyla_composition/trois_stations.tsv", sep="\t")
+_gx = {(k, ph): (_T3[(_T3.categorie == k) & _T3.tissu.isin(["hindgut", "midgut"])][ph].min(),
+                 _T3[(_T3.categorie == k) & _T3.tissu.isin(["caudale", "branchie"])][ph].max())
+       for k in ("Cn", "Hy", "Pt") for ph in ("Fusobacteriota", "Bacillota")}
+chk("Results/composition", "Fuso et Bacillota : min digestif > max externe dans chaque catégorie (Figure S3b)",
+    "were more abundant in both gut sections than in both external tissues in each genotypic category",
+    "; ".join(f"{k} {ph[:4]} {g:.3f}>{e:.3f}" for (k, ph), (g, e) in _gx.items()), all(g > e for g, e in _gx.values()))
 # ------------------------------------------------------------ références : noms de revues abrégés (NLM), ajout 2026-10-05
 NLMA = json.load(open("docs/biblio/nlm_abreviations.json"))
 reste = [o for o, n in NLMA.values() if o != n and f". {o}. " in TXT]
