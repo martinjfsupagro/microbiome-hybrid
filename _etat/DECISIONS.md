@@ -6,6 +6,84 @@ depuis les scripts et le `git log` : la décision est certaine, sa date est appr
 
 ---
 
+## 2026-10-06 (soir) — Paquet de soumission Animal Microbiome : format et contenu
+- **Décision** (JF, choix posés le 06/10) : un Additional file par élément du supplément (18 : tables .xlsx, notes .docx, figures .pdf ; numéros dans l'ordre de première citation) ; copie de soumission **sans notes**, la version de travail restant la référence annotée et toute dérivation étant scriptée (`scripts/72`–`75`, `soumission_commun.py`) ; historique du brouillon (« an earlier version of… », 5 passages des Additional files 1, 6, 12, 17) retiré **des copies seules** ; Methods après Background (permis par la revue) ; « 16S » seul → « 16S rRNA gene » et « Materials and Methods » → « Methods » dans les copies ; Additional file 10 = les 2 304 runs + `sample_accession` + année de l'état ENA actuel. Figure S3 re-rendue phylums en italique (consigne : tous les rangs en italique), aussi dans la version de travail (`scripts/74`). « Eukaryota » et « Mitochondria » laissés en romain (libellés de filtrage SILVA, à confirmer par JF).
+- **Raison** : consignes de la revue lues le 06/10 (`docs/soumission/consignes/`) ; ne pas faire diverger deux textes à la main.
+- **Impact** : `SOUMIS-AM` (`docs/soumission/`, contrôle 112/113, 1 « à compléter » = 8 marqueurs [TO COMPLETE]) ; `MS-SUP` `e6b95f56` → `e050a354`. Deux défauts de l'agent trouvés en le faisant : légende de la Table S7 fausse (« column names are those of the file » alors qu'une colonne était renommée ; « sample accessions » absentes du fichier ; « excerpt below » recopié dans le manuscrit par le script 72) — corrigée dans les copies ; contrôle des polices du script 75 d'abord faux (comptage brut), corrigé. Constat : TITLE ENA de ERS31168490 erroné (voir R41).
+- **Session** : Rédaction. Réf. commit `9a966af`, `docs/soumission/LISEZMOI.md`.
+
+## 2026-10-06 (soir) — Nageoire caudale du canal du Largue : légende et limite
+- **Décision** (JF : « ok pour les trois propositions ») : légende de la Figure S4 chiffrée (médiane 240 lectures en durance1, aucune à 3 000) ; part du Largue dans le biais de sélection quantifiée (R40) ; phrase ajoutée aux limites : la sélection en caudale suit en partie la position (plaque 2, colonnes 06–08).
+- **Raison** : aucun échantillon caudal du Largue dans le panneau b de la Figure S4 (remarque de JF).
+- **Impact** : R40 ; mécanisme de l'excès de 12S non établi `[À CONFIRMER]`. Script 40 : 2 contrôles.
+- **Session** : Analyse puis Rédaction. Réf. `scripts/70` (`52cbc91`), `scripts/71` (`90dd13a`).
+
+## 2026-10-06 (après-midi) — Figure S3, mention Guivier, abondance différentielle, taille
+- **Décision** (JF) : (1) Figure S3 (phylums) validée ; (2) retrait de la mention du financement de Guivier et al. [31] validé ; (3) **pas d'analyse d'abondance différentielle** (D6, reportée depuis le 05/10 : abandonnée) ; (4) une phrase dans les limites sur la taille par catégorie (TL moyenne Cn 24,4 / Hy 19,4 / Pt 16,0 cm, Kruskal-Wallis p = 0,004, âge non estimé) — « Five limits ».
+- **Raison** : la taille diffère entre catégories et pourrait porter une partie de l'effet ; non modélisable avec l'effectif.
+- **Impact** : R42 (taille). Script 40 : contrôle de la taille.
+- **Session** : Rédaction. Réf. `scripts/69` (`be355a1`).
+
+## 2026-10-06 (après-midi) — Ordination en Figure S4 ; PERMDISP devient Figure S5
+- **Décision** (JF et André) : version 1 de la figure d'ordination (panneau b = PCoA par tissu aux trois stations, effet station visible) retenue comme Figure S4 ; la version 2 (axes non contraints après retrait de la station) reste dans `docs/manuscrit/figures/candidats/`. PERMDISP renuméroté Figure S5.
+- **Raison** : proposition d'André (ACM populations × espèces × tissus) ; la PCoA montre ce que les tests disent (station ≫ catégorie).
+- **Impact** : R38. Fichiers `fig_S4_ordination.*`, `fig_S5_permdisp.png` (le script 41 écrit toujours `fig_S3_permdisp.png`, nom historique).
+- **Session** : Analyse puis Rédaction. Réf. `scripts/65` (`25b87d4`), `scripts/68` (`72415e5`).
+
+## 2026-10-06 (après-midi) — Contrôle (vi) : campagne de pêche, déclaré après observation
+- **Décision** (JF : « teste le contrôle campagne ») : tests de catégorie refaits en bloquant station × campagne (14 blocs, Pertuis 2014 scindé en ses deux séries d'après André) ; plan pré-déclaré avant calcul, contrôle **déclaré après observation** (séparation par campagne à Buëch–Méouge vue sur les ordinations du script 65) — chronologie écrite au §8.12.
+- **Raison** : à Buëch–Méouge, les hybrides sont surtout de 2015 : la campagne pouvait porter l'effet de catégorie.
+- **Impact** : R39 ; Methods §8.12, Results, première limite de la Discussion.
+- **Session** : Analyse puis Rédaction. Réf. `docs/plan_controle_campagne_2026-10-06.md`, `scripts/66` (`118d09a`), `scripts/67` (`4d636ca`).
+
+## 2026-10-06 — Figure de composition en phylums (Figure S3)
+- **Décision** (JF et André, en quatre itérations le 06/10) : figure analogue à Guivier et al. 2017 (Fig. 5) ; version finale à deux panneaux : a = tissu × station, tous poissons réunis ; b = trois catégories (Cn, Hy 42, Pt) aux trois stations à trois catégories. Hybrides regroupés (intermédiaires et quasi-purs inégalement répartis : Buëch 8/2, Saint-Just 1/5). Placée en tête de Results « Composition by genotypic category » ; l'ancienne Figure S3 (PERMDISP) devient S4 puis S5.
+- **Raison** : décrire ce qui compose le microbiote avant de tester la catégorie ; la station étant l'effet le plus fort (R23), le panneau a la montre.
+- **Impact** : R37. Règles fixées avant chaque calcul (≥ 3 000 lectures, moyenne par individu × tissu, ≥ 2 profils par catégorie pour b).
+- **Session** : Analyse puis Rédaction. Réf. `scripts/58`–`62` (`33257e3` → `26402c2`).
+
+## 2026-10-06 — Réponses d'André : autorisations, euthanasie, conservation, financement, sexe
+- **Décision** : portées au manuscrit — autorisations ONEMA et DDT 04, 05, 84 ; Suran avec la Fédération de l'Ain, Ardèche avec l'ONEMA 07, **sans numéro** (suffisant d'après André) ; euthanasie par dislocation cervicale juste avant chaque dissection (pour ne pas altérer l'expression des gènes) ; tube éthanol 95 % sur glace puis −80 °C ; référence au projet FACIES retirée du Funding (André ne peut confirmer le rattachement) ; « X » = juvéniles : **NA dans la Table S2** (69 = X 52 + vide 17), X et vide **gardés** dans les métadonnées ; Benjamin Hérodet dans les remerciements (rôle à préciser) ; remerciements et contributions en fin de manuscrit.
+- **Raison** : réponses écrites d'André (`docs/reponses_andre_2026-10-06.md`).
+- **Impact** : Declarations ; `GENO-TAB` (Table S2). Restent : rôle de B. Hérodet, contributions.
+- **Session** : Rédaction. Réf. `scripts/52` (`2a46d4c`), `scripts/57` (`2341572`), `scripts/63` (`674d8f2`).
+
+## 2026-10-06 — Contraste femelles/mâles non rapporté
+- **Décision** (JF) : le contraste de sexe (R27) n'est pas rapporté dans l'article.
+- **Raison** : non établi sous D7 et confondu avec l'ordre de traitement (femelles disséquées plus tôt, rang médian 5 contre 8, p = 0,02), déséquilibré entre stations.
+- **Impact** : seule la note grise du paragraphe Alpha diversity change.
+- **Session** : Rédaction. Réf. `scripts/56` (`4612fae`).
+
+## 2026-10-06 — ENA : incident de procédure, puis MODIFY Pertuis + host subject id appliqué
+- **Fait** : la procédure du MEMO du 30/09 (`build_ena_modify.py` depuis le XML d'origine du 22/08) aurait **ramené à leur valeur d'origine les 4 612 champs** corrigés le 31/08 et le 25/09 (mesuré sans soumettre). Remplacée par `scripts/53` (part de l'état déposé, contrôle le chaînage, relit le XML) et `ena_deposit/10_corriger_pertuis_sujet.sh`. Premier envoi de production refusé (success=false, « No new BioSample was created », aucune accession) ; diagnostic sur un échantillon (`scripts/54`, `ena_deposit/11`) ; état vérifié intact (4 612/4 612, 11:08) ; envoi réussi à 11:18:47 ; vérification exhaustive par JF à 15:02 : 5 339/5 339 (R41). Garde ajoutée à `6_etat_du_depot.sh` (périmé, conseillait une relance destructrice).
+- **Décision** (JF, 03/10, exécutée le 06/10) : 44 dates de Pertuis au jour près + `host subject id` préfixé par la campagne (727) en une seule soumission.
+- **Impact** : `ENA-OCT` ; `ENA-SUBJ` et `ENA-PERT` soumis ; Article §9, Notes S2 et S3 mis à jour (`scripts/64`).
+- **Session** : Soumission de données. Réf. `c650006`, `befa18e`, `d47e210`, `222e295`, `af03346`, `ena_deposit/MEMO_corrections_restantes.md`.
+
+## 2026-10-06 (matin) — Test R31 : dominance de *C. nasus* et ordre de traitement (contrôle v)
+- **Décision** (JF, décision 4) : tester, avec un plan déclaré avant tout calcul ; puis intégrer au §8.12 (contrôle v, chronologie : déclaré après les résultats de iii, avant son calcul), aux Results et à la Discussion (« which was not tested » remplacé).
+- **Raison** : R31 portait un `[À CONFIRMER]` (hotus traités d'abord).
+- **Impact** : R36 ; `[À CONFIRMER]` de R31 levé. **Erreur de l'agent** : le script 49 avait perdu l'italique de « C. nasus » en remplaçant à travers des runs ; corrigé, contrôle d'italique permanent ajouté au script 40.
+- **Session** : Analyse puis Rédaction. Réf. `docs/plan_R31_ordre_2026-10-06.md` (`f3916c1`), `scripts/51`, `scripts/55` (`cd6f2d0`).
+
+## 2026-10-06 (matin) — Décisions 5 et 7 : étendue sur les trois runs ; attente du script 30
+- **Décision** (JF) : (5) les écarts de rétention du §8.6 sont rapportés comme l'**étendue sur les trois runs** et non plus sur le seul run durance1 (article, Note S2, Table S6, légende de la Figure S1) ; (7) script 30 : attente « métadonnées ⊇ table », seule ligne en trop admise et nommée (`15Bue1014Ch03A__durance3`).
+- **Raison** : un run seul donnait une précision illusoire ; la ligne en trop est expliquée (05/10).
+- **Impact** : R35 ; script 30 44/44.
+- **Session** : Rédaction. Réf. `scripts/50` (`f7b41ba`).
+
+## 2026-10-06 (matin) — D2 tranchée (option ii) : séjour en vivier, mécanisme candidat
+- **Décision** (JF) : l'article propose la durée de séjour en vivier avant dissection comme **mécanisme candidat** de l'effet de colonne, avec ses deux appuis et un statut d'hypothèse explicite ; protocole corrigé (« delay between capture and dissection » ne correspondait pas au protocole d'André).
+- **Raison** : R32 — colonne, ordre de traitement et durée de séjour ne sont pas séparables dans ce dispositif ; la prémisse est extérieure au jeu de données.
+- **Impact** : Results, Discussion ; mécanisme `[À CONFIRMER]` (non testable ici).
+- **Session** : Rédaction. Réf. `scripts/49` (`0bf81a7`).
+
+## 2026-10-06 (matin) — La version resserrée devient la référence unique
+- **Décision** (JF, arbitrage (a) du 05/10) : `Article_resserre.docx` → `Article.docx`, `Supplementary_Data_resserre.docx` → `Supplementary_Data.docx` ; versions longues archivées en `docs/manuscrit/archive/*_long_2026-10-05.docx`.
+- **Raison** : une seule version à corriger ; le script 40 pointe par défaut sur le manuscrit vivant.
+- **Impact** : `MS`, `MS-SUP` ; `MS-R`, `MS-SUP-R` sans objet. Les scripts 42, 44, 47, 48 citent les anciens noms (usage unique, non rejouables).
+- **Session** : Rédaction. Réf. `a2752fd`.
+
 ## 2026-10-05 (soir) — Supporting Information de Camper et al. 2024 : deux affirmations du §8.11 vérifiées
 - **Fait** : fichier fourni par JF (`mee314279-sup-0001-Supinfo1.docx`, `CAMPER-SI`). Exclusion de ρ ≥ 0,8 **confirmée** : sur le lézard *Aspidoscelis*, seul système naturel des tables (l'autre est un croisement de maïs), Intersection = 0 à ρ = 0,8 dans les versions Jaccard et Bray-Curtis (Tables S.2.1, S.2.2). Variation de l'axe parental entre 1 000 et 10 000 lectures : **0,0664** (Table S.4.1, Jaccard ; 0,045 en Bray-Curtis, S.4.2), et non 0,067 — mauvais arrondi corrigé en 0,066 au §8.11 des deux versions (`scripts/48-correction_camper_SI.py`) ; le script 40 recalcule les deux valeurs depuis `docs/biblio/camper2024_SI_coeur_profondeur.tsv`. `docs/note_sensibilite_4H.md` attribuait au lézard un « 0,013 (1 000 → 5 000) » qui est la valeur du maïs : note laissée en l'état, signalée ici.
 - **Session** : Rédaction. Réf. `Article.docx` (`c3884a23a479f25c8ff9c2f3dea5d9c0`), `Article_resserre.docx` (`1baaab97fde111200770a4160190e6d4`).
@@ -55,7 +133,7 @@ depuis les scripts et le `git log` : la décision est certaine, sa date est appr
 - **Session** : Analyse. Réf. `docs/plan_permdisp_biais_2026-10-03.md`, scripts 24 (`ecef636`) et 39 (`ec5e318`).
 
 ## 2026-10-03 (soir) — Indice 4H : profondeur, effectif et règles de lecture fixés avant calcul
-- **Décision** (technique, prise par l'agent dans le cadre de D4–D6, **à valider par JF**) : raréfaction 4H à **1 000 lectures assignées au genre** (1 749/1 784 échantillons) ; N = plus petite classe de la passe 1 − 1, commun aux deux passes ; 500 bootstraps ; version Bray-Curtis, pré-analyse, plan nul et hybride nul ; règles de lecture 1–7 ; `FourHcompare` non utilisé (p dépendant du nombre de bootstraps).
+- **Décision** (technique, prise par l'agent dans le cadre de D4–D6, **à valider par JF**) : raréfaction 4H à **1 000 lectures assignées au genre** (1 749/1 784 échantillons) ; N = plus petite classe de la passe 1 − 1, commun aux deux passes ; 500 bootstraps ; version Bray-Curtis, pré-analyse, plan nul et hybride nul ; **[Précision du 2026-10-06 : le plan (`docs/plan_4H_2026-10-03.md`, l. 46–49, commité avant calcul) fixe Jaccard au genre, ρ = 0,5, comme réglage **principal** ; la version Bray-Curtis est une **sensibilité** (abondance), comme ρ 0,3/0,7 et le rang famille. R33 est conforme au plan ; cette entrée, qui citait « version Bray-Curtis » sans son rôle, était ambiguë.]** règles de lecture 1–7 ; `FourHcompare` non utilisé (p dépendant du nombre de bootstraps).
 - **Raison** : le package raréfie la table agrégée ; à 3 000 lectures assignées, trois tissus de la passe 1 tombaient sous 10 hybrides (abandon D6). Camper et al. : axe parental stable à ± 0,067 entre 1 000 et 10 000 lectures.
 - **Impact** : R33. Couverture au genre 64,1 % des lectures, déclarée.
 - **Session** : Analyse. Réf. `docs/plan_4H_2026-10-03.md` (`6372af6`), `docs/recalcul/note_4H_2026-10-03.md`.

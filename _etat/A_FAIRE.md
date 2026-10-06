@@ -1,28 +1,26 @@
 # A_FAIRE — passations par type de session
 
-État au **2026-10-05, clôture du soir** (commit `cfe939b`). Sections *Analyse* et *Rédaction* réécrites à cette clôture ; *Bibliographie* mise à jour en cours de session (05/10) ; *Soumission de données* inchangée depuis le 03/10 soir ; *Autre* : point `IDX-HYB` réglé le 05/10.
+État au **2026-10-06, clôture du soir** (HEAD avant clôture `9a966af`). Sections *Analyse*, *Rédaction*, *Soumission de données* et *Autre* réécrites à cette clôture ; *Bibliographie* inchangée depuis le 05/10.
 Chaque section est réécrite par la session concernée à sa clôture (cf. `README.md` du dossier).
 
 ---
 
 ## Analyse
 
-- **Fait le 05/10** : ligne en trop de `analysis_metadata.csv` expliquée (`15Bue1014Ch03A__durance3`, vidé par `filterAndTrim` ; aucun effet ; `docs/recalcul/note_ligne_metadonnees_2026-10-05.md`) ; rétention selon la profondeur recalculée par catégorie, tissu, passe et run (`scripts/43`, `RETENTION`, R35) — les chiffres du §8.6 sont ceux du run durance1 ; part du 12S recalculée (`scripts/45`, `PART-12S`, R2 annoté) ; index hybride d'André : sens vérifié (0 = hotu), non utilisé.
-- **Rappel 03/10** : 4H pré-déclaré, calculé et lu (R33) ; PERMDISP corrigé du biais de petit effectif (R34).
-- **Attendu de JF** : D2 (mécanisme de l'effet de colonne) ; choix techniques du 4H (1 000 lectures au genre, N commun) ; accord pour l'attente « métadonnées ⊇ table » du script 30 (son seul écart, 43/44) ; tester ou non R31 (dominance de *C. nasus* et ordre de traitement), avec un plan pré-déclaré.
-- **Ouvert** : abondance différentielle (reportée, cf. Rédaction (c)) ; mécanismes R22/R29/R30 `[À CONFIRMER]`.
+- **Fait le 06/10** : test R31 (contrôle v, R36 : dominance de *C. nasus* non attribuable à l'ordre ; ordre effectif sur l'alpha du hindgut) ; contrôle (vi) campagne de pêche (R39 : détections maintenues, 46 → 52 runs) ; composition en phylums (R37) ; ordination (R38) ; nageoire caudale du Largue (R40) ; taille par catégorie (R42). D2 tranchée (séjour en vivier, hypothèse non testable ici, R32). Abondance différentielle **abandonnée** (décision de JF).
+- **Attendu de JF** : validation des choix techniques du 4H pris par l'agent le 03/10 (1 000 lectures au genre, N commun, 500 bootstraps) ; l'entrée correspondante de `DECISIONS.md` est précisée (Jaccard principal, Bray-Curtis en sensibilité, conforme au plan).
+- **Ouvert, facultatif** : identité de l'ASV0185 (phylum non assigné, 80 % du midgut de 2015_Caa_1003 ; BLAST non fait) ; part des Mycoplasmatales (comptées dans *Bacillota* par SILVA 138.2) ; mécanisme de l'excès de 12S en plaque 2, colonnes 06–08 `[À CONFIRMER]` ; mécanismes R22/R29/R30 `[À CONFIRMER]`.
 
-**Passation.** Rien de calculé en attente : tout ce qui pouvait l'être sans arbitrage l'est (scripts 43 et 45 du 05/10). Prochaine analyse possible : test R31 si JF le valide. Lire d'abord `RESULTATS.md` (R35, R2) puis `docs/recalcul/note_4H_2026-10-03.md`.
+**Passation.** Aucun calcul en attente : tout ce que l'article cite est calculé, contrôlé (script 40 95/95, script 30 44/44) et consigné (R36–R42). Les points ouverts sont facultatifs et ne bloquent pas la soumission. Lire d'abord R36–R42 dans `RESULTATS.md`.
 
 ## Rédaction
 
-- **Fait le 05/10** : (1) texte principal resserré (10 677 → 7 904 mots) dans `Article_resserre.docx`, détails techniques déplacés verbatim en Note S2 du supplément resserré (ancienne Note S2 → S3) ; (2) **dans les deux versions** : figures S dans l'ordre de citation (S1 = compromis profondeur, régénérée en anglais avec des valeurs recalculées ; S2 = position), titres des Tables S6/S8/S9/S10, 31 revues abrégées NLM, Figure 4 titres et légende alignés, §8.6 « run durance1 » précisé, §5 part du 12S corrigée (14–15 % par run), §8.11 0,067 → 0,066 (Camper et al., SI), Discussion « one of the two forms », notes grises périmées remplacées, images du supplément à 15,24 cm. Scripts 42, 44, 47, 48.
-- **Contrôles en fin de session** : script 40 **75/75** sur `Article_resserre.docx`, 74/75 sur `Article.docx` (seul écart : ordre des notes, la référence ne citant que la Note S1) ; script 30 **43/44**.
-- **Attendu de JF** : (a) valider ou non la version resserrée (comparaison : `docs/manuscrit/resserrement_2026-10-05_comparaison.docx`) ; (b) §8.6 : un run (durance1) ou l'étendue sur les trois runs (midgut passe 1 : 5,7–14,0 points) ; (c) phrase retirée sur l'abondance différentielle (note grise §8.7) ; (d) D2, phrase sur le mécanisme de l'effet de colonne (séjour en vivier) ; (e) références : année du volume imprimé, notice Sinama 2013, pertinence de Wang 2015 [11] et Sevellec 2014 [6], appel à la Table S5 ; (f) titre définitif ; (g) Declarations : auteurs et contributions, conflits d'intérêts, DOI Zenodo ; (h) notes grises historiques à retirer avant soumission.
-- **Attendu d'André** : autorisations couvrant l'Ain et l'Ardèche ; euthanasie ; température du tube en éthanol ; rattachement du contrat AGDI 428481 à FACIES ; code de sexe « X » ; remerciements ; sa part des contributions.
-- **Bloque** : D2 (JF) pour la phrase sur le mécanisme ; (a) pour savoir quelle version porte la suite du travail.
+- **Fait le 06/10** : version resserrée devenue la référence unique (`MS`, `MS-SUP`) ; D2, décisions 5 et 7, contrôles (v) et (vi), réponses d'André, contraste de sexe non rapporté, Figures S3 (phylums), S4 (ordination), S5 (PERMDISP), taille et Largue dans les limites ; **paquet de soumission Animal Microbiome** (`SOUMIS-AM`, `docs/soumission/`, commit `9a966af`) : manuscrit sans notes, Fig1–5, 18 Additional files, contrôle des consignes 112/113.
+- **Attendu de JF** : (1) remplir les 8 marqueurs [TO COMPLETE] (auteurs, affiliations, courriels, auteur correspondant, DOI Zenodo, rôle des financeurs, contributions, remerciements) ; (2) titre définitif ; (3) références : année du volume imprimé, notice Sinama 2013, pertinence de Wang 2015 [11] et Sevellec 2014 [6], maintien de l'appel à la Table S5 (Additional file 7) au §8.6 ; (4) « Eukaryota » et « Mitochondria » laissés en romain (libellés SILVA) : confirmer ; (5) lettre d'accompagnement, relecteurs suggérés, résumé graphique (facultatif).
+- **Attendu d'André** : rôle de Benjamin Hérodet dans les remerciements ; sa part des contributions.
+- **Règle** : toute correction se fait dans `MS` / `MS-SUP` (version de travail annotée), puis le paquet est **régénéré** par les scripts 72–75 (commandes dans `docs/soumission/LISEZMOI.md`, exécution locale) — jamais d'édition à la main de `docs/soumission/`.
 
-**Passation.** Deux versions coexistent et portent les mêmes corrections : `Article.docx` (référence, `c3884a23…`) et `Article_resserre.docx` (en relecture, `1baaab97…`). Toute nouvelle correction s'applique aux deux tant que (a) n'est pas tranché. Plus rien à faire sans décision de JF ou réponse d'André. Lire d'abord les entrées du 05/10 de `DECISIONS.md`, puis la liste (a)–(h) ci-dessus.
+**Passation.** Le texte est prêt à soumettre, moins les 8 marqueurs. Une fois remplis par JF dans `MS`, régénérer le paquet (72, 73, 75) et relancer les scripts 40 et 30. Lire d'abord `docs/soumission/LISEZMOI.md`, puis les entrées du 06/10 de `DECISIONS.md`.
 
 ## Bibliographie
 
@@ -36,20 +34,20 @@ Chaque section est réécrite par la session concernée à sa clôture (cf. `REA
 
 ## Soumission de données
 
-- **État** : PRJEB124417 vérifié (R28, 4 612/4 612), en ligne, non public.
-- **Décidé par JF le 03/10** : soumettre **en une seule fois** les dates de Pertuis (`ENA-PERT`, 44) et le `host subject id` préfixé par la campagne (`ENA-SUBJ`, 727) ; **pas de restructuration** des 2 304 experiments pour l'instant ; ouverture publique **à la soumission de l'article**.
-- **À faire, par un humain** (identifiants Webin au clavier) : la soumission, selon la ligne de commande testée de `ena_deposit/MEMO_corrections_restantes.md` ; puis ajouter les deux tables **en fin de liste** de `7_verifier_exhaustif.sh` et revérifier ; puis mettre à jour le §9 et la note sur le host subject id (Note S2 de `Supplementary_Data.docx`, Note S3 de la version resserrée).
-- **Recette à ne pas re-découvrir** : FTP Webin inutilisable, `webin-cli -ascp` en appelant le conteneur ; MODIFY par `curl` ; un reçu vide n'est pas un échec (`6_etat_du_depot.sh` avant toute relance).
+- **État** : PRJEB124417 corrigé le 06/10 (44 dates de Pertuis, 727 `host subject id` préfixés) et vérifié par JF à 15:02 : 5 339/5 339 (R41) ; en ligne, **non public**.
+- **Défaut résiduel** (trouvé le 06/10 au soir) : TITLE de ERS31168490 (`15Per2015Ch03A`, pêché le 2014-08-20) = « … Per 2015, individual 2015 », attendu « … Per 2014, individual 2015 ». La vérification l'a déclaré conforme parce que sa valeur de référence portait la même erreur.
+- **À faire, par un humain** (identifiants Webin au clavier) : (1) MODIFY de ce seul TITLE, construit **depuis l'état déposé** (méthode de `scripts/53`, jamais depuis le XML d'août), test puis production ; corriger aussi la valeur de référence avant de revérifier par `7_verifier_exhaustif.sh` ; (2) ouverture publique **à la soumission de l'article** (décision du 03/10).
+- **Recettes à ne pas re-découvrir** : `build_ena_modify.py` depuis le XML d'origine ramène les 4 612 champs corrigés à leur valeur d'août (incident du 06/10) ; `6_etat_du_depot.sh` est périmé (garde `FORCER_ETAT_AOUT=1`) ; un reçu vide ou `success=false` sans accession n'altère pas l'état : vérifier avant toute relance ; FTP Webin inutilisable, `webin-cli -ascp` via le conteneur.
 - **Leçon du 30/09, toujours valable** : ne jamais écrire dans `docs/manuscrit/` depuis une session Soumission.
 
-**Passation.** Rien à calculer : une soumission MODIFY à lancer par JF, déjà construite et testée. Lire `ena_deposit/MEMO_corrections_restantes.md`, puis `DECISIONS.md` du 03/10.
+**Passation.** Un seul champ à corriger (TITLE de ERS31168490), puis l'ouverture publique au moment de la soumission. Lire `ena_deposit/MEMO_corrections_restantes.md` (procédure du 06/10) et R41.
 
 ## Autre (données d'André, hygiène du dépôt)
 
-- **Réponses d'André du 03/10** consignées mot pour mot dans `docs/reponses_andre_2026-10-03.md` : autorisations 2014-156-0001 et 2015-1426DDT605 (ONEMA, DDT 04, 05 et 84), même protocole de dissection pour les quatre tissus, tissu 01 = lobe de nageoire caudale, protocole de laboratoire identique à Guivier et al. 2017, témoins retrouvés dans les plaques, origine de la fuite de mock non récupérable, vivier et durées de dissection, contrat EDF-CNRS AGDI 428481.
-- **Attendu d'André** (questions de suivi transmises par JF le 03/10) : couverture des stations de l'**Ain** et de l'**Ardèche** par une autorisation DDT ; euthanasie par dislocation cervicale juste avant chaque dissection ; température de conservation du tube en éthanol. Plus, en fin d'écriture, les remerciements.
-- **Réponses de JF du 03/10** : `docs/reponses_JF_2026-10-03.md`.
-- **Dépôt GitHub public** (JF) : le miroir s'arrêtait au 25/09 (`72666a3`) ; le manuscrit et les notes internes y deviennent publics à chaque synchronisation.
-- **Hygiène, sans urgence** : `CLAUDE.md` périmé ; 33 fichiers en doublon à la racine ; 0,97 Go de tables ASV redondantes ; `results/fastqc_durance*` et `ena_deposit/webin_out_*` archivables. `metadata/index_hybride_andre.csv` (`IDX-HYB`) : sens **vérifié le 05/10** (0 = hotu, 1 = toxostome ; convention inverse de la colonne Q d'`analysis_metadata.csv`) ; formulaire rempli pour 49/180 individus seulement, non utilisé par les analyses.
+- **André** : réponses du 06/10 consignées (`ANDRE-1006`) et portées au manuscrit ; restent le rôle de B. Hérodet et sa part des contributions (voir Rédaction).
+- **Dépôt GitHub public** (JF) : miroir arrêté au 25/09 (`72666a3`) ; à synchroniser avant soumission (référence [51] de l'article). **Attention** : la synchronisation rend publics la version annotée (`MS`, notes grises) et les notes internes (`_etat/`, `docs/`) — décider avant ce qui est exclu. Archive Zenodo et DOI ensuite (marqueur de la section Availability).
+- **Hygiène, sans urgence** : `CLAUDE.md` périmé ; 33 fichiers en doublon à la racine ; 0,97 Go de tables ASV redondantes ; `results/fastqc_durance*` et `ena_deposit/webin_out_*` archivables ; `scripts/41` écrit encore `fig_S3_permdisp.png` (nom historique de la Figure S5) ; `metadata/analysis_metadata.csv` porte des dates de collecte par station (listes du type « 2014-07-17;2015-07-10 »), l'ENA par échantillon (alignement facultatif) ; `IDX-HYB` non utilisé.
 - **Attention** : dépôt modifié en parallèle par d'autres sessions ; `git status` et relecture avant toute écriture dans `_etat/`.
+
+**Passation.** Rien d'urgent hors la décision sur le contenu du miroir GitHub, à prendre avant la soumission. Lire cette section puis `docs/soumission/LISEZMOI.md`.
 

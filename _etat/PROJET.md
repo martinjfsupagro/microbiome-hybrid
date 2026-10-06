@@ -53,7 +53,7 @@ réorganisation dépend-elle du **compartiment tissulaire** ?
 | Scripts | `scripts/` (`01`→`27`, lanceur + worker) ; variables : `config/project.env` |
 | Sorties d'analyse | `results/<analyse>/` — **non versionnées** (`.gitignore`) |
 | Figures | `docs/figures/` (versionnées) ; `results/*/fig_*.png` (non versionnées) |
-| Manuscrit | `docs/manuscrit/` (`Article.docx`, `Supplementary_Data.docx`) ; cible **Animal Microbiome** (JF, 2026-10-03) ; Tables S1–S10 (S2 = génotypes, depuis le 03/10) |
+| Manuscrit | `docs/manuscrit/` (`Article.docx`, `Supplementary_Data.docx`) = **version de travail annotée, seule à éditer** ; cible **Animal Microbiome** (JF, 2026-10-03) ; Tables S1–S10, Notes S1–S3, Figures S1–S5 (06/10). Copie de soumission **dérivée** dans `docs/soumission/` par `scripts/72`–`75` (exécution locale : python-docx et openpyxl absents de meso) — régénérer, ne pas éditer |
 | Bibliographie | `docs/biblio/` (`microbiome_hybrid_all_refs.bib` fait foi) |
 | Dépôt de séquences | `ena_deposit/` — ENA **PRJEB124417** |
 | Décisions détaillées | `docs/decision_*.md` (20 fichiers) |
