@@ -1,0 +1,19 @@
+additional_file	ancien_libelle	element	titre_court	format	fichier	source	renvois	dims
+1	Table S1	T1	Sampling stations	.xlsx	Additional_file_1.xlsx	docs/manuscrit/Supplementary_Data.docx (version de travail e050a354)	T4	11x10
+2	Table S2	T2	Individual genotypes	.xlsx	Additional_file_2.xlsx	docs/manuscrit/Supplementary_Data.docx (version de travail e050a354)		181x17
+3	Table S3	T3	Sequencing runs and replication structure	.xlsx	Additional_file_3.xlsx	docs/manuscrit/Supplementary_Data.docx (version de travail e050a354)		4x6
+4	Note S1	N1	Verification of the replication structure	.docx	Additional_file_4.docx	docs/manuscrit/Supplementary_Data.docx (version de travail e050a354)		
+5	Table S4	T4	Composition of the ENA submission	.xlsx	Additional_file_5.xlsx	docs/manuscrit/Supplementary_Data.docx (version de travail e050a354)		7x3
+6	Note S2	N2	Sequence processing, quality control and repeated rarefaction	.docx	Additional_file_6.docx	docs/manuscrit/Supplementary_Data.docx (version de travail e050a354)	F1,N3,T1,T3,T5,T6,T7	
+7	Table S5	T5	Monte-Carlo convergence of repeated rarefaction	.xlsx	Additional_file_7.xlsx	docs/manuscrit/Supplementary_Data.docx (version de travail e050a354)		9x6
+8	Table S6	T6	Agreement of diversity metrics across rarefaction depths	.xlsx	Additional_file_8.xlsx	docs/manuscrit/Supplementary_Data.docx (version de travail e050a354)		6x7
+9	Figure S1	F1	Rarefaction depth, metric fidelity and sample selection	.pdf	Additional_file_9.pdf	docs/manuscrit/figures/fig_S1_depth_tradeoff.png (PNG -> PDF 300 dpi)	F2	
+10	Table S7	T7	Run accessions, file names and checksums	.xlsx	Additional_file_10.xlsx	docs/manuscrit/ENA_accessions_durance.tsv (2 304 runs) + ena_deposit/sample_accessions.tsv + ena_deposit/ena_etat_final_oct.tsv (année de collecte) ; légende : Supplementary_Data.docx e050a354		4x6
+11	Note S3	N3	Host subject identifiers are prefixed with the sampling campaign	.docx	Additional_file_11.docx	docs/manuscrit/Supplementary_Data.docx (version de travail e050a354)	T3	
+12	Table S8	T8	Plate-position effect on community composition	.xlsx	Additional_file_12.xlsx	docs/manuscrit/Supplementary_Data.docx (version de travail e050a354)		10x7
+13	Figure S2	F2	Plate position affects community composition	.pdf	Additional_file_13.pdf	docs/manuscrit/figures/fig_S2_position_effect.png (PNG -> PDF 300 dpi)	T8	
+14	Figure S3	F3	Phylum-level composition by tissue, station and genotypic category	.pdf	Additional_file_14.pdf	docs/manuscrit/figures/fig_S3_phyla.pdf (rendu 2026-10-06, phylums en italique)		
+15	Table S9	T9	Preliminary variance partition of genotypic category	.xlsx	Additional_file_15.xlsx	docs/manuscrit/Supplementary_Data.docx (version de travail e050a354)		17x9
+16	Figure S4	F4	Ordination of community composition by tissue, station and category	.pdf	Additional_file_16.pdf	docs/manuscrit/figures/fig_S4_ordination.pdf		
+17	Table S10	T10	Dispersion of community composition by genotypic category (PERMDISP)	.xlsx	Additional_file_17.xlsx	docs/manuscrit/Supplementary_Data.docx (version de travail e050a354)		33x9
+18	Figure S5	F5	Dispersion by genotypic category, corrected for small-sample bias	.pdf	Additional_file_18.pdf	docs/manuscrit/figures/fig_S5_permdisp.png (PNG -> PDF 300 dpi)	T10	

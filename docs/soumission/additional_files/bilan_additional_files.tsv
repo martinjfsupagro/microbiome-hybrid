@@ -1,0 +1,19 @@
+additional_file	element	fichier	octets	md5	contenu
+1	T1	Additional_file_1.xlsx	7577	b30f44fbda7871b69f04d9f722e35d29	10 lignes x 10 colonnes
+2	T2	Additional_file_2.xlsx	19075	52b2a117aee3d317712da1ab6e5d9f7f	180 lignes x 17 colonnes
+3	T3	Additional_file_3.xlsx	6123	db88d3d8c5943e48a35880d76db98ce0	3 lignes x 6 colonnes
+4	N1	Additional_file_4.docx	37238	16db5d3123e799081c9eaab21fdba3a3	3 paragraphes
+5	T4	Additional_file_5.xlsx	5504	150f7a92c618307a85c391a9a747318f	6 lignes x 3 colonnes
+6	N2	Additional_file_6.docx	44986	a9f12b95182d8755976c656dcc5b1618	28 paragraphes
+7	T5	Additional_file_7.xlsx	6129	f3336c89bc415bd58babfc8612a3f6ac	8 lignes x 6 colonnes
+8	T6	Additional_file_8.xlsx	5883	74c661f6106bf8630d36f8d2baa3d905	5 lignes x 7 colonnes
+9	F1	Additional_file_9.pdf	201599	c9c942d7c620bd7c36a2ca4777016abe	source fig_S1_depth_tradeoff.png
+10	T7	Additional_file_10.xlsx	333619	133cd74638761d21c2842fd7a6f31713	2304 lignes x 21 colonnes
+11	N3	Additional_file_11.docx	37306	421e8b942fdfe011cc3404f3ba3c3400	3 paragraphes
+12	T8	Additional_file_12.xlsx	6189	a30860ef3a22cd72e3b547282bdf61b7	9 lignes x 7 colonnes
+13	F2	Additional_file_13.pdf	272863	36c0fab0f6c4fb2f2098570fe498f03c	source fig_S2_position_effect.png
+14	F3	Additional_file_14.pdf	50467	10705ec41d8802cf76b9688e1a19180e	source fig_S3_phyla.pdf
+15	T9	Additional_file_15.xlsx	6481	2cebfd630bd62bf78033dfb1c1dc4803	16 lignes x 9 colonnes
+16	F4	Additional_file_16.pdf	55420	cf44b302eddd0e4f5f77fcfcbdcb6b19	source fig_S4_ordination.pdf
+17	T10	Additional_file_17.xlsx	7175	52dd6ac3deed6293d2f93cac115c44a7	32 lignes x 9 colonnes
+18	F5	Additional_file_18.pdf	267129	ff292181f5f3467060107b71bc4b4e60	source fig_S5_permdisp.png

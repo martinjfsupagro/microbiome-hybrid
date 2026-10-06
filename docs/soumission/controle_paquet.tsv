@@ -1,0 +1,114 @@
+id	objet	regle	valeur	statut
+M1	manuscrit	aucune note grise ni couleur	notes 0, runs colorés 0	OK
+M2a	manuscrit	crochets hors références : seulement [TO COMPLETE]	aucun	OK
+M2b	manuscrit	marqueurs [TO COMPLETE] à remplir avant soumission	8	A COMPLETER
+M3a	manuscrit	Additional files cités dans le corps, 1re citation dans l'ordre 1-18	[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]	OK
+M3b	manuscrit	section Additional files : 1-18 avec format	[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]	OK
+M3c	manuscrit	aucun renvoi Supplementary / S résiduel	aucun	OK
+M4a	manuscrit	Figures 1-5 citées dans l'ordre	[1, 2, 3, 4, 5]	OK
+M4b1	Figure 1	titre ≤ 15 mots	13	OK
+M4c1	Figure 1	légende ≤ 300 mots	83	OK
+M4b2	Figure 2	titre ≤ 15 mots	7	OK
+M4c2	Figure 2	légende ≤ 300 mots	82	OK
+M4b3	Figure 3	titre ≤ 15 mots	13	OK
+M4c3	Figure 3	légende ≤ 300 mots	99	OK
+M4b4	Figure 4	titre ≤ 15 mots	12	OK
+M4c4	Figure 4	légende ≤ 300 mots	86	OK
+M4b5	Figure 5	titre ≤ 15 mots	11	OK
+M4c5	Figure 5	légende ≤ 300 mots	146	OK
+M4d	manuscrit	5 légendes de figures	5	OK
+M5a	résumé	≤ 350 mots (intertitres compris)	306	OK
+M5b	résumé	sections Background, Results, Conclusions	['Background', 'Results', 'Conclusions']	OK
+M5c	résumé	aucune référence citée	0	OK
+M5d	mots-clés	3 à 10	10	OK
+M6	Declarations	Ethics approval and consent to participate	présent	OK
+M6	Declarations	Consent for publication	présent	OK
+M6	Declarations	Availability of data and materials	présent	OK
+M6	Declarations	Competing interests	présent	OK
+M6	Declarations	Funding	présent	OK
+M6	Declarations	Authors' contributions	présent	OK
+M6	Declarations	Acknowledgements	présent	OK
+M6s	sections	Background	présent	OK
+M6s	sections	Methods	présent	OK
+M6s	sections	Results	présent	OK
+M6s	sections	Discussion	présent	OK
+M6s	sections	Conclusions	présent	OK
+M6s	sections	Abbreviations	présent	OK
+M7a	manuscrit	double interligne (corps)	73/73	OK
+M7b	manuscrit	numéros de ligne continus	True	OK
+M7c	manuscrit	numéro de page (champ PAGE)	True	OK
+M8a	manuscrit	espèces et taxons en italique (hors références)	0	OK
+M8b	manuscrit	« 16S » suivi de « rRNA » (hors références)	aucun	OK
+M8c	manuscrit	intitulé « Methods » (pas « Materials and Methods »)	0	OK
+M8d	manuscrit	aucune table dans le manuscrit (toutes en Additional files)	0	OK
+F1a	Fig1.png	≤ 10 Mo	0.16 Mo	OK
+F1b	Fig1.png	≥ 300 dpi à 170 mm	2319 px (346 dpi à 170 mm)	OK
+F2a	Fig2.png	≤ 10 Mo	0.22 Mo	OK
+F2b	Fig2.png	≥ 300 dpi à 170 mm	1982 px (296 dpi à 170 mm)	OK
+F3a	Fig3.png	≤ 10 Mo	0.16 Mo	OK
+F3b	Fig3.png	≥ 300 dpi à 170 mm	2110 px (315 dpi à 170 mm)	OK
+F4a	Fig4.png	≤ 10 Mo	0.13 Mo	OK
+F4b	Fig4.png	≥ 300 dpi à 170 mm	1980 px (296 dpi à 170 mm)	OK
+F5a	Fig5.png	≤ 10 Mo	0.20 Mo	OK
+F5b	Fig5.png	≥ 300 dpi à 170 mm	2035 px (304 dpi à 170 mm)	OK
+A1a	Additional_file_1.xlsx	présent, nom « Additional_file_n.ext »	True	OK
+A1b	Additional_file_1.xlsx	≤ 10 Mo	0.008 Mo	OK
+A1c	Additional_file_1.xlsx	titre ≤ 15 mots	2	OK
+A2a	Additional_file_2.xlsx	présent, nom « Additional_file_n.ext »	True	OK
+A2b	Additional_file_2.xlsx	≤ 10 Mo	0.019 Mo	OK
+A2c	Additional_file_2.xlsx	titre ≤ 15 mots	2	OK
+A3a	Additional_file_3.xlsx	présent, nom « Additional_file_n.ext »	True	OK
+A3b	Additional_file_3.xlsx	≤ 10 Mo	0.006 Mo	OK
+A3c	Additional_file_3.xlsx	titre ≤ 15 mots	5	OK
+A4a	Additional_file_4.docx	présent, nom « Additional_file_n.ext »	True	OK
+A4b	Additional_file_4.docx	≤ 10 Mo	0.037 Mo	OK
+A4c	Additional_file_4.docx	titre ≤ 15 mots	5	OK
+A5a	Additional_file_5.xlsx	présent, nom « Additional_file_n.ext »	True	OK
+A5b	Additional_file_5.xlsx	≤ 10 Mo	0.006 Mo	OK
+A5c	Additional_file_5.xlsx	titre ≤ 15 mots	5	OK
+A6a	Additional_file_6.docx	présent, nom « Additional_file_n.ext »	True	OK
+A6b	Additional_file_6.docx	≤ 10 Mo	0.045 Mo	OK
+A6c	Additional_file_6.docx	titre ≤ 15 mots	7	OK
+A7a	Additional_file_7.xlsx	présent, nom « Additional_file_n.ext »	True	OK
+A7b	Additional_file_7.xlsx	≤ 10 Mo	0.006 Mo	OK
+A7c	Additional_file_7.xlsx	titre ≤ 15 mots	5	OK
+A8a	Additional_file_8.xlsx	présent, nom « Additional_file_n.ext »	True	OK
+A8b	Additional_file_8.xlsx	≤ 10 Mo	0.006 Mo	OK
+A8c	Additional_file_8.xlsx	titre ≤ 15 mots	7	OK
+A9a	Additional_file_9.pdf	présent, nom « Additional_file_n.ext »	True	OK
+A9b	Additional_file_9.pdf	≤ 10 Mo	0.202 Mo	OK
+A9c	Additional_file_9.pdf	titre ≤ 15 mots	7	OK
+A9d	Additional_file_9.pdf	polices incorporées	descripteurs 0, sans fichier de police 0, Type3 0	OK
+A10a	Additional_file_10.xlsx	présent, nom « Additional_file_n.ext »	True	OK
+A10b	Additional_file_10.xlsx	≤ 10 Mo	0.334 Mo	OK
+A10c	Additional_file_10.xlsx	titre ≤ 15 mots	6	OK
+A11a	Additional_file_11.docx	présent, nom « Additional_file_n.ext »	True	OK
+A11b	Additional_file_11.docx	≤ 10 Mo	0.037 Mo	OK
+A11c	Additional_file_11.docx	titre ≤ 15 mots	9	OK
+A12a	Additional_file_12.xlsx	présent, nom « Additional_file_n.ext »	True	OK
+A12b	Additional_file_12.xlsx	≤ 10 Mo	0.006 Mo	OK
+A12c	Additional_file_12.xlsx	titre ≤ 15 mots	5	OK
+A13a	Additional_file_13.pdf	présent, nom « Additional_file_n.ext »	True	OK
+A13b	Additional_file_13.pdf	≤ 10 Mo	0.273 Mo	OK
+A13c	Additional_file_13.pdf	titre ≤ 15 mots	5	OK
+A13d	Additional_file_13.pdf	polices incorporées	descripteurs 0, sans fichier de police 0, Type3 0	OK
+A14a	Additional_file_14.pdf	présent, nom « Additional_file_n.ext »	True	OK
+A14b	Additional_file_14.pdf	≤ 10 Mo	0.050 Mo	OK
+A14c	Additional_file_14.pdf	titre ≤ 15 mots	8	OK
+A14d	Additional_file_14.pdf	polices incorporées	descripteurs 4, sans fichier de police 0, Type3 0	OK
+A15a	Additional_file_15.xlsx	présent, nom « Additional_file_n.ext »	True	OK
+A15b	Additional_file_15.xlsx	≤ 10 Mo	0.006 Mo	OK
+A15c	Additional_file_15.xlsx	titre ≤ 15 mots	6	OK
+A16a	Additional_file_16.pdf	présent, nom « Additional_file_n.ext »	True	OK
+A16b	Additional_file_16.pdf	≤ 10 Mo	0.055 Mo	OK
+A16c	Additional_file_16.pdf	titre ≤ 15 mots	9	OK
+A16d	Additional_file_16.pdf	polices incorporées	descripteurs 4, sans fichier de police 0, Type3 0	OK
+A17a	Additional_file_17.xlsx	présent, nom « Additional_file_n.ext »	True	OK
+A17b	Additional_file_17.xlsx	≤ 10 Mo	0.007 Mo	OK
+A17c	Additional_file_17.xlsx	titre ≤ 15 mots	8	OK
+A18a	Additional_file_18.pdf	présent, nom « Additional_file_n.ext »	True	OK
+A18b	Additional_file_18.pdf	≤ 10 Mo	0.267 Mo	OK
+A18c	Additional_file_18.pdf	titre ≤ 15 mots	8	OK
+A18d	Additional_file_18.pdf	polices incorporées	descripteurs 0, sans fichier de police 0, Type3 0	OK
+A0	additional_files	aucun fichier hors correspondance	aucun	OK
+A00	additional_files	volume total	1.37 Mo	OK

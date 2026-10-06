@@ -63,15 +63,17 @@ axa = fig.add_subplot(gs[0, 0]); ax = fig.add_subplot(gs[1, 0]); axl = fig.add_s
 stacked(axa, A, "station", ST, lambda t, n: n, rot=True)
 NST = T.groupby("tissu").n_stations.first()
 stacked(ax, T, "categorie", CAT, lambda t, n: f"{n}\n({int(NST[t])} stations)", gap=0.7)
-axa.set_title("All fish by station: Pseudomonadota leads in 33 of 36 tissue × station profiles",
+axa.set_title(r"All fish by station: $\it{Pseudomonadota}$ leads in 33 of 36 tissue × station profiles",
               loc="left", fontsize=8, pad=24)
-ax.set_title("Three-category stations: Fusobacteriota and Bacillota are gut-enriched in every group",
+ax.set_title(r"Three-category stations: $\it{Fusobacteriota}$ and $\it{Bacillota}$ are gut-enriched in every group",
              loc="left", fontsize=8, pad=34)
 for a_, l, y in ((axa, "a", 1.20), (ax, "b", 1.255)):
     a_.text(-0.075, y, l, transform=a_.transAxes, fontsize=10, fontweight="bold", va="bottom")
 handles = [Patch(facecolor=COL[p], edgecolor="0.35" if p == "Unassigned" else "none", linewidth=0.4, label=p) for p in reversed(ORDER)]
-axl.legend(handles=handles, loc="center left", frameon=False, fontsize=7, handlelength=1.1, handleheight=1.1,
+_lg = axl.legend(handles=handles, loc="center left", frameon=False, fontsize=7, handlelength=1.1, handleheight=1.1,
            borderaxespad=0, title="Phylum (SILVA 138.2)", title_fontsize=7, alignment="left")
+for _t in _lg.get_texts():                      # noms de taxons en italique (consignes d'Animal Microbiome, 2026-10-06)
+    if _t.get_text() not in ("Other phyla", "Unassigned"): _t.set_fontstyle("italic")
 fig.savefig(OUT + ".png", dpi=300, bbox_inches="tight")
 fig.savefig(OUT + ".pdf", bbox_inches="tight")
 print("écrit :", OUT + ".png", OUT + ".pdf")
