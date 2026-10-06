@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+<RECEIPT receiptDate="2026-10-06T10:17:39.257+01:00" submissionFile="submission.xml" success="true">
+     <SAMPLE accession="ERS31168058" alias="DURANCE16S_14Per2011Ch01A" status="PRIVATE">
+          <EXT_ID accession="SAMEA123387406" type="biosample"/>
+     </SAMPLE>
+     <SUBMISSION accession="" alias="SUBMISSION-06-10-2026-10:17:38:977"/>
+     <MESSAGES/>
+     <ACTIONS>MODIFY</ACTIONS>
+</RECEIPT>

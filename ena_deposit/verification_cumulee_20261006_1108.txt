@@ -1,0 +1,9 @@
+Verification cumulee du depot PRJEB124417
+echantillons 727 | champs 4612 | conformes 4612 | ecarts 0
+TITLE	568
+collection date	727
+geographic location (latitude)	727
+geographic location (longitude)	727
+geographic location (region and locality)	727
+host common name	568
+host scientific name	568
