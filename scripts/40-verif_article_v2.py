@@ -308,6 +308,20 @@ _m = _G.groupby("classe_sept_25chr").TL.mean(); _pk = _kw(*[_G[_G.classe_sept_25
 chk("Discussion/limites", "taille moyenne par catégorie et Kruskal-Wallis",
     f"(mean total length {_m['Cn']:.1f} cm in C. nasus, {_m['Hy']:.1f} cm in hybrids and {_m['Pt']:.1f} cm in P. toxostoma; Kruskal–Wallis p = {_pk:.3f})",
     f"{_m['Cn']:.2f}/{_m['Hy']:.2f}/{_m['Pt']:.2f} p={_pk:.5f}", len(_G) == 180)
+# ------------------------------------------------------------ limites : Largue, 12S et sélection en nageoire caudale (ajout 2026-10-06, scripts/70, 71)
+_EL = pd.read_csv("results/largue_caudale/etapes_par_echantillon.tsv", sep="\t", dtype={"plate": str, "well_col": str})
+_cau = _EL[_EL.tissue == "caudale"]; _lg = _cau.station == "Canal (usine du Largue)"
+_col = (_cau.plate == "2") & _cau.well_col.isin(["06", "07", "08"])
+_v = [100 * _cau[m].part_12S.median() for m in (_lg, ~_lg & _col, ~_lg & ~_col)]
+chk("Discussion/limites", "12S hôte : Largue / Saint-Just mêmes colonnes / autres caudales (médianes groupées)",
+    f"(median {_v[0]:.0f} % and {_v[1]:.0f} % of raw reads, against {_v[2]:.0f} % for the other caudal-fin samples)",
+    "/".join(f"{x:.1f}" for x in _v), bool(_cau[_lg].pipe(lambda d: ((d.plate == "2") & d.well_col.isin(["06", "07", "08"])).all()))
+    and int(_lg.sum()) == 60 and int((~_lg & _col).sum()) == 12)
+_RL = pd.read_csv("results/largue_caudale/retention_avec_sans_largue.tsv", sep="\t", dtype={"passe": str})
+_q = _RL[(_RL.tissu == "caudale") & (_RL.run != "tous") & (_RL.profondeur == 3000) & (_RL.passe == "1")]
+_a = f"{_q.ecart_Pt_moins_Hy_avec.min():.0f}–{_q.ecart_Pt_moins_Hy_avec.max():.0f}"; _s = f"{_q.ecart_Pt_moins_Hy_sans.min():.0f}–{_q.ecart_Pt_moins_Hy_sans.max():.0f}"
+chk("Discussion/limites", "écart Pt − Hy caudale passe 1, avec / sans Largue",
+    f"and intermediate hybrids from {_a} to {_s} points across runs in pass 1", f"{_a} / {_s}", (_a, _s) == ("29–36", "22–31"))
 # ------------------------------------------------------------ références : noms de revues abrégés (NLM), ajout 2026-10-05
 NLMA = json.load(open("docs/biblio/nlm_abreviations.json"))
 reste = [o for o, n in NLMA.values() if o != n and f". {o}. " in TXT]
