@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<SAMPLE_SET><SAMPLE alias="DURANCE16S_14Per2011Ch01A" accession="ERS31168058">
+    <TITLE>Parachondrostoma toxostoma caudal fin bacterial microbiota, Per 2014, individual 2011</TITLE>
+    <SAMPLE_NAME>
+      <TAXON_ID>496924</TAXON_ID>
+      <SCIENTIFIC_NAME>fish metagenome</SCIENTIFIC_NAME>
+    </SAMPLE_NAME>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>ENA-CHECKLIST</TAG>
+        <VALUE>ERC000013</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>project name</TAG>
+        <VALUE>Durance hybrid zone fish microbiota</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>sample type</TAG>
+        <VALUE>biological sample</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>collection date</TAG>
+        <VALUE>2014-07-07/2014-08-20</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>geographic location (country and/or sea)</TAG>
+        <VALUE>France</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>geographic location (latitude)</TAG>
+        <VALUE>43.668139</VALUE>
+        <UNITS>DD</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>geographic location (longitude)</TAG>
+        <VALUE>5.493</VALUE>
+        <UNITS>DD</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>broad-scale environmental context</TAG>
+        <VALUE>freshwater river biome [ENVO:01000253]</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>local environmental context</TAG>
+        <VALUE>river [ENVO:00000022]</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>environmental medium</TAG>
+        <VALUE>river water [ENVO:01000599]</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>host scientific name</TAG>
+        <VALUE>Parachondrostoma toxostoma</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>host common name</TAG>
+        <VALUE>toxostome</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>host tissue sampled</TAG>
+        <VALUE>caudal fin [UBERON:4000164]</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>host subject id</TAG>
+        <VALUE>Per2011</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>geographic location (region and locality)</TAG>
+        <VALUE>Pertuis, Durance</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>collection site code</TAG>
+        <VALUE>Per</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>target gene</TAG>
+        <VALUE>16S rRNA</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>target subfragment</TAG>
+        <VALUE>V4</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>pcr primers</TAG>
+        <VALUE>FWD:GTGCCAGCMGCCGCGGTAA; REV:GGACTACHVGGGTWTCTAAT</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>sequencing method</TAG>
+        <VALUE>Illumina MiSeq</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>plate</TAG>
+        <VALUE>1</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>well</TAG>
+        <VALUE>A11</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>original sample name</TAG>
+        <VALUE>14Per2011Ch01A</VALUE>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+  </SAMPLE_SET>
