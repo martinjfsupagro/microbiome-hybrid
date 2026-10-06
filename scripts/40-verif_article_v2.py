@@ -206,23 +206,35 @@ chk("Tables S", "ordre de première citation = S1…S10, toutes citées", "Suppl
 # ------------------------------------------------------------ §8.6 : rétention selon la profondeur (ajout 2026-10-05, script 43)
 RT = pd.read_csv("results/depth_agreement/retention_par_categorie.tsv", sep="\t")
 RE = pd.read_csv("results/depth_agreement/retention_effectifs.tsv", sep="\t")
-def rt(ps, tis, d, col, run="durance1"):
-    x = RT[(RT.passe == ps) & (RT.tissu == tis) & (RT.profondeur == d) & (RT.run == run)]
-    assert len(x) == 1, (ps, tis, d, run); return float(x[col].iloc[0])
-h1, p1_ = rt(1, "caudale", 3000, "retention_Hy"), rt(1, "caudale", 3000, "retention_Pt")
-h2 = rt(2, "caudale", 3000, "retention_Hy")
-g1, g2 = rt(1, "caudale", 3000, "ecart_Pt_moins_Hy"), rt(2, "caudale", 3000, "ecart_Pt_moins_Hy")
-chk("Methods/8.6", "rétention caudale à 3 000 (durance1) : Hy p1, Pt, Hy p2",
-    f"in sequencing run durance1, {h1:.0f} % of intermediate hybrids passed the threshold against {p1_:.0f} % of P. toxostoma (pass 1), and {h2:.0f} % of all 42 hybrids (pass 2)",
-    f"{h1:.2f} / {p1_:.2f} / {h2:.2f}", (f"{h1:.0f}", f"{p1_:.0f}", f"{h2:.0f}") == ("50", "86", "67"))
-chk("Methods/8.6", "écart caudal à 3 000 (durance1)", f"a gap of {g1:.0f} and {g2:.0f} points", f"{g1:.2f} / {g2:.2f}",
-    (f"{g1:.0f}", f"{g2:.0f}") == ("36", "20"))
-c1, c2 = rt(1, "caudale", 500, "ecart_Pt_moins_Hy"), rt(2, "caudale", 500, "ecart_Pt_moins_Hy")
-chk("Methods/8.6", "écart caudal à 500 (durance1)", f"falls to {c1:.1f} points (pass 1) and {c2:.1f} points (pass 2)",
-    f"{c1:.2f} / {c2:.2f}", (f"{c1:.1f}", f"{c2:.1f}") == ("3.8", "5.7"))
-m1, m2 = rt(1, "midgut", 500, "ecart_Pt_moins_Hy"), rt(2, "midgut", 500, "ecart_Pt_moins_Hy")
-chk("Methods/8.6", "écart midgut à 500 (durance1)", f"({m1:.1f} and {m2:.1f} points)", f"{m1:.2f} / {m2:.2f}",
-    (f"{m1:.1f}", f"{m2:.1f}") == ("14.0", "8.9"))
+# 2026-10-06 (décision 5 de JF) : étendue sur les trois runs au lieu du seul run durance1. Valeurs exactes
+# depuis les effectifs (les colonnes du script 43 sont arrondies à 2 décimales : double arrondi évité).
+RR = RT[RT.run.isin(["durance1", "durance2", "durance3"])].copy()
+RR["retention_Hy"] = 100 * RR.retenus_Hy / RR.n_Hy
+RR["retention_Pt"] = 100 * RR.retenus_Pt / RR.n_Pt
+RR["ecart_Pt_moins_Hy"] = RR.retention_Pt - RR.retention_Hy
+def rt(ps, tis, d, col):
+    x = RR[(RR.passe == ps) & (RR.tissu == tis) & (RR.profondeur == d)]
+    assert len(x) == 3, (ps, tis, d); return float(x[col].min()), float(x[col].max())
+def fr(lohi, f):
+    a, b = format(lohi[0], f), format(lohi[1], f); return a if a == b else f"{a}–{b}"
+h1, p1_ = fr(rt(1, "caudale", 3000, "retention_Hy"), ".0f"), fr(rt(1, "caudale", 3000, "retention_Pt"), ".0f")
+h2 = fr(rt(2, "caudale", 3000, "retention_Hy"), ".0f")
+g1, g2 = fr(rt(1, "caudale", 3000, "ecart_Pt_moins_Hy"), ".0f"), fr(rt(2, "caudale", 3000, "ecart_Pt_moins_Hy"), ".0f")
+chk("Methods/8.6", "rétention caudale à 3 000 (3 runs) : Hy p1, Pt, Hy p2",
+    f"in the caudal fin, across the three sequencing runs, {h1} % of intermediate hybrids passed the threshold against {p1_} % of P. toxostoma (pass 1), and {h2} % of all 42 hybrids (pass 2)",
+    f"{h1} / {p1_} / {h2}", (h1, p1_, h2) == ("50", "79–86", "64–67"))
+chk("Methods/8.6", "écart caudal à 3 000 (3 runs)", f"a gap of {g1} and {g2} points", f"{g1} / {g2}",
+    (g1, g2) == ("29–36", "15–20"))
+c1, c2 = fr(rt(1, "caudale", 500, "ecart_Pt_moins_Hy"), ".1f"), fr(rt(2, "caudale", 500, "ecart_Pt_moins_Hy"), ".1f")
+chk("Methods/8.6", "écart caudal à 500 (3 runs)", f"falls to {c1} points (pass 1) and {c2} points (pass 2)",
+    f"{c1} / {c2}", (c1, c2) == ("2.6–3.8", "3.4–5.7"))
+m1, m2 = fr(rt(1, "midgut", 500, "ecart_Pt_moins_Hy"), ".1f"), fr(rt(2, "midgut", 500, "ecart_Pt_moins_Hy"), ".1f")
+chk("Methods/8.6", "écart midgut à 500 (3 runs)", f"({m1} and {m2} points)", f"{m1} / {m2}",
+    (m1, m2) == ("5.7–14.0", "7.8–8.9"))
+_d1 = "in sequencing run durance1, " in TXT
+ROWS.append(dict(section="absence", affirmation="plus aucune valeur de rétention attribuée au seul run durance1 (§8.6)",
+                 texte="in sequencing run durance1, ", calcule=str(_d1), valeur_ok=True, dans_docx=_d1,
+                 statut="OK" if not _d1 else "ECART"))
 n2 = int(RE[(RE.passe == 2) & (RE.profondeur == 500)].n_retenus.iloc[0]); n1 = int(RE[(RE.passe == 1) & (RE.profondeur == 500)].n_retenus.iloc[0])
 chk("Methods/8.6", "échantillons retenus à 500 (tous runs)", f"{n2:,} samples are retained ({n1:,} in pass 1)", f"{n2} / {n1}", (n2, n1) == (2067, 1825))
 # ------------------------------------------------------------ §5 : 12S de l'hôte et dimères (ajout 2026-10-05, script 45)

@@ -65,10 +65,16 @@ with open("results/decontam/asv_table_clean.tsv", encoding="utf-8") as f:
     cols = f.readline().rstrip("\n").split("\t")[1:]
 chk("§8.4", "2 180 echantillons biologiques", "2,180", str(len(cols)),
     len(cols) == 2180, "results/decontam/asv_table_clean.tsv (colonnes)")
-extra = sorted(mids - set(cols))
-chk("metadonnees", "analysis_metadata ne decrit que la table d'analyse", "2,180 lignes",
-    "%d lignes, en trop : %s" % (len(mids), extra or "aucune"), not extra,
-    "analysis_metadata.csv vs asv_table_clean.tsv")
+# Attente revue le 2026-10-06 (decision 7 de JF) : metadonnees ⊇ table. Toute colonne de la table doit etre
+# decrite ; une seule ligne en trop est admise, nommee : 15Bue1014Ch03A__durance3, echantillon vide par
+# filterAndTrim (13 paires brutes), docs/recalcul/note_ligne_metadonnees_2026-10-05.md. Toute autre ligne
+# en trop, ou toute colonne non decrite, reste un ECART.
+ADMIS = ["15Bue1014Ch03A__durance3"]
+extra = sorted(mids - set(cols)); missing = sorted(set(cols) - mids)
+chk("metadonnees", "analysis_metadata couvre la table d'analyse (metadonnees ⊇ table ; seule ligne en trop admise : %s)" % ADMIS[0],
+    "2,180 echantillons decrits",
+    "%d lignes ; colonnes non decrites : %s ; en trop : %s" % (len(mids), missing or "aucune", extra or "aucune"),
+    not missing and extra == ADMIS, "analysis_metadata.csv vs asv_table_clean.tsv")
 
 tot = [0.0] * len(cols)                       # sommes de colonnes de la table propre
 with open("results/decontam/asv_table_clean.tsv", encoding="utf-8") as f:
