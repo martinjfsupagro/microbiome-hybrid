@@ -111,8 +111,11 @@ envoyer() {  # $1 = submission.xml  $2 = sample.xml  $3 = etiquette
   echo "  ECHEC DE TRANSPORT apres 3 tentatives : aucun recu exploitable."
   echo "  L'etat du depot est INDETERMINE — la soumission a pu aboutir cote ENA"
   echo "  sans que la reponse nous parvienne. NE PAS relancer a l'aveugle."
-  echo "  Determiner l'etat reel avant toute action :"
-  echo "      bash 6_etat_du_depot.sh"
+  echo "  Determiner l'etat reel avant toute action (lecture seule) :"
+  echo "      bash 7_verifier_exhaustif.sh"
+  echo "  (attendu si rien n'a change : LES 4612 VALEURS ATTENDUES SONT EN PLACE)."
+  echo "  NE PAS utiliser 6_etat_du_depot.sh : perime, il propose de relancer le script 4,"
+  echo "  ce qui annulerait les corrections du 25/09."
   return 1
 }
 

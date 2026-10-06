@@ -10,6 +10,16 @@
 # Ne modifie RIEN : lecture seule.
 
 set -uo pipefail
+# GARDE AJOUTEE LE 2026-10-06 : script PERIME depuis la campagne du 25/09. Il ne compare le depot
+# qu'a la table d'aout et, s'il conclut "non applique", conseille de relancer
+# 4_corriger_metadonnees.sh prod, qui renverrait le XML du 31/08 et ANNULERAIT les corrections du
+# 25/09. Pour l'etat reel du depot : bash 7_verifier_exhaustif.sh (lecture seule, etat cumule).
+if [ "${FORCER_ETAT_AOUT:-}" != "1" ]; then
+  echo "6_etat_du_depot.sh est PERIME (ne connait que la correction du 31/08)."
+  echo "Utiliser :  bash 7_verifier_exhaustif.sh"
+  echo "(pour l'executer quand meme, a titre historique : FORCER_ETAT_AOUT=1 bash $0)"
+  exit 1
+fi
 D=/home/martinj/work/projects/microbiome-hybrid/ena_deposit
 cd "$D" || exit 1
 

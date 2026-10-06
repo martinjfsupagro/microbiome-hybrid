@@ -100,8 +100,13 @@ bash 7_verifier_exhaustif.sh ena_corrections.tsv ena_corrections_hote_sept.tsv \
 ```
 
 Un second test exige de reconstruire les XML (alias de test figés) : déplacer
-`ena_update_oct{,_test}/` puis relancer `scripts/53`. En cas d'échec de transport en production,
-**ne pas relancer** : `bash 6_etat_du_depot.sh` d'abord.
+`ena_update_oct{,_test}/` puis relancer `scripts/53`. En cas d'échec en production (transport ou
+`success=false`), **ne pas relancer** : établir d'abord l'état du dépôt avec
+`bash 7_verifier_exhaustif.sh` (sans argument : les deux tables soumises ; attendu si rien n'a changé :
+« LES 4612 VALEURS ATTENDUES SONT EN PLACE »). **Ne pas utiliser `6_etat_du_depot.sh`** : il compare
+le dépôt à la seule table d'août et, s'il conclut « non appliqué », propose de relancer
+`4_corriger_metadonnees.sh prod`, qui renverrait le XML du 31/08 et annulerait les corrections du
+25/09 sur 568 échantillons (constaté le 2026-10-06).
 
 Rappel de recette, à ne pas redécouvrir : le FTP Webin est inutilisable, les MODIFY passent par
 `curl` sur le drop-box. Le script s'arrête si une seule accession du reçu diffère.
