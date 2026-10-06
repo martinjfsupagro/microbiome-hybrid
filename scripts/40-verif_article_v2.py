@@ -271,6 +271,36 @@ _gx = {(k, ph): (_T3[(_T3.categorie == k) & _T3.tissu.isin(["hindgut", "midgut"]
 chk("Results/composition", "Fuso et Bacillota : min digestif > max externe dans chaque catégorie (Figure S3b)",
     "were more abundant in both gut sections than in both external tissues in each genotypic category",
     "; ".join(f"{k} {ph[:4]} {g:.3f}>{e:.3f}" for (k, ph), (g, e) in _gx.items()), all(g > e for g, e in _gx.values()))
+# ------------------------------------------------------------ contrôle (vi), campagne de pêche (ajout 2026-10-06, scripts/66, 67)
+_CT = pd.read_csv("results/controle_campagne/campagne_tests.tsv", sep="\t")
+_CP = pd.read_csv("results/controle_campagne/campagne_parentaux.tsv", sep="\t")
+_ds = _CT.p_station < 0.05; _dc = _CT.p_campagne < 0.05; _lost = _CT[_ds & ~_dc]
+chk("Results/composition", "contrôle vi : témoin de montage (référence = results/recat) 96/96",
+    "Restricting permutations to the 14 station × campaign blocks", f"{int(_CT.temoin_ok.sum())}/{len(_CT)}",
+    bool(_CT.temoin_ok.all()) and len(_CT) == 96)
+chk("Results/composition", "contrôle vi : 46 détections à blocs de station, 52 à blocs station × campagne",
+    "46 were significant with station blocks and 52 with station × campaign blocks", f"{int(_ds.sum())}/{int(_dc.sum())}",
+    (int(_ds.sum()), int(_dc.sum())) == (46, 52))
+_lp = f"{_lost.p_station.min():.3f}–{_lost.p_station.max():.3f} -> {_lost.p_campagne.min():.3f}–{_lost.p_campagne.max():.3f}"
+chk("Results/composition", "contrôle vi : 2 strates perdues, UniFrac non pondéré, passe 2",
+    "the 2 lost were both on unweighted UniFrac in pass 2, with p moving from 0.042–0.045 to 0.065–0.068", _lp,
+    len(_lost) == 2 and set(_lost.metrique) == {"unifrac_unweighted"} and set(_lost.passe.astype(str)) == {"2"}
+    and _lp == "0.042–0.045 -> 0.065–0.068")
+_rob = lambda m, ps, t: all(int(_dc[(_CT.metrique == m) & (_CT.passe.astype(str) == q) & (_CT.tissu == t)].sum()) == 3 for q in ps)
+chk("Results/composition", "contrôle vi : Jaccard midgut 3/3 (deux passes) et UniFrac pondéré caudale 3/3 (passe 1) sous blocs campagne",
+    "The midgut on Jaccard remained significant in all three runs of both passes", "",
+    _rob("jaccard", ["1", "2"], "midgut") and _rob("unifrac_weighted", ["1"], "caudale"))
+_mc, _ms = 100 * _CT.R2_cat_apres_campagne.median(), 100 * _CT.R2_cat_apres_station.median()
+chk("Results/composition", "contrôle vi : R² médian de la catégorie après station × campagne / après station",
+    f"(median {_mc:.2f} % over the 96 strata) was that fitted after station ({_ms:.2f} %)", f"{_mc:.2f}/{_ms:.2f}",
+    (f"{_mc:.2f}", f"{_ms:.2f}") == ("1.46", "1.53"))
+_r3 = f"{100 * _CP.R2_campagne.min():.1f}–{100 * _CP.R2_campagne.max():.1f}"
+chk("Results/composition", "contrôle vi : parentaux, campagne 6,7–27,3 %, p <= 0,039 dans les 48 strates",
+    f"it accounted for {_r3} % of variance within station and species (p ≤ {_CP.p_campagne.max():.3f} in all 48",
+    f"{_r3} ; p max {_CP.p_campagne.max()} ; n {len(_CP)}", len(_CP) == 48 and _r3 == "6.7–27.3" and _CP.p_campagne.max() < 0.05)
+chk("Discussion/limites", "contrôle vi : effet de campagne 7–27 % (arrondi)",
+    f"accounted for {100 * _CP.R2_campagne.min():.0f}–{100 * _CP.R2_campagne.max():.0f} % of compositional variance in the parental species alone",
+    f"{100 * _CP.R2_campagne.min():.0f}–{100 * _CP.R2_campagne.max():.0f}", True)
 # ------------------------------------------------------------ références : noms de revues abrégés (NLM), ajout 2026-10-05
 NLMA = json.load(open("docs/biblio/nlm_abreviations.json"))
 reste = [o for o, n in NLMA.values() if o != n and f". {o}. " in TXT]
