@@ -268,6 +268,32 @@ for m in re.finditer(r"Notes?\s+S(\d+)", TXT):
     n = int(m.group(1))
     if n not in norder: norder.append(n)
 chk("Notes S", "ordre de première citation des notes = S1…S3, toutes citées", "Supplementary Note S3", str(norder), norder == [1, 2, 3])
+# ------------------------------------------------------------ contrôle (v), R36 : ordre de traitement et alpha (ajout 2026-10-06, scripts/51)
+RO = pd.read_csv("results/tests_20261006/alpha_ordre/alpha_ordre.tsv", sep="\t", dtype={"passe": str})
+EST = RO[(RO.classe_principal == "dominant Cn") & (((RO.passe == "1") & (RO.tissu == "caudale")) | ((RO.passe == "2") & (RO.tissu == "midgut")))].copy()
+EST["breq"] = EST.delta_a_Hy_moins_Pt / EST.delta_r_Hy_moins_Pt
+EST["ratio"] = EST.breq.abs() / np.maximum(EST.beta_w_bas.abs(), EST.beta_w_haut.abs())
+_drc = abs(RO[(RO.passe == "1") & (RO.tissu == "caudale")].delta_r_Hy_moins_Pt.iloc[0]); _drm = abs(RO[(RO.passe == "2") & (RO.tissu == "midgut")].delta_r_Hy_moins_Pt.iloc[0])
+chk("Results/alpha", "contrôle (v) : écart de rang Hy - Pt dans les stations", f"differences of {_drc:.1f} ranks in the caudal fin in pass 1 and {_drm:.1f} in the midgut in pass 2",
+    f"{_drc:.3f} / {_drm:.3f}", len(EST) == 7)
+chk("Results/alpha", "contrôle (v) : pente requise / pente intra-cellule, 7 indices dominant Cn", f"by a factor of {EST.ratio.min():.0f} to {EST.ratio.max():.0f} on every index",
+    f"{EST.ratio.min():.2f}–{EST.ratio.max():.2f}", bool(((EST.breq < EST.beta_w_bas) | (EST.breq > EST.beta_w_haut)).all()))
+HG = RO[RO.tissu == "hindgut"]; _pct = (1 - np.exp(10 * HG.beta_w)) * 100
+chk("Results/alpha", "hindgut : baisse avec le rang, 8/8 tests", f"on all four indices in both passes (p ≤ {HG.p_beta_w.max():.3f}), by {_pct.min():.0f}–{_pct.max():.0f} % per ten ranks",
+    f"{(HG.p_beta_w < 0.05).sum()}/{len(HG)}", len(HG) == 8 and bool((HG.p_beta_w < 0.05).all()) and bool((HG.beta_w < 0).all()))
+MG = RO[(RO.tissu == "midgut") & (RO.p_beta_w < 0.05)]
+chk("Results/alpha", "midgut : baisse sur indices de présence seulement", "in the midgut on presence-based indices only (3 of 8 tests)",
+    f"{len(MG)} ; ponderee={sorted(set(MG.ponderee.astype(str)))}", len(MG) == 3 and set(MG.ponderee.astype(str)) == {"False"})
+_dh = sorted((abs(x) for x in HG.groupby("passe").delta_r_Hy_moins_Pt.first()), reverse=True)
+chk("Results/alpha", "hindgut : écart de rang Hy - Pt", f"(differences of {_dh[0]:.1f} and {_dh[1]:.1f} ranks)", f"{_dh[0]:.3f} / {_dh[1]:.3f}", True)
+_wnc = "which was not tested" in TXT
+ROWS.append(dict(section="absence", affirmation="Discussion : plus de « which was not tested » sur l'ordre et la dominance de C. nasus",
+                 texte="which was not tested", calcule=str(_wnc), valeur_ok=True, dans_docx=_wnc, statut="OK" if not _wnc else "ECART"))
+# ------------------------------------------------------------ italiques : aucun nom d'espèce dans un run romain (ajout 2026-10-06)
+_bad = [m for m in re.findall(r"<w:r[ >].*?</w:r>", xml, flags=re.S)
+        if re.search(r"\b(C\. nasus|P\. toxostoma)\b", re.sub(r"<[^>]+>", "", m)) and not re.search(r"<w:i/>|<w:i w:val=\"(1|true)\"/>", m)]
+ROWS.append(dict(section="forme", affirmation="noms d'espèce (C. nasus, P. toxostoma) tous en italique", texte="",
+                 calcule=str(len(_bad)), valeur_ok=True, dans_docx=bool(_bad), statut="OK" if not _bad else "ECART"))
 out = pd.DataFrame(ROWS); out.to_csv(OUT, sep="\t", index=False)
 print(out[["section", "affirmation", "calcule", "valeur_ok", "dans_docx", "statut"]].to_string(index=False))
 print(f"\n{(out.statut=='OK').sum()} OK / {len(out)} ; écarts : {(out.statut!='OK').sum()}")
