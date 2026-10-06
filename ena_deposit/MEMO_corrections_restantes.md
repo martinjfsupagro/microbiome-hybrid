@@ -1,7 +1,8 @@
 # Corrections ENA restantes — état et mode d'emploi
 
-État au 2026-09-30. PRJEB124417 est soumis et à jour sur les coordonnées, les rivières, les dates
-(hors Pertuis) et l'identité d'hôte. Deux corrections de métadonnées sont **prêtes et non
+État au 2026-10-06. **La procédure de soumission du 30/09 était fausse** (section « Incident du 2026-10-06 ») ;
+elle est remplacée par `scripts/53` et `10_corriger_pertuis_sujet.sh`. Au 30/09, PRJEB124417 est
+soumis et à jour sur les coordonnées, les rivières, les dates (hors Pertuis) et l'identité d'hôte. Deux corrections de métadonnées sont **prêtes et non
 soumises**, une troisième question est structurelle et ne se traite pas par un MODIFY.
 
 ## Ce qui est prêt
@@ -39,34 +40,68 @@ annonçait « 25 identifiants réutilisés » ; le nombre réel de réutilisatio
 **24**, le vingt-cinquième étant cette coquille. Contrôle après correction : aucun identifiant
 n'est plus ambigu, et les quatre tissus du poisson portent le même sujet.
 
-## Comment soumettre
+## Incident du 2026-10-06 — la commande du 30/09 aurait annulé les corrections publiées
+
+La version précédente de ce mémo faisait construire le MODIFY par
+`build_ena_modify.py --deposited ena_submission/sample.xml`, c'est-à-dire à partir du XML
+**d'origine du 22/08**, en n'y appliquant que les deux tables ci-dessus. Or :
+
+- `build_ena_modify.py` écrase les champs listés et recopie tout le reste du XML de départ ; il ne
+  compare jamais la colonne `valeur_deposee` à ce XML ;
+- l'action MODIFY de l'ENA **remplace l'objet entier** ;
+- la table `host subject id` touche les 727 échantillons biologiques.
+
+Mesuré sur meso le 2026-10-06, sans soumission : la commande aurait ramené à leur valeur du 22/08
+**4 612 champs sur 727 échantillons** — coordonnées, localité et date corrigées le 31/08 (727 ×
+4), nom scientifique, nom commun et titre corrigés le 25/09 (568 × 3) — soit exactement l'état que
+R28 avait vérifié le 30/09. Le « contrôle ponctuel » de la construction ne portait que sur les
+deux champs modifiés et ne pouvait pas le voir. Deux défauts annexes : `--outdir ena_update`
+écrasait le XML effectivement soumis le 31/08 ; et le mode `test` de `4_corriger_metadonnees.sh`
+reconstruit **toujours** la table d'août, il ne validait donc pas les nouvelles valeurs.
+
+**Règle** : ne plus utiliser `build_ena_modify.py` ni `4_corriger_metadonnees.sh` pour une
+correction postérieure au 31/08. Toute nouvelle campagne part de l'**état déposé** et vérifie le
+chaînage avant d'écrire, comme `scripts/28` (25/09) et `scripts/53` (06/10).
+
+## Comment soumettre (procédure du 2026-10-06)
+
+Les XML sont **déjà construits et vérifiés** par `scripts/53-ena_pertuis_sujet.py` (commit
+`c650006`, sorties `6039d49`) :
+
+| contrôle (bloquant) | résultat |
+|---|---|
+| base = XML du 25/09 (568 objets), sinon du 31/08 (159) ; accessions = reçus de production | 727 objets |
+| base conforme au chaînage des tables soumises (l'état vérifié en direct par R28) | 4 612 / 4 612 |
+| champs de la base différant de l'origine hors des tables soumises | aucun |
+| `valeur_deposee` == base, pour chaque ligne des deux tables du jour | 771 / 771 |
+| relecture : chaque objet écrit ne diffère de la base que sur les champs des tables | 727 / 727 |
+
+Soumission de 727 échantillons (44 `collection date`, 727 `host subject id`) ; les 41 contrôles ne
+sont pas envoyés. `ena_update_oct/sample.xml` md5 `e6488a371118e42d5fd704e1b45927cf` (MODIFY),
+`ena_update_oct_test/sample.xml` md5 `d379e3218e98b94796e99db3df00b122` (ADD, alias suffixés
+`_VAL101943`, sans accession).
 
 Les identifiants Webin sont saisis au clavier et ne sont jamais écrits : **un humain lance le
-script**. Depuis `ena_deposit/` :
+script**, en session interactive sur la frontale (le script lit `/dev/tty`), depuis `ena_deposit/` :
 
 ```bash
-# 1. construire le MODIFY (les deux corrections, ou une seule en retirant sa ligne)
-python3 build_ena_modify.py \
-    --deposited ena_submission/sample.xml \
-    --corrections ena_corrections_pertuis_dates.tsv \
-    --corrections ena_corrections_subject_id.tsv \
-    --receipt "$(ls -t receipt_prod_*.xml | head -1)" \
-    --outdir ena_update
+cd ~/work/projects/microbiome-hybrid/ena_deposit
 
-# 2. valider les valeurs sur le serveur de test, puis soumettre en production
-bash 4_corriger_metadonnees.sh test
-bash 4_corriger_metadonnees.sh prod
+# 1. serveur de test : valide les VALEURS (checklist ERC000013), objets jetables
+bash 10_corriger_pertuis_sujet.sh test
 
-# 3. verifier quelques heures plus tard
-bash 5_verifier_correction.sh
+# 2. production, seulement si le test affiche « VALEURS VALIDEES » (taper OUI, puis identifiants)
+bash 10_corriger_pertuis_sujet.sh prod
+
+# 3. quelques heures plus tard : vérification exhaustive, les QUATRE tables dans cet ordre
+bash 7_verifier_exhaustif.sh ena_corrections.tsv ena_corrections_hote_sept.tsv \
+     ena_corrections_pertuis_dates.tsv ena_corrections_subject_id.tsv
+# attendu : « LES 5339 VALEURS ATTENDUES SONT EN PLACE » (4 612 + 727 host subject id)
 ```
 
-> **Construction vérifiée le 2026-09-30** (frontale, sans soumission) : les deux tables
-> cumulées donnent 771 corrections sur 727 échantillons — 44 dates et 727 sujets — pour
-> 768 objets SAMPLE et 41 contrôles inchangés, dans un `submission.xml` portant bien
-> `<MODIFY/>`. Contrôle ponctuel sur `14Per2015Ch01A` : `collection date = 2014-08-20`
-> (série 2xxx, pêche du 20 août) et `host subject id = 14Per2015`. La ligne de commande
-> ci-dessus est donc testée, pas supposée.
+Un second test exige de reconstruire les XML (alias de test figés) : déplacer
+`ena_update_oct{,_test}/` puis relancer `scripts/53`. En cas d'échec de transport en production,
+**ne pas relancer** : `bash 6_etat_du_depot.sh` d'abord.
 
 Rappel de recette, à ne pas redécouvrir : le FTP Webin est inutilisable, les MODIFY passent par
 `curl` sur le drop-box. Le script s'arrête si une seule accession du reçu diffère.
