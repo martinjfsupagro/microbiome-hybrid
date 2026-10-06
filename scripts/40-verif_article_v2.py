@@ -301,6 +301,13 @@ chk("Results/composition", "contrôle vi : parentaux, campagne 6,7–27,3 %, p <
 chk("Discussion/limites", "contrôle vi : effet de campagne 7–27 % (arrondi)",
     f"accounted for {100 * _CP.R2_campagne.min():.0f}–{100 * _CP.R2_campagne.max():.0f} % of compositional variance in the parental species alone",
     f"{100 * _CP.R2_campagne.min():.0f}–{100 * _CP.R2_campagne.max():.0f}", True)
+# ------------------------------------------------------------ limites : taille par catégorie (ajout 2026-10-06, scripts/69)
+from scipy.stats import kruskal as _kw
+_G = pd.read_csv("metadata/genotypes_verifies_sept_180.csv", dtype=str); _G["TL"] = pd.to_numeric(_G.taille_cm, errors="coerce")
+_m = _G.groupby("classe_sept_25chr").TL.mean(); _pk = _kw(*[_G[_G.classe_sept_25chr == k].TL.dropna() for k in ("Cn", "Hy", "Pt")]).pvalue
+chk("Discussion/limites", "taille moyenne par catégorie et Kruskal-Wallis",
+    f"(mean total length {_m['Cn']:.1f} cm in C. nasus, {_m['Hy']:.1f} cm in hybrids and {_m['Pt']:.1f} cm in P. toxostoma; Kruskal–Wallis p = {_pk:.3f})",
+    f"{_m['Cn']:.2f}/{_m['Hy']:.2f}/{_m['Pt']:.2f} p={_pk:.5f}", len(_G) == 180)
 # ------------------------------------------------------------ références : noms de revues abrégés (NLM), ajout 2026-10-05
 NLMA = json.load(open("docs/biblio/nlm_abreviations.json"))
 reste = [o for o, n in NLMA.values() if o != n and f". {o}. " in TXT]
