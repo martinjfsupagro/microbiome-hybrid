@@ -256,7 +256,7 @@ forder = []
 for m in re.finditer(r"Figures?\s+S(\d+)", TXT):
     n = int(m.group(1))
     if n not in forder: forder.append(n)
-chk("Figures S", "ordre de première citation des figures = S1…S4 (S3 = phylums, ajout 2026-10-06)", "Figure S4", str(forder), forder == [1, 2, 3, 4])
+chk("Figures S", "ordre de première citation des figures = S1…S5 (S3 = phylums, S4 = ordination, ajout 2026-10-06)", "Figure S5", str(forder), forder == [1, 2, 3, 4, 5])
 # ------------------------------------------------------------ Figure S3, composition en phylums (ajout 2026-10-06, scripts/59, 61, 62)
 _ST = pd.read_csv("results/phyla_composition/station_tous_poissons.tsv", sep="\t")
 _PH = [c for c in _ST.columns if c not in ("tissu", "station", "n", "n_par_categorie")]
