@@ -1,23 +1,11 @@
-# Figure S4 — projet de légende (2026-10-06)
+# Figure S4 — légende (version à un panneau, 2026-10-06 ; remplace la version provisoire à deux panneaux)
 
-Numéro provisoire : S4 suppose une première citation après celle de la Figure S3 (ordre de citation des
-figures S contrôlé par scripts/40). Point d'appel dans l'article à décider par JF.
-Calcul : scripts/58-phyla_composition.py (commit 33257e3) ; tracé : docs/manuscrit/figures/src/figure_S4_phyla_src.py.
+**Figure S4. Phylum-level composition of the 16S microbiota by tissue and genotypic category at the three stations where *C. nasus*, hybrids and *P. toxostoma* co-occur.**
+Stacked bars give mean relative abundances of the twelve most abundant bacterial phyla (SILVA 138.2 nomenclature); remaining phyla are pooled as "Other phyla", and reads not assigned at phylum rank are shown as "Unassigned". Cn, *C. nasus*; Hy, all hybrids (n = 42 in the full dataset, intermediate and near-parental pooled); Pt, *P. toxostoma*. Stations: Canal (usine du Largue), Confluence Buëch-Méouge and Saint-Just-d'Ardèche. Among the 1,784 libraries with ≥ 3,000 reads after decontamination, those from these three stations were converted to relative abundances, averaged per individual × tissue across sequencing runs, then per station and category; each bar is the unweighted mean of the station means, so every station contributes equally and identically to the three categories. Within each tissue a station was kept only if every category had at least two individual profiles; for the caudal fin the Largue canal did not meet this criterion and the bars rest on two stations. Numbers above bars are individuals. Weighting by individuals instead of stations changes any bar segment by at most 6.5 percentage points. The unassigned fraction in the midgut *C. nasus* bar comes from a single individual (Largue canal) in which one amplicon sequence variant unassigned at phylum rank accounts for 80 % of midgut reads; with three *C. nasus* midgut profiles at that station it weighs one ninth of the bar. Correspondence with former names: Pseudomonadota = Proteobacteria; Bacillota = Firmicutes (including Mollicutes/Mycoplasmatales, formerly Tenericutes); Bacteroidota = Bacteroidetes; Fusobacteriota = Fusobacteria; Thermodesulfobacteriota includes the former Deltaproteobacteria (Desulfuromonadia, Desulfovibrionia, Desulfobulbia); Actinomycetota = Actinobacteria; Cyanobacteriota = Cyanobacteria. The figure is descriptive; category contrasts are tested at ASV level in the main text.
 
----
-
-**Figure S4. Phylum-level composition of the microbiota by tissue.** Mean relative abundance of the twelve most
-abundant bacterial phyla, with the remaining phyla pooled and amplicon sequence variants unassigned at phylum rank
-shown separately. Relative abundances were computed per library on the 1,784 libraries with at least 3,000 reads,
-averaged over the libraries of each individual and tissue (three sequencing runs and re-extractions), then over
-individuals; numbers above bars are numbers of individuals. **a** *P. toxostoma* by tissue and station, the design of
-Guivier et al. [31] (their Fig. 5); the caudal-fin bar of the Largue canal rests on a single individual. **b** The four
-genotypic groups of Figure 2 (Cn, *C. nasus*; Hy int., intermediate hybrids; Hy near-p., near-parental hybrids; Pt,
-*P. toxostoma*), stations pooled. Because station is the largest source of compositional variance and is unevenly
-represented across groups (Fig. 1a), differences between groups in panel b are descriptive; genotypic category is
-tested in Figure 3. Phylum names follow SILVA 138.2; former names used in Guivier et al. [31]: Pseudomonadota,
-Proteobacteria; Bacillota, Firmicutes, which here also includes the Mollicutes (Mycoplasmatales), shown as Tenericutes
-in [31]; Bacteroidota, Bacteroidetes; Fusobacteriota, Fusobacteria; Actinomycetota, Actinobacteria; Verrucomicrobiota,
-Verrucomicrobia; Deinococcota, Deinococcus-Thermus; Chlamydiota, Chlamydiae; Planctomycetota, Planctomycetes;
-Spirochaetota, Spirochaetes; Cyanobacteriota, Cyanobacteria. Thermodesulfobacteriota groups lineages formerly
-classified in the Deltaproteobacteria (here mainly Desulfuromonadia, Desulfovibrionia and Desulfobulbia).
+## Traçabilité
+- Données : `results/phyla_composition/trois_stations.tsv` (scripts/59-phyla_trois_stations.py, commit 9aceb57) ; profils individuels `results/phyla_composition/profils_individus.tsv` (scripts/58, commit 33257e3).
+- Tracé : `docs/manuscrit/figures/src/figure_S4_phyla_src.py`.
+- Titre vérifié sur les 12 barres : *Fusobacteriota* minimum digestif 0,145 (Pt) à 0,20 (Hy) > maximum externe 0,051 (Pt) à 0,119 (Hy) ; *Bacillota* minimum digestif 0,085 (Cn) > maximum externe 0,050 (Cn) ; *Pseudomonadota* premier phylum dans les 12 barres.
+- Individu à part non assignée : 2015_Caa_1003, midgut, ASV0185 (Kingdom Bacteria, phylum non assigné), 8 326 / 10 407 lectures sur trois runs. Règle « ≥ 2 profils par catégorie » fixée avant calcul, non modifiée.
+- Point d'appel proposé : première phrase de Results « Composition by genotypic category » (à valider par JF).
