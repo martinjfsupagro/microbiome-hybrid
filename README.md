@@ -345,7 +345,7 @@ and checksums: `docs/manuscrit/ENA_accessions_durance.tsv`.
 
 ## GitHub remote
 The repository is mirrored at
-**https://github.com/martinjfsupagro/microbiome-hybrid** (**private**, branch
+**https://github.com/martinjfsupagro/microbiome-hybrid** (**public**, branch
 `main`), with author identity preserved.
 
 Until this mirror existed, the history lived in exactly one place: `.git` on
@@ -376,11 +376,12 @@ Alternatively, the history can be transferred as a git bundle
 ever reaches the cluster. That is how the first push was done.
 
 ### Visibility
-The repository is **private** by explicit choice: the manuscript is not
-submitted, and the decision notes contain points awaiting the collaborator's
-input. Switching to public is one click away at submission time. The reverse is
-not true — a repository made public cannot be un-published, since clones and
-caches persist.
+The repository is **public** (checked 2026-10-07; it already was on 2026-10-05).
+It is cited by the manuscript as the code repository. Everything that is
+committed becomes public on the next push, including the working manuscript
+with its annotations (`docs/manuscrit/`) and the project notes (`_etat/`,
+`docs/`): this is the choice made on 2026-10-07 (see `_etat/DECISIONS.md`).
+Never commit credentials (Webin password files, tokens).
 
 ### Not version-controlled
 `results/` (large, regenerable from the scripts), `consolidated_dataset/` (12 GB

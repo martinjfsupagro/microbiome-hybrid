@@ -6,6 +6,24 @@ depuis les scripts et le `git log` : la décision est certaine, sa date est appr
 
 ---
 
+## 2026-10-07 — Miroir GitHub : public, synchronisé avec l'historique complet
+- **Décision** (JF, 2026-10-07) : le dépôt `github.com/martinjfsupagro/microbiome-hybrid` reste **public** et il est synchronisé avec l'historique complet du cluster, y compris `_etat/`, `docs/` et la version de travail annotée (`MS`, notes grises). Aucune exclusion.
+- **Raison** : le dépôt était déjà public et à jour au 05/10. Le 07/10, l'API et les fichiers bruts répondent sans authentification (HTTP 200 ; témoin : 404 sur un dépôt inexistant). `main` y pointait sur `7c55973` (poussé le 2026-10-05 à 16:04 UTC, ancêtre du HEAD du cluster), qui contient déjà `_etat/` (7 fichiers), `docs/manuscrit/Article.docx` annoté, 16 `docs/decision_*.md` et 69 fichiers de `ena_deposit/`. Les notes antérieures (miroir « arrêté au 25/09, `72666a3` », README « private ») étaient fausses. L'auteur du push du 05/10 et du passage en public n'est pas identifié. L'article cite le dépôt (référence [51]).
+- **Impact** : section « GitHub remote » du `README.md` corrigée (*private* → *public*, paragraphe *Visibility* réécrit). Audit avant le push des 36 commits (112 fichiers) : aucun motif d'identifiant (`ghp_`, `github_pat_`, `password=`, `WEBIN-<n>`), aucun fichier suivi au nom de secret, plus gros objet 2,5 Mo. Le push se fait sans `--force`, par bundle depuis le bac à sable : aucun jeton n'est écrit sur le cluster. L'archive Zenodo et son DOI restent à faire (marqueur de la section Availability).
+- **Session** : Autre.
+
+## 2026-10-07 — Benjamin Hérodet : remerciements
+- **Décision** (JF, 2026-10-07) : Benjamin Hérodet (Fédération de l'Ain pour la pêche et la protection des milieux aquatiques) figure dans les **remerciements**, pas parmi les auteurs.
+- **Raison** : il faut un placement définitif avant la soumission ; André le demandait (06/10).
+- **Impact** : `MS` inchangé, la phrase « We thank Benjamin Hérodet (Fédération de l'Ain …). » s'y trouve déjà. Le rôle n'est pas précisé ; la piste « aide aux pêches du Suran » de la note grise reste une hypothèse `[À CONFIRMER]`. Sans précision de JF ou d'André, la phrase reste en l'état. Au prochain passage de `scripts/72`, le marqueur « [TO COMPLETE: role of Benjamin Hérodet; other acknowledgements.] » doit devenir « [TO COMPLETE: other acknowledgements.] ». Le paquet `docs/soumission/` n'est pas régénéré pour cette seule raison.
+- **Session** : Rédaction.
+
+## 2026-10-07 — Indice 4H : choix techniques du 03/10 validés par JF
+- **Décision** (JF, 2026-10-07) : JF valide les choix techniques pris par l'agent le 03/10 (entrée « Indice 4H : profondeur, effectif et règles de lecture fixés avant calcul ») : raréfaction à 1 000 lectures assignées au genre, N commun aux deux passes (plus petite classe de la passe 1 − 1), 500 bootstraps ; Jaccard au genre et ρ = 0,5 en principal, Bray-Curtis en sensibilité.
+- **Raison** : ce sont les recommandations du plan pré-déclaré (`docs/plan_4H_2026-10-03.md`).
+- **Impact** : R33 inchangé, aucun recalcul ; la mention « à valider par JF » de l'entrée du 03/10 est levée. Aucune note du manuscrit n'attendait cette validation (vérifié dans `MS` et `MS-SUP` le 07/10).
+- **Session** : Analyse.
+
 ## 2026-10-06 (soir) — Paquet de soumission Animal Microbiome : format et contenu
 - **Décision** (JF, choix posés le 06/10) : un Additional file par élément du supplément (18 : tables .xlsx, notes .docx, figures .pdf ; numéros dans l'ordre de première citation) ; copie de soumission **sans notes**, la version de travail restant la référence annotée et toute dérivation étant scriptée (`scripts/72`–`75`, `soumission_commun.py`) ; historique du brouillon (« an earlier version of… », 5 passages des Additional files 1, 6, 12, 17) retiré **des copies seules** ; Methods après Background (permis par la revue) ; « 16S » seul → « 16S rRNA gene » et « Materials and Methods » → « Methods » dans les copies ; Additional file 10 = les 2 304 runs + `sample_accession` + année de l'état ENA actuel. Figure S3 re-rendue phylums en italique (consigne : tous les rangs en italique), aussi dans la version de travail (`scripts/74`). « Eukaryota » et « Mitochondria » laissés en romain (libellés de filtrage SILVA, à confirmer par JF).
 - **Raison** : consignes de la revue lues le 06/10 (`docs/soumission/consignes/`) ; ne pas faire diverger deux textes à la main.
@@ -133,7 +151,7 @@ depuis les scripts et le `git log` : la décision est certaine, sa date est appr
 - **Session** : Analyse. Réf. `docs/plan_permdisp_biais_2026-10-03.md`, scripts 24 (`ecef636`) et 39 (`ec5e318`).
 
 ## 2026-10-03 (soir) — Indice 4H : profondeur, effectif et règles de lecture fixés avant calcul
-- **Décision** (technique, prise par l'agent dans le cadre de D4–D6, **à valider par JF**) : raréfaction 4H à **1 000 lectures assignées au genre** (1 749/1 784 échantillons) ; N = plus petite classe de la passe 1 − 1, commun aux deux passes ; 500 bootstraps ; version Bray-Curtis, pré-analyse, plan nul et hybride nul ; **[Précision du 2026-10-06 : le plan (`docs/plan_4H_2026-10-03.md`, l. 46–49, commité avant calcul) fixe Jaccard au genre, ρ = 0,5, comme réglage **principal** ; la version Bray-Curtis est une **sensibilité** (abondance), comme ρ 0,3/0,7 et le rang famille. R33 est conforme au plan ; cette entrée, qui citait « version Bray-Curtis » sans son rôle, était ambiguë.]** règles de lecture 1–7 ; `FourHcompare` non utilisé (p dépendant du nombre de bootstraps).
+- **Décision** (technique, prise par l'agent dans le cadre de D4–D6, **à valider par JF** — validé par JF le 2026-10-07, voir l'entrée de ce jour) : raréfaction 4H à **1 000 lectures assignées au genre** (1 749/1 784 échantillons) ; N = plus petite classe de la passe 1 − 1, commun aux deux passes ; 500 bootstraps ; version Bray-Curtis, pré-analyse, plan nul et hybride nul ; **[Précision du 2026-10-06 : le plan (`docs/plan_4H_2026-10-03.md`, l. 46–49, commité avant calcul) fixe Jaccard au genre, ρ = 0,5, comme réglage **principal** ; la version Bray-Curtis est une **sensibilité** (abondance), comme ρ 0,3/0,7 et le rang famille. R33 est conforme au plan ; cette entrée, qui citait « version Bray-Curtis » sans son rôle, était ambiguë.]** règles de lecture 1–7 ; `FourHcompare` non utilisé (p dépendant du nombre de bootstraps).
 - **Raison** : le package raréfie la table agrégée ; à 3 000 lectures assignées, trois tissus de la passe 1 tombaient sous 10 hybrides (abandon D6). Camper et al. : axe parental stable à ± 0,067 entre 1 000 et 10 000 lectures.
 - **Impact** : R33. Couverture au genre 64,1 % des lectures, déclarée.
 - **Session** : Analyse. Réf. `docs/plan_4H_2026-10-03.md` (`6372af6`), `docs/recalcul/note_4H_2026-10-03.md`.
